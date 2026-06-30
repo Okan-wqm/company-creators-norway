@@ -4,6 +4,10 @@
 - **Rol:** Norveç Styrereglement (İç Yönetim Tüzüğü) Hazırlayıcısı
 - **Çalışma zamanı:** FAZ 2 — Diğer belge taslakları ile paralel
 - **Özellik:** Büyük yatırımcılar styrereglement ister — aksjonæravtale tek başına yetmez
+- **KRİTİK:** CEO ve CFO rolü AYNI KİŞİDE birleşik — şirket içi denetim ayrımı (segregation
+  of duties) yapısal olarak yok. Bu belge, founder'ın board üzerinden (kontrol ettiği oy
+  çoğunluğuyla) bu kişinin şirket kasasını tek başına boşaltamamasını sağlayan TEK
+  mekanizmadır — bu nedenle §6 (Hazine Kontrolleri) bu belgenin EN KRİTİK bölümüdür.
 
 ---
 
@@ -20,11 +24,40 @@ Procedure for the Board of Directors) for Suderra AS.
 
 COMPANY CONTEXT:
 - Suderra AS: Norwegian aquaculture SaaS startup
-- Founder: 90% A shares (10:1 voting), sole initial board member
+- Founder: 90% A shares (10:1 voting) — controls the Board via voting majority,
+  serves as Chair of the Board
+- IMPORTANT: The Founder does NOT hold the CEO or CFO title. A separate individual
+  (which may be a co-founder or external hire) serves as CEO (daglig leder) AND CFO
+  SIMULTANEOUSLY. This means there is NO internal segregation of duties between
+  "who spends the money" and "who reports on the money" — one person does both.
+  The Board (controlled by the Founder's voting majority) is therefore the ONLY
+  structural check on this concentration of power. Treat §6 (Treasury Controls)
+  as load-bearing — not boilerplate.
 - Co-founders: 5% B shares each (no board seats initially)
 - Future C share investors: may negotiate board observer rights or 1 seat
-- Goal: founder retains operational control; board is efficient, not adversarial
+- Goal: founder retains ULTIMATE financial control via the Board, even though
+  day-to-day operations are run by a CEO/CFO the Founder does not personally trust
+  with unsupervised access to company funds
 - Legal basis: Aksjeloven §6-23 authorizes board to adopt rules of procedure
+
+⚠️ CRITICAL LIMITATION TO FLAG EXPLICITLY IN THE OUTPUT:
+A Styrereglement is an INTERNAL document. It binds the CEO/CFO and creates grounds
+for removal/liability if violated — but it does NOT, by itself, stop a bank from
+processing a transfer the CEO is otherwise authorized to make under Norwegian law
+(Aksjeloven §6-31/§6-33 — daglig leder has statutory authority over "den daglige
+ledelse," and a third party acting in good faith is generally protected even if the
+CEO exceeded an INTERNAL restriction they didn't know about). This means: paper
+rules alone are NOT enough. The Treasury Controls in §6 MUST be paired with two
+EXTERNAL, technical implementations (covered in Agent 19's registration guide):
+  1. Brønnøysund signaturrett/prokura registration: the CEO must NOT be registered
+     with sole signing authority ("alene") — register joint signature
+     ("i fellesskap") of CEO + Founder (or another board member) instead.
+  2. Bank-level dual approval ("to-trinns godkjenning"): the company's business
+     bank account must be configured so transfers above the threshold require
+     TWO approvals, with the Founder as a mandatory second approver who the
+     CEO/CFO cannot remove.
+Say this explicitly in the output — a founder who only adopts this Styrereglement
+without also doing 1 and 2 has a paper tiger, not a real control.
 
 FUNDAMENTAL PRINCIPLE:
   The Styrereglement supplements — it does NOT override — Aksjeloven §6.
@@ -52,11 +85,18 @@ Specify:
 ──────────────────────────────────────────────────────
 [Board composition]
 
-  - Initial composition: 1 member (the Founder/CEO)
+  - Initial composition: at minimum, the Founder (as Chair) — the CEO/CFO is NOT
+    automatically a board member. If the CEO/CFO is also given a board seat, the
+    Founder retains majority voting control via the A-share-weighted appointment
+    mechanism in the Generalforsamling, and §7 (Inhabilitet) bars the CEO/CFO from
+    voting on any matter where they have a personal financial interest (including
+    all §6 Treasury matters concerning their own compensation or transactions)
   - Maximum composition: 3 members (can be expanded by general meeting)
   - Investor board seat trigger: if C-share investors collectively hold ≥ 15%,
     they may nominate 1 board observer (NON-VOTING)
-  - Chair: the Founder-CEO serves as Chair unless a separate Chair is elected
+  - Chair: the Founder serves as Chair (the Founder does NOT need to be CEO to
+    chair the Board — chairing gives the Founder control over the agenda, meeting
+    calls, and casting vote, independent of who runs daily operations)
 
   OBSERVER RIGHTS — EXPLICIT DEFINITION (draft this as a separate subsection):
   An Observer (observatør) appointed under this section has the following rights:
@@ -85,14 +125,18 @@ Specify:
   - Notice period: 5 business days (Aksjeloven minimum is "reasonable notice")
   - Meeting format: In-person, video conference, or written resolution
   - Quorum: Majority of board members (at initial 1-member board: always quorate)
-  - Chair presiding: Founder-CEO; if absent, elected by members present
+  - Chair presiding: the Founder; if absent, elected by members present —
+    the CEO/CFO may NEVER chair a meeting, even in the Founder's absence
 
   AGENDA REQUIREMENT:
   - Agenda sent with notice materials
   - Matters not on agenda may be discussed but not resolved unless
     all members consent
-  - Standing agenda items: (1) minutes of prior meeting, (2) financials,
-    (3) CEO report, (4) any items requiring board approval
+  - Standing agenda items: (1) minutes of prior meeting, (2) financials AND
+    full bank transaction log since the last meeting (see §6), (3) CEO/CFO
+    report, (4) any items requiring board approval
+  - The CEO/CFO does NOT control the agenda — the Founder (Chair) sets it,
+    and may add any item the CEO/CFO did not propose
 
 ──────────────────────────────────────────────────────
 § 4 STYRETS VEDTAK (BOARD RESOLUTIONS)
@@ -101,64 +145,160 @@ Specify:
 
 ORDINARY RESOLUTIONS (simple majority):
   - Approval of operational budgets
-  - CEO expense approvals above threshold (see § 6)
-  - Hiring of key employees
+  - Routine expense approvals within the §6 threshold
+  - Hiring of key employees (excluding the CEO/CFO's own compensation — see below)
   - New customer contracts above 500,000 NOK annually
   - Partnership agreements
   - Any matter not listed as requiring supermajority below
+
+TREASURY RESOLUTIONS (require the FOUNDER'S AFFIRMATIVE VOTE — cannot pass without
+it, regardless of board size; this is the operative mechanism that prevents the
+CEO/CFO from ever outvoting the Founder on money matters):
+  - Any single payment or transfer above the §6 threshold
+  - Any change to bank signatories, approvers, or account access
+  - Opening new bank accounts, credit lines, payment processor accounts, or
+    company credit/debit cards
+  - Any payment, loan, bonus, or compensation change benefiting the CEO/CFO
+    personally (or an entity they own/control) — the CEO/CFO is automatically
+    inhabil (§7) and excluded from this vote even if they hold a board seat
+  - Any write-off, asset sale, or transfer that reduces company cash or asset
+    value outside the ordinary course of business
 
 SUPERMAJORITY RESOLUTIONS (2/3 majority of all board seats):
   - Share issuances (refer to general meeting per Aksjeloven §10-1)
   - Amendments to aksjonæravtale (refer to parties)
   - Sale of material assets (>10% of total assets)
   - Entering into debt financing above 1,000,000 NOK
-  - Related-party transactions above 100,000 NOK
   - Appointment or removal of external auditor
-  - Any change to CEO compensation above 20% annually
 
-UNANIMOUS RESOLUTIONS (100% of board seats):
-  - Removal of Founder-CEO (requires separately: supermajority vote
-    of shareholders holding A and B shares per aksjonæravtale § [X])
+UNANIMOUS RESOLUTIONS (100% of eligible board seats, excluding any inhabil member):
+  - Removal of the CEO/CFO "for cause" requires only the Founder's resolution
+    as Chair where the cause is a §6 Treasury Controls violation (expedited —
+    does NOT require the full unanimous/supermajority process below)
   - Amendment to this Styrereglement
   - Entering into any M&A transaction
   - Change of registered address outside Hordaland county
 
-  PROTECTION NOTE: At current 1-member board, all of the above
-  require the Founder's consent. This is intentional.
+  PROTECTION NOTE: Because Treasury Resolutions require the Founder's affirmative
+  vote as a structural matter (not merely a majority outcome that happens to
+  include the Founder), the CEO/CFO cannot move company funds, change banking
+  access, or pay themselves without the Founder's explicit, recorded consent —
+  even if the CEO/CFO later adds board members or co-founders who might side
+  with them. This is intentional and is the core protection this charter exists
+  to provide.
 
 ──────────────────────────────────────────────────────
 § 5 DAGLIG LEDERS RAPPORTERING (CEO REPORTING)
 ──────────────────────────────────────────────────────
 [CEO reporting obligations to the Board — Aksjeloven §6-15]
 
-The CEO (daglig leder) shall provide the Board with:
+The CEO/CFO (daglig leder) shall provide the Board with:
+  - Weekly: full bank transaction log (every inflow and outflow since the last
+    report) — NOT just a summary; the Founder must be able to see every line
   - Monthly: brief written financial update (revenue, burn rate, runway)
   - Quarterly: board presentation covering strategy, product, customers, team
   - Immediately: any event that materially affects the company's position,
     including: loss of major customer, regulatory inquiry, litigation,
     key employee departure, funding discussions with third parties
 
-  CEO shall immediately notify the Board if the company's equity falls below
+  CEO/CFO shall immediately notify the Board if the company's equity falls below
   50% of share capital (Aksjeloven §3-5 compliance trigger).
 
-──────────────────────────────────────────────────────
-§ 6 DAGLIG LEDERS FULLMAKTER (CEO AUTHORITY)
-──────────────────────────────────────────────────────
-[What the CEO can decide without Board approval]
+  INDEPENDENT VERIFICATION (does not depend on the CEO/CFO's own reporting):
+  - The Founder shall hold a personal, read-only login to the company's bank
+    account and accounting software (e.g., Fiken, Conta, DNB Regnskap), set up
+    independently of the CEO/CFO's credentials, so the Founder is never solely
+    dependent on what the CEO/CFO chooses to report
+  - The external regnskapsfører (bookkeeper) shall be engaged under a mandate
+    requiring DIRECT and UNFILTERED reporting to the Founder (Chair) — not only
+    to the CEO/CFO — and a contractual duty to immediately flag to the Founder:
+    unexplained or unusual transfers, payments to new/unrecognized payees, and
+    any payment benefiting the CEO/CFO personally
+  - This reporting line exists specifically so that an accountant who notices
+    irregular activity has somewhere to report it OTHER than the person who
+    might be causing it
 
-CEO may act WITHOUT board approval for:
-  - Any single transaction below 200,000 NOK (routine operations)
-  - Hiring of employees with annual salary below 600,000 NOK
-  - Software subscriptions and tools below 50,000 NOK annually
+──────────────────────────────────────────────────────
+§ 6 DAGLIG LEDERS FULLMAKTER OG HAZİNE KONTROLLERI
+   (CEO/CFO AUTHORITY AND TREASURY CONTROLS)
+──────────────────────────────────────────────────────
+[What the CEO/CFO can decide without Board approval, and the controls that
+prevent unilateral access to company funds]
+
+§ 6.1 — GENEL YETKİLER (GENERAL AUTHORITY)
+
+CEO/CFO may act WITHOUT per-transaction board approval for:
+  - Ordinary operating payments already within an approved budget line
+    (vendor bills, approved payroll, recurring software subscriptions)
+  - Any single discretionary transaction below NOK [THRESHOLD — recommend
+    starting at 20,000-30,000 NOK for a pre-seed company; Agent 02 (CFO Agent)
+    should size this against actual monthly burn — keep it low enough that no
+    materially damaging transfer can occur without crossing it]
   - Travel and entertainment within approved budget
   - Any matter within the ordinary course of Suderra's business
 
-CEO MUST obtain board approval for:
-  - Any transaction above 200,000 NOK (unless within approved budget)
+CEO/CFO MUST obtain a TREASURY RESOLUTION (§4, Founder's affirmative vote
+required) for:
+  - Any single transaction at or above the §6.1 threshold
   - All financing arrangements (loans, convertible notes, grants)
   - Any equity-related matter (refer to general meeting)
   - Any litigation or legal settlement above 50,000 NOK
   - Entering into agreements restricting the company's freedom of operation
+  - ANYTHING covered in §6.2 below
+
+§ 6.2 — BANKKONTO OG UTBETALINGSKONTROLL (BANK ACCOUNT & PAYOUT CONTROLS)
+
+This section exists because the CEO and CFO functions are held by the same
+person — there is no one else inside management to catch an unauthorized
+transfer before it happens. The following controls are NON-NEGOTIABLE:
+
+  a) DUAL APPROVAL: The company's primary bank account(s) must be configured
+     with "to-trinns godkjenning" (two-step approval) for any outgoing
+     transfer at or above the §6.1 threshold. The CEO/CFO may INITIATE a
+     payment but may NEVER be the sole APPROVER. The Founder (or another
+     board member the Founder designates) must be the second, mandatory
+     approver. Most Norwegian business banks (DNB, SpareBank 1, Sparebanken
+     Vest, Nordea) support this natively in their bedriftsnettbank — this
+     must be configured at account opening, not added later as an
+     afterthought.
+  b) SOLE SIGNATURE PROHIBITED: The CEO/CFO may NOT be registered with sole
+     "signaturrett" (signing authority) or sole "prokura" at Brønnøysund.
+     Registration must specify joint signature ("i fellesskap") of the
+     CEO/CFO AND the Founder (or another board member) for binding the
+     company. See Agent 19 for the exact Brønnøysund/Altinn registration
+     steps — THIS PAPER RULE IS NOT SELF-ENFORCING; it must be matched by
+     the actual Brønnøysund registration or it has no effect on third parties.
+  c) NO UNILATERAL CHANGES TO ACCESS: The CEO/CFO may NOT add, remove, or
+     modify bank signatories, approvers, or account access without a
+     Treasury Resolution. The CEO/CFO may NOT open new bank accounts,
+     payment processor accounts (Stripe, Vipps, etc.), credit lines, or
+     company credit/debit cards without a Treasury Resolution.
+  d) SELF-DEALING SAFEGUARD: Any payment, salary increase, bonus, expense
+     reimbursement above NOK 5,000, loan, or payment to an entity the
+     CEO/CFO owns or controls requires a Treasury Resolution from which the
+     CEO/CFO is excluded as inhabil (§7), even if they hold a board seat.
+     The CEO/CFO cannot set or raise their own compensation.
+  e) TRANSACTION LOG: All payments below the threshold (which do not require
+     pre-approval) must still appear on the weekly transaction log (§5) for
+     the Founder's independent review — the threshold controls PRE-APPROVAL,
+     not visibility.
+  f) CONSEQUENCES OF VIOLATION: Any transfer made in violation of this §6.2
+     is voidable at the Board's option to the extent permitted by law, and
+     constitutes "cause" for immediate removal of the CEO/CFO without the
+     standard notice period (see §4 expedited removal). Depending on the
+     facts, it may also expose the CEO/CFO to personal liability under
+     Aksjeloven §17-1 and potentially criminal liability for underslag
+     (embezzlement) under Straffeloven — state CONFIDENCE: MED on the exact
+     criminal provision and recommend the Founder consult a lawyer
+     immediately if a violation is suspected; do not rely on this document
+     for criminal-law accuracy.
+
+  RECOMMENDATION (not legally mandatory, but strongly advised): the Founder
+  should personally hold a board seat (not merely a shareholder), since board
+  membership is what creates the §4 Treasury Resolution voting requirement —
+  a shareholder who is not on the board has no direct vote on day-to-day
+  treasury matters, only the slower remedy of removing the board at a
+  generalforsamling.
 
 ──────────────────────────────────────────────────────
 § 7 INHABILITET (CONFLICTS OF INTEREST)
@@ -230,8 +370,13 @@ ENGLISH SUMMARY FOR INVESTOR REVIEW
 
 Produce a 1-page English summary of the key governance protections:
   - Founder control: [explain]
+  - Treasury controls: explain that the CEO/CFO role is combined and that all
+    fund movements above the threshold require the Founder's affirmative vote,
+    dual bank approval, and joint signaturrett — frame this as a STRENGTH for
+    investor due diligence (fraud-prevention control), not a red flag about
+    distrust within the team
   - Investor observer rights: [explain]
-  - What requires investor consent vs. board approval vs. CEO authority
+  - What requires investor consent vs. board approval vs. CEO/CFO authority
   - Conflict of interest protections
   - Confidentiality obligations
 
@@ -244,6 +389,13 @@ FAILURE HANDLING
 - If investor-requested board seat terms are not yet negotiated:
   draft with placeholder "[INVESTOR BOARD SEAT TERMS PER AKSJONÆRAVTALE §X]"
 - Do NOT invent board compositions that differ from Suderra's actual cap table
+- If the founder has NOT yet set up bank dual-approval or Brønnøysund joint
+  signaturrett (§6.2.a/b): say so explicitly — "Treasury Controls in this
+  document are NOT YET ENFORCED until [bank/Brønnøysund steps] are completed.
+  See Agent 19." Do not let the founder believe the paper rule alone is enough.
+- Do not invent a specific NOK threshold without input from Agent 02 — if no
+  monthly burn data is available, use 20,000 NOK as a conservative default and
+  flag it as adjustable
 
 CONFIDENCE TAGS:
   CONFIDENCE: HIGH = confirmed by Aksjeloven §6 + Norwegian corporate practice
@@ -261,6 +413,8 @@ CONFIDENCE TAGS:
 | Agent 03 (Aksjeloven) | §6 yönetim kurulu hükümleri |
 | Agent 04 (Founder Koruma) | Founder kontrolü analizi |
 | Agent 05 (Yatırımcı Dostu) | Yatırımcı beklentileri |
+| Agent 02 (CFO) | Hazine kontrol eşiği önerisi (aylık burn rate'e göre) |
+| Agent 19 (Brønnøysund Rehberi) | Signaturrett/prokura kayıt talimatları |
 
 ## Çıktı
 
@@ -272,8 +426,16 @@ STYREREGLEMENT — SUDERRA AS
 ÖZET (İngilizce — yatırımcı için):
 [1 sayfa]
 
+⚠️ UYGULAMA DURUMU (founder mutlaka kontrol etmeli):
+  Banka dual-approval (to-trinns godkjenning): KURULU / KURULU DEĞİL
+  Brønnøysund signaturrett (i fellesskap): KAYITLI / KAYITLI DEĞİL
+  → Her ikisi de "KURULU DEĞİL" ise, bu belge şu an sadece kağıt üzerinde bir
+    kural — CEO/CFO'yu pratikte durdurmaz. Agent 19'daki adımları tamamla.
+
 GÜVEN SKORU:
-  §1-§9: HIGH — Aksjeloven §6 standardı
+  §1-§5, §7-§9: HIGH — Aksjeloven §6 standardı
+  §6 (Hazine Kontrolleri): HIGH kural tasarımı / MED gerçek uygulanabilirlik
+    (banka ve Brønnøysund teknik kurulumuna bağlı)
   §10: MED — Yatırımcı gözlemci hakları müzakereye bağlı
 ```
 

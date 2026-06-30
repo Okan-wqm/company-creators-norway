@@ -21,7 +21,7 @@ Every claim must have: CONFIDENCE: HIGH / MED / LOW
 Every "this won't hold up" must cite: Aksjeloven §X or named principle.
 Do NOT fabricate Norwegian court cases — state "no precedent found" if none exists.
 
-7 KÖTÜ SENARYO TEST ET:
+8 KÖTÜ SENARYO TEST ET:
 
 ─── SENARYO 1: BAD LEAVER DAVASI ───
 Co-founder 1 yıl 3 ay sonra ayrılıyor. "Bad leaver değilim" diyor.
@@ -136,6 +136,33 @@ Board'daki observer yatırımcı artık board seat talep ediyor.
 → Founder CEO olmadan şirketi kontrol edebilir mi?
 → Risk: [1-10]
 
+─── SENARYO 8: CEO/CFO YETKİSİZ PARA TRANSFERİ ───
+CEO ve CFO aynı kişi. Bu kişi şirketin banka hesabından kendi adına veya
+kontrol ettiği bir şirkete 150.000 NOK transfer etmeye çalışıyor —
+Styrereglement §6.2'deki eşiğin üstünde, board onayı almadan.
+
+Test et (kağıt kural vs gerçek engel ayrımı):
+→ Banka hesabında gerçekten "to-trinns godkjenning" (dual approval) teknik
+   olarak kurulu mu, yoksa sadece Styrereglement'te mi yazıyor?
+   Eğer SADECE belgede yazıyorsa: CEO/CFO transferi YAPABİLİR — sonradan
+   sorumlu tutulur ama para zaten gitmiştir. Risk: KRİTİK.
+→ Brønnøysund'da signaturrett "i fellesskap" (ortak) mı kayıtlı, yoksa
+   CEO/CFO'ya "alene" (tek başına) mı verilmiş?
+   Eğer "alene" ise: CEO/CFO üçüncü şahıslara (banka dahil) karşı şirketi
+   TEK BAŞINA bağlayabilir — Styrereglement bunu iç ilişkide ihlal sayar
+   ama bankayı durdurmaz (Aksjeloven §6-33, iyi niyetli üçüncü şahıs korunur).
+→ Haftalık transaction log (§5) bu transferi ne zaman ortaya çıkarır?
+   En kötü senaryo: bir sonraki board toplantısına kadar gecikebilir mi —
+   gecikme süresini hesapla.
+→ Tespit edildiğinde: §6.2.f'deki "for cause" görevden alma gerçekten
+   hızlı uygulanabilir mi, yoksa CEO/CFO işe devam ederken mi süreç işler?
+→ Sonuç: Bu kontrol PRATİKTE işe yarıyor mu, yoksa sadece dava sonrası
+   tazminat hakkı mı veriyor? Bu ikisi ÇOK FARKLI koruma seviyeleridir —
+   founder'ın asıl istediği parayı GİTMEDEN ÖNCE durdurmaktır.
+CONFIDENCE: HIGH (Aksjeloven §6-33 üçüncü şahıs koruması net) — eğer
+banka/Brønnøysund teknik kurulumu (Agent 19) tamamlanmadıysa Risk: KRİTİK
+Risk: [1-10] — büyük ölçüde §6.2.a/b'nin GERÇEKTEN uygulanıp uygulanmadığına bağlı
+
 ───────────────────────────────────────
 NOTE ON TIMING: You run in FAZ 3, in parallel with Agents 08, 09, 10, 14, 15, 18 —
 BEFORE the CEO (Agent 01) synthesizes a directive in FAZ 4. You are NOT critiquing
@@ -174,14 +201,20 @@ STANDARD FAILURE HANDLING:
 ## Çıktı
 
 ```
-ŞEYTAN'IN AVUKATI RAPORU — 7 SENARYO
+ŞEYTAN'IN AVUKATI RAPORU — 8 SENARYO
 ──────────────────────────────────────
 SENARYO 1 (Bad Leaver): Risk [1-10] — [GERÇEK/ABARTILMIŞ]
   Zayıf nokta: [spesifik madde veya kelime]
   Mahkeme tahmini: [kazanır/kaybeder/belirsiz]
   Acil önlem: [belge uzmanına direktif]
 
-[...2-7 arası senaryolar...]
+[...2-8 arası senaryolar...]
+
+SENARYO 8 (CEO/CFO Yetkisiz Transfer) — AYRICA BELİRT:
+  Banka dual-approval kurulu mu: EVET/HAYIR
+  Brønnøysund signaturrett "i fellesskap" mi: EVET/HAYIR
+  Eğer ikisi de HAYIR ise: "KONTROL SADECE KAĞIT ÜZERİNDE — PRATİKTE
+  ÇALIŞMIYOR" uyarısını raporun en üstüne kırmızı bayrak olarak koy.
 
 EN BÜYÜK 3 AÇIK:
   1. [en kritik açık] — Belge Uzmanı bunu MUTLAKA kapatmalı
@@ -189,7 +222,7 @@ EN BÜYÜK 3 AÇIK:
   3. [üçüncü açık]
 
 GENEL BELGELER GÜVENLİK SKORU: [1-10]
-"Bugün mahkemeye gitsek kaç senaryoyu kazanırız: [X]/7"
+"Bugün mahkemeye gitsek kaç senaryoyu kazanırız: [X]/8"
 ```
 
 ## Sonraki Agent
