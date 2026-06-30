@@ -246,11 +246,23 @@ Content (CRITICAL — use ONLY what is real from S2-07):
     (acceptable framing if interviews are rigorous)
 
   IF NOTHING YET:
-  → Do not include a traction slide — include a VALIDATION PLAN instead:
-  → "3 pilot farms identified for Q[X] 2025 launch"
-  → "First paying customer target: Q[Y] 2025"
+  → Slide 7 is titled "ROADMAP & VALIDATION PLAN" — it is STILL slide 7, not an extra slide
+  → Content for validation plan version:
+    "3 pilot farms identified for Q[X] 2025 launch"
+    "First paying customer target: Q[Y] 2025"
+    12-month roadmap with key milestones
   → Note: absence of traction is the single biggest investor concern at seed
     → Focus almost all energy on getting SOMETHING real before first meetings
+
+  DECK STRUCTURE INVARIANT — ALL DOWNSTREAM AGENTS MUST KNOW:
+  The Suderra pitch deck is ALWAYS exactly 10 slides.
+  Slide 7 title changes based on traction level:
+    - Paying customers: "TRACTION"
+    - Pilot only: "EARLY TRACTION & PILOTS"
+    - Interviews only: "VALIDATION"
+    - Nothing yet: "ROADMAP & VALIDATION PLAN"
+  S2-05, S2-06, S2-11 and all other agents referencing "the pitch deck"
+  should assume a 10-slide structure. Never add an 11th slide.
 
 ═══════════════════════════════════════════════════
 SLIDE 8: TEAM

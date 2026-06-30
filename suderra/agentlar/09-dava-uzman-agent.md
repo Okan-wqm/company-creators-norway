@@ -110,6 +110,47 @@ They propose a vedtekter amendment to lower drag-along threshold from 75% to 51%
 CONFIDENCE: HIGH for vedtekter blocking (Aksjeloven §5-18 math is clear);
 MED for aksjonæravtale amendment risk (depends on current draft language)
 
+SENARYO I — KURUCU §17-1 KİŞİSEL SORUMLULUK:
+A creditor or third party claims the founder is personally liable for a
+company decision that violated Aksjeloven.
+- Under Aksjeloven §17-1, board members are personally liable for intentional
+  or negligent violations that cause damage to the company, creditors, or third parties
+- When is the founder at risk? Concrete examples to test:
+  → Paid a supplier from company funds after knowing the company was insolvent
+  → Signed a contract outside authorized scope (§6-14 violation)
+  → Failed to convene general meeting when equity fell below 50% of share capital (§3-5)
+  → Provided false information to Brønnøysund/Altinn
+- Protection mechanism: founder's proper documentation of decisions (styreprotokoll)
+  → A well-documented board decision, even if commercially wrong, limits §17-1 exposure
+  → Gross negligence threshold is HIGH for startup decisions made in good faith
+- Mitigation: Document ALL significant decisions in styreprotokoll; board minutes
+  serve as the primary defense against §17-1 personal liability claims
+- Confidence: HIGH (Aksjeloven §17-1 text is clear; threshold for personal liability
+  in early-stage companies is high when board acted on reasonable information)
+Risk Level: MEDIUM for typical startup decisions / HIGH if insolvent trading suspected
+Court Prediction: Founder wins on ordinary business judgment; LOSES if insolvent trading
+
+SENARYO J — YATIRIMCI AKSJONÆRAVTALE BOZULMASI:
+After a Series A round, investor coalition attempts to amend the aksjonæravtale
+to lower the drag-along threshold from 75% to 51%, claiming this needs only
+a simple majority of aksjonæravtale signatories — not unanimous consent.
+- This is the follow-on to Senaryo H, specifically targeting the aksjonæravtale
+  amendment clause rather than the vedtekter amendment route
+- Key question: What does the aksjonæravtale's OWN amendment clause say?
+  → If "amendments require unanimous consent": PROTECTED — cannot happen
+  → If "amendments require majority of shares": RISK — coalition may force it
+  → If silent on amendments: Norwegian contract law default = unanimous for
+    material changes to fundamental rights (legal doctrine)
+- Recommended protection (must be in aksjonæravtale text):
+    "Amendments to §[drag-along], §[ROFR], §[tag-along], and §[information rights]
+     require the written consent of ALL parties to this agreement."
+    "Amendments to any other section require written consent of parties holding
+     a minimum of 75% of all shares in Suderra AS."
+- Secondary check: Is drag-along ONLY in aksjonæravtale or also in vedtekter?
+  → If in vedtekter too: Senaryo H math applies (founder blocks with A shares)
+  → If ONLY in aksjonæravtale: aksjonæravtale amendment clause controls
+CONFIDENCE: HIGH for contract law analysis; MED for court outcome prediction
+
 HER SENARYO İÇİN FORMAT:
   Risk Level: [LOW / MEDIUM / HIGH / CRITICAL]
   Current Status in Document: [present? sufficient?]

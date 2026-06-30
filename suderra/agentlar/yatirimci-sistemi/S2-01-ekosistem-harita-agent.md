@@ -383,8 +383,27 @@ KATEGORİ DAĞILIMI:
   Nordic Tech VC: [X]
   Uluslararası: [X]
 
-TAM LİSTE:
-[Tablo formatında her yatırımcı]
+TAM LİSTE (VALID JSON — S2-02 input schema):
+[
+  {
+    "investor_id": "INV-001",
+    "name": "[Investor name]",
+    "category": "A|B|C|D|E|F|G|H",
+    "location": "[City, Norway]",
+    "stage_focus": ["pre-seed", "seed"],
+    "check_range_nok": {"min": 500000, "max": 5000000},
+    "web_status": "ACTIVE|PASSIVE|UNKNOWN",
+    "proff_verified": true,
+    "last_investment_date": "YYYY-MM",
+    "aquaculture_portfolio": ["company1", "company2"],
+    "phase": "PHASE-1|PHASE-2|PHASE-3",
+    "conflict_flag": "NONE|PARTIAL|DIRECT",
+    "contact": {"name": "[decision maker]", "linkedin": "[URL]", "channel": "LinkedIn|Email|Event"},
+    "source_urls": ["[URL1]", "[URL2]"],
+    "data_quality": "VERIFIED|ESTIMATED|UNKNOWN",
+    "notes": "[Any special notes]"
+  }
+]
 
 HEMEN BAŞVURULACAK TOP 10:
 [Öncelikli liste ve neden]

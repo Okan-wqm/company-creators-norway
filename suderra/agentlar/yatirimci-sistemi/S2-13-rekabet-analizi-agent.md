@@ -141,13 +141,32 @@ COMPETITOR 4: SAP AGRICULTURE / MICROSOFT DYNAMICS
 ─── CATEGORY C: AQUACULTURE HARDWARE + MONITORING ───
 
 COMPETITOR 5: IDUN AQUA
-  (Research this Norwegian company — may provide operations management)
-  Note: If relevant, add competitor card. If not a direct competitor, note as ecosystem player.
+  MANDATORY FETCH (do NOT leave as "Research this"):
+  → proff.no: search "Idun Aqua" (get org.nr., revenue, employees, year founded)
+  → idunaqua.no or similar — search for their website via web search
+  → LinkedIn: "Idun Aqua" company page and recent activity
+  → Crunchbase: "Idun Aqua" for funding rounds
+  If found → complete competitor card with: product focus, customer segment, funding, threat level.
+  If NOT found / dissolved / not a direct SaaS competitor:
+    State explicitly: "Idun Aqua: Araştırıldı. Kayıt/web bulunamadı — ya küçük lokal
+    oyuncu ya da aquaculture SaaS değil. Direkt rakip sayılmaz."
+  Do NOT write "(Research this)" in any output.
 
 COMPETITOR 6: SCALE AQ
-  (Research this Norwegian startup — farm operations focus)
-  Note: Research their current product, funding status, customer count.
-  If direct competitor: assess threat level.
+  MANDATORY FETCH (do NOT leave as "Research this"):
+  → proff.no: search "Scale AQ" (org.nr., revenue, employees, year founded)
+  → scaleaq.no or similar website
+  → LinkedIn: "Scale AQ" — product updates and team growth signal
+  → Crunchbase: "Scale AQ" funding status
+  If found → complete competitor card. Key questions:
+    - Same 900+ Norwegian salmon farm segment? YES/NO
+    - Current funding status and last investment?
+    - Paying customers: confirmed count or estimate?
+    - Threat level: LOW / MEDIUM / HIGH and why
+  If NOT found or inactive:
+    State explicitly: "Scale AQ: Araştırıldı [tarih]. Aktif durum: [sonuç].
+    Threat level: [LOW — inactive / MED — early stage / HIGH — funded and growing]."
+  Do NOT write "(Research this)" in any output.
 
 ─── CATEGORY D: THE REAL INCUMBENT ───
 

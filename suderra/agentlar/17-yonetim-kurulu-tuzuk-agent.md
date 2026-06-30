@@ -56,8 +56,21 @@ Specify:
   - Maximum composition: 3 members (can be expanded by general meeting)
   - Investor board seat trigger: if C-share investors collectively hold ≥ 15%,
     they may nominate 1 board observer (NON-VOTING)
-  - Observer rights: attend meetings, receive materials, no vote
   - Chair: the Founder-CEO serves as Chair unless a separate Chair is elected
+
+  OBSERVER RIGHTS — EXPLICIT DEFINITION (draft this as a separate subsection):
+  An Observer (observatør) appointed under this section has the following rights:
+    → Receives all board materials minimum 5 business days prior to each meeting
+    → Attends board meetings and may address the board on agenda items (speak but NOT vote)
+    → Has NO voting rights on any board resolution
+    → Is EXCLUDED from closed sessions in which: (a) the observer's appointing
+       shareholder has a conflict of interest (§7), or (b) the Chair determines
+       that the observer's presence would compromise confidential competitive matters
+    → Bound by the same confidentiality obligations as full board members (§8)
+    → Observer status does NOT carry board member personal liability under Aksjeloven §17-1
+    → Observer appointment may be immediately revoked by board resolution if:
+       (a) the observer's appointing shareholder falls below 15% C-share threshold,
+       or (b) the observer breaches confidentiality obligations
 
   IMPORTANT: Draft this section to protect founder. An observer ≠ board member.
   Observers have no right to demand information beyond what is presented at meetings

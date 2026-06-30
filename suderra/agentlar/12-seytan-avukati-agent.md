@@ -111,7 +111,19 @@ Avukatı ekliyor: "Müvekkilim geçimini sağlayamıyor."
 → Arbeidsmiljøloven §14 A-4 uyarınca kompensasyon (tazminat) ödendi mi?
    Co-founder çalışan sayılırsa: kompensasyon şart — yoksa rekabet yasağı geçersiz!
 → 12 ay makul mü? Emsal var mı?
-→ Risk: [1-10]
+
+KONKRET NOK HESABI (founder için zorunlu):
+  Co-founder maaş varsayımı: NOK 600,000/yıl (50,000/ay)
+  12 aylık non-compete için §14A-4 zorunlu kompensasyon:
+    Ay 1-6: %100 × 50,000 = 50,000 NOK/ay × 6 = 300,000 NOK
+    Ay 7-12: %70 × 50,000 = 35,000 NOK/ay × 6 = 210,000 NOK
+    TOPLAM ZORUNLU ÖDEME: 510,000 NOK
+  Eğer Suderra bu parayı ödeyemiyorsa:
+    → Non-compete başından geçersiz (§14A-4 ihlali)
+    → Co-founder mahkemede kazanır — kesin
+    → Founder yeni bir şirkette rakip olarak çalışabilir
+  KONTROL: Sweat equity belgesi non-compete içeriyor mu? Kompensasyon ödendi mi?
+  Risk: [1-10]
 
 ─── SENARYO 7: BOARD DEVİR SUÇLAMASI ───
 Şirket zorlu dönem geçiriyor. Büyük yatırımcı:

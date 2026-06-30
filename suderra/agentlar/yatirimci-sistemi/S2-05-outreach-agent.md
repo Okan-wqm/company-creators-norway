@@ -151,6 +151,21 @@ Sıcak Intro Notu:
 
 ÖZEL NOT (bu kişiye özel dikkat edilecek):
 [1-2 cümle]
+
+OUTREACH_LOG:
+{
+  "investor_id": "[S2-01 investor_id — e.g. INV-001]",
+  "investor_name": "[Yatırımcı adı]",
+  "variant_sent": null,
+  "sent_date": null,
+  "response_received": null,
+  "response_date": null,
+  "response_type": null,
+  "notes": null
+}
+NOTE TO FOUNDER: Fill in variant_sent ("LinkedIn"|"Email"|"WarmIntro"),
+sent_date (YYYY-MM-DD), and response fields after sending.
+S2-12 (Geri Bildirim Agent) reads these logs to update S2-04 scores.
 ```
 
 ---

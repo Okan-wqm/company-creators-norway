@@ -53,28 +53,31 @@
 
 ---
 
-## Agent Listesi (18 Agent)
+## Agent Listesi (21 Agent)
 
 | # | Agent | Blok | Görev |
 |---|-------|------|-------|
 | 01 | CEO Agent | Koordinasyon | Orkestrasyon, sentez, nihai karar (3-level hierarchy) |
-| 02 | CFO Agent | Mali | Cap table, dilution, finansal yapı |
-| 03 | Aksjeloven Agent | Hukuk | Norveç şirket kanunu uyumu |
+| 02 | CFO Agent | Mali | Cap table, dilution, finansal yapı + arbeidsgiveravgift + MVA |
+| 03 | Aksjeloven Agent | Hukuk | Norveç şirket kanunu uyumu (Lovdata.no protokolü) |
 | 04 | Founder Koruma Agent | Hukuk | KANTİTATİF: oy yüzdeleri, cap table math, dilution modelleri |
 | 05 | Yatırımcı Dostu Agent | Hukuk/Mali | Ürkütücü maddeleri tespit eder |
-| 06 | Sweat Equity Agent | Hukuk | B hissesi vesting, co-founder hakları |
+| 06 | Sweat Equity Agent | Hukuk | B hissesi vesting, co-founder hakları, oransal bad leaver |
 | 07 | Reverse Tax Optimizer | Vergi | Vergi fırsatı (Fritaksmetoden, Skattefunn, opsjonsordning §5-14) |
 | 08 | Norveç Avukat Agent | Avukat | Preliminary legal review (NOT certification) |
-| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 8 senaryo (A-H) |
+| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 10 senaryo (A-J) |
 | 10 | Founder Avukatı Agent | Avukat | ADVERSARİAL: karşı taraf avukatının argümanları |
 | 11 | Belge Uzmanı Agent | Çıktı | Nihai format, imzaya hazır 10 belge |
-| 12 | Şeytan'ın Avukatı | Kalite | Kötü senaryo testi, somut vergi cezaları |
+| 12 | Şeytan'ın Avukatı | Kalite | FAZ 3'te çalışır — CEO'dan ÖNCE kötü senaryoları test eder |
 | 13 | Emsal Araştırma Agent | Araştırma | Davalar (anti-hallüsinasyon korumalı), 20 yazım hatası |
-| 14 | IP & Yazılım Hakları | Hukuk/YENİ | IP atama, açık kaynak politikası, veri sahipliği |
-| 15 | GDPR & Veri Uyum | Hukuk/YENİ | Personopplysningsloven, Databehandleravtale şablonu |
-| 16 | Belge Tutarlılık | Kalite/YENİ | BLOKAJ GEÇIDI: 10 belge çapraz kontrol, çelişki tespiti |
-| 17 | Styrereglement | Çıktı/YENİ | Norveç yönetim kurulu tüzüğü (Aksjeloven §6-23) |
-| 18 | Co-founder Perspektif | Kalite/YENİ | "Bu sözleşmeyi imzalar mıydım?" testi |
+| 14 | IP & Yazılım Hakları | Hukuk | IP atama, açık kaynak politikası, veri sahipliği |
+| 15 | GDPR & Veri Uyum | Hukuk | Personopplysningsloven, Databehandleravtale şablonu |
+| 16 | Belge Tutarlılık | Kalite | BLOKAJ GEÇIDI: 10 belge çapraz kontrol, çelişki tespiti |
+| 17 | Styrereglement | Çıktı | Norveç yönetim kurulu tüzüğü (Aksjeloven §6-23) |
+| 18 | Co-founder Perspektif | Kalite | "Bu sözleşmeyi imzalar mıydım?" testi |
+| 19 | Brønnøysund Kayıt Rehberi | Süreç/YENİ | Altinn adım adım tescil, pre-registration uyarısı |
+| 20 | Çalışan Sözleşmesi | Hukuk/YENİ | Norveç arbeidskontrakt (co-founder çalışan ise) |
+| 21 | Yıllık Uyum Takvimi | Süreç/YENİ | Tüm yıllık son tarihler: vergi, Brønnøysund, GDPR |
 
 ---
 
@@ -94,18 +97,17 @@ FAZ 2 — Taslak Belgeler (10 belge) [paralel]
 FAZ 2b — Tutarlılık Kontrolü (Agent 16) ← YENİ BLOKAJ GEÇIDI
   ↓ 10 belge çapraz kontrol — KRITIK çelişkiler çözülmeden FAZ 3'e geçilmez
 
-FAZ 3 — Tartışma & Eleştiri (Agent 08, 09, 10, 05, 07, 14, 15, 18) [paralel]
-  ↓ Preliminary legal review (08) — 8 mahkeme senaryosu (09) — Adversarial argümanlar (10)
-  ↓ Yatırımcı dostu kontrol (05) — Vergi eksik (07) — IP (14) — GDPR (15) — Co-founder testi (18)
+FAZ 3 — TÜM ELEŞTİRİLER (Agent 08, 09, 10, 12, 14, 15, 18) [paralel] ← Agent 12 buraya taşındı
+  ↓ Preliminary legal review (08) — 8+2 mahkeme senaryosu (09) — Adversarial argümanlar (10)
+  ↓ Şeytan'ın avukatı / kötü senaryolar (12) — IP (14) — GDPR (15) — Co-founder testi (18)
+  ↓ NOT: Agent 12 artık Agent 01'den ÖNCE çalışır; CEO tüm eleştirileri alır
 
 FAZ 4 — CEO Sentezi (Agent 01)
   ↓ 3-seviye karar hiyerarşisi: Aksjeloven uyumu > Founder koruması > Yatırımcı dostu
+  ↓ FAZ 3'teki TÜM eleştiri çıktılarını alır (08+09+10+12+14+15+18)
 
-FAZ 5 — Şeytan'ın Avukatı (Agent 12)
-  ↓ 7 kötü senaryo + somut vergi cezaları (Skatteforvaltningsloven §14-3)
-
-FAZ 6 — Final Belgeler (Agent 11)
-  ↓ Tüm revizyonları dahil eder, imzaya hazır 10 belge üretir
+FAZ 5 — Final Belgeler (Agent 11)
+  ↓ CEO direktifini uygular, imzaya hazır 10 belge üretir
 ```
 
 ---

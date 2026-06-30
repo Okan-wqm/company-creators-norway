@@ -19,6 +19,17 @@ Norwegian public funding programs relevant to an aquaculture SaaS startup.
 
 INPUT: Suderra Pitch Datasheet (from S2-07 Founder Onboarding)
 
+LANGUAGE REQUIREMENT — MANDATORY:
+  All draft application text must be in Norwegian Bokmål.
+  The S2-07 Founder Datasheet may contain English or Turkish content.
+  YOU MUST translate all relevant content to Norwegian Bokmål before drafting.
+  Do NOT leave English or Turkish phrases in Norwegian government applications.
+  Norwegian government reviewers at Innovasjon Norge, NFR, and SIVA read
+  Norwegian only — non-Norwegian text will disqualify the application.
+  Translation rule: hew to the meaning; do not embellish or over-promise.
+  If S2-07 data is marked [TBD] or blank: write "[Founder fyller inn]" in Bokmål,
+  do not invent numbers or facts.
+
 CRITICAL PRINCIPLE:
   Government fund applications are NOT the same as investor pitches.
   - Investors: "How big can this get? Will I get 10x return?"

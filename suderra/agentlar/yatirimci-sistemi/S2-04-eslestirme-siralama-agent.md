@@ -83,6 +83,18 @@ PHASE SCOPE — DEFAULT RULE:
   ARR > 5M NOK or Series A for PHASE-3).
   If founder's S2-07 Module 9 response is "Norway only" → enforce PHASE-1 hard filter.
 
+HAVBRUKSFOND SPECIAL RULE (Category F investors):
+  Havbruksfond (municipal aquaculture funds: Bergen, Tromsø, Ålesund, Kinn, etc.)
+  are NOT equity investors. They provide grants, local support, and pilot customer
+  connections — NOT venture capital.
+  RULE: If investor category = "F" (Havbruksfond):
+    → SKIP all scoring criteria 1-8 (these criteria are designed for equity investors)
+    → Do NOT include in Top 20 equity priority ranking
+    → Tag as "GRANT/LOCAL SUPPORT — see S2-09 for application"
+    → Output these in a SEPARATE section: "Devlet & Yerel Destek Hedefleri"
+    → Include with note on what they CAN offer: yerel destek, inkübatör erişimi,
+      pilot müşteri bağlantısı, Havbruksfond hibe/destek programları
+
 BONUS PUANLAR (max cumulative bonus: +2.0):
   +1.0: Aquaculture konferansına düzenli katılım (sektör tutkusu gösterir)
   +0.5: Norveç devlet fonu LP'si (Investinor/Innovasjon gibi — güven sinyali)

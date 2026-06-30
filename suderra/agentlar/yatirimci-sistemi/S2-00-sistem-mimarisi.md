@@ -56,12 +56,13 @@ ve kişiye özel ilk temas stratejisi hazırla.
 
 ---
 
-## Agent Listesi (14 Agent — Güncellenmiş)
+## Agent Listesi (15 Agent — Güncellenmiş)
 
 | # | Agent | Görev | Çıktı | Faz |
 |---|-------|-------|-------|-----|
 | S2-07 | Founder Onboarding | Suderra Pitch Datasheeti üretir (TÜM sistemin girdi kaynağı) | JSON datasheet + readiness score | FAZ -1 |
-| S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond + Banka VC + Stratejik dahil) | Yatırımcı listesi | FAZ 0 |
+| S2-00.5 | Pre-Flight Doğrulama | Sistem 1 tamamlığını kontrol eder — GEÇMEDEN sistemi başlatma | PASS/PARTIAL/FAIL raporu | FAZ -1 |
+| S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond + Banka VC + Stratejik dahil) | Yatırımcı listesi JSON | FAZ 0 |
 | S2-13 | Rekabet İstihbaratı | Rakip analizi — S2-06 ve S2-10'a veri sağlar | Competitor cards + positioning | FAZ 0 |
 | S2-08 | Veri Doğrulama | S2-01 listesini bağımsız kaynaklarla çapraz kontrol eder | Doğrulanmış liste | FAZ 0b |
 | S2-02 | Profil Araştırmacı | Her yatırımcı için derin kişi/şirket profili | Yapılandırılmış profil kartları | FAZ 1 |
@@ -171,8 +172,9 @@ S2-07 Modül 9'da founder "Yalnızca Norveç" seçerse PHASE-1 hard filter aktif
 ## Güncellenmiş Çalışma Sırası
 
 ```
-FAZ -1: S2-07 Founder Onboarding (TÜM sistemden önce çalışır)
-  ↓ Suderra Pitch Datasheet üretilir — tüm [boşluklar] doldurulur
+FAZ -1: S2-07 (Founder Onboarding) + S2-00.5 (Pre-Flight Doğrulama) [paralel]
+  ↓ S2-07: Suderra Pitch Datasheet üretilir — valid JSON formatında
+  ↓ S2-00.5: Hukuki/vergi/materyal hazırlık kontrol — PASS olmadan FAZ 0 başlamaz
   ↓ Investor Readiness Score: 0-10
 
 FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]

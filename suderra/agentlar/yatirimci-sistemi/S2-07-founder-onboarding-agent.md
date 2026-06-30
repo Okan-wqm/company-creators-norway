@@ -216,8 +216,12 @@ Q23. Tax and structure preference for investors:
      → Record preference: NO_PREFERENCE / NORWAY_AS_PREFERRED / FOREIGN_WELCOME
 
 ═══════════════════════════════════════════════════
-OUTPUT: SUDERRA PITCH DATASHEET (JSON-like format)
+OUTPUT: SUDERRA PITCH DATASHEET (VALID JSON)
 ═══════════════════════════════════════════════════
+
+CRITICAL: Output MUST be valid JSON — not Python dicts, not pseudo-code.
+All downstream agents (S2-05, S2-06, S2-09, S2-10, S2-14) parse this directly.
+Use JSON-compliant syntax only: lowercase true/false/null, double-quoted strings.
 
 Compile answers into this structured format that ALL downstream agents
 will use as their first input:
@@ -305,7 +309,22 @@ will use as their first input:
   },
   "unknown_items": [
     "[List everything the founder could not answer — these need research]"
-  ]
+  ],
+  "readiness_score": {
+    "product_clarity": 0,
+    "traction_evidence": 0,
+    "competitive_awareness": 0,
+    "team_credibility": 0,
+    "investment_ask_clarity": 0,
+    "materials_readiness": 0,
+    "overall": 0,
+    "interpretation": "READY|PREPARE_2_4_WEEKS|NEEDS_VALIDATION|NOT_READY",
+    "immediate_actions": [
+      "[Most critical gap]",
+      "[Second most critical]",
+      "[Third most critical]"
+    ]
+  }
 }
 
 ═══════════════════════════════════════════════════

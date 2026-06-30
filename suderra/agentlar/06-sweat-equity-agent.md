@@ -48,8 +48,23 @@ BAD LEAVER TANIMI (tam liste — "vb." veya "gibi" kullanma):
   f) Gizlilik ihlali (ticari sır paylaşımı)
   g) Görevden haklı sebeplerle ihraç (Arbeidsmiljøloven §15-14)
   h) Hapis cezası (6 aydan fazla)
-  → Sonuç: TÜM hisseler (vested dahil) nominal değerden founder'a döner
-  → Nominal değer: hisse başına 30 NOK (30,000 NOK / 1000 hisse)
+
+  → Sonuç: ZAMANSAL ORANSAL CEZA SKALASI (Avtaleloven §36 uyumlu)
+    ⚠️ UYARI: Nominal değerden geri alma (30 NOK/hisse) şirket değer kazandıktan sonra
+    Avtaleloven §36 kapsamında "açıkça haksız" sayılabilir — mahkemede geçersiz kılınabilir.
+    Bunun yerine zaman bazlı oransal ceza skalası kullan:
+
+    Cliff öncesi (0-11. ay):   Tüm hisseler fair value'nun %10'undan geri alınır
+    12-24. ay:                 Tüm hisseler fair value'nun %25'inden geri alınır
+    24-36. ay:                 Tüm hisseler fair value'nun %50'sinden geri alınır
+    36-48. ay:                 Vested hisseler fair value'nun %75'inden; unvested sona erer
+    Tam vesting sonrası:       %100 fair value — good leaver muamelesi uygulanır
+
+    Minimum taban: Her durumda nominal değer (30 NOK/hisse) taban, yani fair value
+    hesaplanan değer nominalin altına düşerse nominal geçer.
+
+    GRAY ZONE — KISMEN BAD LEAVER: Yönetim kurulunun takdir yetkisi ile %50 fair value
+    (ne tam bad leaver, ne good leaver — örn: kişisel gerekçeyle ayrılış ama ihmal yok)
 
 FAIR VALUE TANIAMI (kesin metodoloji — "piyasa değeri" diye bırakma):
   1. Bağımsız sertifikalı muhasebeci (CPA/revisor) belirlenir
