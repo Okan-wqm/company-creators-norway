@@ -56,19 +56,20 @@ ve kişiye özel ilk temas stratejisi hazırla.
 
 ---
 
-## Agent Listesi (13 Agent — Güncellenmiş)
+## Agent Listesi (14 Agent — Güncellenmiş)
 
 | # | Agent | Görev | Çıktı | Faz |
 |---|-------|-------|-------|-----|
 | S2-07 | Founder Onboarding | Suderra Pitch Datasheeti üretir (TÜM sistemin girdi kaynağı) | JSON datasheet + readiness score | FAZ -1 |
-| S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond dahil) | Yatırımcı listesi | FAZ 0 |
+| S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond + Banka VC + Stratejik dahil) | Yatırımcı listesi | FAZ 0 |
 | S2-13 | Rekabet İstihbaratı | Rakip analizi — S2-06 ve S2-10'a veri sağlar | Competitor cards + positioning | FAZ 0 |
 | S2-08 | Veri Doğrulama | S2-01 listesini bağımsız kaynaklarla çapraz kontrol eder | Doğrulanmış liste | FAZ 0b |
 | S2-02 | Profil Araştırmacı | Her yatırımcı için derin kişi/şirket profili | Yapılandırılmış profil kartları | FAZ 1 |
 | S2-03 | Portfolio Analist | Geçmiş yatırımların deseni, tutar, zamanlama | Yatırım davranış analizi | FAZ 1 |
-| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru (8 kriter, bonus cap ±2) | Top 20 liste + gerekçe | FAZ 2 |
+| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru (8 kriter, bonus cap ±2) — PHASE-1 only default | Top 20 liste + gerekçe | FAZ 2 |
 | S2-09 | Devlet Fonu Başvuru | Skattefunn + SIVA + Innovasjon Norge + BIA başvuruları | Hazır başvuru paketleri | FAZ 2 |
 | S2-10 | Pitch Deck İçerik | 10 slide için metin içerik (traction seviyesine göre) | Slide content | FAZ 2 |
+| S2-14 | Yatırım Süreci Yönetim | Yatırımcı tipi başına tam süreç haritası + vergi dönüm noktaları | Süreç rehberi + vergi takvimi | FAZ 3 |
 | S2-05 | Outreach Yazarı | Kişiye özel ilk temas mesajı + e-posta | Hazır iletişim şablonları | FAZ 3 |
 | S2-06 | Yatırımcı Soruları | Due diligence soruları + hazır cevaplar (S2-07 datasheeti ile doldurulur) | Q&A belgesi | FAZ 3 |
 | S2-11 | Toplantı Hazırlık | Her yatırımcı toplantısı için 2 sayfalık brifing | Meeting briefing | FAZ 3 (on-demand) |
@@ -187,7 +188,8 @@ FAZ 1:  S2-02 + S2-03 [paralel — validated liste üzerinde]
 FAZ 2:  S2-04 (Eşleştirme) + S2-09 (Devlet Fonu) + S2-10 (Pitch Deck) [paralel]
   ↓ Top 20 priority list + hazır başvuru paketleri + pitch içerik
 
-FAZ 3:  S2-05 + S2-06 + S2-11 [paralel]
+FAZ 3:  S2-14 + S2-05 + S2-06 + S2-11 [paralel]
+  ↓ S2-14: Yatırımcı tipi başına süreç haritası + vergi dönüm takvimi ← YENİ
   ↓ Outreach mesajları + Q&A + toplantı brifingleri (on-demand)
 
 FAZ ∞:  S2-12 (Geri Bildirim) — her outreach dalgası sonrası tekrar çalışır
