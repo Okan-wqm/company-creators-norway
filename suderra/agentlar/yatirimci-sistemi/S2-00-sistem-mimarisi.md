@@ -8,50 +8,57 @@ ve kişiye özel ilk temas stratejisi hazırla.
 
 ## Genel Yapı
 
+Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama için aşağıdaki
+"Güncellenmiş Çalışma Sırası" ve "Agent Listesi" bölümlerine bakın.
+
 ```
-                    ┌────────────────────────────┐
-                    │  FOUNDER (SEN)              │
-                    │  "Hangi yatırımcıya gitmeliyim?" │
-                    └──────────────┬─────────────┘
-                                   │
-              ┌────────────────────▼────────────────────┐
-              │           S2-01: EKOSİSTEM HARİTALAMA   │
-              │   Norveç aquaculture yatırım ekosistemi  │
-              │   tam harita: VC, angel, devlet, ivme    │
-              └──┬──────────┬──────────┬──────────┬─────┘
-                 │          │          │          │
-                 ▼          ▼          ▼          ▼
-          ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
-          │S2-02     │ │S2-03     │ │S2-04     │ │S2-06     │
-          │PROFİL    │ │PORTFÖLİO │ │EŞLEŞME & │ │YATIRIMCI │
-          │ARAŞTIRMA │ │ANALİST   │ │SIRALAMA  │ │SORULARI  │
-          │          │ │          │ │          │ │          │
-          │Her kişi  │ │Ne zaman, │ │Suderra'ya│ │Due dilig.│
-          │hakkında  │ │neye, kaç │ │en uygun  │ │soruları  │
-          │derin     │ │yatırdılar│ │20 kişi   │ │ve cevapla│
-          │profil    │ │          │ │öncelikli │ │rı hazırla│
-          └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘
-               │            │            │            │
-               └────────────┴────────────┘            │
-                            │                         │
-                            ▼                         │
-              ┌─────────────────────────┐             │
-              │    S2-05: OUTREACH      │◄────────────┘
-              │    YAZARI               │
-              │  Kişiye özel mesajlar   │
-              │  + pitch deck notu      │
-              └─────────────┬───────────┘
-                            │
-                            ▼
-              ┌─────────────────────────┐
-              │  ÇIKTI: YATIRIMCİ      │
-              │  İSTİHBARAT PAKETI      │
-              │                         │
-              │  - Öncelikli 20 kişi   │
-              │  - Her kişi profili     │
-              │  - Özel mesajlar        │
-              │  - Due diligence hazırlık│
-              └─────────────────────────┘
+┌─────────────────────────┐
+│  FOUNDER (SEN)            │
+│  "Hangi yatırımcıya gitmeliyim?" │
+└────────────┬─────────────┘
+             ▼
+┌──────────────────────────────────────────┐
+│ FAZ -1 — Onboarding + Pre-Flight [paralel]│
+│ S2-07 (Pitch Datasheet) + S2-00.5 (Gate)  │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ 0 — Ekosistem + Rekabet [paralel]     │
+│ S2-01 (50-80 yatırımcı) + S2-13 (rakipler)│
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ 0b — Veri Doğrulama (S2-08)           │
+│ %70+ PASS olmayanlar elenir               │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ 1 — Derinlemesine Araştırma [paralel] │
+│ S2-02 (profil) + S2-03 (portfolio)        │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ 2 — Eşleştirme + Hazırlık [paralel]   │
+│ S2-04 (Top 20) + S2-09 (devlet fonu) +    │
+│ S2-10 (pitch deck içerik)                 │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ 3 — Outreach Hazırlığı [paralel]      │
+│ S2-14 (süreç haritası) + S2-05 (outreach) │
+│ + S2-06 (Q&A) + S2-11 (toplantı brifingi) │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  ÇIKTI: YATIRIMCİ İSTİHBARAT PAKETİ       │
+│  Öncelikli 20 kişi + profiller + mesajlar │
+│  + Q&A + devlet fonu başvuruları + deck   │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│ FAZ ∞ — Geri Bildirim (S2-12)             │
+│ Her outreach dalgası sonrası tekrar çalışır│
+└──────────────────────────────────────────┘
 ```
 
 ---

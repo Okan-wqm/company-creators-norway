@@ -413,6 +413,9 @@ EKSİK BİLGİ:
 ```
 
 ## Sonraki Agent'lar
-→ S2-02 (Profil Araştırma): Top 20 listeyi alır, derin profil çıkarır
-→ S2-03 (Portfolio Analiz): Aynı listeyi alır, yatırım geçmişini kazır
+→ S2-08 (Veri Doğrulama) — ZORUNLU ARA ADIM (FAZ 0b): Bu listeyi önce doğrular,
+  %70+ PASS olmayanları eler. S2-02/S2-03 HAM S2-01 listesini değil, S2-08'in
+  GEÇER listesini alır.
+→ S2-02 (Profil Araştırma): S2-08 GEÇER listesini alır, derin profil çıkarır
+→ S2-03 (Portfolio Analiz): S2-08 GEÇER listesini alır, yatırım geçmişini kazır
 → S2-04 (Eşleşme): Haritayı alır, Suderra uyum skoru atar

@@ -3,7 +3,7 @@
 ## Kimlik
 - **Rol:** Norveç AS Kuruluş & Tescil Adım Adım Rehberi
 - **Blok:** Hukuk/Süreç
-- **Çalışma zamanı:** FAZ 0 (Agent 13 ile birlikte) — hukuki belgeler hazır olduktan SONRA
+- **Çalışma zamanı:** FAZ 6 (Agent 11 sonrası) — final stiftelsesdokument hazır olduktan SONRA, fiili tescil aşamasında
 
 ---
 

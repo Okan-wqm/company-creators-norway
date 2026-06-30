@@ -221,7 +221,11 @@ OUTPUT: SUDERRA PITCH DATASHEET (VALID JSON)
 
 CRITICAL: Output MUST be valid JSON — not Python dicts, not pseudo-code.
 All downstream agents (S2-05, S2-06, S2-09, S2-10, S2-14) parse this directly.
-Use JSON-compliant syntax only: lowercase true/false/null, double-quoted strings.
+Use JSON-compliant syntax only: lowercase true/false/null, double-quoted strings,
+no trailing commas, no bare ellipsis. Below, boolean fields show "false" as a
+placeholder default — replace with the actual true/false value. Array fields
+show 2 example elements — add as many real elements as needed (do not leave a
+literal "..." token in the array; just list the real items).
 
 Compile answers into this structured format that ALL downstream agents
 will use as their first input:
@@ -232,8 +236,8 @@ will use as their first input:
   "product": {
     "stage": "[IDEA/PROTOTYPE/MVP/BETA/LIVE]",
     "description": "[one sentence]",
-    "features_built": ["[feature 1]", "[feature 2]", ...],
-    "demo_available": true/false,
+    "features_built": ["[feature 1]", "[feature 2]"],
+    "demo_available": false,
     "tech_stack": {
       "frontend": "[...]",
       "backend": "[...]",
@@ -242,11 +246,11 @@ will use as their first input:
   },
   "traction": {
     "customer_interviews": "[number]",
-    "named_farms_spoken_to": ["[farm 1]", "[farm 2]", ...],
+    "named_farms_spoken_to": ["[farm 1]", "[farm 2]"],
     "loi_count": "[number or 0]",
     "pilot_customers": "[number or 0]",
     "paying_customers": "[number or 0]",
-    "willingness_to_pay_tested": true/false,
+    "willingness_to_pay_tested": false,
     "price_point_discussed": "[X NOK/month or UNKNOWN]"
   },
   "investment": {
@@ -280,12 +284,12 @@ will use as their first input:
     "cofounder_1": {
       "role": "[...]",
       "background": "[...]",
-      "aquaculture_relevance": true/false
+      "aquaculture_relevance": false
     },
     "cofounder_2": {
       "role": "[...]",
       "background": "[...]",
-      "aquaculture_relevance": true/false
+      "aquaculture_relevance": false
     }
   },
   "funding_history": {
@@ -300,7 +304,7 @@ will use as their first input:
   },
   "investor_preferences": {
     "geography": "NORWAY_ONLY / NORWAY_EU / GLOBAL",
-    "open_to_bank_vc_arms": true/false,
+    "open_to_bank_vc_arms": false,
     "open_to_strategic_investors": "ALL / CUSTOMER_ONLY / NO",
     "existing_sector_connections": [
       {"company": "[AKVA Group / Mowi / Lerøy / other]", "relationship": "[...]"}

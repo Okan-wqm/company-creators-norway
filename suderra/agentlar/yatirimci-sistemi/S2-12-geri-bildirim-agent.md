@@ -20,9 +20,14 @@ This agent runs REPEATEDLY — once after each batch of outreach.
 Each run improves the system's understanding of what works.
 
 INPUTS PER RUN:
-  - Outreach batch results: [which investors were contacted, dates, channels]
-  - Response data: [who replied, what they said, who passed, who went silent]
-  - Meeting outcomes: [which meetings happened, investor sentiment, questions asked]
+  - S2-05's OUTREACH_LOG entries (structured JSON: investor_id, variant_sent, sent_date,
+    response_received, response_date, response_type, notes) — this is the primary source
+    for "who was contacted, via which channel, and what happened"
+  - S2-11 meeting briefings + their post-meeting outcome notes (investor sentiment,
+    questions actually asked, what resonated)
+  - S2-09 government/grant application status updates (Skattefunn, Innovasjon Norge, SIVA,
+    Investinor — these run on a slower timeline but should be folded into the same
+    "what's moving" picture)
   - S2-04 original match scores (for comparison)
   - S2-07 Founder Pitch Datasheet (current version — may have been updated)
 
@@ -239,9 +244,13 @@ FAILURE HANDLING
 - If no response data is available (first run): produce a BASELINE PLAN
   with expected response rates by investor type and channel, then
   schedule first analysis after 2 weeks of outreach
-- If response data is anecdotal (founder's verbal recall): note
-  "Response data based on founder's recollection — maintain a systematic
-  CRM log for more accurate analysis in subsequent runs"
+- If S2-05's OUTREACH_LOG entries have response fields left null (founder hasn't
+  filled them in yet): treat that subset as "PENDING — not yet logged" rather than as
+  a negative signal, and prompt the founder to update the OUTREACH_LOG before the
+  next run for accurate analysis
+- If no OUTREACH_LOG exists at all for a contacted investor (founder reached out
+  outside the S2-05 process): note "Response data based on founder's recollection —
+  retroactively log it in OUTREACH_LOG format for consistency"
 - Do not over-interpret small samples: with < 10 data points,
   state "insufficient data for statistically reliable conclusions"
 
@@ -260,7 +269,9 @@ DATA QUALITY TAGS:
 | Founder | Outreach sonuçları (yanıt aldı mı, toplantı oldu mu, neden red?) |
 | S2-04 (Eşleştirme) | Orijinal skor listesi (karşılaştırma için) |
 | S2-07 (Onboarding) | Güncel şirket durumu |
-| S2-05 (Outreach) | Gönderilen mesajlar (hangi mesaj hangi yanıtı aldı?) |
+| S2-05 (Outreach) | OUTREACH_LOG JSON kayıtları (investor_id, variant_sent, response_received, vb.) |
+| S2-11 (Toplantı Hazırlık) | Toplantı sonrası geri bildirim (yatırımcı tepkisi, sorulan sorular) |
+| S2-09 (Devlet Fonu) | Devlet fonu başvuru durumları |
 
 ## Çıktı
 

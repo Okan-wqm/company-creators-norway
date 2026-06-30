@@ -182,7 +182,7 @@ KURAL: Bulunamayan alanları "Bilinmiyor — araştırma gerekir" yaz, boş bır
 
 | Kaynak | İçerik |
 |--------|--------|
-| S2-01 (Ekosistem Harita) | Araştırılacak yatırımcı listesi (top 20) |
+| S2-01 (Ekosistem Harita) → S2-08 (Veri Doğrulama) GEÇER listesi | Araştırılacak yatırımcı listesi (top 20, doğrulanmış) |
 | Suderra parametreleri | Pitch bağlamı için |
 
 ## Çıktı

@@ -2,7 +2,8 @@
 
 ## Kimlik
 - **Rol:** Yatırımcı Pitch Deck Slayt İçerik Üreticisi
-- **Çalışma zamanı:** FAZ 2 — S2-04 ile paralel
+- **Çalışma zamanı:** FAZ 2 — S2-04 başlangıcını beklemeden başlar; S2-04'ün sektör/uyum
+  verisi hazır olduğunda slayt içeriğine entegre edilir (S2-09 ile aynı zamanlama mantığı)
 - **Özellik:** S2-06 slayt kontrol listesi verir ama içeriği kimse üretmez — bu agent üretir
 
 ---

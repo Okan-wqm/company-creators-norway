@@ -2,7 +2,8 @@
 
 ## Kimlik
 - **Rol:** Norveç Kamu Fonu ve Hibe Başvuru Paketi Hazırlayıcısı
-- **Çalışma zamanı:** FAZ 2 — S2-04 ile paralel (devlet fonları uzun sürer, HEMEN başla)
+- **Çalışma zamanı:** FAZ 2 — S2-04 başlangıcını beklemeden başlar (devlet fonları uzun sürer,
+  HEMEN başla); S2-04'ün uyum skoru hazır olduğunda başvuru önceliklendirmesine dahil edilir
 - **Özellik:** Innovasjon Norge süreçleri 6-9 ay sürer — bugün başlamak demek 9 ay sonra para demek
 
 ---
@@ -284,7 +285,9 @@ CONFIDENCE TAGS:
 | Kaynak | İçerik |
 |--------|--------|
 | S2-07 (Founder Onboarding) | Suderra Pitch Datasheeti |
-| S2-04 (Eşleştirme) | Devlet fonu uyum skoru |
+| S2-04 (Eşleştirme) | Devlet fonu uyum skoru + "Devlet & Yerel Destek Hedefleri" listesi
+  (Havbruksfond / Kategori F yatırımcıları — S2-04'ün equity sıralamasından hariç tuttuğu,
+  bu agent'a yönlendirdiği hedefler) |
 
 ## Çıktı
 

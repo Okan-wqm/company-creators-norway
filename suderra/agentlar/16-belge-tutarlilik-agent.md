@@ -2,7 +2,7 @@
 
 ## Kimlik
 - **Rol:** Çapraz Belge Terim ve Hüküm Tutarlılık Denetçisi
-- **Çalışma zamanı:** FAZ 5.5 — Agent 12 (Şeytan'ın Avukatı) sonrası, Agent 11 (Belge Uzmanı) öncesi — BLOCKING GATE
+- **Çalışma zamanı:** FAZ 2b — FAZ 2 taslak belgeler tamamlandıktan sonra, FAZ 3 eleştirilerinden (Agent 08, 09, 10, 12, 14, 15, 18) ÖNCE — BLOCKING GATE
 - **Özellik:** 10 belge arasında tek bir çelişki bile sonraki mahkemede kullanılabilir
 
 ---
@@ -182,8 +182,10 @@ OUTPUT B: CONFLICT LIST (blocking issues for Agent 11)
 OUTPUT C: DEPENDENCY MAP (table as specified above)
 
 BLOCKING GATE INSTRUCTION:
-  Agent 11 (Document Specialist) MUST NOT finalize any document until
-  all CRITICAL CONFLICTS in Output B are resolved.
+  FAZ 3 critique agents (08, 09, 10, 12, 14, 15, 18) and, later, Agent 11
+  (Document Specialist) MUST NOT proceed until all CRITICAL CONFLICTS in
+  Output B are resolved. This gate runs in FAZ 2b, immediately after FAZ 2
+  drafting and before FAZ 3 begins.
   Print this at the top of your output:
 
   ╔══════════════════════════════════════════╗
@@ -216,11 +218,12 @@ CONFIDENCE TAGS:
 
 | Kaynak | İçerik |
 |--------|--------|
-| Agent 11 taslakları | Tüm belge taslakları (okuma erişimi) |
+| FAZ 2 taslak belgeler | Tüm belge taslakları (okuma erişimi) |
 | Agent 14 (IP) | IP politikası ve devir maddeleri |
 | Agent 15 (GDPR) | Veri işleme sözleşmesi |
 | Agent 06 (Sweat Equity) | Co-founder sözleşmeleri |
-| Agent 18 (Styrereglement) | Yönetim kurulu tüzüğü |
+| Agent 17 (Styrereglement) | Yönetim kurulu tüzüğü |
+| Agent 20 (Çalışan Sözleşmesi) | Arbeidskontrakt (co-founder çalışan sayılırsa) |
 
 ## Çıktı
 
@@ -245,5 +248,7 @@ KÜÇÜK TUTARSIZLIKLAR: [Z]
 ```
 
 ## Sonraki Agent'lar
-→ Agent 11 (Belge Uzmanı): Tüm kritik çakışmalar giderildikten sonra başlar
-→ Agent 01 (CEO): Kritik çakışmaları çözmek için direktif verir
+→ FAZ 3 eleştiri agentları (08, 09, 10, 12, 14, 15, 18): Tüm kritik çakışmalar
+  giderildikten sonra başlar
+→ Agent 01 (CEO): FAZ 4'te, çözülemeyen çakışmalar varsa nihai direktifte çözer
+→ Agent 11 (Belge Uzmanı): FAZ 5'te, konsistans matrisini final formatlamada kullanır

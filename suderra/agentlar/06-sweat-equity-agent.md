@@ -121,3 +121,5 @@ SWEAT EQUITY AVTALE (Tam Norveçce Metin)
 → CEO Agent'a teslim edilir
 → Agent 09 (Dava Uzmanı) tarafından mahkeme testi yapılır
 → Agent 10 (Founder Avukatı) founder zayıflığı kontrol eder
+→ Agent 20 (Çalışan Sözleşmesi): Co-founder çalışan sayılırsa, vesting başlangıç
+  tarihi ve non-compete kapsamı arbeidskontrakt ile koordine edilir

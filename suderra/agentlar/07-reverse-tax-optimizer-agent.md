@@ -478,3 +478,4 @@ KAÇIRILAN FIRSATLAR (taslak belgelerden):
 → CEO Agent'a vergi optimizasyon raporu gönderilir
 → Holding Transfer Planı belgesi için temel sağlanır
 → Skattefunn başvurusu için metodoloji gönderilir
+→ Agent 20 (Çalışan Sözleşmesi): Maaş/arbeidsgiveravgift verisi arbeidskontrakt §7'ye girdi olur

@@ -2,7 +2,8 @@
 
 ## Kimlik
 - **Rol:** Personvernloven + GDPR Uyumu, Aquaculture Operasyonel Veri
-- **Çalışma zamanı:** FAZ 1 — Agent 03, 07, 05, 14 ile paralel
+- **Çalışma zamanı:** FAZ 3 — Agent 08, 09, 10, 12, 14, 18 ile paralel eleştiri/inceleme
+  aşaması (databehandleravtale şablonu burada üretilir, 08-ip-politikasi.md içinde özetlenir)
 - **Özellik:** Çiftlik yönetim yazılımı veri işliyor — yatırımcı due diligence'ında mutlaka sorulur
 
 ---

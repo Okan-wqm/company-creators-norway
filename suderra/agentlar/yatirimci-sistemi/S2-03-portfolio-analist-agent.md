@@ -118,7 +118,7 @@ YEŞİL BAYRAK:
 
 | Kaynak | İçerik |
 |--------|--------|
-| S2-01 (Ekosistem) | Araştırılacak yatırımcı listesi |
+| S2-01 (Ekosistem) → S2-08 (Veri Doğrulama) GEÇER listesi | Araştırılacak yatırımcı listesi (doğrulanmış) |
 | S2-02 (Profil) | Kurum ve karar verici bilgileri |
 | Suderra parametreleri | Uyum karşılaştırması için |
 

@@ -2,53 +2,63 @@
 
 ## Genel Bakış
 
+Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama için aşağıdaki
+"Çalışma Sırası" bölümüne bakın — herhangi bir çelişki durumunda o bölüm geçerlidir.
+
 ```
-                        ┌─────────────────────────┐
-                        │     FOUNDER (SEN)        │
-                        │   Yönlendirme & Onay     │
-                        └────────────┬────────────┘
-                                     │
-                        ┌────────────▼────────────┐
-                        │       CEO AGENT          │
-                        │  Orchestrator & Sentez   │
-                        └──┬─────────┬──────────┬─┘
-                           │         │          │
-          ┌────────────────┘    ┌────┘    ┌─────┘
-          ▼                     ▼         ▼
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│   HUKUK BLOĞU   │  │   MALİ BLOK     │  │   VERGİ BLOĞU   │
-│                 │  │                 │  │                 │
-│ 03-aksjeloven   │  │ 02-cfo          │  │ 07-reverse-tax  │
-│ 04-founder-kor  │  │ 05-yat-dostu    │  │                 │
-│ 06-sweat-equity │  │                 │  │                 │
-│                 │  │                 │  │                 │
-│  AVUKAT GRUBU   │  │                 │  │                 │
-│ 08-norveç-avuk  │  │                 │  │                 │
-│ 09-dava-uzman   │  │                 │  │                 │
-│ 10-founder-avuk │  │                 │  │                 │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-          │                     │                  │
-          └─────────────────────┼──────────────────┘
-                                ▼
-               ┌────────────────────────────────┐
-               │      ARAŞTIRMA KATMANI          │
-               │   13-emsal-arastirma-agent      │
-               │   (davalar, hatalar, vakalar)   │
-               └────────────────────────────────┘
-                                │
-                                ▼
-               ┌────────────────────────────────┐
-               │       KALİTE KATMANI           │
-               │   12-seytan-avukati-agent       │
-               │   (her şeyi çürütmeye çalışır) │
-               └────────────────────────────────┘
-                                │
-                                ▼
-               ┌────────────────────────────────┐
-               │      ÇIKTI KATMANI             │
-               │   11-belge-uzmani-agent         │
-               │   (nihai imzaya hazır belgeler) │
-               └────────────────────────────────┘
+┌─────────────────────────┐
+│     FOUNDER (SEN)        │
+│   Yönlendirme & Onay     │
+└────────────┬────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│  FAZ 0 — ARAŞTIRMA (Agent 13)             │
+│  Davalar + yazım hataları kataloğu         │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 1 — UZMAN ARAŞTIRMASI [paralel]      │
+│  03-aksjeloven · 07-reverse-tax · 05-yat-dostu │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 2 — TASLAK BELGELER [paralel]        │
+│  9 taslak: stiftelsesdokument, vedtekter,  │
+│  sweat-equity (06), aksjonæravtale (04),   │
+│  holding-plan, term-sheet, skattefunn,     │
+│  ip-politikasi (14), styrereglement (17)   │
+│  + opsiyonel: 20-çalışan-sözleşmesi        │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 2b — TUTARLILIK GEÇİDİ (Agent 16)    │
+│  BLOKAJ: kritik çelişkiler çözülmeden      │
+│  FAZ 3'e geçilmez                          │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 3 — TÜM ELEŞTİRİLER [paralel]        │
+│  08-norveç-avuk · 09-dava-uzman ·          │
+│  10-founder-avuk · 12-şeytan-avukatı ·     │
+│  14-ip · 15-gdpr · 18-cofounder-perspektif │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 4 — CEO SENTEZİ (Agent 01)           │
+│  3-seviye karar hiyerarşisi: Aksjeloven >  │
+│  Founder koruması > Yatırımcı dostu        │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 5 — FİNAL BELGELER (Agent 11)        │
+│  10 belge, imzaya hazır format             │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 6 — OPERASYONEL UYGULAMA [sıralı/sürekli] │
+│  19-brønnøysund-kayıt · 21-yıllık-uyum     │
+└──────────────────────────────────────────┘
 ```
 
 ---
@@ -90,12 +100,16 @@ FAZ 0 — Araştırma (Agent 13)
 FAZ 1 — Uzman Araştırması (Agent 03, 07, 05) [paralel]
   ↓ Aksjeloven + Vergi fırsatları (Fritaksmetoden, Skattefunn, opsjonsordning) + Yatırımcı beklentileri
 
-FAZ 2 — Taslak Belgeler (10 belge) [paralel]
+FAZ 2 — Taslak Belgeler (9 taslak + 1 opsiyonel) [paralel]
   ↓ Stiftelsesdokument + Vedtekter + Sweat Equity + Aksjonæravtale
-  ↓ Holding Plan + Term Sheet + Skattefunn + IP Policy + GDPR/Databehandleravtale + Styrereglement
+  ↓ Holding Plan + Term Sheet + Skattefunn + IP Policy + Styrereglement
+  ↓ Opsiyonel: Çalışan Sözleşmesi (Agent 20) — yalnızca co-founder çalışan sayılırsa
+  NOT: GDPR/Databehandleravtale (Agent 15) burada DRAFT edilmez — Agent 15 FAZ 3'te
+  inceleme yapar; databehandleravtale şablonu 08-ip-politikasi.md belgesi içinde özetlenir
+  (bkz. Agent 11 belge #8 içeriği), ayrı bir belge sayılmaz.
 
 FAZ 2b — Tutarlılık Kontrolü (Agent 16) ← YENİ BLOKAJ GEÇIDI
-  ↓ 10 belge çapraz kontrol — KRITIK çelişkiler çözülmeden FAZ 3'e geçilmez
+  ↓ FAZ 2 taslakları çapraz kontrol — KRITIK çelişkiler çözülmeden FAZ 3'e geçilmez
 
 FAZ 3 — TÜM ELEŞTİRİLER (Agent 08, 09, 10, 12, 14, 15, 18) [paralel] ← Agent 12 buraya taşındı
   ↓ Preliminary legal review (08) — 8+2 mahkeme senaryosu (09) — Adversarial argümanlar (10)
@@ -108,6 +122,11 @@ FAZ 4 — CEO Sentezi (Agent 01)
 
 FAZ 5 — Final Belgeler (Agent 11)
   ↓ CEO direktifini uygular, imzaya hazır 10 belge üretir
+
+FAZ 6 — Operasyonel Uygulama (Agent 19, 21) [sıralı, sonrasında sürekli]
+  ↓ Agent 19: Final stiftelsesdokument ile Brønnøysund/Altinn tescil rehberi uygulanır
+  ↓ Agent 21: Tescil sonrası yıllık uyum takvimi kurulur — bu noktadan itibaren sürekli/
+    tekrarlayan bir agent olarak çalışır (FAZ 0-5'in tek seferlik kuruluş döngüsünün dışında)
 ```
 
 ---

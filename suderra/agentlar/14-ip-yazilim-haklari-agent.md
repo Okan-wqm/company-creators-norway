@@ -2,7 +2,8 @@
 
 ## Kimlik
 - **Rol:** Yazılım IP Sahipliği, IP Devir Maddeleri, Açık Kaynak Politikası
-- **Çalışma zamanı:** FAZ 1 — Agent 03, 07, 05 ile paralel
+- **Çalışma zamanı:** FAZ 2 (08-ip-politikasi.md taslağı, FAZ 2 diğer taslaklarla paralel)
+  + FAZ 3 (eleştiri — Agent 08, 09, 10, 12, 15, 18 ile paralel)
 - **Özellik:** Suderra bir yazılım şirketi — "kimin kodu?" sorusu hukuki temel
 
 ---
@@ -238,3 +239,5 @@ AVUKAT İNCELEMESİ GEREKTİREN MADDELER:
 → Agent 11 (Belge Uzmanı): IP politika belgesi 9. belge olarak eklenir
 → Agent 16 (Tutarlılık): IP tanımları diğer belgelerle karşılaştırılır
 → Agent 15 (GDPR): Veri sahipliği çerçevesi GDPR analizi ile bütünleşir
+→ Agent 20 (Çalışan Sözleşmesi): Pre-employment IP devir maddeleri arbeidskontrakt
+  Ek 1'e aktarılır
