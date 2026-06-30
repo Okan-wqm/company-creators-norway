@@ -118,7 +118,7 @@ Balderton Capital         — European tech, Norveç portföyü var
 Northzone                 — Nordic focused VC
 ```
 
-### Kategori F — Havbruksfond (Municipal Aquaculture Funds) ← YENİ
+### Kategori F — Havbruksfond (Municipal Aquaculture Funds)
 ```
 Bergen kommune            — Havbruksfond geliri, aquaculture-yakın yatırım
 Tromsø kommune            — Kuzey Norveç aquaculture merkezi
@@ -127,6 +127,43 @@ Kinn kommune              — Vestland, havbruksfond aktif
 ```
 Not: Bu fonlar özel yatırımcı değil — ancak yerel destek, inkübatör erişimi,
 pilot müşteri bağlantısı için kritik. S2-09 bu müzelerin programlarını araştırır.
+
+### Kategori G — Norveç Banka & Sigorta VC Kolları ← YENİ
+```
+DNB Ventures              — DNB Bank'ın VC kolu, Norveç B2B tech & sustainability
+SpareBank 1 SR-Bank       — Stavanger merkezli, blue economy/denizcilik eğilimi
+Sparebanken Vest          — Bergen merkezli (laks bölgesi), lokal yatırım
+Storebrand Impact         — ESG odaklı, sürdürülebilir aquaculture uyumu
+Gjensidige Forsikring     — Büyük sigorta, VC kolu var mı araştır
+```
+KURAL: Sadece bankanın/sigortanın dedicated VC kolu dahil edilir.
+KESINLIKLE HARİÇ: KLP (emeklilik fonu — sadece halka açık piyasa),
+NBIM/Norges Bank Investment Management (varlık fonu — sadece halka açık piyasa).
+Her ikisi de pre-seed'e yatırım yapmaz, minimum tutar çok yüksek.
+
+### Kategori H — Stratejik / Kurumsal Yatırımcılar ← YENİ
+```
+AKVA Group ASA            — Norveç aquaculture donanım lideri (⚠️ FishTalk = rakip — CEO onayı gerek)
+Mowi ASA                  — Dünyanın en büyük somon şirketi, Mowi Innovation araştır
+Lerøy Seafood Group ASA   — Bergen merkezli, corporate venture kolu var mı?
+SalMar ASA                — SalMar Innovation, dijital tarım teknolojisi
+Cermaq (Mitsubishi)       — Düşük öncelik (Japon ana şirket yapısı)
+```
+Not: Stratejik yatırımcı = potansiyel pilot müşteri + fon = çift değer.
+S2-04'te +1.0 bonus: equity + pilot partnership + distribution = üçlü değer.
+
+---
+
+## Faz Genişleme Tablosu
+
+| Faz | Tetikleyici | Kapsam | Kategoriler |
+|-----|-------------|--------|-------------|
+| **PHASE-1** | Şimdi (gelir öncesi) | Yalnızca Norveç | A, B, C, D, E, F, G, H |
+| **PHASE-2** | İlk ödeme yapan müşteri veya imzalı LOI | AB dahil | Aqua-Spark (NL), EIC Accelerator (max €2.5M equity), Nordic Investment Bank |
+| **PHASE-3** | ARR > 5M NOK veya Series A hazırlığı | Uluslararası | Chile/CORFO, Kanada, IFC (Dünya Bankası), Asia Pacific aquaculture |
+
+S2-04 varsayılan olarak SADECE PHASE-1 yatırımcılarını sıralar.
+S2-07 Modül 9'da founder "Yalnızca Norveç" seçerse PHASE-1 hard filter aktif olur.
 
 ---
 

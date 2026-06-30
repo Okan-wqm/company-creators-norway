@@ -160,12 +160,183 @@ RESEARCH TASKS:
    CONFIDENCE: HIGH (Skatteloven §5-14, Lov om skatt §5-14 tredje ledd,
    confirmed by Skatteetaten.no/opsjoner-ansatte-oppstart)
 
+10. INVESTOR NATIONALITY TAX ANALYSIS — CRITICAL FOR FUNDRAISING STRATEGY
+    ──────────────────────────────────────────────────────────────────────
+    CONTEXT: A Norwegian tax advisor stated "Norwegian investors = more tax,
+    foreign investors = less tax." This section quantifies that claim step by step
+    so the founder can build a tax-informed investor strategy.
+    
+    THE CORE ISSUE: Who pays the tax and how much depends on INVESTOR TYPE.
+    Suderra does not pay the investor's tax directly — but investor tax burden
+    directly affects: (a) what return they demand, (b) valuation pressure,
+    (c) dividend policy pressure. High-tax investors demand better terms.
+    
+    ─── SCENARIO A: NORWEGIAN INDIVIDUAL (PRIVATPERSON) INVESTOR ───
+    
+    Example: Angel investor puts 500,000 NOK for 5% of Suderra.
+    
+    STEP 1 — Investorfradrag at investment time (Skatteloven §6-53):
+      → Investor deducts 50% × 500,000 = 250,000 NOK from taxable income
+      → At 33.2% marginal rate: saves ~83,000 NOK in the year of investment
+      → CEILING: 500,000 NOK investment per investor per year (max deduction 250k NOK)
+      → AVAILABLE TO: Norwegian tax residents ONLY — not available to foreign investors
+      → This makes Suderra MORE attractive to Norwegian angels at investment stage
+    
+    STEP 2 — During holding (dividends before exit):
+      → Dividends received: 37.84% tax (after skjermingsfradrag deduction)
+        Formula: utbytte × (1 + 0.72) × 0.22 = effective 37.84% (2025 rate)
+      → Skjermingsfradrag: acquisition cost × skjermingsrente (3.5%) = small deduction
+      → Suderra does NOT withhold — investor declares and pays their own tax
+    
+    STEP 3 — At exit (company sold or shares sold):
+      → Capital gain = (exit price - acquisition cost - skjermingsfradrag accumulated)
+      → Tax: 37.84% on capital gain
+      → Example: Investor paid 500k NOK, exits at 5M NOK (10x return):
+          Gain: 4,500,000 NOK
+          Tax: 4,500,000 × 37.84% = 1,702,800 NOK
+          Net: 3,297,200 NOK (3,297,200 / 500,000 = 6.6x net, not 10x gross)
+      → This investor DEMANDED 10x gross to net 6.6x — valuation pressure is HIGH
+    
+    STEP 4 — Suderra's paperwork burden: MINIMAL (no withholding needed)
+    
+    TAX ADVISOR EXPLANATION: "Norwegian individual = more tax" means this investor
+    pays 37.84% on exit gains, demanding higher gross returns from Suderra.
+    
+    ─── SCENARIO B: NORWEGIAN AS (COMPANY) INVESTOR — FRITAKSMETODEN ───
+    
+    Example: Family office (AS company) puts 500,000 NOK for 5%.
+    Legal basis: Skatteloven §2-38 (Fritaksmetoden)
+    
+    STEP 1 — Investment time: NO investorfradrag (that is only for natural persons)
+    
+    STEP 2 — Dividends received by the AS:
+      → 97% of dividends are EXEMPT from tax
+      → Only 3% is taxable at 22% corporate rate
+      → Effective rate: 3% × 22% = 0.66%
+      → Example: Suderra pays 100,000 NOK dividend → investor AS pays 660 NOK tax
+    
+    STEP 3 — At exit (shares sold by the AS):
+      → 97% of capital gain is EXEMPT
+      → Effective rate: 0.66% on gain
+      → Example: Same 10x exit (gain = 4,500,000 NOK):
+          Tax: 4,500,000 × 0.66% = 29,700 NOK
+          Net: 4,470,300 NOK (8.94x net, vs 6.6x for individual)
+      → This investor accepts LOWER gross return — less valuation pressure for Suderra
+    
+    STEP 4 — Suderra's paperwork burden: MINIMAL (no withholding for Norwegian AS)
+    
+    KEY INSIGHT: Norwegian AS investors (Fritaksmetoden) are BETTER for Suderra
+    than Norwegian individual investors — they accept lower gross returns.
+    
+    ─── SCENARIO C: FOREIGN EEA INVESTOR (e.g., NETHERLANDS/SWEDEN FUND) ───
+    
+    Legal basis: Skatteloven §2-38 can extend to EEA companies (EFTA/EEA Agreement)
+    under "EØS-selskap" provisions — BUT conditions must be met.
+    
+    STEP 1 — Can foreign EEA company access Fritaksmetoden?
+      → YES, if: (a) EEA-based company, (b) comparable to Norwegian AS,
+        (c) not a "tax haven" entity (CFC rules do not apply)
+      → Practical path: Netherlands BV, Swedish AB, Danish ApS can access Fritaksmetoden
+      → EU/EEA holding structures commonly used by international VCs for this reason
+    
+    STEP 2 — Dividends from Suderra to foreign EEA company:
+      → WITHHOLDING TAX RISK: Norway levies 25% kildeskatt (withholding tax) on
+        dividends to foreign shareholders by default
+      → BUT under EØS Fritaksmetoden: WHT exemption applies if conditions met
+      → Treaty reduction (if Fritaksmetoden not applicable):
+          Netherlands: 0% WHT (parent-subsidiary directive threshold: ≥10% stake)
+          Sweden: 15% standard, 0% for companies with ≥10% stake (Nordic treaty)
+          Germany: 15% / 0% for ≥25% stake
+          UK: 15% (post-Brexit — UK no longer EEA)
+          USA: 15% (US-Norway tax treaty)
+          Luxembourg: 5-15% depending on stake size
+      → CAVEAT: Suderra must verify each investor's specific treaty position
+    
+    STEP 3 — At exit (foreign company sells Suderra shares):
+      → If Fritaksmetoden applies: same 0.66% effective rate as Norwegian AS
+      → If not: depends on investor's home country tax rules (may be 0% for fund)
+    
+    STEP 4 — Suderra's paperwork burden: MODERATE
+      → Must apply reduced WHT rate at payment time (not refund process)
+      → Risk: wrong WHT rate applied → Skatteetaten penalty
+      → Mitigation: accounting firm handles each dividend payment to foreign shareholders
+    
+    ─── SCENARIO D: NON-EEA FOREIGN INVESTOR (USA, UK, ASIA) ───
+    
+    STEP 1 — Dividends from Suderra: 25% WHT by default, reduced by treaty
+      → USA: 15% WHT (US-Norway treaty) or 5% if US company holds ≥10% stake
+      → UK: 15% WHT (post-Brexit UK-Norway treaty)
+      → Cayman Islands / no treaty: 25% full WHT — expensive for investor
+    
+    STEP 2 — At exit: Norway taxes the GAIN on Norwegian-source shares
+      → BUT: most tax treaties exempt capital gains from Norwegian CGT if investor
+        has no Norwegian "fast driftssted" (permanent establishment)
+      → Practical result: Non-EEA fund investing directly often pays 0% Norwegian CGT
+        at exit, but higher WHT on dividends during holding period
+    
+    STEP 3 — Investor's home country: International funds often in 0-tax jurisdictions
+      → Luxembourg SICAV: 0% Luxembourg fund tax
+      → Cayman feeder fund: 0% Cayman tax
+      → Combined: very low overall tax for international fund investors
+    
+    STEP 4 — Suderra's paperwork burden: HIGH
+      → WHT compliance complex: different rate for each country, different forms
+      → Must file Skattemelding for utenlandsk kildeskatt
+      → Recommend: engage Norwegian international tax firm before accepting non-EEA investors
+    
+    ─── SUMMARY TABLE: INVESTOR TYPE COMPARISON ───
+    
+    | Investor Type          | Tax at Dividends      | Tax at Exit (10x)  | Suderra Burden | Best For |
+    |------------------------|-----------------------|--------------------|----------------|----------|
+    | Norwegian individual   | 37.84% (self-declare) | 37.84% on gain     | MINIMAL        | Angels with investorfradrag |
+    | Norwegian AS/Holding   | 0.66% (Fritaksmetoden)| 0.66% on gain      | MINIMAL        | IDEAL: low pressure on returns |
+    | Foreign EEA company    | 0% if Fritaksmetoden  | 0.66% if covered   | MODERATE       | Good if EEA structure |
+    | Non-EEA fund           | 15-25% WHT            | 0% (treaty CGT)    | HIGH           | Complex but investor prefers |
+    
+    ─── STRATEGIC RECOMMENDATION FOR SUDERRA ───
+    
+    PRIORITY ORDER (for lowest return pressure and simplest compliance):
+    
+    1. BEST: Norwegian AS investors (family offices, holding companies) via Fritaksmetoden
+       → They pay 0.66% effective → accept lowest gross returns → least valuation pressure
+       → Zero withholding complexity for Suderra
+    
+    2. GOOD: Norwegian individual angels (privatpersoner) — BUT offer investorfradrag timing
+       → Investorfradrag partially offsets their 37.84% exit tax
+       → Still demand higher multiples than AS investors
+       → Negotiate: lower valuation in exchange for investorfradrag eligibility
+    
+    3. MANAGEABLE: Foreign EEA investors with Fritaksmetoden access
+       → Structure: foreign investor invests via EEA holding company
+       → Result: same 0.66% as Norwegian AS
+       → Suderra paperwork: moderate, handled by accountant
+    
+    4. COMPLEX: Non-EEA/international funds
+       → Low investor tax (fund jurisdiction) BUT high Suderra WHT compliance
+       → Only pursue for strategic value (Aqua-Spark Netherlands, EIC, global VC)
+       → Accept after first traction is proven (PHASE-2 or later)
+    
+    TAX ADVISOR CLARIFICATION:
+    "Norwegian investor pays more tax" likely means NORWEGIAN INDIVIDUALS (37.84%).
+    Norwegian AS investors actually pay LESS (0.66% via Fritaksmetoden).
+    Foreign investors in 0-tax jurisdictions pay 0% in their home country BUT
+    Suderra incurs WHT withholding obligations on dividends.
+    
+    NET RECOMMENDATION: Target Norwegian AS investors (Kategori G, C family offices)
+    and well-structured EEA investors first. Document investor entity type at onboarding
+    to determine correct WHT treatment before paying any dividends.
+    
+    CONFIDENCE: HIGH for rates (Skatteloven §2-38, §6-53, tax treaties published by Skatteetaten)
+    CONFIDENCE: MED for specific treaty applications (verify each investor's entity type separately)
+
 CRITIQUE TASKS (FAZ 3):
 When documents are complete:
 - Which tax opportunity is missing from the documents?
 - Is the Skattefunn document strong enough to survive Skatteetaten review?
 - Does the holding plan fully activate Fritaksmetoden?
 - Is the opsjonsordning (§5-14) authorized in vedtekter and mentioned in aksjonæravtale?
+- Does the aksjonæravtale specify investor entity type requirements (Norwegian AS preferred)?
+- Is there a WHT handling clause for future foreign investor onboarding?
 - Missed opportunity: [list with estimated NOK loss over 5 years]
 
 STANDARD FAILURE HANDLING:
@@ -208,6 +379,25 @@ FIRSAT 2 — SKATTEFUNn:
   Başvuru zamanlaması: [tarih]
 
 [...devam...]
+
+FIRSAT 10 — YATIRIMCI YAPISI VERGİ KARŞILAŞTIRMASI:
+  Norveç bireysel yatırımcı (privatperson):
+    → Yatırım: 500,000 NOK / Çıkışta 10x → Net: 6.6x (%37.84 CGT sonrası)
+    → Investorfradrag faydası: ~83,000 NOK (sadece Norveç vergi mükellefleri)
+  Norveç AS yatırımcısı (Fritaksmetoden):
+    → Aynı yatırım → Net: 8.94x (%0.66 efektif vergi)
+    → Suderra'ya daha az baskı uygular — IDEAL
+  Yabancı AB/AEA yatırımcısı (yapılandırılmış):
+    → Fritaksmetoden'den yararlanabilir (NL BV, SE AB, DK ApS)
+    → Temettülerde %0 veya azaltılmış stopaj
+  Yabancı AB dışı fon:
+    → Stopaj vergisi karmaşıklığı: Suderra'ya %25 → antlaşma oranına düşür
+    → ABD: %15, İngiltere: %15, AB dışı antlaşmasız: %25
+
+STRATEJİK ÖNERİ:
+  ÖNCE: Norveç AS yatırımcıları (aile ofisleri, holding şirketleri)
+  SONRA: Yapılandırılmış AEA yatırımcıları
+  KARMAŞIK: AB dışı fonlar (PHASE-2'de değerlendirin)
 
 KAÇIRILAN FIRSATLAR (taslak belgelerden):
   ❌ [belge]: [kaçırılan fırsat] — [tahmini kayıp]

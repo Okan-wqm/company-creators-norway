@@ -76,16 +76,31 @@ KRİTER 8 — YATIRIMCınıN SUDERRA'YA KATKI POTANSİYELİ [ağırlık: %2]
 AĞIRLIKLI TOPLAM PUAN:
   = (K1×0.25) + (K2×0.20) + (K3×0.15) + (K4×0.15) + (K5×0.10) + (K6×0.10) + (K7×0.03) + (K8×0.02)
 
+PHASE SCOPE — DEFAULT RULE:
+  S2-04 by default ONLY scores and ranks PHASE-1 investors.
+  PHASE-2 and PHASE-3 entries are documented in S2-01 but NOT ranked here
+  until their phase triggers are met (first paying customer / LOI for PHASE-2;
+  ARR > 5M NOK or Series A for PHASE-3).
+  If founder's S2-07 Module 9 response is "Norway only" → enforce PHASE-1 hard filter.
+
 BONUS PUANLAR (max cumulative bonus: +2.0):
   +1.0: Aquaculture konferansına düzenli katılım (sektör tutkusu gösterir)
   +0.5: Norveç devlet fonu LP'si (Investinor/Innovasjon gibi — güven sinyali)
   +0.5: Portföyden başarılı aquaculture exit var
+  +1.0: Stratejik yatırımcı — potansiyel pilot müşteri (AKVA Group, Mowi, Lerøy, SalMar)
+        Value proposition: equity + pilot partnership + distribution = triple value.
+        Apply ONLY if S2-07 Module 9 confirms founder has or is willing to pursue
+        existing sector connections with that company.
 
 CEZA PUANLAR (max cumulative penalty: -3.0):
   -2.0: Portföyde DOĞRUDAN rakip var (kesinlikle gitme sinyali)
   -0.5: Portföyde KISMİ rakip var (adjacent product, not identical — gray zone)
   -1.0: Son 24 ayda yatırım yok (pasif fon)
   -0.5: Minimum yatırım tutarı bizim beklentimizin 5 katı
+  -2.0: Minimum yatırım tutarı > Suderra'nın hedefinin 3 katı
+        (kurumsal düzey — KLP, NBIM, büyük emeklilik/sigorta fonları otomatik elenir;
+        these institutions do not invest at pre-seed scale and will waste founder time)
+        NOTE: These two size penalties are ADDITIVE for extreme mismatch.
   -0.5: "vesentlig norsk aktivitet" gerektirir (Investinor için zorunlu kriter —
         if Suderra cannot demonstrate substantial Norwegian activity, score penalty)
 

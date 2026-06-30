@@ -179,6 +179,42 @@ Q19. What would make your ideal investor?
      → They have: [aquaculture knowledge / Nordic network / SaaS expertise / other]
      → They would bring: [customers / team introductions / regulatory contacts / other]
 
+─── MODULE 9: GEOGRAPHIC & INVESTOR TYPE PREFERENCES ───
+
+Q20. What is your investor geography preference for THIS round?
+     Options:
+     A) Norway only — simplest, fastest, most relevant (recommended for Phase 1)
+     B) Norway + EU — broader pool, more complexity, longer timelines
+     C) Global — maximum options, requires English materials + longer process
+     → Record answer as: NORWAY_ONLY / NORWAY_EU / GLOBAL
+     → This answer activates or restricts S2-04 phase filtering.
+
+Q21. Are you open to bank/insurance VC arms as investors?
+     (e.g., DNB Ventures, SpareBank 1 SR-Bank, Storebrand Impact)
+     Options:
+     A) Yes — include all institutional VC arms
+     B) No — prefer pure-play VCs and angels only
+     C) Only if they bring aquaculture customer relationships
+     → Record answer. If B: flag these as low priority in S2-04.
+
+Q22. Do you have existing relationships with any strategic corporate investors?
+     (e.g., AKVA Group, Mowi, Lerøy, SalMar, Cermaq — companies that could ALSO
+     become your pilot customers)
+     → For each company named: What is the relationship? (board member connection /
+       existing customer / conference contact / cold)
+     → This activates the +1.0 strategic investor bonus in S2-04 for named companies.
+     → If none: record "no existing sector connections" — strategic category still
+       researched but bonus not applied until connection established.
+
+Q23. Tax and structure preference for investors:
+     → Do you prefer Norwegian investors (AS/ENK) or are you open to foreign investors?
+     → NOTE: This has significant tax implications (see Agent 07 Module 10 for detail):
+       - Norwegian AS investors: Fritaksmetoden — near-zero tax on your dividends/exit
+       - Norwegian individual investors: 37.84% tax on gains (may push for lower val)
+       - Foreign EEA investors: Can also access Fritaksmetoden via holding structure
+       - Foreign non-EEA: Withholding tax may apply
+     → Record preference: NO_PREFERENCE / NORWAY_AS_PREFERRED / FOREIGN_WELCOME
+
 ═══════════════════════════════════════════════════
 OUTPUT: SUDERRA PITCH DATASHEET (JSON-like format)
 ═══════════════════════════════════════════════════
@@ -257,6 +293,15 @@ will use as their first input:
     "pitch_deck": "READY/IN PROGRESS/NOT STARTED",
     "financial_model": "READY/IN PROGRESS/NOT STARTED",
     "demo": "READY/IN PROGRESS/NOT STARTED"
+  },
+  "investor_preferences": {
+    "geography": "NORWAY_ONLY / NORWAY_EU / GLOBAL",
+    "open_to_bank_vc_arms": true/false,
+    "open_to_strategic_investors": "ALL / CUSTOMER_ONLY / NO",
+    "existing_sector_connections": [
+      {"company": "[AKVA Group / Mowi / Lerøy / other]", "relationship": "[...]"}
+    ],
+    "investor_tax_preference": "NO_PREFERENCE / NORWAY_AS_PREFERRED / FOREIGN_WELCOME"
   },
   "unknown_items": [
     "[List everything the founder could not answer — these need research]"

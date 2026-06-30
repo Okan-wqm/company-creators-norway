@@ -149,7 +149,7 @@ Norveç'te balıkçılık ve aquaculture servetinden çıkan family offices:
 22. EU Horizon aquaculture programları (Norveç katılımcı)
 23. Blue Economy odaklı Avrupa fonları
 
-─── BÖLÜM 7: HAVBRUKSFOND (BELEDİYE AQUACULTURE FONLARI) ← YENİ ───
+─── BÖLÜM 7: HAVBRUKSFOND (BELEDİYE AQUACULTURE FONLARI) ───
 
 WHAT IS HAVBRUKSFOND:
 Norway's municipalities receive a share of revenues from aquaculture license
@@ -170,6 +170,112 @@ MUNICIPALITIES TO RESEARCH:
 
 FOR EACH: Does the municipality have an innovation program? Contact name?
 CLASSIFY AS: "Grant/Support" — NOT equity investment.
+
+─── BÖLÜM 8: NORVEÇ BANKA & SİGORTA VC KOLLARI ← YENİ ───
+
+CRITICAL DISTINCTION:
+  INCLUDE: The bank/insurance company's dedicated VENTURE CAPITAL ARM only
+  EXCLUDE: The parent institution itself (minimum check too large; public markets focus)
+  ALWAYS EXCLUDE: KLP (pension fund — public markets only), NBIM/Norges Bank Investment
+    Management (sovereign wealth fund — exclusively public markets)
+
+For each entry: Research whether a dedicated VC/startup arm exists. If none found: EXCLUDE.
+
+28. DNB VENTURES (DNB Bank's VC arm)
+    - Norway's largest bank — has active technology venture unit
+    - Focus: Norwegian B2B tech, fintech, sustainability
+    - Aquaculture interest: DNB banks major salmon companies (Mowi, SalMar, Lerøy) —
+      understand sector deeply, may want tech exposure
+    - Research: portfolio companies, check size, pre-revenue stage comfort
+    - PHASE: PHASE-1 | CLASSIFY: Bank VC Arm
+
+29. SPAREBANK 1 SR-BANK / SR-VENTURES
+    - Stavanger-based savings bank — strong blue economy/maritime footprint
+    - Stavanger is transitioning from oil → blue economy, aquaculture natural fit
+    - Research: SpareBank 1 SR-Bank's startup/venture investment vehicle
+    - PHASE: PHASE-1 | CLASSIFY: Bank VC Arm
+
+30. SPAREBANKEN VEST
+    - Bergen-based — heart of Norwegian salmon industry
+    - Major banking clients: Lerøy Seafood, Grieg Seafood, SalMar
+    - Research: startup/innovation investment vehicle
+    - PHASE: PHASE-1 | CLASSIFY: Bank VC Arm if exists
+
+31. STOREBRAND IMPACT INVESTMENT
+    - Norway's largest private insurance/pension group
+    - Has explicit ESG/sustainability investment mandate — aquaculture sustainability relevant
+    - NOT a typical early-stage investor — research minimum check size carefully
+    - If check size > 5M NOK: S2-04 size penalty applies, likely scores < 4.0
+    - PHASE: PHASE-1 (if check size fits) | CLASSIFY: Impact Investor
+
+32. GJENSIDIGE FORSIKRING
+    - Major Norwegian insurance company
+    - Research: any venture or innovation investment vehicle?
+    - If no dedicated VC arm found: EXCLUDE from active outreach
+    - PHASE: Research pending | CLASSIFY: TBD
+
+─── BÖLÜM 9: STRATEJİK / KURUMSAL YATIRIMCILAR ← YENİ ───
+
+WHAT IS A STRATEGIC INVESTOR:
+A company that IS or COULD BE Suderra's customer AND also invests.
+Value proposition: equity + pilot partnership + distribution = triple value.
+They accept lower financial return because they gain product/technology access.
+
+33. AKVA GROUP ASA (Oslo Bors: AKVA)
+    - Norway's leading aquaculture technology company
+    - Products: feeding systems, cage systems, fish farm management software (FishTalk)
+    ⚠️ CONFLICT ALERT: FishTalk = DIRECT COMPETITOR to Suderra
+      → BUT strategic rationale exists: AKVA hardware + Suderra operations layer = bundle
+      → AKVA's weakness: FishTalk is legacy/desktop; Suderra is mobile-first cloud
+      → AKVA may prefer acquisition/investment over building a new platform
+    - Research: AKVA Group venture/innovation investment vehicle
+    - PHASE: PHASE-1 | CLASSIFY: Strategic — COMPETITOR ADJACENT (flag for CEO review before approach)
+
+34. MOWI ASA (Oslo Bors listed — world's largest salmon company)
+    - Operations: Norway, Chile, Canada, Scotland, Ireland, Faroe Islands
+    - If Mowi invests: their Norwegian farms become immediate pilot customers
+    - Mowi Innovation or corporate venture arm: research
+    - PHASE: PHASE-1 | CLASSIFY: Strategic Investor
+
+35. LERØY SEAFOOD GROUP ASA (Bergen, Oslo Bors listed)
+    - Bergen-based — geographically closest to Suderra's likely early customers
+    - Strong sustainability/tech adoption reputation
+    - Corporate venture or "Lerøy Future" program: research
+    - PHASE: PHASE-1 | CLASSIFY: Strategic Investor
+
+36. SALMAR ASA (Frøya/Trondheim)
+    - Major salmon producer — SalMar Innovation technology focus
+    - Has collaborated with Innovasjon Norge on digital farming
+    - PHASE: PHASE-1 | CLASSIFY: Strategic Investor
+
+37. CERMAQ (Mitsubishi-owned, Oslo HQ)
+    - Global salmon/trout farmer, Japanese parent
+    - Unlikely to make startup investment given Japanese ownership structure
+    - PHASE: PHASE-2 if any corporate venture interest found | CLASSIFY: Low priority
+
+─── BÖLÜM 10: FAZ GENİŞLEME PLANI ← YENİ ───
+
+MANDATORY: Every investor entry in this research must include a PHASE tag.
+S2-04 by default ONLY scores and ranks PHASE-1 investors.
+PHASE-2 and PHASE-3 are documented now but not pursued until triggers are met.
+
+PHASE-1 — ŞİMDİ (gelir öncesi, pilot öncesi):
+  All categories A through I above. Norwegian investors only.
+  Activate: Immediately.
+
+PHASE-2 — İLK ÖDEME YAPAN MÜŞTERİ VEYA LOI SONRASI (est. 3-6 months):
+  → Aqua-Spark (Netherlands HQ — but deep Norway aquaculture VC experience)
+  → EIC Accelerator (EU Innovation Council — up to €2.5M equity + €2.5M grant)
+    Note: EIC requires EU entity or association agreement country (Norway qualifies)
+  → Nordic Investment Bank (NIB) — project/growth lending, not equity
+  → Hatch international portfolio/LP connections
+  Activate: When S2-07 Founder Onboarding reports first paying customer or signed LOI.
+
+PHASE-3 — SERİES A HAZIRLIĞI (est. 18-24 months):
+  → International aquaculture VCs: Chile (CORFO), Canada, Japan, Asia-Pacific markets
+  → IFC (World Bank Group) — impact + aquaculture sustainability mandate
+  → Large EU structural funds (ERDF, InvestEU)
+  Activate: When ARR > 5M NOK or Series A term sheet process begins.
 
 ─── FORMAT ───
 
