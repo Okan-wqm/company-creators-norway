@@ -183,18 +183,29 @@ would look for:
   conversion-on-transfer clause in the vedtekter.
   → Since vedtekter are filed with Brønnøysund and are public record (unlike
     aksjonæravtale, which only binds signatories), is a buyer who didn't
-    actually read them still bound by the conversion? Norwegian company law
-    generally treats vedtekter as constructive notice to anyone dealing in
-    the company's shares — but verify this is not weakened by anything in
-    Agent 03's Aksjeloven §4-1/§6-33 research.
+    actually read them still bound by the conversion? The claim that
+    "Norwegian company law treats vedtekter as constructive notice to anyone
+    dealing in the company's shares" is a PLAUSIBLE but UNVERIFIED doctrinal
+    claim — no specific Aksjeloven section or named case is cited for it here.
+    CONFIDENCE: LOW on this specific sub-claim (distinct from the MED rating
+    on the overall scenario below) — state explicitly: "No specific statutory
+    or case authority cited for vedtekter-as-constructive-notice; verify with
+    a Norwegian attorney before relying on this for the document's
+    enforceability against a non-reading buyer." Do NOT state this as settled
+    doctrine to the founder.
   → Recommended mitigation regardless of the legal answer: require the board's
     samtykke (consent) for any share transfer (already a vedtekter feature)
     to include written acknowledgment by the buyer of the conversion clause
     BEFORE the board approves registering the transfer — removes the "I didn't
-    know" argument entirely as a practical matter.
-CONFIDENCE: MED — these are foreseeable drafting loopholes, not yet
-court-tested in Norway; recommend explicit anti-circumvention language per
-the fixes above rather than relying on general principles to close them
+    know" argument entirely as a practical matter, independent of whether the
+    constructive-notice doctrine would otherwise apply.
+  → See also Agent 10 Attack 7 for the related (but distinct) question of
+    ROFR/tag-along/drag-along sequencing on the same type of transaction.
+CONFIDENCE: MED on the overall circumvention-loophole analysis (salami
+slicing, Permitted Transferee laundering — these are foreseeable drafting
+gaps, not yet court-tested in Norway); CONFIDENCE: LOW specifically on the
+vedtekter-as-constructive-notice doctrinal claim (see above — flagged
+separately per the system's per-claim confidence convention)
 
 HER SENARYO İÇİN FORMAT:
   Risk Level: [LOW / MEDIUM / HIGH / CRITICAL]

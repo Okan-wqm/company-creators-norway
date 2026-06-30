@@ -112,7 +112,7 @@ FAZ 2b — Tutarlılık Kontrolü (Agent 16) ← YENİ BLOKAJ GEÇIDI
   ↓ FAZ 2 taslakları çapraz kontrol — KRITIK çelişkiler çözülmeden FAZ 3'e geçilmez
 
 FAZ 3 — TÜM ELEŞTİRİLER (Agent 08, 09, 10, 12, 14, 15, 18) [paralel] ← Agent 12 buraya taşındı
-  ↓ Preliminary legal review (08) — 8+2 mahkeme senaryosu (09) — Adversarial argümanlar (10)
+  ↓ Preliminary legal review (08) — 11 mahkeme senaryosu A-K (09) — Adversarial argümanlar 7 saldırı vektörü (10)
   ↓ Şeytan'ın avukatı / kötü senaryolar (12) — IP (14) — GDPR (15) — Co-founder testi (18)
   ↓ NOT: Agent 12 artık Agent 01'den ÖNCE çalışır; CEO tüm eleştirileri alır
 

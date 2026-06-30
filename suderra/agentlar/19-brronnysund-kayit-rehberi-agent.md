@@ -78,11 +78,22 @@ even exists:
    Founder must personally look up the company on brreg.no/proff.no (not
    rely on a screenshot or summary from the CEO/CFO) and confirm: registered
    share capital, share classes, board members, and signaturrett all match
-   what was actually agreed. Set up Brønnøysund's "varsling om endringer"
-   (change notification service) so the Founder is automatically alerted of
-   ANY future change to the company's registered information — this catches
-   a later attempt to quietly change signaturrett or board composition via
-   an "endringsmelding."
+   what was actually agreed. NOTE: this registry lookup verifies signaturrett
+   and board composition ONLY — it does NOT and CANNOT verify bank dual-approval
+   configuration (Agent 17 §6.2.a), which is a private banking setting invisible
+   to brreg.no/proff.no. Bank dual-approval must be verified separately, directly
+   with the bank or via the Founder's own bedriftsnettbank login (see Step 7) —
+   do not assume a clean brreg.no/proff.no lookup means the bank-side control is
+   also in place.
+   Attempt to set up Brønnøysund's "varsling om endringer" (change notification)
+   service so the Founder is automatically alerted of ANY future change to the
+   company's registered information — this would catch a later attempt to
+   quietly change signaturrett or board composition via an "endringsmelding."
+   CONFIDENCE: MED — verify this exact service name and self-service
+   configurability directly on brreg.no/altinn.no before relying on it; if no
+   such self-service feature exists, the fallback is a manual quarterly lookup
+   on brreg.no/proff.no instead (see Agent 21's annual calendar for a recurring
+   reminder).
 6. AKSJEBOK ACCESS: The Founder must hold an independent copy of or access
    to the aksjebok (share register, Step 10) — not solely whatever the
    CEO/CFO maintains. This prevents undetected share dilution or reissuance.
@@ -322,9 +333,14 @@ SONRASI:
   □ Aksjebok oluşturuldu, Founder erişimi/kopyası var
 
 FOUNDER BAĞIMSIZ DOĞRULAMA (CEO/CFO Founder değilse ZORUNLU):
-  □ brreg.no / proff.no üzerinden bağımsız kontrol yapıldı
+  □ brreg.no / proff.no üzerinden bağımsız kontrol yapıldı (sadece signaturrett/board
+    kaydını doğrular — banka dual-approval'ı DOĞRULAMAZ, bu ayrı kontrol gerektirir)
   □ Signaturrett "i fellesskap" olarak kayıtlı (✓) — "alene" DEĞİL
-  □ Brønnøysund "varsling om endringer" servisi kuruldu
+  □ Banka dual-approval ayrıca, doğrudan bankayla veya Founder'ın kendi
+    bedriftsnettbank girişiyle doğrulandı (brreg.no/proff.no'dan görünmez)
+  □ Brønnøysund "varsling om endringer" servisi kuruldu [CONFIDENCE: MED — tam
+    servis adı ve kendi kendine kurulabilirliği altinn.no/brreg.no'da doğrulanmalı;
+    yoksa: Agent 21 takviminde üç ayda bir manuel brreg.no kontrolü yedek plan]
   □ Kuruluş belgeleri Founder'ın kendi bağımsız avukatınca incelendi
   □ Tüm belgeler aynı oturumda (samtidig signering) imzalandı
 

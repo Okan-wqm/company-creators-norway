@@ -72,6 +72,19 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
       Permittert Mottaker (jf. aksjonæravtalen § [X]), konverteres automatisk
       til C-aksje (1:1 stemmerett, uten automatisk likvidasjonspreferanse) ved
       overføringstidspunktet."
+     "En Permittert Mottakers status er IKKE varig: dersom en Permittert Mottaker
+      senere overfører aksjene videre til noen som selv ikke kvalifiserer som
+      Permittert Mottaker, anses konverteringen (og eventuell tag-along-utløsning
+      etter aksjonæravtalen § [Y]) å inntre på dette senere tidspunktet, som om
+      unntaket aldri hadde vært anvendt på den opprinnelige overføringen til den
+      Permitterte Mottakeren." (anti-laundering — Agent 09 Senaryo K fix #2;
+      without this sentence, a Founder could launder shares through a holding
+      company to permanently escape both conversion and tag-along)
+     "Tvangsrealisasjon av pantsatte A-aksjer til panthaver eller en tredjepart
+      ved mislighold anses som en overføring til en ikke-Permittert Mottaker og
+      utløser konvertering til C-aksje, med mindre panthaveren selv kvalifiserer
+      som Permittert Mottaker." (foreclosure-on-pledge triggers conversion —
+      Agent 04 Analysis 6 pledge gap fix)
      Bu madde VEDTEKTER'de olmalı (sadece aksjonæravtale'de değil) — şirkete ve
      üçüncü şahıs alıcılara karşı bağlayıcı olması için (bkz. Agent 03 araştırma
      madde 11). Board'un samtykke onayı, alıcının bu dönüşüm maddesini yazılı
@@ -93,9 +106,33 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
      etmezse, Founder kendi satışını da tamamlayamaz. Permitted Transferee
      istisnası (Suderra Holding AS, aile/miras planlaması, teminat — gerçek
      kontrol değişikliği yok) — bkz. Agent 04 Analysis 6 tam matematik.
+   → SIRALAMA — ROFR ÖNCE, TAG-ALONG SONRA (Agent 10 Attack 7 Rule 1): ROFR
+     bildirimi (30 gün) önce gönderilir; sadece ROFR ile satın alınmayan
+     hisseler üçüncü şahıs satışına gider; tag-along bu KALAN miktar üzerinden
+     hesaplanır, orijinal teklif edilen miktar üzerinden değil. ROFR kullanan
+     hissedar aynı hisseler için ayrıca tag-along talep edemez.
+   → DRAG-ALONG ÖNCELİĞİ (Agent 10 Attack 7 Rule 2): Eğer aynı işlem bağımsız
+     olarak drag-along eşiğini (%75) karşılıyorsa, drag-along süreci ve fiyat
+     şartları geçerlidir; tag-along AYRICA uygulanmaz (zaten herkes satmak
+     zorunda). Eşik karşılanmıyorsa sadece tag-along uygulanır. Bu iki mekanizma
+     AYNI ANDA tetiklenmez — biri diğerini geçersiz kılar, çakışma yaratmaz.
+   → OVERSUBSCRIPTION / ORANSAL AZALTMA (eksik olan kısım — şimdi ekleniyor):
+     Eğer alıcı, toplam tag-along havuzunun TAMAMINDAN daha azını almak isterse
+     (örn. 230 hisseden sadece 200'ünü): satılacak miktar TÜM satıcılar (Founder
+     dahil) arasında, her birinin teklif ettiği orana göre ORANSAL olarak
+     azaltılır — Founder'ın payı veya herhangi bir hissedarın payı tek taraflı
+     öncelikli kesilmez. Formül: [satıcı payı] = [satıcının teklif ettiği hisse]
+     × ([alıcının kabul ettiği toplam] / [havuzun toplamı]).
    → Anti-circumvention: tag-along, Founder'ın aynı alıcıya/bağlı şirketlerine
      12 ay içinde yaptığı TÜM transferleri toplar (salami-slicing önleme,
-     Agent 09 Senaryo K)
+     Agent 09 Senaryo K); Permittert Mottaker istisnası VARİS DEĞİLDİR — bir
+     Permittert Mottaker hisseleri ileride başka birine satarsa, dönüşüm/tag-along
+     o satış anında devreye girer (bkz. Agent 11 doc #2 vedtekter maddesi)
+   → TEMİNAT/REHİN (pledge) AÇIKLIĞI: Founder A hisselerini teminat gösterirse,
+     oy hakkı teminat süresince Founder'da kalır — kredi verene oy vekaleti
+     (fullmakt) verilmesi YASAKTIR (aksi halde fiili kontrol kaybı, dönüşüm
+     mekanizmasını atlatma riski). Mislighold/tvangssalg durumunda Agent 11
+     doc #2'deki dönüşüm maddesi devreye girer.
    → Anti-dilution: broad-based WA matematiksel formül dahil
    → Non-compete dar tanım (Avtaleloven §36 uyumlu)
    → Board üyeliği hisseye bağlı DEĞİLDİR: bir hissedar hisselerini satarsa,

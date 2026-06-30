@@ -113,13 +113,35 @@ their own holding to the same buyer, at the same price/terms.
       amount, or Founder cannot complete even their own partial sale —
       calculate this for every scenario, don't just state the rule
 
+  SEQUENCING WITH ROFR (Agent 10 Attack 7 Rule 1 — calculate this, don't skip it):
+    ROFR runs FIRST, on the originally offered amount, BEFORE tag-along is
+    even calculated. If, in the example above, Co-F1 exercises ROFR and buys
+    60 of the Founder's 180 offered shares directly: only the remaining 120
+    shares proceed to the third-party sale, and tag-along is recalculated on
+    THAT 120 (not the original 180): Co-F2 tags 120/900×50≈6.7 shares,
+    Investor tags 120/900×150=20 shares. Co-F1 cannot ALSO tag along on top
+    of their ROFR purchase. Always show both the pre-ROFR and post-ROFR
+    tag-along numbers so it's clear the pool can shrink.
+
+  OVERSUBSCRIPTION / PRORATION (buyer wants less than the full tag-along pool):
+    If the buyer only wants to purchase 200 of the 230 total shares in the
+    base example: reduce EVERY seller's allocation pro-rata by the same
+    factor (200/230 = 86.96%): Founder sells 180×0.8696≈157, Co-F1 sells
+    10×0.8696≈8.7, Co-F2≈8.7, Investor≈26.1 (round per the actual agreement's
+    rounding convention — state which convention is used). No seller is cut
+    to zero before another is reduced; the reduction is proportional across
+    ALL sellers including the Founder. Show this calculation explicitly
+    whenever a hypothetical buyer demand is below the full pool.
+
   EDGE CASE — Founder sells 100% of their A shares (exit/full sale):
-    All other shareholders may tag along 100% of their own holdings
-    → Calculate: does this functionally force a full company sale? Compare
-      to the drag-along mechanism (Analysis 2) — note for Agent 10 whether
-      tag-along and drag-along can be triggered simultaneously and whether
-      that creates a conflict (e.g., buyer wants 100% but tag-along recipients
-      disagree on price with a drag-along-triggering coalition)
+    All other shareholders may tag along 100% of their own holdings.
+    RESOLVED (Agent 10 Attack 7 Rule 2): if this transaction independently
+    meets the 75% drag-along threshold, drag-along's own price/process terms
+    govern and tag-along does not separately apply (everyone is already
+    compelled to sell under drag-along). If the threshold is NOT met, tag-along
+    applies on its own terms. These two mechanisms are mutually exclusive
+    triggers on the same transaction, not simultaneous — do not present this
+    as an open question, present it as resolved per Agent 10 Attack 7.
 
   PERMITTED TRANSFEREE CARVE-OUT (NOT subject to tag-along):
     Transfers to: (a) a holding company wholly owned by the Founder (Suderra
@@ -128,6 +150,27 @@ their own holding to the same buyer, at the same price/terms.
     ownership. State the economic effect: these transfers do NOT trigger
     tag-along OR the C-conversion in Analysis 7 below, because no real change
     of ultimate control/ownership occurs.
+
+    PLEDGE-SPECIFIC LIMITS (closes a real gap — calculate the risk if these
+    aren't in the documents): the pledge carve-out (c) is conditional on TWO
+    things that must be explicit in the documents, not assumed:
+      1. The Founder retains VOTING rights on pledged A shares for the
+         duration of the pledge — the lender may NOT be granted a voting
+         proxy/power of attorney over those shares as part of the security
+         package. If this isn't explicitly prohibited, a lender could obtain
+         de facto negative control over Founder votes without ever
+         "transferring" anything, defeating the entire conversion mechanism
+         without technically triggering it. Quantify the risk: e.g., a
+         lender holding a voting proxy over 30% of Founder's 900 A shares
+         (270 shares = 2,700 votes) could materially affect supermajority
+         votes even though no transfer occurred.
+      2. On DEFAULT and foreclosure/enforcement sale, the pledge carve-out
+         ENDS — a foreclosure transferring shares to the lender or a third
+         party IS a real change of beneficial ownership and MUST trigger the
+         A→C conversion (unless the lender itself independently qualifies as
+         a Permitted Transferee, which would be unusual). Calculate the
+         founder-control impact exactly as in Analysis 7's Event 2 if this
+         clause is missing vs. present.
 
 ═══════════════════════════════════════
 ANALYSIS 7: SHARE CLASS CONVERSION-ON-TRANSFER IMPACT

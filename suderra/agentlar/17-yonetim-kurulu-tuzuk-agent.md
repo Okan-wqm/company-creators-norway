@@ -44,9 +44,10 @@ COMPANY CONTEXT:
 A Styrereglement is an INTERNAL document. It binds the CEO/CFO and creates grounds
 for removal/liability if violated — but it does NOT, by itself, stop a bank from
 processing a transfer the CEO is otherwise authorized to make under Norwegian law
-(Aksjeloven §6-31/§6-33 — daglig leder has statutory authority over "den daglige
+(Aksjeloven §6-33 — daglig leder has statutory authority over "den daglige
 ledelse," and a third party acting in good faith is generally protected even if the
-CEO exceeded an INTERNAL restriction they didn't know about). This means: paper
+CEO exceeded an INTERNAL restriction they didn't know about; see Agent 09 Senaryo K,
+Agent 12 Senaryo 8, and Agent 19 for the same citation used consistently). This means: paper
 rules alone are NOT enough. The Treasury Controls in §6 MUST be paired with two
 EXTERNAL, technical implementations (covered in Agent 19's registration guide):
   1. Brønnøysund signaturrett/prokura registration: the CEO must NOT be registered
@@ -307,12 +308,71 @@ transfer before it happens. The following controls are NON-NEGOTIABLE:
      immediately if a violation is suspected; do not rely on this document
      for criminal-law accuracy.
 
+     INTERIM MANAGEMENT CONTINUITY ON REMOVAL (closes a real gap — do not
+     remove the CEO/CFO without this in place): the moment a §6.2.f removal
+     resolution is signed, Suderra AS would otherwise have NO registered
+     daglig leder and a signaturrett gap, since this is a one-person
+     management team. To prevent operational paralysis:
+       - The Founder (who is already a registered joint signatory per §6.2.b)
+         AUTOMATICALLY assumes interim daglig leder authority the moment the
+         removal resolution is signed — this must be stated in the
+         resolution itself, not left implicit.
+       - Within 5 business days: file an "endringsmelding" with Brønnøysund
+         registering the Founder (or an interim appointee) as daglig leder
+         and updating signaturrett accordingly (see Agent 19).
+       - Within 30 days: the generalforsamling must appoint either a
+         permanent replacement CEO or confirm the Founder in the role
+         going forward — the "interim" status is time-boxed, not indefinite.
+       - Practical continuity checklist (assign to whoever takes interim
+         control): notify the bank, payroll provider, key vendors, and
+         employees of the change; confirm continued access to company
+         email/systems/registered office; do NOT wait for the generalforsamling
+         to handle these — they happen immediately upon removal.
+
+  g) EMERGENCY / FOUNDER-UNAVAILABLE EXCEPTION (closes the single point of
+     failure this control would otherwise create): Because every Treasury
+     Resolution and every above-threshold payment structurally requires the
+     Founder's affirmative vote/approval, the company would otherwise have
+     NO lawful way to make an urgent payment (payroll, a tax deadline to
+     avoid Skatteforvaltningsloven §14-3 tilleggsskatt, a time-critical
+     supplier payment) if the Founder is genuinely unreachable (hospitalized,
+     in transit, no connectivity). This exception is deliberately narrow to
+     prevent the CEO/CFO from invoking it as a routine workaround:
+       - TRIGGER: the Founder has not responded to a payment approval request
+         within 5 business days AND the payment is objectively time-critical
+         (a stated legal/contractual deadline, not a business preference)
+       - APPROVAL: requires UNANIMOUS consent of every OTHER board member
+         (excluding the CEO/CFO) — if the Founder is the sole other board
+         member, this exception cannot be invoked at all without a
+         pre-designated backup approver (see below)
+       - CAP: emergency payments under this exception are capped at the §6.1
+         threshold amount per occurrence, regardless of how urgent the
+         underlying need is — anything larger must wait for the Founder or
+         go through a formal power-of-attorney process, not this exception
+       - MANDATORY RATIFICATION: any emergency payment must be presented to
+         the Founder for retroactive ratification at the next opportunity
+         (immediately upon the Founder becoming reachable, no later than the
+         next board meeting) — failure to ratify does not undo the payment
+         but is itself a reportable event
+       - RECOMMENDATION: the Founder should pre-designate, in writing, a
+         specific backup approver (e.g., a trusted board observer, the
+         Founder's own attorney under a LIMITED, narrowly-scoped power of
+         attorney held in escrow, or a second board member appointed for
+         this purpose) BEFORE this scenario ever arises — do not leave the
+         identity of the emergency approver undecided until an emergency
+         actually happens
+
   RECOMMENDATION (not legally mandatory, but strongly advised): the Founder
   should personally hold a board seat (not merely a shareholder), since board
   membership is what creates the §4 Treasury Resolution voting requirement —
   a shareholder who is not on the board has no direct vote on day-to-day
   treasury matters, only the slower remedy of removing the board at a
   generalforsamling.
+
+  PERIODIC RE-VERIFICATION: §6.2's protections (joint signaturrett, bank
+  dual-approval) are only real if they stay configured correctly over time —
+  see Agent 21's Yıllık Uyum Takvimi for the recurring annual check that
+  re-confirms this configuration has not been quietly loosened or misconfigured.
 
 ──────────────────────────────────────────────────────
 § 7 INHABILITET (CONFLICTS OF INTEREST)

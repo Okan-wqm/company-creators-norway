@@ -65,6 +65,25 @@ TERM GROUP 3 — GOVERNANCE TERMS
     related transfers to the same buyer within 12 months in BOTH documents
     (anti-salami-slicing, Agent 09 Senaryo K)? Is the Permitted Transferee
     carve-out defined identically in vedtekter (if referenced) and aksjonæravtale?
+  □ "Permitted Transferee" NON-PERMANENCE — does the vedtekter conversion
+    clause AND the aksjonæravtale tag-along clause both include the
+    anti-laundering condition (a Permitted Transferee's later resale to a
+    non-Permitted Transferee retroactively triggers conversion/tag-along)?
+    This is a DISTINCT check from "is the definition identical" above — a
+    document can define Permitted Transferee identically in both places and
+    STILL be missing this non-permanence condition. Check for it explicitly.
+  □ ROFR-then-tag-along SEQUENCING (Agent 10 Attack 7 Rule 1) — does the
+    aksjonæravtale state that tag-along is calculated on the POST-ROFR
+    remaining share count, not the originally-offered amount? Is this
+    consistent with how Agent 04's quantitative model computes it?
+  □ DRAG-ALONG / TAG-ALONG PRECEDENCE (Agent 10 Attack 7 Rule 2) — does the
+    aksjonæravtale state that drag-along supersedes tag-along when the same
+    transaction independently meets the 75% threshold? Flag if this is
+    presented as unresolved/open anywhere (it should be resolved per Agent 10).
+  □ TAG-ALONG OVERSUBSCRIPTION/PRORATION — is there an explicit pro-rata
+    reduction formula for when a buyer wants less than the full tag-along
+    pool? Flag if only the two extreme cases (full purchase / total block)
+    are addressed.
   □ "ROFR period" — 30 days in ALL documents?
   □ "Observer" rights — same scope in all documents?
   □ "Board seat not share-attached" rule — does Styrereglement §2 (Agent 17)
@@ -90,6 +109,11 @@ TERM GROUP 4 — SHARE CLASS TERMS
         in aksjonæravtale (which would only bind signatories, not buyers)?
         If it's ONLY in aksjonæravtale: flag as CRITICAL — the mechanism the
         Founder is relying on would not bind a future buyer.
+      - PLEDGE/FORECLOSURE: does the vedtekter clause state that foreclosure
+        on a pledged A share triggers A→C conversion, and does the
+        aksjonæravtale state the lender may NOT receive a voting proxy over
+        pledged shares during the pledge term? Both conditions must be
+        present — flag if either is missing (Agent 04 Analysis 6 pledge gap).
   □ Anti-dilution formula — CP2=CP1×(A+B)/(A+C) written the same everywhere?
 
 TERM GROUP 5 — NOTICE / TIMING TERMS

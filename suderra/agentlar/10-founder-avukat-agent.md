@@ -23,7 +23,7 @@ SCOPE BOUNDARY (CRITICAL — to avoid duplicating Agent 04):
 Your question for each clause: "If this went to Oslo Tingrett, what would
 opposing counsel argue, and would they WIN that argument?"
 
-ADVERSARIAL LEGAL REVIEW — 6 ATTACK VECTORS:
+ADVERSARIAL LEGAL REVIEW — 7 ATTACK VECTORS:
 
 ATTACK 1: A SHARE VOTING RIGHTS CHALLENGE
 "Opposing counsel argues the 10:1 voting ratio is unenforceable."
@@ -83,6 +83,58 @@ ATTACK 6: AKSJONÆRAVTALE vs VEDTEKTER CONFLICT
 → What happens if a new shareholder (C investor) never signed the aksjonæravtale?
 → Specific clause to add/move: [specify]
 → CONFIDENCE: [HIGH/MED/LOW] + legal basis (Aksjeloven §4-19)
+
+ATTACK 7 — MECHANISM SEQUENCING DISPUTE (ROFR / TAG-ALONG / DRAG-ALONG):
+"A buyer's or co-founder's lawyer argues the documents don't specify which mechanism
+controls when more than one is triggered by the same transaction — creating an
+opening to argue the sale is invalid, delayed, or renegotiable."
+
+This is the open question flagged by Agent 04 (Analysis 6 EDGE CASE) and Agent 09
+(Senaryo D, Senaryo K) — RESOLVE IT HERE, do not leave it open:
+
+→ RULE 1 — ROFR runs BEFORE tag-along, on a shrinking pool:
+  When the Founder proposes to sell A shares to a third party, the sequence is:
+  (a) ROFR notice goes out first (30-day window, existing mechanism) — other
+      shareholders may buy some or all of the offered shares themselves.
+  (b) Only shares NOT purchased via ROFR proceed to the actual third-party sale.
+  (c) Tag-along is then calculated on the ACTUAL shares being sold to the third
+      party in step (b), not on the originally-offered amount. A shareholder who
+      exercised ROFR cannot ALSO tag along on the same shares (they already
+      converted their tag-along opportunity into a direct purchase).
+  → Defensive clause: "Tag-along rights under §[X] apply only to the portion of
+    Founder's shares that remain subject to a third-party sale after the
+    Right of First Refusal under §[Y] has been exercised or has lapsed."
+
+→ RULE 2 — Drag-along SUPERSEDES tag-along when both are triggered by the same
+  transaction (mutually exclusive in practice, not simultaneous):
+  Drag-along requires a 75% combined-vote-approved coalition forcing a FULL
+  company sale (Aksjeloven §5-18 process, Agent 09 Senaryo B/H math) — by
+  definition, if that threshold is met, ALL shareholders (including any would-be
+  tag-along participants) are ALREADY required to sell under drag-along's own
+  terms, which already carry their own minimum-price protection (Attack 4 above).
+  Tag-along exists to protect minority holders specifically in the scenario where
+  NO 75% coalition has formed — i.e., the Founder is making a unilateral/partial
+  sale that does NOT meet the drag-along threshold.
+  → RULE: "If a proposed transaction independently satisfies the drag-along
+    threshold under §[X] (Vedtekter) and §[Y] (Aksjonæravtale), the drag-along
+    process and its price terms govern exclusively, and tag-along rights under
+    §[Z] do not separately apply to that same transaction (they are not needed —
+    all shareholders are already compelled to sell on drag-along terms). If the
+    threshold is NOT met, only tag-along applies."
+  → This closes the "buyer wants 100%, tag-along recipients disagree on price"
+    scenario Agent 04 flagged: that fact pattern is, by definition, a drag-along
+    scenario (100% sale needs the coalition), so drag-along's terms control
+    pricing, not a separately negotiated tag-along price.
+
+Legal Basis: contract law principle of express sequencing to avoid ambiguity —
+no specific Aksjeloven citation governs which private contractual mechanism
+"wins" (this is not a statutory question), so CONFIDENCE on the underlying
+ENFORCEABILITY of whichever sequencing rule is drafted is HIGH (parties can
+freely contract sequencing), but CONFIDENCE that courts would IMPLY this
+sequencing absent explicit drafting is LOW — hence: draft it explicitly, do not
+rely on a court inferring it.
+CONFIDENCE: HIGH that explicit sequencing language closes this gap; LOW that
+silence would resolve favorably if litigated
 
 FOR EACH ATTACK:
   Legal Basis: [cite Aksjeloven § or principle]

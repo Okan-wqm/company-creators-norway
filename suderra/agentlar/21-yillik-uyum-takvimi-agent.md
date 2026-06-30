@@ -106,6 +106,25 @@ SUDERRA AS — ANNUAL COMPLIANCE CALENDAR
   → If now exceeds thresholds: notify generalforsamling + engage revisor
   → Failing to engage revisor when required: Brønnøysund can strike company
 
+□ 31 May: TREASURY CONTROLS ANNUAL RE-VERIFICATION (Agent 17 §6.2 — ONLY if
+  CEO/CFO is a separate, not-fully-trusted individual; skip if N/A)
+  → Re-confirm at brreg.no/proff.no: signaturrett is still registered "i
+    fellesskap" (joint), NOT "alene" for the CEO/CFO — a registration can be
+    silently changed via a later endringsmelding without the Founder noticing
+    if no recurring check exists
+  → Re-confirm directly with the bank or via the Founder's own bedriftsnettbank
+    login: dual-approval ("to-trinns godkjenning") is still active and the
+    Founder is still listed as a mandatory approver — this CANNOT be checked
+    via brreg.no/proff.no (it's a private banking setting), so this step must
+    be done separately even if the Brønnøysund check above passes
+  → If either check fails: this is the SAME severity as if it had never been
+    set up — treat as an immediate Treasury Resolution item to restore, not
+    a routine compliance note
+  → This is the only scheduled, recurring check of this control in the entire
+    system — without it, a regression (CEO/CFO lobbying to loosen the
+    workflow, or a bank relationship-manager error during an unrelated
+    account change) could go undetected indefinitely
+
 ─── JUNE ───
 
 □ 15 Jun: SKATTEFUNN RF-1053 DEADLINE
