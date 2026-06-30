@@ -41,12 +41,23 @@ KALİTE KRİTERLERİ:
 □ Dil: Norveçce Bokmål (hukuki standart)
 □ Şeytan'ın avukatı senaryolarına karşı güçlendirilmiş
 
-ÜRETİLECEK 8 BELGE:
+⚠️ TESCİL ÖNCESI UYARI (her belgeye ekle):
+"Bu belge, Suderra AS'nin Brønnøysundregistrene'den organisasjonsnummer
+almasına kadar kuruculara şahsen bağlayıcıdır. Tescil öncesinde imzalanan
+sözleşmeler şirketi değil kurucuyu yükümlü kılar (Aksjeloven §2-9).
+Tescil genellikle online başvuruda 1-3 iş günü sürer."
+
+ÜRETİLECEK 10 BELGE:
 
 1. 01-stiftelsesdokument.md
    → Tam Norveçce kuruluş senedi
    → A/B/C hisse yapısı açıkça belirtilmiş
    → Aksjeloven §2-1 ila §2-9 zorunluluklarının tamamı
+   → ZORUNLU EK: Revisorloven denetim muafiyeti beyanı (fravalg av revisjon):
+     "Generalforsamlingen vedtar å unnlate revisjon i henhold til Revisorloven §2-1,
+      da selskapet oppfyller vilkårene for fritak."
+     (Şirket küçük şirket kriterlerini karşılıyorsa: <5M NOK gelir, <10M NOK bilanço, <10 çalışan)
+     Bu madde olmadan şirket yılda 30.000-50.000 NOK denetim ücreti ödemek zorundadır.
 
 2. 02-vedtekter.md
    → Minimum §2-2 içeriği + güçlendirilmiş hükümler
@@ -82,12 +93,25 @@ KALİTE KRİTERLERİ:
    → Aquaculture yazılım AR-GE niteliği kanıtlanmış
    → Bütçe ve zaman planı şablonu
 
-8. 00-founder-ozet.md
+8. 08-ip-politikasi.md
+   → Agent 14'ten gelen IP assignment maddeleri
+   → Co-founder IP devir beyanı
+   → Açık kaynak lisans politikası
+   → Alan adı ve marka devir beyanı
+   → Databehandleravtale özeti (Agent 15'ten)
+
+9. 09-styrereglement.md
+   → Agent 17'den gelen yönetim kurulu tüzüğü
+   → Tam Norveçce Bokmål
+   → CEO yetki sınırları, karar eşikleri, toplantı kuralları
+
+10. 00-founder-ozet.md
    → Tüm belgeler için Türkçe özet (founder için)
    → Her belgenin ne işe yaradığı
    → En kritik 3 madde per belge
    → İmzalamadan önce bilmen gerekenler
    → Bir sonraki adımlar
+   → Brønnøysundregistrene kayıt adımları (Altinn, ~1-3 iş günü)
 
 EKSTRA — DAVA ÖNLEME NOTU:
 Her belgenin sonuna ekle:
@@ -121,7 +145,7 @@ danışılması tavsiye edilir. Özellikle [o belgeye özgü kritik maddeler]."
 [Avukat uyarısı]
 
 TAMAMLANMA RAPORU:
-  Üretilen belgeler: 8/8
+  Üretilen belgeler: 10/10
   Kritik uyarılar: [liste]
   Eksik kalan maddeler: [varsa]
   Founder için sonraki adımlar: [öncelik sırasıyla]

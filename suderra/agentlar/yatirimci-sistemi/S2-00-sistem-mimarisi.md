@@ -56,16 +56,23 @@ ve kişiye özel ilk temas stratejisi hazırla.
 
 ---
 
-## Agent Listesi (6 Agent)
+## Agent Listesi (13 Agent — Güncellenmiş)
 
-| # | Agent | Görev | Çıktı |
-|---|-------|-------|-------|
-| S2-01 | Ekosistem Haritalama | Norveç AquaTech yatırım ekosistemini tam haritalandırır | 50+ yatırımcı listesi |
-| S2-02 | Profil Araştırmacı | Her yatırımcı için derin kişi/şirket profili | Yapılandırılmış profil kartları |
-| S2-03 | Portfolio Analist | Geçmiş yatırımların deseni, tutar, zamanlama | Yatırım davranış analizi |
-| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru, öncelik sırası | Top 20 liste + gerekçe |
-| S2-05 | Outreach Yazarı | Kişiye özel ilk temas mesajı + e-posta | Hazır iletişim şablonları |
-| S2-06 | Yatırımcı Soruları | Due diligence soruları + hazır cevaplar | Q&A belgesi |
+| # | Agent | Görev | Çıktı | Faz |
+|---|-------|-------|-------|-----|
+| S2-07 | Founder Onboarding | Suderra Pitch Datasheeti üretir (TÜM sistemin girdi kaynağı) | JSON datasheet + readiness score | FAZ -1 |
+| S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond dahil) | Yatırımcı listesi | FAZ 0 |
+| S2-13 | Rekabet İstihbaratı | Rakip analizi — S2-06 ve S2-10'a veri sağlar | Competitor cards + positioning | FAZ 0 |
+| S2-08 | Veri Doğrulama | S2-01 listesini bağımsız kaynaklarla çapraz kontrol eder | Doğrulanmış liste | FAZ 0b |
+| S2-02 | Profil Araştırmacı | Her yatırımcı için derin kişi/şirket profili | Yapılandırılmış profil kartları | FAZ 1 |
+| S2-03 | Portfolio Analist | Geçmiş yatırımların deseni, tutar, zamanlama | Yatırım davranış analizi | FAZ 1 |
+| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru (8 kriter, bonus cap ±2) | Top 20 liste + gerekçe | FAZ 2 |
+| S2-09 | Devlet Fonu Başvuru | Skattefunn + SIVA + Innovasjon Norge + BIA başvuruları | Hazır başvuru paketleri | FAZ 2 |
+| S2-10 | Pitch Deck İçerik | 10 slide için metin içerik (traction seviyesine göre) | Slide content | FAZ 2 |
+| S2-05 | Outreach Yazarı | Kişiye özel ilk temas mesajı + e-posta | Hazır iletişim şablonları | FAZ 3 |
+| S2-06 | Yatırımcı Soruları | Due diligence soruları + hazır cevaplar (S2-07 datasheeti ile doldurulur) | Q&A belgesi | FAZ 3 |
+| S2-11 | Toplantı Hazırlık | Her yatırımcı toplantısı için 2 sayfalık brifing | Meeting briefing | FAZ 3 (on-demand) |
+| S2-12 | Geri Bildirim | Outreach sonuçlarını analiz eder, S2-04 skorlarını günceller | Updated priority list | FAZ ∞ |
 
 ---
 
@@ -83,8 +90,8 @@ Spawn Capital               — AquaTech, food tech, seed/Series A
 ```
 Investinor AS               — Norveç devlet yatırım fonu, early stage
 Innovasjon Norge            — Hibe + loan + equity, aquaculture için özel programlar
-Norges Forskningsråd        — AR-GE hibeleri, Skattefunn koordinasyonu
-SIVA                        — Teknoloji transfer, inkübatör
+Norges Forskningsråd (BIA)  — AR-GE hibeleri, Skattefunn koordinasyonu (S2-09 başvuru hazırlar)
+SIVA                        — Teknoloji transfer, inkübatör (S2-09 başvuru hazırlar)
 ```
 
 ### Kategori C — Sektör Bağlantılı Family Offices
@@ -111,15 +118,43 @@ Balderton Capital         — European tech, Norveç portföyü var
 Northzone                 — Nordic focused VC
 ```
 
+### Kategori F — Havbruksfond (Municipal Aquaculture Funds) ← YENİ
+```
+Bergen kommune            — Havbruksfond geliri, aquaculture-yakın yatırım
+Tromsø kommune            — Kuzey Norveç aquaculture merkezi
+Ålesund kommune           — Balıkçılık geleneği, yerel destek
+Kinn kommune              — Vestland, havbruksfond aktif
+```
+Not: Bu fonlar özel yatırımcı değil — ancak yerel destek, inkübatör erişimi,
+pilot müşteri bağlantısı için kritik. S2-09 bu müzelerin programlarını araştırır.
+
 ---
 
-## Çalışma Sırası
+## Güncellenmiş Çalışma Sırası
 
 ```
-FAZ 0: S2-01 Ekosistem Haritalama (önce çalışır, sonraki 4'e liste sağlar)
-FAZ 1: S2-02 + S2-03 (paralel — profil ve portfolio analizi)
-FAZ 2: S2-04 Eşleşme & Sıralama (S2-02 ve S2-03 bitince)
-FAZ 3: S2-05 + S2-06 (paralel — outreach + due diligence hazırlık)
+FAZ -1: S2-07 Founder Onboarding (TÜM sistemden önce çalışır)
+  ↓ Suderra Pitch Datasheet üretilir — tüm [boşluklar] doldurulur
+  ↓ Investor Readiness Score: 0-10
+
+FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]
+  ↓ S2-01: 50-80 yatırımcı listesi (Havbruksfond dahil)
+  ↓ S2-13: Fishtalk, AquaCloud, Excel/WhatsApp rakip kartları
+
+FAZ 0b: S2-08 (Veri Doğrulama)
+  ↓ S2-01 listesinin %70+ PASS kontrolü — başarısız olanlar elenir
+
+FAZ 1:  S2-02 + S2-03 [paralel — validated liste üzerinde]
+  ↓ Profil kartları + portfolio analizi
+
+FAZ 2:  S2-04 (Eşleştirme) + S2-09 (Devlet Fonu) + S2-10 (Pitch Deck) [paralel]
+  ↓ Top 20 priority list + hazır başvuru paketleri + pitch içerik
+
+FAZ 3:  S2-05 + S2-06 + S2-11 [paralel]
+  ↓ Outreach mesajları + Q&A + toplantı brifingleri (on-demand)
+
+FAZ ∞:  S2-12 (Geri Bildirim) — her outreach dalgası sonrası tekrar çalışır
+  ↓ Skorlar güncellenir, sonraki dalga optimize edilir
 ```
 
 ---

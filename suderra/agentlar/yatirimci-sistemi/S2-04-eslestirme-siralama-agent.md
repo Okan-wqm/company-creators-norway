@@ -76,15 +76,23 @@ KRİTER 8 — YATIRIMCınıN SUDERRA'YA KATKI POTANSİYELİ [ağırlık: %2]
 AĞIRLIKLI TOPLAM PUAN:
   = (K1×0.25) + (K2×0.20) + (K3×0.15) + (K4×0.15) + (K5×0.10) + (K6×0.10) + (K7×0.03) + (K8×0.02)
 
-BONUS PUANLAR:
+BONUS PUANLAR (max cumulative bonus: +2.0):
   +1.0: Aquaculture konferansına düzenli katılım (sektör tutkusu gösterir)
   +0.5: Norveç devlet fonu LP'si (Investinor/Innovasjon gibi — güven sinyali)
   +0.5: Portföyden başarılı aquaculture exit var
-  -2.0: Portföyde DOĞRUDAN rakip var (kesinlikle gitme sinyali)
-  -1.0: Son 24 ayda yatırım yok (pasif)
-  -0.5: Minimum yatırım tutarı bizim beklentimizin 5 katı
 
-FINAL SKORU = Ağırlıklı Toplam + Bonus/Ceza
+CEZA PUANLAR (max cumulative penalty: -3.0):
+  -2.0: Portföyde DOĞRUDAN rakip var (kesinlikle gitme sinyali)
+  -0.5: Portföyde KISMİ rakip var (adjacent product, not identical — gray zone)
+  -1.0: Son 24 ayda yatırım yok (pasif fon)
+  -0.5: Minimum yatırım tutarı bizim beklentimizin 5 katı
+  -0.5: "vesentlig norsk aktivitet" gerektirir (Investinor için zorunlu kriter —
+        if Suderra cannot demonstrate substantial Norwegian activity, score penalty)
+
+BONUS CAP: Maximum bonus = +2.0 (prevent over-scoring on qualitative factors)
+PENALTY CAP: Maximum penalty = -3.0 (prevent a single disqualifier from hiding other signals)
+
+FINAL SKORU = Ağırlıklı Toplam + Bonus (max +2.0) + Ceza (min -3.0)
 
 ─── SIRALAMA ve KATEGORİLER ───
 
