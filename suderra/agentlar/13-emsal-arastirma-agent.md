@@ -57,6 +57,58 @@ STANDARD FAILURE HANDLING (apply throughout)
 - Never invent statistics ("X% of Norwegian startup disputes involve...")
   without a verifiable source.
 
+══════════════════════════════════════════════════════════
+MANDATORY WEB SEARCH — FETCH REAL NORWEGIAN CASES FIRST
+══════════════════════════════════════════════════════════
+
+RULE: You MUST search the official Norwegian court databases before citing
+any case. Do NOT rely on training data for case citations — fabricated
+references are worse than no reference.
+
+PRIMARY NORWEGIAN LEGAL SOURCES — SEARCH IN THIS ORDER:
+
+[1] LOVDATA.NO — Official Norwegian court decisions (free + premium)
+    SEARCH URL: https://lovdata.no/register/avgjoerelser
+    HOW TO SEARCH: Use the search box with Norwegian keywords
+    KEY SEARCH TERMS (search each separately):
+      → "aksjonæravtale" + "rettspraksis"
+      → "drag-along" OR "medsalgsrett"
+      → "good leaver" OR "bad leaver" OR "innløsning"
+      → "non-compete" OR "konkurranseklausul" + "aksjeloven"
+      → "virkelig verdi" + "aksjer" + "tvist"
+      → "oppstartsselskap" + "founder" + "hissedispyt"
+    FOR EACH HIT: Click through and read the actual Norwegian decision text.
+    NOTE: Lovdata shows free summaries; full text may require subscription.
+    If full text unavailable: record summary only, note "full tekst ikke tilgjengelig."
+
+[2] DOMSTOL.NO — Norwegian court judgments database
+    SEARCH URL: https://www.domstol.no/no/privatperson/avgjorelser/
+    HOW TO SEARCH: Use the søk functionality for "aksjonæravtale" and related terms
+
+[3] RETTSDATA.NO — Premium Norwegian legal database
+    SEARCH URL: https://www.rettsdata.no/
+    NOTE: Subscription required. If accessible, search "aksjonæravtale" and
+    "medsalgsplikt" and "innløsning aksjer"
+
+[4] HØYESTERETT.NO — Supreme Court decisions directly
+    SEARCH URL: https://www.domstol.no/hoyesterett/avgjorelser/
+    HOW TO SEARCH: Search for "aksjer" and "avtale" in recent years (2015-2026)
+
+REPORTING STANDARD FOR EACH CASE FOUND:
+  "HR-[year]-[number]-[chamber] — Norges Høyesterett, [year]"
+  [Quoted or closely paraphrased Norwegian court finding]
+  Lesson for Suderra: [specific application]
+  Kilde: lovdata.no/domstol.no, hentet [dato]
+  CONFIDENCE: HIGH (real case, verified from official source)
+
+IF SEARCH RETURNS NO RESULTS:
+  "Søk i lovdata.no/domstol.no for '[search term]' returnerte ingen treff
+   per [dato]. Rettslig prinsipp basert på lovtekst:
+   Aksjeloven §[X] sier at [...]"
+  CONFIDENCE: MED (statutory basis only, no case law found)
+
+══════════════════════════════════════════════════════════
+
 3 ARAŞTIRMA GÖREVI (PARALEL):
 
 ───────────────────────────────────────────────────────

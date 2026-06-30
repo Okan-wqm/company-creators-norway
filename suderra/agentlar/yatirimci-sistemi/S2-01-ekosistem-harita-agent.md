@@ -24,18 +24,77 @@ FOR EACH INVESTOR, MANDATORY CLASSIFICATION:
   PASSIVE: No recent activity (> 24 months) — monitor, approach after real traction
   (Do NOT include passive investors in top-priority outreach list)
 
-VERIFIED SOURCES TO USE:
-  Primary: Investor's own website (fund page, portfolio section)
-  Secondary: Proff.no (Norwegian company database — check financials of fund AS)
-  Startup databases: Dealroom.co (search "Norway" + "aquaculture"), Crunchbase
-  Market tracking: Euronext Growth Oslo (listed aquaculture companies)
-  News: Kyst.no, IntraFish.no, SalmonBusiness.com (Norwegian aquaculture news)
-  Events: AquaNor conference (Trondheim, every 2 years — last August 2023, next August 2025)
+══════════════════════════════════════════════════════════════════════
+MANDATORY WEB RESEARCH PROTOCOL — APPLY TO EVERY INVESTOR ENTRY
+══════════════════════════════════════════════════════════════════════
 
-DATA QUALITY TAGS:
-  VERIFIED = from investor's own website or official press release
-  ESTIMATED = from Dealroom/Crunchbase (may be incomplete)
-  UNKNOWN = no data found — flag for S2-08 validation
+RULE: Every data point you record must come from a live web source fetched
+during this research session. Do NOT use training data as the primary source —
+fund managers change, funds close, portfolio companies change.
+
+FOR EVERY INVESTOR — MANDATORY FETCH SEQUENCE:
+
+STEP 1 — INVESTOR'S OWN WEBSITE:
+  → Fetch the investor's official website
+  → Navigate to: Fund page / Portfolio / Investments / About / Team
+  → Read the Norwegian-language content if the site is in Norwegian
+  → Extract: current fund name, investment stage, check size, sector focus, portfolio list
+  → Record: [URL fetched], [date], [content found]
+
+STEP 2 — PROFF.NO (Norwegian company database — always check):
+  → FETCH: https://www.proff.no/selskap/[company-name]/[org-number]/
+  → OR SEARCH: https://www.proff.no/søk?q=[investor+name]
+  → READ IN NORWEGIAN: Organisasjonsnummer, aksjekapital, styremedlemmer, årsregnskap
+  → KEY DATA: Is the fund AS (company) active? What is the annual turnover (omsetning)?
+  → Inactive AS or zero turnover = PASSIVE or CLOSED fund → do not include
+  → Record: org.nr., last filed accounts year, omsetning
+
+STEP 3 — DEALROOM.CO (startup investment data):
+  → SEARCH: https://dealroom.co/companies/[investor-name] or
+            https://app.dealroom.co/investors search with "Norway" filter
+  → Look for: portfolio list, investment stage, check size, last activity date
+  → Mark data as: DATA QUALITY: ESTIMATED (Dealroom may be incomplete)
+
+STEP 4 — RECENT NEWS VERIFICATION:
+  → Search for investor name on:
+      https://e24.no (Norwegian business news — search in Norwegian)
+      https://shifter.no (Norwegian startup news)
+      https://kyst.no (aquaculture news — for aquaculture investors)
+      https://intrafish.no (aquaculture news — search in English/Norwegian)
+  → Search terms: "[investor name] investering" OR "[investor name] portefølje"
+  → Find any investment announcement from the past 24 months
+  → If found: ACTIVE — record announcement URL and date
+  → If not found in 24 months: PASSIVE — record this explicitly
+
+STEP 5 — FOR LISTED COMPANIES (AKVA Group, Mowi, Lerøy, SalMar):
+  → Check Oslo Bors / Euronext Growth Oslo announcement database:
+    https://newsweb.oslobors.no/
+  → Search for "[company] oppkjøp" OR "[company] investering" OR "[company] innovasjon"
+  → Read Norwegian corporate announcements
+
+STEP 6 — LINKEDIN (for key contacts):
+  → Search: "[investor firm] Norway" on LinkedIn
+  → Identify: current Managing Partner, sector-relevant Partner/Associate
+  → Verify: are they still at the firm? When was their last LinkedIn activity?
+  → Do NOT guess email addresses — record "email: verify via LinkedIn" only
+
+DATA QUALITY TAG (mandatory for every data point):
+  VERIFIED = from investor's own website OR official press release OR Proff.no — fetched today
+  ESTIMATED = from Dealroom/Crunchbase — may be incomplete or outdated
+  UNKNOWN = not found after searching all sources above — flag for S2-08 validation
+
+RECORD FORMAT FOR EACH SOURCE:
+  "Kilde: [URL] — hentet [dato] — [Norwegian/English] — innhold: [brief description]"
+
+══════════════════════════════════════════════════════════════════════
+
+VERIFIED SOURCES TO USE:
+  Primary: Investor's own website (fund page, portfolio section) — FETCH LIVE
+  Secondary: Proff.no (Norwegian company database — verify fund AS is active)
+  Startup databases: Dealroom.co (search "Norway" + "aquaculture"), Crunchbase
+  Market tracking: newsweb.oslobors.no (Oslo Bors announcements)
+  News: e24.no, shifter.no, kyst.no, intrafish.no, salmenbusiness.com
+  Events: AquaNor conference (Trondheim, every 2 years — last August 2023, next August 2025)
 
 ARAŞTIRMA GÖREVLERİN:
 
