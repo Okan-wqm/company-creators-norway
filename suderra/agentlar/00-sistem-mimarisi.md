@@ -75,7 +75,7 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
 | 06 | Sweat Equity Agent | Hukuk | B hissesi vesting, co-founder hakları, oransal bad leaver |
 | 07 | Reverse Tax Optimizer | Vergi | Vergi fırsatı (Fritaksmetoden, Skattefunn, opsjonsordning §5-14) |
 | 08 | Norveç Avukat Agent | Avukat | Preliminary legal review (NOT certification) |
-| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 10 senaryo (A-J) |
+| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 11 senaryo (A-K) |
 | 10 | Founder Avukatı Agent | Avukat | ADVERSARİAL: karşı taraf avukatının argümanları |
 | 11 | Belge Uzmanı Agent | Çıktı | Nihai format, imzaya hazır 10 belge |
 | 12 | Şeytan'ın Avukatı | Kalite | FAZ 3'te çalışır — CEO'dan ÖNCE kötü senaryoları test eder |

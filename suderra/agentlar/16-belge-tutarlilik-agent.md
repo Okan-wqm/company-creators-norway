@@ -61,15 +61,35 @@ TERM GROUP 3 — GOVERNANCE TERMS
   □ "Board" vs. "Styre" — consistent use of language?
   □ "Supermajority" threshold — 75% in all references?
   □ "Drag-along" trigger — same percentage in vedtekter and aksjonæravtale?
-  □ "Tag-along" — pro-rata calculation identical everywhere?
+  □ "Tag-along" — pro-rata calculation identical everywhere? Does it aggregate
+    related transfers to the same buyer within 12 months in BOTH documents
+    (anti-salami-slicing, Agent 09 Senaryo K)? Is the Permitted Transferee
+    carve-out defined identically in vedtekter (if referenced) and aksjonæravtale?
   □ "ROFR period" — 30 days in ALL documents?
   □ "Observer" rights — same scope in all documents?
+  □ "Board seat not share-attached" rule — does Styrereglement §2 (Agent 17)
+    and Aksjonæravtale agree that a board/observer seat does NOT transfer
+    automatically to a share buyer? Flag any document implying otherwise.
+  □ CEO/CFO Treasury threshold (Agent 17 §6.1) — same NOK figure referenced
+    anywhere else it's mentioned (e.g., Agent 02 CFO output, term sheet)?
 
 TERM GROUP 4 — SHARE CLASS TERMS
   □ "A Share" voting ratio — 10:1 stated consistently?
   □ "B Share" voting ratio — 1:1 stated consistently?
   □ "C Share" liquidation preference — 1x non-participating in all docs?
-  □ "Conversion" rights — identical in vedtekter and aksjonæravtale?
+  □ SHARE CLASS CONVERSION-ON-TRANSFER (new — verify carefully, this is a
+    custom mechanism not boilerplate):
+      - B/C→A on Founder acquisition: stated identically in vedtekter and
+        any document referencing the cap table (term sheet, founder summary)?
+      - A→C on Founder transfer-out: stated identically, and does every
+        document agree the converted share does NOT carry automatic
+        liquidation preference (that is reserved for primary investment
+        rounds, per Agent 04 Analysis 7)?
+      - Is the conversion clause actually present in VEDTEKTER (required for
+        third-party/company-binding effect per Agent 03 item 11) and not only
+        in aksjonæravtale (which would only bind signatories, not buyers)?
+        If it's ONLY in aksjonæravtale: flag as CRITICAL — the mechanism the
+        Founder is relying on would not bind a future buyer.
   □ Anti-dilution formula — CP2=CP1×(A+B)/(A+C) written the same everywhere?
 
 TERM GROUP 5 — NOTICE / TIMING TERMS
@@ -139,6 +159,10 @@ If [this is changed] → [these documents must also be updated]:
 | A share voting ratio | Stiftelsesdokument, Vedtekter §[X], Aksjonæravtale §[Y] |
 | Non-compete scope | Sweat Equity §[X], Aksjonæravtale §[Y] |
 | Co-founder bad leaver list | Sweat Equity §[X], Aksjonæravtale §[Y] |
+| Tag-along trigger/proportion | Aksjonæravtale §[X], Term Sheet §[Y] |
+| Permitted Transferee definition | Vedtekter §[X], Aksjonæravtale §[Y] (must match — used by both tag-along AND conversion-on-transfer) |
+| Share class conversion-on-transfer | Vedtekter §[X] (binding source), Aksjonæravtale §[Y], Founder Özet, Styrereglement §2 (board seat note) |
+| CEO/CFO Treasury threshold | Styrereglement §6.1, Agent 02 CFO output, Term Sheet (if disclosed to investors) |
 
 This table exists so that when a founder or investor negotiates one term,
 they immediately know what else must change.

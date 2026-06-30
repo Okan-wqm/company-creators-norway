@@ -151,6 +151,51 @@ a simple majority of aksjonæravtale signatories — not unanimous consent.
   → If ONLY in aksjonæravtale: aksjonæravtale amendment clause controls
 CONFIDENCE: HIGH for contract law analysis; MED for court outcome prediction
 
+SENARYO K — TAG-ALONG / SHARE CLASS CONVERSION ATLATMA:
+Founder wants to sell a large stake to an outside buyer without triggering
+tag-along rights or the A→C conversion-on-transfer mechanism (Agent 03 item
+11, Agent 04 Analysis 6-7). Test the loopholes a sophisticated buyer's lawyer
+would look for:
+
+- SALAMI SLICING: Founder structures the sale as 10 separate transactions,
+  each below any per-transaction notice threshold, over several months, to
+  the same buyer (or affiliated buyers).
+  → Does the tag-along clause cover "a series of related transactions" or
+    only a single transaction? If only single-transaction language exists:
+    RISK — this loophole works. Recommended fix: aggregate all transfers by
+    the Founder to the same buyer (or its affiliates) within any 12-month
+    period for tag-along trigger purposes.
+- PERMITTED TRANSFEREE LAUNDERING: Founder transfers shares to a "Permitted
+  Transferee" (e.g., a personal holding company, exempt from tag-along and
+  conversion per Agent 04 Analysis 6) which then immediately resells to the
+  real outside buyer.
+  → Does the Permitted Transferee definition include a holding-period or
+    "no subsequent transfer for value" condition? If not: RISK — the carve-out
+    becomes a loophole to bypass both tag-along AND the A→C conversion (since
+    the shares never technically left "Founder-controlled" hands directly).
+  → Recommended fix: Permitted Transferee status should be revocable, or the
+    carve-out exemption itself should follow the shares (i.e., if a Permitted
+    Transferee later sells to a non-Permitted Transferee, tag-along/conversion
+    triggers retroactively at THAT point, treating the original transfer as
+    if it never benefited from the exemption).
+- GOOD FAITH PURCHASER ON CONVERSION: A buyer purchases what they believe are
+  A shares (10:1 voting) from the Founder, unaware of the automatic A→C
+  conversion-on-transfer clause in the vedtekter.
+  → Since vedtekter are filed with Brønnøysund and are public record (unlike
+    aksjonæravtale, which only binds signatories), is a buyer who didn't
+    actually read them still bound by the conversion? Norwegian company law
+    generally treats vedtekter as constructive notice to anyone dealing in
+    the company's shares — but verify this is not weakened by anything in
+    Agent 03's Aksjeloven §4-1/§6-33 research.
+  → Recommended mitigation regardless of the legal answer: require the board's
+    samtykke (consent) for any share transfer (already a vedtekter feature)
+    to include written acknowledgment by the buyer of the conversion clause
+    BEFORE the board approves registering the transfer — removes the "I didn't
+    know" argument entirely as a practical matter.
+CONFIDENCE: MED — these are foreseeable drafting loopholes, not yet
+court-tested in Norway; recommend explicit anti-circumvention language per
+the fixes above rather than relying on general principles to close them
+
 HER SENARYO İÇİN FORMAT:
   Risk Level: [LOW / MEDIUM / HIGH / CRITICAL]
   Current Status in Document: [present? sufficient?]
@@ -180,7 +225,7 @@ STANDARD FAILURE HANDLING:
 ## Çıktı
 
 ```
-COURT STRESS TEST REPORT — 8 SCENARIOS
+COURT STRESS TEST REPORT — 11 SCENARIOS
 ────────────────────────────────────────
 SCENARIO A (Bad Leaver Dispute):
   Risk: [LOW / MEDIUM / HIGH]
@@ -188,7 +233,7 @@ SCENARIO A (Bad Leaver Dispute):
   Weak point: [clause]
   Mitigation: [revision]
 
-[...B, C, D, E, F, G, H scenarios...]
+[...B through K scenarios...]
 
 GENEL MAHKEME DAYANIKLILIK SKORU:
   Stiftelsesdokument: [1-10]

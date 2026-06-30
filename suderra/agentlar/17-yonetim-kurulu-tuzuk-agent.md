@@ -98,6 +98,20 @@ Specify:
     chair the Board — chairing gives the Founder control over the agenda, meeting
     calls, and casting vote, independent of who runs daily operations)
 
+  BOARD SEATS ARE NOT SHARE-ATTACHED (explicit, non-negotiable rule):
+    A board seat or observer right is a PERSONAL appointment to the named
+    individual/entity holding it at the time — it does NOT automatically
+    transfer to whoever later acquires that person's shares (Aksjeloven §6-3:
+    board members are elected by the generalforsamling, not inherited via
+    share transfer). If a shareholder who holds a board seat or observer
+    right sells their shares (including any sale that converts the shares to
+    C class per Vedtekter — see Agent 11 doc #2), the seat/right becomes
+    vacant and does NOT pass to the buyer. A new appointment (or renewed
+    nomination, if the buyer independently meets a stated threshold like the
+    15% C-share trigger above) requires a fresh generalforsamling resolution.
+    The majority of shareholders (via the generalforsamling) decides who may
+    or may not serve on the Board — no one self-appoints by acquiring shares.
+
   OBSERVER RIGHTS — EXPLICIT DEFINITION (draft this as a separate subsection):
   An Observer (observatør) appointed under this section has the following rights:
     → Receives all board materials minimum 5 business days prior to each meeting

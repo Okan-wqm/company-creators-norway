@@ -41,6 +41,21 @@ ARAŞTIRMA GÖREVLERİN:
 10. Rekabet yasağı geçerlilik şartları:
     - Avtaleloven §36 (genel sınır)
     - Arbeidsmiljøloven §14 A-1 (iş sözleşmesindeki rekabet yasağı)
+11. Hisse sınıfı otomatik dönüşüm (conversion-on-transfer) mekanizması — YENİ:
+    Founder kontrolünü korumak için: (a) Founder'ın satın aldığı/geri aldığı
+    B veya C hisseleri otomatik olarak A hissesine dönüşür, (b) Founder'ın
+    Permitted Transferee dışındaki birine sattığı A hisseleri otomatik olarak
+    C hissesine dönüşür (10:1 oy hakkını kaybeder).
+    - Bu tür "sunset"/conversion-on-transfer maddeleri Aksjeloven §4-1 kapsamında
+      vedtekter'de tanımlanabilir mi? Hangi madde formatı şirkete (üçüncü
+      şahıslara karşı) bağlayıcı olur — sadece aksjonæravtale'de yazarsa
+      bağlamaz mı (bkz. madde 7)?
+    - Dönüşüm ne zaman tetiklenir: devir anında mı, aksjebok'a kayıt anında mı?
+      Board'un samtykke (onay) yetkisi bu kaydı nasıl etkiler?
+    - İyi niyetli alıcı (good faith purchaser) sorunu: alıcı hisseyi A hissesi
+      sanarak alırsa, vedtekter'de açıkça yazılı olması bu riski ortadan
+      kaldırır mı? (Vedtekter halka açık kayıt olduğu için "herkes bilir
+      sayılır" prensibi geçerli mi?)
 
 ELEŞTİRİ GÖREVİN (FAZ 3):
 Taslak belgeler geldiğinde her birini tara:

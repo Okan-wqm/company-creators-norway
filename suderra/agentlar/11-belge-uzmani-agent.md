@@ -64,6 +64,18 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
    → 10:1 A hissesi oy hakkı açıkça yazılmış
    → ROFR mekanizması (30 takvim günü)
    → Samtykke gereklilikleri
+   → ZORUNLU EK — HİSSE SINIFI OTOMATİK DÖNÜŞÜM MADDESİ (conversion-on-transfer):
+     "Enhver B- eller C-aksje som erverves av Founder (tilbakekjøp, forkjøpsrett,
+      bad leaver-gjenkjøp eller annet kjøp) konverteres automatisk til A-aksje
+      ved overføring til Founder."
+     "Enhver A-aksje som Founder overfører til en person som ikke er en
+      Permittert Mottaker (jf. aksjonæravtalen § [X]), konverteres automatisk
+      til C-aksje (1:1 stemmerett, uten automatisk likvidasjonspreferanse) ved
+      overføringstidspunktet."
+     Bu madde VEDTEKTER'de olmalı (sadece aksjonæravtale'de değil) — şirkete ve
+     üçüncü şahıs alıcılara karşı bağlayıcı olması için (bkz. Agent 03 araştırma
+     madde 11). Board'un samtykke onayı, alıcının bu dönüşüm maddesini yazılı
+     olarak kabul ettiğini teyit etmeden verilmemeli (Agent 09 Senaryo K).
 
 3. 03-sweat-equity-avtale.md
    → Co-founder başına (iki versiyon: Co-F1 ve Co-F2)
@@ -74,8 +86,21 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
 4. 04-aksjonaer-avtale.md
    → En kapsamlı belge
    → Drag-along: "%75 A+B+C birleşik oy" — tam formül
+   → TAG-ALONG (YENİ — orantılı co-sale hakkı): Founder A hisselerinin bir
+     kısmını/tamamını üçüncü şahsa satarsa, diğer TÜM hissedarlar (B ve C sınıfı)
+     kendi hisselerinin AYNI ORANINI aynı alıcıya aynı fiyat/şartlarla satma
+     hakkına sahiptir. Alıcı tag-along miktarının tamamını almayı kabul
+     etmezse, Founder kendi satışını da tamamlayamaz. Permitted Transferee
+     istisnası (Suderra Holding AS, aile/miras planlaması, teminat — gerçek
+     kontrol değişikliği yok) — bkz. Agent 04 Analysis 6 tam matematik.
+   → Anti-circumvention: tag-along, Founder'ın aynı alıcıya/bağlı şirketlerine
+     12 ay içinde yaptığı TÜM transferleri toplar (salami-slicing önleme,
+     Agent 09 Senaryo K)
    → Anti-dilution: broad-based WA matematiksel formül dahil
    → Non-compete dar tanım (Avtaleloven §36 uyumlu)
+   → Board üyeliği hisseye bağlı DEĞİLDİR: bir hissedar hisselerini satarsa,
+     yeni alıcı board koltuğunu OTOMATİK devralmaz — board üyeliği Aksjeloven
+     §6-3 uyarınca genel kurul çoğunluk oyuyla atanır (bkz. Agent 17 §2)
    → Dispute resolution: Oslo Tingrett, Norveç hukuku
 
 5. 05-holding-transfer-plan.md
