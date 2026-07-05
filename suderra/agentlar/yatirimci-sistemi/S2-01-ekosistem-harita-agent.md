@@ -152,7 +152,8 @@ ARAŞTIRMA GÖREVLERİN:
 
 7. NORGES FORSKNINGSRÅD
    - Skattefunn koordinasyonu
-   - BIA (Brukerstyrt Innovasjonsarena) programı
+   - IPN ("Innovasjonsprosjekt i næringslivet") programı — eski BIA'nın
+     yerini aldı; løpende başvuru (güncel çağrı koşullarını forskningsradet.no'dan fetch et)
    - Aquaculture tech projeleri için uygunluk
    - Tutar ve süre
 

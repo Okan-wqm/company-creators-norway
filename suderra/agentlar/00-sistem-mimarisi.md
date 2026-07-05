@@ -72,12 +72,25 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
 ┌──────────────────────────────────────────┐
 │  FAZ 6 — OPERASYONEL UYGULAMA [sıralı/sürekli] │
 │  19-brønnøysund-kayıt · 21-yıllık-uyum     │
+│  + on-demand: 23-ticari-sözleşmeler        │
+└────────────────────┬──────────────────────┘
+                      ▼
+┌──────────────────────────────────────────┐
+│  FAZ 7 — KAPANIŞ & EMİSYON (Agent 22)     │
+│  [olay-tetiklemeli: imzalı term sheet]     │
+│  22 → 02/04 (cap table) → 16 (yeniden     │
+│  geçit) → 11 (v2 belgeler) → ✋ FOUNDER   │
+│  → Altinn bildirimi → 21 (yeni takvim)     │
+│  Her yatırım turunda tekrar çalışır        │
 └──────────────────────────────────────────┘
+
+NOT: Her agent, oturumlar arası durum takibi için S0 protokolüne uyar —
+bkz. S0-durum-yonetimi.md (suderra/durum.json şeması).
 ```
 
 ---
 
-## Agent Listesi (21 Agent)
+## Agent Listesi (23 Agent + S0 Protokolü)
 
 | # | Agent | Blok | Görev |
 |---|-------|------|-------|
@@ -102,6 +115,9 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
 | 19 | Brønnøysund Kayıt Rehberi | Süreç/YENİ | Altinn adım adım tescil, pre-registration uyarısı |
 | 20 | Çalışan Sözleşmesi | Hukuk/YENİ | Norveç arbeidskontrakt (co-founder çalışan ise) |
 | 21 | Yıllık Uyum Takvimi | Süreç/YENİ | Tüm yıllık son tarihler: vergi, Brønnøysund, GDPR |
+| 22 | Kapanış & Emisyon | Süreç/YENİ | FAZ 7: imzalı term sheet → kapitalforhøyelse belgeleri, §10-9 üç-ay takibi, S2→S1 geri besleme döngüsü |
+| 23 | Ticari Sözleşmeler | Hukuk/YENİ | SaaS müşteri sözleşmesi + oppdragsavtale (aml §1-8 testi, yüklenici IP devri) — on-demand |
+| S0 | Durum Yönetimi Protokolü | Koordinasyon | Agent değil protokol: suderra/durum.json ile oturumlar arası belge versiyonu/gate/outreach durumu takibi |
 
 ---
 
@@ -165,7 +181,23 @@ FAZ 6 — Operasyonel Uygulama (Agent 19, 21) [sıralı, sonrasında sürekli]
     tekrarlayan bir agent olarak çalışır (FAZ 0-5b'nin tek seferlik kuruluş döngüsünün dışında)
   ↓ SONRAKİ SİSTEM (el değiştirme): Kuruluş tamamlandığında yatırım turu süreci
     için Sistem 2 ile devam edin — yatirimci-sistemi/S2-00.5 pre-flight ile başlayın
+  ↓ On-demand: Agent 23 (Ticari Sözleşmeler) — ilk müşteri/pilot veya ilk
+    yüklenici gündeme geldiğinde (kuruluş döngüsünü bloklamaz)
+
+FAZ 7 — Kapanış & Emisyon (Agent 22) [olay-tetiklemeli, her yatırım turunda]
+  ↓ Tetikleyici: Sistem 2'den (S2-14/S2-15) veya founder'dan "imzalı term sheet" sinyali
+  ↓ Agent 22: GK protokolü + tegningsliste + revize belge direktifleri (v2)
+  ↓ Agent 02/04: post-round cap table + oy matematiği doğrulaması
+  ↓ Agent 16 (yeniden geçit) → Agent 11 (v2 final belgeler)
+  ✋ FOUNDER CHECKPOINT 3: kapanış paketi onayı
+  ↓ Foretaksregisteret bildirimi (§10-9 — tegningsfrist bitiminden itibaren 3 ay!)
+  ↓ Agent 21: yeni yükümlülükler takvime; S2-12: yatırımcı durumu "INVESTED";
+    durum.json güncellenir
 ```
+
+**Durum yönetimi:** Tüm fazlarda her agent, `S0-durum-yonetimi.md` protokolüne
+uyar: başlarken `suderra/durum.json` okunur, bitirirken yalnız kendi alanı
+güncellenir. Yeni LLM oturumu = "durum.json'u oku ve devam et".
 
 ---
 
@@ -183,6 +215,12 @@ FAZ 6 — Operasyonel Uygulama (Agent 19, 21) [sıralı, sonrasında sürekli]
 09-styrereglement.md         → Yönetim Kurulu Tüzüğü (Agent 17'den) ← YENİ
 00-founder-ozet.md           → Tüm belgeler Türkçe özet + Brønnøysund kayıt adımları
 ```
+
+Opsiyonel / olay-tetiklemeli belgeler (10-belge sayımına dahil değildir):
+- arbeidskontrakt (Agent 20 — co-founder çalışan sayılırsa)
+- saas-musteri-sozlesmesi + oppdragsavtale (Agent 23 — ilk müşteri/yüklenici)
+- FAZ 7 kapanış seti: GK protokolü, tegningsliste, vedtekter v2,
+  aksjonæravtale v2 (Agent 22 — her yatırım turunda)
 
 ---
 
@@ -216,6 +254,16 @@ Bu sistem (S1) şirket kuruluşunu kapsar. Yatırım turu süreci ayrı bir sist
 - **S2-14** — Term sheet / emisyon varsayımları bileşeni; C hissesi emisyon
   ön-yetkilendirmesinin (vedtekter styrefullmakt) S1 belgelerinde hazır olmasını bekler
   (bkz. Agent 11 belge #2 ve Agent 16 kontrol matrisi).
+- **S2-15** — Gelen term sheet'leri S1 belge 06 şablonuna ve kırmızı çizgilere
+  karşı analiz eder; müzakere bitince Agent 22'yi (FAZ 7) tetikler.
+- **S2-16** — Data room hazırlığı: S1 belgelerinin DD-hazır paketlenmesi
+  (durum.json versiyonlarıyla).
+- **S2-17** — GDPR & outreach uyum: S1 Agent 15'in çerçevesini yatırımcı
+  istihbaratı bağlamına uyarlar.
 
-Bu referanslar S1 içinde tanımlı değildir — detayları için `yatirimci-sistemi/`
-klasörüne bakın.
+Geri besleme döngüsü: yatırım kapandığında S2 → **Agent 22 (FAZ 7)** → S1
+belgeleri v2 olarak güncellenir ve Agent 16/11 geçitlerinden yeniden geçer.
+Ortak durum: iki sistem de `suderra/durum.json` üzerinden senkronize olur
+(bkz. S0-durum-yonetimi.md).
+
+Bu referansların detayları için `yatirimci-sistemi/` klasörüne bakın.
