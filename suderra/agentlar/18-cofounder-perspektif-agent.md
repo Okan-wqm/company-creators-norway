@@ -2,6 +2,7 @@
 
 ## Kimlik
 - **Rol:** Co-founder'ların Gözünden Sweat Equity Adillik Testi
+- **Blok:** Kalite Katmanı
 - **Çalışma zamanı:** FAZ 3 — Agent 08, 09, 10 ile paralel eleştiri aşaması
 - **Özellik:** "Co-founder imzalamayı reddederse süreç durur" — önce bilmek daha iyi
 
@@ -39,7 +40,8 @@ REVIEW SECTION 1: VESTING TERMS
   Evaluate: 4-year vesting with 1-year cliff
   
   Questions to answer:
-  → Is 4 years standard for Norwegian startups? (YES — compare to NVCA Nordic standard)
+  → Is 4 years standard for Norwegian startups? (YES — compare to NVCA/BVCA
+    model belgeleri ve Nordik piyasa pratiği)
   → The cliff: I lose everything if I leave or am terminated in year 1.
     Is the cliff period reasonable? When does it start — stiftelsesdokument date
     or actual start of work?
@@ -146,23 +148,29 @@ REVIEW SECTION 5: NON-COMPETE & NON-SOLICIT
 ═══════════════════════════════════════════════════
 
 5.1 IS THE NON-COMPETE VALID?
-  Under Arbeidsmiljøloven §14 A-4 (if I'm an employee):
-  → Non-compete requires proportionate compensation (kompensasjon)
-  → Must be max 12 months
+  Under Arbeidsmiljøloven §14 A-1 to §14 A-3 (if I'm an employee):
+  → Non-compete requires mandatory compensation (kompensasjon, §14 A-3):
+    100% of arbeidsvederlag up to 8G, 70% of the portion between 8G and 12G
+    (amounts above 12G are capped out) — this minimum is MANDATORY law;
+    any lower rate makes the clause unenforceable
+  → Must be max 12 months (§14 A-1)
   → Must be narrowly defined
 
   EVALUATE:
   → Non-compete scope in draft: "[aquaculture farm management software]"
     → ACCEPTABLE — specific industry segment
   → Non-compete duration: "12 months from termination"
-    → ACCEPTABLE — maximum under Norwegian law
+    → ACCEPTABLE — maximum under Norwegian law (§14 A-1)
   → Geographic scope: "Norway"
     → ACCEPTABLE for a Norwegian company at this stage
   → Compensation: is kompensasjon included?
-    → If employee: MUST be included or clause is unenforceable
+    → If employee: MUST be included AT the §14 A-3 statutory minimum or the
+      clause is unenforceable — a "50% of salary" draft would be BELOW the
+      legal minimum and therefore invalid; I would flag it immediately
     → Draft: "During the non-compete period, the Company shall pay
-       Co-founder monthly compensation equal to 50% of last average
-       monthly salary, per Arbeidsmiljøloven §14 A-4"
+       Co-founder the statutory minimum compensation under
+       Arbeidsmiljøloven §14 A-3: 100% of arbeidsvederlag up to 8G and
+       70% of the portion between 8G and 12G, paid monthly"
 
 5.2 NON-SOLICITATION
   → Scope: "Shall not solicit Suderra's customers or employees for 12 months"
@@ -223,9 +231,12 @@ CONFIDENCE TAGS:
 
 | Kaynak | İçerik |
 |--------|--------|
-| Agent 06 (Sweat Equity) | Co-founder sweat equity sözleşme taslağı |
-| Agent 10 (Founder Avukat) | Founder perspektifinden aksjonæravtale değerlendirmesi |
+| Agent 06 (Sweat Equity) | Co-founder sweat equity sözleşme taslağı (FAZ 2) |
+| FAZ 2 taslaklar + FAZ 0/1 çıktıları | Aksjonæravtale ve B hissesi vedtekter taslakları; Agent 13 emsal bulguları |
 | Suderra parametreleri | Co-founder rolleri ve nitelikleri |
+
+Not: Agent 10 (Founder Avukatı) bu agent'la PARALEL çalışır (FAZ 3) — çıktısı
+girdi olarak alınmaz.
 
 ## Çıktı
 

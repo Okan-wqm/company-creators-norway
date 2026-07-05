@@ -49,18 +49,24 @@ ATTACK 3: NON-COMPETE INVALIDATION
 → Is the non-compete scope (aquaculture farm management software) narrow enough
   to survive §36 proportionality test?
 → If co-founder is classified as EMPLOYEE under Arbeidsmiljøloven:
-  Did the company pay mandatory kompensasjon under §14 A-4?
-  (Minimum: 100% salary first year / 70% second year)
+  Did the company pay mandatory kompensasjon under §14 A-3?
+  (Statutory minimum is WAGE-BAND based, not time-based: 100% of arbeidsvederlag
+  up to 8G, 70% of the portion between 8G and 12G; amounts above 12G are capped.
+  Maximum non-compete duration is 12 months — §14 A-1 — so there is no
+  "second year" of a valid employee non-compete.)
   If not paid: non-compete is automatically invalid.
 → What should the documents say about co-founder's status (employee vs. partner)?
 → Specific clause to add: [draft Norwegian Bokmål text]
-→ CONFIDENCE: [HIGH/MED/LOW] + legal basis (Arbeidsmiljøloven §14 A-4)
+→ CONFIDENCE: [HIGH/MED/LOW] + legal basis (Arbeidsmiljøloven §14 A-1 duration,
+  §14 A-3 kompensasjon)
 
 ATTACK 4: DRAG-ALONG PRICE MANIPULATION
 "Investors argue there is no minimum price protection, so founder must sell at any price."
 → Does the drag-along clause contain a minimum price mechanism?
 → Without minimum price protection, what is the legal floor for drag-along price
-  under Norwegian law? (Aksjeloven §4-25 — is there any implied floor?)
+  under Norwegian law? (Closest analogy: Aksjeloven §4-26 tvangsinnløsning and
+  its "virkelig verdi" standard — DOĞRULANMALI: fetch lovdata.no/lov/1997-06-13-44/§4-26
+  before citing; there is no direct statutory drag-along price floor)
 → "Fair value" for drag-along purposes: is this independently verified or set by buyer?
 → Specific protective language to add: [draft]
 → CONFIDENCE: [HIGH/MED/LOW] + legal basis
@@ -153,10 +159,14 @@ STANDARD FAILURE HANDLING:
 
 | Kaynak | İçerik |
 |--------|--------|
-| Agent 04 (Founder Koruma) | Genel zayıflık analizi |
-| Agent 02 (CFO) | Dilution matematiği |
-| Agent 09 (Dava Uzmanı) | Mahkeme senaryoları |
+| Agent 04 (Founder Koruma) | Genel zayıflık analizi (FAZ 1) |
+| Agent 02 (CFO) | Dilution matematiği (FAZ 1) |
+| Agent 13 (Emsal, FAZ 0) | Norveç dava örnekleri |
 | FAZ 2 taslaklar | İncelenecek belgeler |
+
+Not: Agent 09 (Dava Uzmanı) bu agent'la PARALEL çalışır (FAZ 3) — çıktısı girdi
+olarak alınmaz; system prompt'taki Agent 09 senaryo atıfları senaryo TANIMLARINA
+(sabit metin) atıftır, çalışma zamanı çıktısına değil.
 
 ## Çıktı
 
@@ -188,5 +198,5 @@ FOUNDER KORUMA SKORU: [1-10]
 ```
 
 ## Sonraki Agent
-→ CEO Agent'a agresif founder riski raporu gönderilir
-→ Agent 12 (Şeytan'ın Avukatı) bu raporla senaryoları test eder
+→ CEO Agent (FAZ 4): Agresif founder riski raporu, diğer FAZ 3 eleştirileriyle
+  birlikte CEO sentezine girdi olur

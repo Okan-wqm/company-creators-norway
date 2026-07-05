@@ -30,7 +30,10 @@ RULE 2: For every case you cite, provide:
   - A brief description of what the case actually decided
   If you cannot provide all three, do NOT cite the case.
 
-RULE 3: REAL ANCHOR CASES — USE THESE AS FORMAT EXAMPLES:
+RULE 3: CITATION FORMAT EXAMPLES — doğrulanmadan otorite olarak GÖSTERME:
+  (Aşağıdaki referanslar YALNIZCA atıf biçimi örneğidir — içerikleri bu dosyada
+  doğrulanmamıştır; lovdata.no/domstol.no'dan teyit etmeden hiçbir agent'a
+  "gerçek emsal" olarak sunma.)
   Format A (Høyesterett): "HR-2016-1439-A — Høyesterett, 2016 —
     [brief description of what it decided]"
   Format B (Lagmannsretten): "LB-2019-73596 — Borgarting lagmannsrett, 2019 —
@@ -48,8 +51,9 @@ RULE 4: CONFIDENCE RATING is MANDATORY for every finding:
 STANDARD FAILURE HANDLING (apply throughout)
 ══════════════════════════════════════════════════════════
 
-- If an Aksjeloven § cannot be verified for 2026: state
-  "§[X] not verified for current 2026 Aksjeloven — manual legal lookup required"
+- If an Aksjeloven § cannot be verified: state
+  "§[X] not verified for the current consolidated aksjeloven
+  (LOV-1997-06-13-44, güncel hali) — manual legal lookup required"
 - If a writing mistake example is theoretical (not from actual case):
   label it as "THEORETICAL RISK — not from documented litigation"
 - Do NOT assert that any clause "will not hold up in court" without
@@ -191,7 +195,7 @@ KATEGORİ A — KRİTİK (dava çıkarmış veya çıkarır):
       Yanlış: "hissedarların çoğunluğunun kararıyla"
       Doğru:  "A, B ve C hisselerinin birleşik oy gücünün %75'ini temsil eden
                hissedarların yazılı oybirliğiyle"
-      Dava riski: YÜKSEKs — yoruma açık, her grup kendi çoğunluğunu iddia eder
+      Dava riski: YÜKSEK — yoruma açık, her grup kendi çoğunluğunu iddia eder
 
   02. "FAIR VALUE" TANIMI EKSİKLİĞİ
       Yanlış: "hissenin piyasa değeri üzerinden"
@@ -236,44 +240,58 @@ KATEGORİ A — KRİTİK (dava çıkarmış veya çıkarır):
       Doğru:  "co-founder'ın fiilen şirkette çalışmaya başladığı tarihten itibaren"
       Dava riski: ORTA — 3-6 ay kayıp olabilir
 
-  13. IP DEVİR MADDESİ EKSİKLİĞİ (YENİ — Agent 14 bulgusu)
+  09. IP DEVİR MADDESİ EKSİKLİĞİ (YENİ — Agent 14 bulgusu)
       Yanlış: [madde yok — IP sahipliği varsayıma bırakılmış]
       Doğru:  "Co-founder, şirket faaliyetleriyle bağlantılı olarak geliştirdiği
                tüm yazılım, algoritma ve ticari sır haklarını geri alınamaz
                biçimde Suderra AS'ye devrettiğini kabul eder."
       Dava riski: KRİTİK — co-founder çıkışında "kodu ben yazdım" iddiası
 
-  14. EMPLOYEE vs. PARTNER SINIFLANDIRMA EKSİKLİĞİ
+  10. EMPLOYEE vs. PARTNER SINIFLANDIRMA EKSİKLİĞİ
       Yanlış: co-founder statüsü tanımsız
-      Doğru:  "Co-founder, işbu anlaşma kapsamında Arbeidsmiljøloven §14 A-1
-               bağlamında bağımsız ortak (selvstendig næringsdrivende) olarak
-               değerlendirilir / İşbu anlaşma, co-founder'ı Suderra AS'nin
-               çalışanı olarak nitelendirmez."
-      Dava riski: YÜKSEK — çalışan ise non-compete için kompensasyon zorunlu
+      Doğru:  Statüyü belgede AÇIKÇA düzenle — ama sözleşme etiketi TEK BAŞINA
+              YETMEZ: sınıflandırma fiili çalışma ilişkisine göre yapılır ve
+              Arbeidsmiljøloven §1-8 (2024 değişikliği) belirsiz durumlarda
+              ÇALIŞAN karinesi getirir — işveren aksini ispatlamalıdır.
+              Belge dili: "Taraflar, co-founder'ın fiili çalışma koşullarının
+              bağımsız ortaklık (selvstendig næringsdrivende) niteliğinde
+              olduğunu tespit eder: [talimat bağımlılığı yok / kendi araç ve
+              riski / sonuç sorumluluğu vb. olgular]. Taraflar bu olguların
+              değişmesi halinde statünün Arbeidsmiljøloven §1-8 uyarınca
+              yeniden değerlendirileceğini kabul eder."
+      Dava riski: YÜKSEK — fiilen çalışan sayılırsa etiket ne derse desin
+      non-compete için kompensasyon zorunlu; §1-8 karinesi ispat yükünü
+      şirkete yıkar
 
-  15. REVISORLOVEN DENETİM MUAFİYETİ EKSİKLİĞİ (YENİ BULGU)
-      Yanlış: [stiftelsesdokument'te muafiyet beyanı yok]
+  11. REVİZYON FRAVALG (DENETİM MUAFİYETİ) EKSİKLİĞİ (YENİ BULGU)
+      Yanlış: [stiftelsesdokument'te muafiyet beyanı yok; veya dayanak olarak
+              Revisorloven §2-1 gösterilmiş — YANLIŞ dayanak]
       Doğru:  "Generalforsamlingen vedtar å unnlate revisjon i henhold til
-               Revisorloven §2-1, da selskapet oppfyller vilkårene for fritak:
-               driftsinntekter under kr 5.000.000, balansesum under kr 10.000.000,
-               og færre enn ti ansatte."
+               aksjeloven §7-6, da selskapet oppfyller vilkårene for fritak:
+               driftsinntekter under terskelverdien (ca. kr 7.000.000),
+               balansesum under terskelverdien (ca. kr 27.000.000),
+               og gjennomsnittlig antall ansatte som ikke overstiger ti årsverk."
+      NOT: Doğru yasal dayanak Aksjeloven §7-6'dır (Revisorloven §2-1 değil).
+      Eşikler Mayıs 2023'te yükseltildi (~7M gelir / ~27M bilanço / 10 årsverk) —
+      2026 güncel değerleri DOĞRULANMALI: lovdata.no/lov/1997-06-13-44/§7-6 ve
+      ilgili forskrift fetch edilmeden rakam kullanma.
       Pratik etki: Yıllık 30.000-50.000 NOK denetim ücreti tasarrufu
 
-  16. TESCİL ÖNCESİ SÖZLEŞME UYARISI EKSİKLİĞİ
+  12. TESCİL ÖNCESİ SÖZLEŞME UYARISI EKSİKLİĞİ
       Yanlış: [stiftelsesdokument'te uyarı yok]
       Doğru:  "Bu belge, Suderra AS'nin Brønnøysundregistrene'den
                organisasjonsnummer almasına kadar kurucu ortakları şahsen
                bağlayıcı niteliktedir. Tescil tarihi itibarıyla şirkete devrolur."
       Hukuki dayanak: Aksjeloven §2-9
 
-  17. ESKİ İŞ YERİ IP ÇAKIŞMASI EKSİKLİĞİ
+  13. ESKİ İŞ YERİ IP ÇAKIŞMASI EKSİKLİĞİ
       Yanlış: [yok]
       Doğru:  "Kurucu ve co-founder'lar, Suderra AS için geliştirdikleri
                fikri mülkiyet haklarının üçüncü tarafların (eski işverenler
                dahil) haklarını ihlal etmediğini beyan ve taahhüt eder."
       Dava riski: ORTA — eski işveren "bizim IP" davası
 
-  18. OBSERVER HAKKINDAKİ PUSLU TANIMLAMALAR
+  14. OBSERVER HAKKINDAKİ PUSLU TANIMLAMALAR
       Yanlış: "yatırımcı gözlemci olarak toplantılara katılabilir"
       Doğru:  "Gözlemci (Observer), yönetim kurulu toplantılarına oy hakkı
                olmaksızın katılma ve toplantı materyallerine erişme hakkına
@@ -281,7 +299,7 @@ KATEGORİ A — KRİTİK (dava çıkarmış veya çıkarır):
                gelmez ve Aksjeloven §6 kapsamında herhangi bir hak doğurmaz."
       Dava riski: ORTA — gözlemci ile tam üye arasındaki fark muğlak olunca dava
 
-  19. VEDTEKTER ve AKSJONÆRAVTALE ÇAKIŞMASI
+  15. VEDTEKTER ve AKSJONÆRAVTALE ÇAKIŞMASI
       Yanlış: aksjonæravtale'deki drag-along eşiği vedtekter'e dahil edilmiş
       Doğru:  vedtekter yalnızca Aksjeloven'in gerektirdiği zorunlu hükümleri içerir;
               aksjonæravtale hükümleri vedtekter'e by reference dahil edilemez
@@ -289,30 +307,37 @@ KATEGORİ A — KRİTİK (dava çıkarmış veya çıkarır):
               taraflara — bu fark kritiktir)
       Dava riski: YÜKSEK — vedtekter'e eklenen sözleşme maddesi yeni hissedar için yargı sorunu
 
-  20. KOMPENSASYON EKSİKLİĞİ (ARBEİDSMİLJØLOVEN §14 A-4)
-      Yanlış: çalışan olarak sınıflandırılan co-founder için non-compete ama kompensasyon yok
-      Doğru:  "Rekabet yasağı süresince Şirket, son ortalama aylık brüt ücretin
-               [%50'sini / tam tutarını] aylık kompensasyon olarak öder."
-      Yasal zorunluluk: eğer co-founder çalışan ise kompensasyon zorunlu — yoksa non-compete geçersiz
+  16. KOMPENSASYON EKSİKLİĞİ (ARBEİDSMİLJØLOVEN §14 A-3)
+      Yanlış: çalışan olarak sınıflandırılan co-founder için non-compete ama
+              kompensasyon yok — veya yasal asgarinin altında oran (ör. "%50")
+      Doğru:  "Rekabet yasağı süresince Şirket, Arbeidsmiljøloven §14 A-3
+               uyarınca kompensasyon öder: yıllık arbeidsvederlag'ın 8G'ye kadar
+               olan kısmı için %100, 8G ile 12G arasındaki kısım için %70
+               (12G üzeri hesaba katılmaz)."
+      Yasal zorunluluk: co-founder çalışan ise §14 A-3 asgarisi EMREDİCİDİR —
+      altındaki oran (ör. %50) klozu geçersiz kılar; azami süre 12 ay (§14 A-1)
 
 KATEGORİ B — YÜKSEK (hak kaybına yol açar):
-  09. TAG-ALONG ORAN EKSİKLİĞİ
+  17. TAG-ALONG ORAN EKSİKLİĞİ
       Yanlış: "diğer hissedarlar da satışa katılabilir"
       Doğru:  "her hissedar, toplam satılan hisse oranında (pro-rata) ve aynı
                fiyat ve şartlarla satışa katılma hakkına sahiptir"
 
-  10. DISPUTE RESOLUTION MADDE EKSİKLİĞİ
+  18. DISPUTE RESOLUTION MADDE EKSİKLİĞİ
       Yanlış: [madde yok]
       Doğru:  "§XX Uyuşmazlık Çözümü: Taraflar önce 30 gün müzakere eder.
                Çözümsüz kalırsa Oslo Tingrett münhasır yargı yetkisine sahiptir.
                Bu anlaşmaya Norveç hukuku uygulanır."
 
-  11. AKSJEEİERBOK SORUMLULUĞU BELİRSİZ
-      Yanlış: [yok]
+  19. AKSJEEİERBOK SORUMLULUĞU BELİRSİZ
+      Yanlış: [yok] — veya keyfi bir süre yazılmış ("30 gün içinde" / "2 iş günü")
       Doğru:  "Şirket, Aksjeloven §4-5 uyarınca pay defterini güncel tutar.
-               Her hisse devri 2 iş günü içinde pay defterine işlenir."
+               Her hisse devri, §4-5'teki 'uten opphold' (gecikmeksizin)
+               standardına uygun olarak derhal pay defterine işlenir."
+      NOT: Kanuni standart "uten opphold"dur — tüm belgelerde ve Agent 19
+      rehberinde AYNI standart kullanılmalı, keyfi gün sayısı yazılmamalı.
 
-  12. OPTION POOL SEYRELTMESİ BELİRSİZ
+  20. OPTION POOL SEYRELTMESİ BELİRSİZ
       Yanlış: "çalışanlara hisse seçeneği verilebilir"
       Doğru:  "ESOP kapsamında ihraç edilecek hisseler yalnızca C hisselerinden
                seyreltilir; A ve B hisseleri ESOP seyreltmesinden muaftır"
@@ -366,7 +391,7 @@ NORVEÇ DAVA ÖZETİ: [X] vaka
 ULUSLARARASI EMSAL: [Y] vaka
   [Vaka listesi]
 
-KRİTİK YAZI HATALARI: [12 hata, kategori A+B]
+KRİTİK YAZI HATALARI: [20 hata — Kategori A: 01-16, Kategori B: 17-20]
   [Tam katalog]
 
 FOUNDER ZARAR PARADİGMALARI: 5 paradigma
