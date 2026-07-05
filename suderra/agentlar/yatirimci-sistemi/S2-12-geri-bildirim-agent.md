@@ -3,7 +3,7 @@
 ## Kimlik
 - **Rol:** Outreach Sonuçları Analistı & S2-04 Skor Güncelleyici
 - **Çalışma zamanı:** FAZ ∞ — Her outreach dalgası sonrası tekrar çalışır
-- **Özellik:** Şu an sistemde geri bildirim döngüsü yok — ilk 10 geçerse ne yapacak?
+- **Özellik:** Sistemin FAZ ∞ geri bildirim döngüsünü işletir — her outreach dalgası ve toplantı sonrası skorları ve stratejiyi ampirik veriyle günceller
 
 ---
 
@@ -23,8 +23,9 @@ INPUTS PER RUN:
   - S2-05's OUTREACH_LOG entries (structured JSON: investor_id, variant_sent, sent_date,
     response_received, response_date, response_type, notes) — this is the primary source
     for "who was contacted, via which channel, and what happened"
-  - S2-11 meeting briefings + their post-meeting outcome notes (investor sentiment,
-    questions actually asked, what resonated)
+  - S2-11's MEETING_LOG JSON entries (investor_id, meeting_date, questions_asked,
+    sentiment, what_resonated, concerns_raised, next_step) — matched to OUTREACH_LOG
+    by investor_id — plus the meeting briefings themselves
   - S2-09 government/grant application status updates (Skattefunn, Innovasjon Norge, SIVA,
     Investinor — these run on a slower timeline but should be folded into the same
     "what's moving" picture)
@@ -43,11 +44,13 @@ SECTION 1: RESPONSE ANALYSIS
   → Total contacted to date: [Y]
   → Response rate this batch: [X% — positive + negative + meetings]
   → Meeting rate this batch: [X% of contacted]
-  → Positive responses (meetings booked): [X]
-  → Soft passes (interested but not now): [X]
-  → Hard passes (rejected): [X]
-  → No response: [X]
-  → Follow-up pending: [X]
+  → Positive responses (meetings booked): [X]        ← response_type "meeting"
+  → Soft passes (interested but not now): [X]        ← response_type "soft_pass"
+  → Hard passes (rejected): [X]                      ← response_type "hard_pass"
+  → No response: [X]                                 ← response_type "no_response"
+  → Follow-up pending: [X]                           ← response_type "pending"
+  (Kırılım S2-05'te tanımlı response_type enum'uyla birebir hizalıdır —
+   başka kategori icat etme)
 
   CHANNEL PERFORMANCE:
   → LinkedIn message response rate: [X%]
@@ -59,11 +62,13 @@ SECTION 1: RESPONSE ANALYSIS
   Look for patterns in who responded vs. who didn't:
 
   INVESTOR TYPE ANALYSIS:
-  → AquaTech-focused investors: [X contacted, Y responded = Z%]
-  → Government/semi-government funds: [X contacted, Y responded = Z%]
-  → Family offices: [X contacted, Y responded = Z%]
-  → Angel investors: [X contacted, Y responded = Z%]
-  → Nordic tech VCs: [X contacted, Y responded = Z%]
+  → AquaTech-focused investors [AquaTech]: [X contacted, Y responded = Z%]
+  → Government/semi-government funds [Devlet]: [X contacted, Y responded = Z%]
+  → Family offices [FamilyOffice]: [X contacted, Y responded = Z%]
+  → Angel investors [Angel]: [X contacted, Y responded = Z%]
+  → Nordic tech VCs [TechVC]: [X contacted, Y responded = Z%]
+  → Bank VC arms [Bank]: [X contacted, Y responded = Z%]
+  → Strategic investors [Strategic]: [X contacted, Y responded = Z%]
   
   Which investor TYPE is showing most interest? → [recommendation]
   Which investor type is NOT responding? → [recommendation]
@@ -134,18 +139,39 @@ SECTION 4: SCORE RECALIBRATION
 
 Update S2-04 scores based on empirical data.
 
+RULE — DO NOT OVERWRITE THE ORIGINAL S2-04 SCORE:
+  The S2-04 score is immutable. Empirical corrections are recorded in a
+  SEPARATE field per investor, using this schema:
+
+  EMPIRICAL_ADJUSTMENT:
+  {
+    "investor_id": "[S2-01 investor_id — e.g. INV-001]",
+    "original_score": 7.2,        // S2-04 çıktısı — DEĞİŞMEZ
+    "adjustment": +1.3,           // ampirik bonus/ceza
+    "revised_score": 8.5,         // = original_score + adjustment
+    "reason": "[neden — gözleme dayalı]",
+    "evidence": "[OUTREACH_LOG / MEETING_LOG referansı]",
+    "date": "YYYY-MM-DD"
+  }
+
+  S2-04's bonus/penalty cap rules apply to "adjustment" as well:
+  max cumulative bonus +2.0, max cumulative penalty -3.0.
+
 4.1 ACTUAL RESPONSE DATA AS SIGNAL
   Original S2-04 used predicted scores. Now we have real data.
   
   UPWARD REVISIONS (investor scored lower but responded positively):
-  → [Investor X]: Original score [7.2], responded enthusiastically →
-    Revised score: [8.5] — reason: [thesis is more aligned than predicted]
+  → [Investor X]: original_score [7.2], responded enthusiastically →
+    adjustment [+1.3] → revised_score [8.5] — reason: [thesis is more
+    aligned than predicted]
   
   DOWNWARD REVISIONS (investor scored higher but passed or didn't respond):
-  → [Investor Y]: Original score [8.8], hard pass at first meeting →
-    Revised score: [5.0] — reason: [they have undisclosed competitor in pipeline]
+  → [Investor Y]: original_score [8.8], hard pass at first meeting →
+    adjustment [-3.0 — penalty cap] → revised_score [5.8] — reason:
+    [they have undisclosed competitor in pipeline]
   
-  KEY LEARNING: Real response data beats predicted scores. Update the model.
+  KEY LEARNING: Real response data beats predicted scores. Record the
+  adjustment — never edit the S2-04 original.
 
 4.2 UPDATED PRIORITY LIST
   Produce a revised top 20 list incorporating empirical results:
@@ -155,8 +181,8 @@ Update S2-04 scores based on empirical data.
     [Investor B] — interested, awaiting deck review
   
   Tier 2 — NEXT OUTREACH WAVE (not yet contacted):
-    [Investor C] — revised score [X] — [outreach method]
-    [Investor D] — revised score [X] — [outreach method]
+    [Investor C] — revised_score [X] (= original + adjustment) — [outreach method]
+    [Investor D] — revised_score [X] (= original + adjustment) — [outreach method]
     ...
   
   Tier 3 — SOFT PASS — RE-APPROACH IN 90 DAYS:
@@ -270,7 +296,7 @@ DATA QUALITY TAGS:
 | S2-04 (Eşleştirme) | Orijinal skor listesi (karşılaştırma için) |
 | S2-07 (Onboarding) | Güncel şirket durumu |
 | S2-05 (Outreach) | OUTREACH_LOG JSON kayıtları (investor_id, variant_sent, response_received, vb.) |
-| S2-11 (Toplantı Hazırlık) | Toplantı sonrası geri bildirim (yatırımcı tepkisi, sorulan sorular) |
+| S2-11 (Toplantı Hazırlık) | MEETING_LOG JSON kayıtları (investor_id, meeting_date, questions_asked, sentiment, next_step) + brifingler |
 | S2-09 (Devlet Fonu) | Devlet fonu başvuru durumları |
 
 ## Çıktı
@@ -288,9 +314,9 @@ PATTERN ANALİZİ:
   En iyi çalışan: [yatırımcı tipi / mesaj stili / kanal]
   Çalışmayan: [...]
 
-SKOR GÜNCELLEMESİ:
-  Yükselen: [Yatırımcı X] [7.2] → [8.5]
-  Düşen: [Yatırımcı Y] [8.8] → [5.0]
+SKOR GÜNCELLEMESİ (EMPIRICAL_ADJUSTMENT — orijinal S2-04 skoru değişmez):
+  Yükselen: [INV-XXX Yatırımcı X] original [7.2] + adjustment [+1.3] → revised [8.5]
+  Düşen: [INV-YYY Yatırımcı Y] original [8.8] + adjustment [-3.0] → revised [5.8]
 
 SONRAKİ 2 HAFTA AKSİYON PLANI:
   Aktif görüşmeler: [...]
@@ -299,7 +325,7 @@ SONRAKİ 2 HAFTA AKSİYON PLANI:
 ```
 
 ## Bu Agent'tan Sonra
-→ S2-04 skoru güncellenir (bir sonraki dalga için)
+→ S2-04 skoruna EMPIRICAL_ADJUSTMENT eklenir (orijinal skor değişmez; revised = original + adjustment — bir sonraki dalga için)
 → S2-05 mesajları kalibre edilir (yanıt oranı düşükse)
 → Founder bir sonraki outreach dalgasına hazırlanır
 → Bu agent 2 haftada bir tekrar çalışır (sürekli döngü)

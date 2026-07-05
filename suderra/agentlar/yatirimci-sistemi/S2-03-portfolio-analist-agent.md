@@ -87,23 +87,32 @@ BAŞARISIZ YATIRIMLAR (varsa bilgi):
 - Portföyde zarar yazılan şirket var mı?
 - Ortak özellik: ne tür şirketler başarısız oldu?
 
-─── BÖLÜM 6: SUDERRA'YA ÖZEL UYUM ANALİZİ ───
+─── BÖLÜM 6: SUDERRA'YA ÖZEL UYUM ANALİZİ — S2-04 İÇİN KANIT GİRDİSİ ───
 
 Portföy deseni Suderra ile eşleşiyor mu?
 
-UYUM PUANI (her kriter 1-10):
-  Sektör uyumu (aquaculture/tech): [1-10]
-  Aşama uyumu (seed): [1-10]
-  Coğrafya uyumu (Norveç): [1-10]
-  Portföy boşluğu (benzer şirket yok mu?): [1-10]
-  Yatırım büyüklüğü uyumu: [1-10]
-  Geçmiş davranış uyumu: [1-10]
+ROL TANIMI — ÇİFTE SKORLAMA YOK:
+  Bu bölümün çıktısı NİHAİ skor DEĞİLDİR. Nihai 8-kriterli skorlama S2-04'te
+  yapılır. Buradaki değerlendirme iki işlev görür:
+    1. S2-04'ün kriter 1-5 puanlaması için KANIT GİRDİSİ
+       (sektör, aşama, coğrafya, portföy boşluğu, yatırım büyüklüğü)
+    2. ÖN-ELEME SİNYALİ (doğrudan rakip portföyde → S2-04'e "gitme" bayrağıyla ilet)
 
-TOPLAM UYUM PUANI: [ortalama] / 10
+ÖN-SKOR KANIT SETİ (her kriter 1-10 — S2-04 kriter 1-5'e karşılık gelir):
+  Sektör uyumu (aquaculture/tech): [1-10] + kanıt
+  Aşama uyumu (seed): [1-10] + kanıt
+  Coğrafya uyumu (Norveç): [1-10] + kanıt
+  Portföy boşluğu (benzer şirket yok mu?): [1-10] + kanıt
+  Yatırım büyüklüğü uyumu: [1-10] + kanıt
+  Geçmiş davranış uyumu: [1-10] + kanıt
+
+ÖN-SKOR (NİHAİ DEĞİL): [ortalama] / 10
+  → Etiket zorunlu: "ön-skor — nihai skor S2-04'te hesaplanır"
 
 KIRMIZI BAYRAK:
   - Portföyde Suderra rakibi var mı? EVET/HAYIR
-  - Son yatırım 12 aydan eskiyse pasif mi? EVET/HAYIR
+  - Son yatırım 24 aydan eskiyse PASİF (S2-04'te ceza); 12-24 ay arasıysa
+    UYARI işareti (S2-04 zamanlama kriteriyle aynı eşikler) — durumu belirt
   - Minimum yatırım büyüklüğü aranılan tutarın üzerinde mi? EVET/HAYIR
 
 YEŞİL BAYRAK:
@@ -130,14 +139,16 @@ PORTFÖLİO ANALİZ RAPORU
 [Her yatırımcı için]
 
 [Kurum Adı]:
+  investor_id: [S2-01 kimliği — örn. INV-001 — ZORUNLU, kimliği düşürme kuralı:
+    S2-02 kartındaki ID ile aynı olmalı]
   Portföy büyüklüğü: [X] şirket
   Aquaculture oranı: [%Y]
   Ortalama yatırım: [Z] NOK
   Tercih aşaması: [seed/A]
   Son yatırım: [tarih]
-  Aktif mi? [EVET/HAYIR]
+  Aktif mi? [EVET/HAYIR — 24 ay eşiği]
   
-  SUDERRA UYUM PUANI: [X]/10
+  SUDERRA ÖN-SKOR (nihai değil — S2-04 yeniden puanlar): [X]/10
   KIRIMIZI BAYRAK: [var/yok — açıklama]
   YEŞİL BAYRAK: [var/yok — açıklama]
   
@@ -150,5 +161,5 @@ GENEL BULGU:
 ```
 
 ## Sonraki Agent'lar
-→ S2-04 (Eşleşme & Sıralama): Uyum puanları aktarılır
+→ S2-04 (Eşleşme & Sıralama): Ön-skor + kriter 1-5 kanıt girdileri aktarılır (nihai skor S2-04'te hesaplanır)
 → S2-05 (Outreach): "Neden bizi sevmeli?" argümanları için

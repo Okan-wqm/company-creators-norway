@@ -88,7 +88,27 @@ SECTION 3: THE 5 MOST LIKELY QUESTIONS
 ═══════════════════════════════════════════════════
 
 From S2-06 Q&A database, select the 5 questions THIS SPECIFIC investor
-is most likely to ask (based on their investment style and portfolio focus):
+is most likely to ask (based on their investment style and portfolio focus).
+
+SELECTION MECHANISM — USE S2-06's INVESTOR-TYPE TAGS AS THE FILTER:
+  Step 1: Determine the investor's S2-00 category (from S2-04/S2-02 data).
+  Step 2: Map the category to the S2-06 tag using this table:
+
+  | S2-00 Kategori (yatırımcı tipi)        | S2-06 Etiketi   |
+  |----------------------------------------|-----------------|
+  | AquaTech VC / accelerator              | [AquaTech]      |
+  | Devlet / kamu fonları                  | [Devlet]        |
+  | Angel / angel ağları                   | [Angel]         |
+  | Family office                          | [FamilyOffice]  |
+  | Kategori D/E — Nordic / genel tech VC  | [TechVC]        |
+  | Stratejik sektör oyuncuları            | [Strategic]     |
+  | Banka VC kolları                       | [Bank]          |
+  | Kategori F — Havbruksfond              | [Devlet] (equity dışı — normalde S2-09'a gider, toplantı brifingi nadiren gerekir) |
+
+  (Kategori harflerini S2-00 çıktısındaki güncel tanımlarla doğrula.)
+  Step 3: Filter the S2-06 library to questions tagged with this investor's
+  tag + the universal [TÜMÜ] tag, then pick the 5 most likely from that subset.
+  Untagged questions cannot be filtered — flag them back to S2-06.
 
 For each question:
   Q: [Question text]
@@ -198,6 +218,31 @@ ONE PAGE — print this and take it to the meeting (or keep on phone):
   free market research)
 
 ═══════════════════════════════════════════════════
+SECTION 6: POST-MEETING LOG (fill within 24 hours — S2-12 input)
+═══════════════════════════════════════════════════
+
+Attach this template to every briefing. The founder fills it in after
+the meeting; S2-12 (Geri Bildirim Agent) reads it — matched to S2-05's
+OUTREACH_LOG by investor_id.
+
+MEETING_LOG:
+{
+  "investor_id": "[S2-01 investor_id — e.g. INV-001 — ZORUNLU]",
+  "investor_name": "[Yatırımcı adı]",
+  "meeting_date": "YYYY-MM-DD",
+  "meeting_format": "[30min video / 1hr in-person / coffee / pitch event]",
+  "questions_asked": ["[sorulan soru 1]", "[soru 2]", "..."],
+  "sentiment": "positive" | "neutral" | "negative",
+  "what_resonated": "[neye olumlu tepki verdiler]",
+  "concerns_raised": "[dile getirilen endişeler]",
+  "next_step": "[önerilen/kararlaştırılan sonraki adım]",
+  "next_step_deadline": "YYYY-MM-DD"
+}
+
+NOTE TO FOUNDER: An unfilled MEETING_LOG = S2-12 cannot learn from this
+meeting. Fill it the same day while memory is fresh.
+
+═══════════════════════════════════════════════════
 FAILURE HANDLING
 ═══════════════════════════════════════════════════
 
@@ -242,9 +287,10 @@ Bölüm 2: En çok neyi önemsiyorlar
 Bölüm 3: Sormalarını beklediğin 5 soru + en iyi cevap
 Bölüm 4: Toplantı stratejisi (açılış → kapanış)
 Bölüm 5: Hızlı referans kartı (yazdır/telefona al)
+Bölüm 6: MEETING_LOG JSON şablonu (toplantı sonrası 24 saat içinde doldurulur)
 ```
 
 ## Bu Agent'tan Sonra
 → Founder brifing kartını alır, toplantıya gider
-→ Toplantı sonrası S2-12 (Geri Bildirim)'e sonucu rapor eder
+→ Toplantı sonrası founder MEETING_LOG JSON'unu doldurur → S2-12 (Geri Bildirim) bu kaydı okur
 → Bu agent toplantıdan önce hep yeniden çalışır (statik değil)
