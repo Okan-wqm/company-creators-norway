@@ -195,7 +195,8 @@ Q21. Are you open to bank/insurance VC arms as investors?
      A) Yes — include all institutional VC arms
      B) No — prefer pure-play VCs and angels only
      C) Only if they bring aquaculture customer relationships
-     → Record answer. If B: flag these as low priority in S2-04.
+     → Record answer as: ALL (A) / NO (B) / CUSTOMER_RELATIONSHIP_ONLY (C)
+     → If NO: flag these as low priority in S2-04.
 
 Q22. Do you have existing relationships with any strategic corporate investors?
      (e.g., AKVA Group, Mowi, Lerøy, SalMar, Cermaq — companies that could ALSO
@@ -206,9 +207,20 @@ Q22. Do you have existing relationships with any strategic corporate investors?
      → If none: record "no existing sector connections" — strategic category still
        researched but bonus not applied until connection established.
 
+Q22b. Independently of existing relationships: are you open in principle to
+      strategic/corporate investors (companies that could also be your customers)?
+      Options:
+      A) Yes — open to all strategic investors
+      B) Only if they are (or become) a pilot/paying customer
+      C) No — financial investors only
+      → Record answer as: ALL (A) / CUSTOMER_ONLY (B) / NO (C)
+      → This fills the open_to_strategic_investors field in the datasheet.
+      → If NO: S2-01 still documents Category H, but S2-04 excludes it from ranking.
+
 Q23. Tax and structure preference for investors:
      → Do you prefer Norwegian investors (AS/ENK) or are you open to foreign investors?
-     → NOTE: This has significant tax implications (see Agent 07 Module 10 for detail):
+     → NOTE: This has significant tax implications (see Agent 07's
+       Fritaksmetoden / investor-scenario section — yatırımcı senaryoları bölümü — for detail):
        - Norwegian AS investors: Fritaksmetoden — near-zero tax on your dividends/exit
        - Norwegian individual investors: 37.84% tax on gains (may push for lower val)
        - Foreign EEA investors: Can also access Fritaksmetoden via holding structure
@@ -220,10 +232,12 @@ OUTPUT: SUDERRA PITCH DATASHEET (VALID JSON)
 ═══════════════════════════════════════════════════
 
 CRITICAL: Output MUST be valid JSON — not Python dicts, not pseudo-code.
-All downstream agents (S2-05, S2-06, S2-09, S2-10, S2-14) parse this directly.
-Use JSON-compliant syntax only: lowercase true/false/null, double-quoted strings,
-no trailing commas, no bare ellipsis. Below, boolean fields show "false" as a
-placeholder default — replace with the actual true/false value. Array fields
+All downstream agents (S2-05, S2-06, S2-09, S2-10, S2-11, S2-13, S2-14) parse
+this directly. Use JSON-compliant syntax only: lowercase true/false/null,
+double-quoted strings, no trailing commas, no bare ellipsis. Below, boolean
+fields show "false" as a placeholder default — replace with the actual
+true/false value. Numeric fields (counts, months) are shown UNQUOTED
+(e.g. "loi_count": 0) — output them as JSON numbers, not strings. Array fields
 show 2 example elements — add as many real elements as needed (do not leave a
 literal "..." token in the array; just list the real items).
 
@@ -241,15 +255,16 @@ will use as their first input:
     "tech_stack": {
       "frontend": "[...]",
       "backend": "[...]",
+      "database": "[...]",
       "cloud": "[...]"
     }
   },
   "traction": {
-    "customer_interviews": "[number]",
+    "customer_interviews": 0,
     "named_farms_spoken_to": ["[farm 1]", "[farm 2]"],
-    "loi_count": "[number or 0]",
-    "pilot_customers": "[number or 0]",
-    "paying_customers": "[number or 0]",
+    "loi_count": 0,
+    "pilot_customers": 0,
+    "paying_customers": 0,
     "willingness_to_pay_tested": false,
     "price_point_discussed": "[X NOK/month or UNKNOWN]"
   },
@@ -264,7 +279,7 @@ will use as their first input:
       "operations": "[X%]",
       "other": "[X%]"
     },
-    "runway_months": "[X months]",
+    "runway_months": 0,
     "funding_milestones": ["[milestone 1]", "[milestone 2]", "[milestone 3]"]
   },
   "competition": {
@@ -278,7 +293,7 @@ will use as their first input:
     "founder": {
       "aquaculture_experience": "DIRECT/INDIRECT/NONE",
       "technical_background": "YES/NO",
-      "previous_exits": "[number or 0]",
+      "previous_exits": 0,
       "founding_story": "[2-3 sentences]"
     },
     "cofounder_1": {
@@ -304,7 +319,7 @@ will use as their first input:
   },
   "investor_preferences": {
     "geography": "NORWAY_ONLY / NORWAY_EU / GLOBAL",
-    "open_to_bank_vc_arms": false,
+    "open_to_bank_vc_arms": "ALL / NO / CUSTOMER_RELATIONSHIP_ONLY",
     "open_to_strategic_investors": "ALL / CUSTOMER_ONLY / NO",
     "existing_sector_connections": [
       {"company": "[AKVA Group / Mowi / Lerøy / other]", "relationship": "[...]"}

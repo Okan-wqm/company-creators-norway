@@ -83,6 +83,11 @@ DATA QUALITY TAG (mandatory for every data point):
   ESTIMATED = from Dealroom/Crunchbase — may be incomplete or outdated
   UNKNOWN = not found after searching all sources above — flag for S2-08 validation
 
+  TTL RULE: a VERIFIED tag is valid for 90 days from its fetch date. VERIFIED
+  data older than 90 days expires and requires S2-08 mini-revalidation
+  (Yeniden Doğrulama Modu — only for investors about to be targeted) before
+  any outreach based on it.
+
 RECORD FORMAT FOR EACH SOURCE:
   "Kilde: [URL] — hentet [dato] — [Norwegian/English] — innhold: [brief description]"
 
@@ -94,7 +99,8 @@ VERIFIED SOURCES TO USE:
   Startup databases: Dealroom.co (search "Norway" + "aquaculture"), Crunchbase
   Market tracking: newsweb.oslobors.no (Oslo Bors announcements)
   News: e24.no, shifter.no, kyst.no, intrafish.no, salmenbusiness.com
-  Events: AquaNor conference (Trondheim, every 2 years — last August 2023, next August 2025)
+  Events: AquaNor conference (Trondheim, tek yıllarda / odd years — güncel tarihi
+          web'den doğrula (aquanor.no fetch); sıradaki muhtemelen Ağustos 2027)
 
 ARAŞTIRMA GÖREVLERİN:
 
@@ -121,6 +127,9 @@ ARAŞTIRMA GÖREVLERİN:
    - Yatırım kriterleri: impact metrics neler?
 
 4. SPAWN CAPITAL
+   - ÖNCE VARLIĞINI TEYİT ET (DOĞRULANMALI — web araması + proff.no fetch):
+     bu fonun gerçekten var olduğu kesin değil. Teyit edilemezse listeden çıkar
+     ve yerine Bluefront Equity (gerçek Norveç seafood PE/VC) gibi alternatifleri araştır.
    - AquaTech + food tech
    - Norveç portföyü var mı?
    - Yatırım aşaması ve tutarı
@@ -212,7 +221,10 @@ Norveç'te balıkçılık ve aquaculture servetinden çıkan family offices:
 
 WHAT IS HAVBRUKSFOND:
 Norway's municipalities receive a share of revenues from aquaculture license
-auctions. Bergen, Tromsø, Ålesund, Kinn receive significant amounts.
+auctions. Bergen, Tromsø, Ålesund, Kinn receive significant amounts
+(DOĞRULANMALI — bu belediye listesi resmi Havbruksfond dağıtım verisiyle
+doğrulanmalı: Fiskeridirektoratet fetch. En büyük alıcılar tipik olarak Frøya,
+Nærøysund, Alta gibi belediyelerdir — listeyi resmi dağıtım verisine göre revize et).
 Some use these funds to support local aquaculture innovation.
 
 These are NOT typical equity investors — but they offer:
@@ -224,7 +236,7 @@ These are NOT typical equity investors — but they offer:
 MUNICIPALITIES TO RESEARCH:
 24. Bergen kommune — what programs exist for aquaculture startups?
 25. Tromsø kommune — largest Northern Norway aquaculture region
-26. Ålesund kommune — Vestland, fishing heritage, local innovation programs
+26. Ålesund kommune — Møre og Romsdal, fishing heritage, local innovation programs
 27. Kinn kommune — active Havbruksfond, Florø area
 
 FOR EACH: Does the municipality have an innovation program? Contact name?
@@ -319,12 +331,28 @@ S2-04 by default ONLY scores and ranks PHASE-1 investors.
 PHASE-2 and PHASE-3 are documented now but not pursued until triggers are met.
 
 PHASE-1 — ŞİMDİ (gelir öncesi, pilot öncesi):
-  All categories A through I above. Norwegian investors only.
+  All categories A through H above. Norwegian investors only.
   Activate: Immediately.
+
+  BÖLÜM → KATEGORİ EŞLEME (JSON "category" alanı yalnız A-H değerleri alır):
+  | Araştırma Bölümü | Kategori (A-H) |
+  |------------------|----------------|
+  | BÖLÜM 1 — AquaTech odaklı kurumlar | A |
+  | BÖLÜM 2 — Devlet & yarı-devlet fonlar | B |
+  | BÖLÜM 3 — Sektör bağlantılı family offices | C |
+  | BÖLÜM 4 — Angel yatırımcı grupları | D |
+  | BÖLÜM 5 — Nordic tech VC'ler | D (Alliance Venture, Ferd) veya E (Northzone, Eir Ventures) |
+  | BÖLÜM 6 — Uluslararası aquaculture yatırımcıları | E |
+  | BÖLÜM 7 — Havbruksfond (belediye fonları) | F |
+  | BÖLÜM 8 — Banka & sigorta VC kolları | G |
+  | BÖLÜM 9 — Stratejik / kurumsal yatırımcılar | H |
+  (BÖLÜM 10 kategori değildir — faz genişleme planıdır.)
 
 PHASE-2 — İLK ÖDEME YAPAN MÜŞTERİ VEYA LOI SONRASI (est. 3-6 months):
   → Aqua-Spark (Netherlands HQ — but deep Norway aquaculture VC experience)
-  → EIC Accelerator (EU Innovation Council — up to €2.5M equity + €2.5M grant)
+  → EIC Accelerator (EU Innovation Council — max €2.5M grant + €0.5-15M equity
+    via EIC Fund) (DOĞRULANMALI — güncel koşulları başvuru anında ec.europa.eu
+    üzerinden fetch ile doğrula)
     Note: EIC requires EU entity or association agreement country (Norway qualifies)
   → Nordic Investment Bank (NIB) — project/growth lending, not equity
   → Hatch international portfolio/LP connections
@@ -337,6 +365,12 @@ PHASE-3 — SERİES A HAZIRLIĞI (est. 18-24 months):
   Activate: When ARR > 5M NOK or Series A term sheet process begins.
 
 ─── FORMAT ───
+
+FORMAT KURALI: Aşağıdaki 11 alanlık tablo İNSAN-OKUR ÖZETTİR. OTORİTER format,
+çıktı bölümündeki "TAM LİSTE" JSON şemasıdır (investor_id, web_status,
+conflict_flag, data_quality dahil 16 alan) — S2-08 ve tüm downstream agent'lar
+yalnız JSON'u parse eder. Her yatırımcı HER İKİ formatta da yer almalı ve
+içerik tutarlı olmalıdır.
 
 Her yatırımcı için kayıt oluştur:
 
@@ -383,7 +417,8 @@ KATEGORİ DAĞILIMI:
   Nordic Tech VC: [X]
   Uluslararası: [X]
 
-TAM LİSTE (VALID JSON — S2-02 input schema):
+TAM LİSTE (VALID JSON — S2-02 input schema — OTORİTER FORMAT; yukarıdaki
+11 alanlık tablo yalnız insan-okur özettir):
 [
   {
     "investor_id": "INV-001",
@@ -413,9 +448,10 @@ EKSİK BİLGİ:
 ```
 
 ## Sonraki Agent'lar
-→ S2-08 (Veri Doğrulama) — ZORUNLU ARA ADIM (FAZ 0b): Bu listeyi önce doğrular,
-  %70+ PASS olmayanları eler. S2-02/S2-03 HAM S2-01 listesini değil, S2-08'in
-  GEÇER listesini alır.
+→ S2-08 (Veri Doğrulama) — ZORUNLU ARA ADIM (FAZ 0b): Bu listeyi önce doğrular.
+  %70 kuralı: yatırımcı başına S2-08'in 7 kontrolünün ≥%70'i (≥5) Green (ve
+  Red yok) → PASS; bunu sağlamayanlar elenir. S2-02/S2-03 HAM S2-01 listesini
+  değil, S2-08'in GEÇER listesini alır.
 → S2-02 (Profil Araştırma): S2-08 GEÇER listesini alır, derin profil çıkarır
 → S2-03 (Portfolio Analiz): S2-08 GEÇER listesini alır, yatırım geçmişini kazır
 → S2-04 (Eşleşme): Haritayı alır, Suderra uyum skoru atar

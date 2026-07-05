@@ -49,17 +49,42 @@ For each competitor, produce a COMPETITOR CARD:
 COMPETITOR CARDS
 ═══════════════════════════════════════════════════
 
+MANDATORY FETCH PROTOCOL — CATEGORY A & B CARDS:
+The pre-written Category A and B cards below are HYPOTHESES from prior
+knowledge — NOT verified facts. Before any content from these cards reaches
+an investor-facing output (S2-06, S2-10, S2-05):
+  → FETCH live sources for EVERY claim: the competitor's own website,
+    proff.no (org.nr., revenue, employees), LinkedIn company page, Crunchbase,
+    and recent news (kyst.no, intrafish.no).
+    Fishtalk → akvagroup.com + proff.no. AquaCloud → aquacloud.ai + NCE Seafood
+    Innovation Cluster pages. Marel → marel.com. SAP/Dynamics → vendor pages.
+  → Any claim that cannot be confirmed by a live fetch must be dropped or
+    explicitly tagged "(DOĞRULANMALI — [kaynak] fetch)".
+  → Do NOT write "(Research this)" — either complete the card from live
+    sources or state explicitly what could not be found.
+
+FARM COUNT RULE (tek rakam kuralı):
+All cards, investor answers and positioning statements must use ONE consistent
+figure for the Norwegian mid-size farm segment. DOĞRULANMALI —
+Fiskeridirektoratet/SSB fetch: the number of salmon farming COMPANIES in
+Norway is on the order of ~100; figures like "900+" almost certainly refer to
+licensed LOCALITIES (lokalite/site sayısı), not companies. Resolve company vs.
+locality explicitly, pin ONE number, and use it everywhere. Below, the
+placeholder [N mid-size farms — DOĞRULANMALI, Fiskeridirektoratet/SSB fetch]
+marks every spot that must carry this single verified figure.
+
 ─── CATEGORY A: PURPOSE-BUILT AQUACULTURE SOFTWARE ───
 
-COMPETITOR 1: FISHTALK
+COMPETITOR 1: FISHTALK  [HİPOTEZ KARTI — canlı kaynakla doğrula]
   Country: Norway (AKVA Group subsidiary)
   Product: Aquaculture production management system
-  Technology age: Launched ~2000s — legacy system
+  Technology age: origins in the 1990s (DOĞRULANMALI — akvagroup.com fetch;
+    launch decade must come from the live source, not memory) — legacy system
   Known customers: Large Norwegian salmon companies (Mowi, SalMar — primarily enterprise)
   
   STRENGTHS:
   → Established brand in Norwegian aquaculture
-  → Deep Aksjeloven/Mattilsynet compliance (Norwegian regulatory built-in)
+  → Deep Akvakulturloven/Mattilsynet compliance (Norwegian regulatory built-in)
   → Integration with AKVA Group hardware (feeding systems, sensors)
   
   WEAKNESSES:
@@ -77,9 +102,16 @@ COMPETITOR 1: FISHTALK
   
   INVESTOR ANSWER: "Fishtalk serves enterprise and requires expensive
   hardware integration. We're cloud-native, mobile-first, and designed
-  for the 900+ mid-size farms they cannot profitably serve."
+  for the [N mid-size farms — DOĞRULANMALI, Fiskeridirektoratet/SSB fetch]
+  they cannot profitably serve."
 
-COMPETITOR 2: AQUACLOUD
+COMPETITOR 2: AQUACLOUD  [HİPOTEZ KARTI — canlı kaynakla doğrula]
+  ⚠️ RAKİP OLMAYABİLİR (DOĞRULANMALI — aquacloud.ai + NCE Seafood Innovation
+  Cluster sayfaları fetch): AquaCloud muhtemelen ticari bir SaaS rakibi DEĞİL —
+  NCE Seafood Innovation Cluster'ın sektör veri-standardizasyon girişimi
+  olması kuvvetle muhtemel. Önce ne olduğunu doğrula; ticari rakip değilse bu
+  kartı "rakip değil — sektör veri girişimi / potansiyel veri ortağı" olarak
+  yeniden sınıflandır.
   Country: Norway (Bergen-based)
   Product: Real-time sensor data platform for aquaculture
   Focus: Monitoring and analytics (temperature, O2, biomass estimation)
@@ -104,7 +136,7 @@ COMPETITOR 2: AQUACLOUD
   manages the farm operations. They're different layers of the stack.
   We are exploring integration with AquaCloud data."
 
-COMPETITOR 3: MAREL SOFTWARE PRODUCTS
+COMPETITOR 3: MAREL SOFTWARE PRODUCTS  [HİPOTEZ KARTI — canlı kaynakla doğrula]
   Country: Iceland (global hardware and software company)
   Product: Aquaculture harvest management, processing software
   Focus: Post-harvest and processing — not farm operations
@@ -124,7 +156,7 @@ COMPETITOR 3: MAREL SOFTWARE PRODUCTS
 
 ─── CATEGORY B: GENERIC FARM MANAGEMENT / ERP ───
 
-COMPETITOR 4: SAP AGRICULTURE / MICROSOFT DYNAMICS
+COMPETITOR 4: SAP AGRICULTURE / MICROSOFT DYNAMICS  [HİPOTEZ KARTI — canlı kaynakla doğrula]
   Country: Germany / USA
   Product: Generic ERP used across industries
   
@@ -136,7 +168,8 @@ COMPETITOR 4: SAP AGRICULTURE / MICROSOFT DYNAMICS
   
   DIFFERENTIATION: Generic ERP is not a realistic competitor for SMB aquaculture.
   The real risk is that LARGE FARMS build custom modules on SAP —
-  but this doesn't serve the 900+ mid-size farms Suderra targets.
+  but this doesn't serve the [N mid-size farms — DOĞRULANMALI,
+  Fiskeridirektoratet/SSB fetch] Suderra targets.
 
 ─── CATEGORY C: AQUACULTURE HARDWARE + MONITORING ───
 
@@ -159,7 +192,7 @@ COMPETITOR 6: SCALE AQ
   → LinkedIn: "Scale AQ" — product updates and team growth signal
   → Crunchbase: "Scale AQ" funding status
   If found → complete competitor card. Key questions:
-    - Same 900+ Norwegian salmon farm segment? YES/NO
+    - Same Norwegian mid-size salmon farm segment ([N] — tek rakam kuralına uy)? YES/NO
     - Current funding status and last investment?
     - Paying customers: confirmed count or estimate?
     - Threat level: LOW / MEDIUM / HIGH and why
@@ -235,7 +268,8 @@ This is the question investors always ask. Prepare the answer for each competito
   → They're a hardware company first — software is their hardware sales driver
   → Their existing customer base (Mowi, SalMar) don't want a rebuild
   → Starting fresh with cloud-native mobile tech would cannibalize their maintenance revenue
-  → The SMB farm market (~800+ farms) is not profitable enough for their cost structure
+  → The SMB farm market ([N mid-size farms — DOĞRULANMALI, Fiskeridirektoratet/SSB
+    fetch — tek rakam kuralına uy]) is not profitable enough for their cost structure
   → Timeline estimate: even if they started today, 3+ years to rebuild
   
 3.2 AQUACLOUD
@@ -278,8 +312,13 @@ VERSION A (for AquaTech investors like Hatch):
 
 VERSION B (for Nordic tech VCs):
   "Suderra is entering the Norwegian aquaculture software market —
-   NOK 180B industry, <5% SaaS penetration, no mobile-first operator.
+   NOK [X]B industry (DOĞRULANMALI — sektör büyüklüğünü Fiskeridirektoratet/SSB
+   üretim/ihracat değeri verisinden fetch ile doğrula ve tek rakama sabitle),
+   no mobile-first operator.
    Our wedge: mandatory regulatory reporting that forces digital adoption."
+  NOT: Önceki taslaktaki "<5% SaaS penetration" iddiası kaynaksız olduğu için
+  çıkarıldı — yalnızca kaynaklı bir penetrasyon verisi bulunursa (kaynak URL
+  ile) geri eklenebilir.
 
 VERSION C (for government funds / Innovasjon Norge):
   "Norwegian aquaculture is globally competitive on production but
@@ -300,7 +339,8 @@ MONTHLY:
     (new regulations create new software needs → opportunity)
 
 QUARTERLY:
-  → AquaNor conference news (held every 2 years in Trondheim — next: August 2025)
+  → AquaNor conference news (Trondheim, tek yıllarda / odd years — güncel
+    tarihi web'den doğrula (aquanor.no fetch); sıradaki muhtemelen 2027)
   → Nordic Aqua Forum announcements
   → AKVA Group / Mowi / SalMar annual reports (do they mention software?)
 

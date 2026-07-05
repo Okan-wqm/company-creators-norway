@@ -18,8 +18,8 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
 └────────────┬─────────────┘
              ▼
 ┌──────────────────────────────────────────┐
-│ FAZ -1 — Onboarding + Pre-Flight [paralel]│
-│ S2-07 (Pitch Datasheet) + S2-00.5 (Gate)  │
+│ FAZ -1 — Onboarding + Pre-Flight [sıralı] │
+│ S2-07 (Pitch Datasheet) → S2-00.5 (Gate)  │
 └────────────────────┬──────────────────────┘
                       ▼
 ┌──────────────────────────────────────────┐
@@ -29,7 +29,8 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
                       ▼
 ┌──────────────────────────────────────────┐
 │ FAZ 0b — Veri Doğrulama (S2-08)           │
-│ %70+ PASS olmayanlar elenir               │
+│ %70 kuralı: yatırımcı başına 7 kontrolün  │
+│ ≥%70'i (≥5) Green değilse elenir          │
 └────────────────────┬──────────────────────┘
                       ▼
 ┌──────────────────────────────────────────┐
@@ -93,6 +94,9 @@ Hatch AS (Bergen)           — Aquaculture accelerator, seed stage
 Aqua-Spark                  — Global, Norveç odaklı, aquaculture VC
 Katapult Ocean              — Impact VC, blue economy
 Spawn Capital               — AquaTech, food tech, seed/Series A
+                              (DOĞRULANMALI — varlığı web + proff.no fetch ile
+                              teyit edilmeli; bulunamazsa listeden çıkar,
+                              Bluefront Equity gibi alternatifleri araştır)
 ```
 
 ### Kategori B — Devlet & Yarı-Devlet Fonlar
@@ -123,7 +127,11 @@ Middelthon-familien
 ### Kategori E — Uluslararası ama Norveç Odaklı
 ```
 Eir Ventures              — Nordic digital health & food tech
+                            (DOĞRULANMALI — bilinen profili yaşam bilimleri;
+                            eirventures.eu fetch ile food tech odağını teyit et)
 Balderton Capital         — European tech, Norveç portföyü var
+                            (DOĞRULANMALI — Norveç portföyü web'de doğrula;
+                            balderton.com portfolio fetch)
 Northzone                 — Nordic focused VC
 ```
 
@@ -131,11 +139,14 @@ Northzone                 — Nordic focused VC
 ```
 Bergen kommune            — Havbruksfond geliri, aquaculture-yakın yatırım
 Tromsø kommune            — Kuzey Norveç aquaculture merkezi
-Ålesund kommune           — Balıkçılık geleneği, yerel destek
+Ålesund kommune           — Møre og Romsdal, balıkçılık geleneği, yerel destek
 Kinn kommune              — Vestland, havbruksfond aktif
 ```
 Not: Bu fonlar özel yatırımcı değil — ancak yerel destek, inkübatör erişimi,
-pilot müşteri bağlantısı için kritik. S2-09 bu müzelerin programlarını araştırır.
+pilot müşteri bağlantısı için kritik. S2-09 bu belediyelerin programlarını araştırır.
+DOĞRULANMALI: Bu belediye listesi resmi Havbruksfond dağıtım verisiyle
+(Fiskeridirektoratet) doğrulanmalı — en büyük alıcılar tipik olarak Frøya,
+Nærøysund, Alta gibi belediyelerdir; liste resmi dağıtım verisine göre revize edilmeli.
 
 ### Kategori G — Norveç Banka & Sigorta VC Kolları ← YENİ
 ```
@@ -168,7 +179,7 @@ S2-04'te +1.0 bonus: equity + pilot partnership + distribution = üçlü değer.
 | Faz | Tetikleyici | Kapsam | Kategoriler |
 |-----|-------------|--------|-------------|
 | **PHASE-1** | Şimdi (gelir öncesi) | Yalnızca Norveç | A, B, C, D, E, F, G, H |
-| **PHASE-2** | İlk ödeme yapan müşteri veya imzalı LOI | AB dahil | Aqua-Spark (NL), EIC Accelerator (max €2.5M equity), Nordic Investment Bank |
+| **PHASE-2** | İlk ödeme yapan müşteri veya imzalı LOI | AB dahil | Aqua-Spark (NL), EIC Accelerator (max €2.5M grant + €0.5-15M equity, EIC Fund) (DOĞRULANMALI — başvuru anında ec.europa.eu fetch), Nordic Investment Bank |
 | **PHASE-3** | ARR > 5M NOK veya Series A hazırlığı | Uluslararası | Chile/CORFO, Kanada, IFC (Dünya Bankası), Asia Pacific aquaculture |
 
 S2-04 varsayılan olarak SADECE PHASE-1 yatırımcılarını sıralar.
@@ -179,9 +190,10 @@ S2-07 Modül 9'da founder "Yalnızca Norveç" seçerse PHASE-1 hard filter aktif
 ## Güncellenmiş Çalışma Sırası
 
 ```
-FAZ -1: S2-07 (Founder Onboarding) + S2-00.5 (Pre-Flight Doğrulama) [paralel]
-  ↓ S2-07: Suderra Pitch Datasheet üretilir — valid JSON formatında
-  ↓ S2-00.5: Hukuki/vergi/materyal hazırlık kontrol — PASS olmadan FAZ 0 başlamaz
+FAZ -1: S2-07 (Founder Onboarding) → S2-00.5 (Pre-Flight Doğrulama) [sıralı]
+  ↓ S2-07 ÖNCE çalışır: Suderra Pitch Datasheet üretilir — valid JSON formatında
+  ↓ S2-00.5 SONRA çalışır (M1 + JSON şema kontrolü S2-07 çıktısını gerektirir):
+    Hukuki/vergi/materyal hazırlık kontrol — PASS olmadan FAZ 0 başlamaz
   ↓ Investor Readiness Score: 0-10
 
 FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]
@@ -189,7 +201,8 @@ FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]
   ↓ S2-13: Fishtalk, AquaCloud, Excel/WhatsApp rakip kartları
 
 FAZ 0b: S2-08 (Veri Doğrulama)
-  ↓ S2-01 listesinin %70+ PASS kontrolü — başarısız olanlar elenir
+  ↓ S2-01 listesinin %70 kuralı ile kontrolü — yatırımcı başına 7 kontrolün
+    ≥%70'i (≥5) Green (ve Red yok) → PASS; başarısız olanlar elenir
 
 FAZ 1:  S2-02 + S2-03 [paralel — validated liste üzerinde]
   ↓ Profil kartları + portfolio analizi
@@ -213,7 +226,7 @@ FAZ ∞:  S2-12 (Geri Bildirim) — her outreach dalgası sonrası tekrar çalı
 sirket: Suderra AS
 sektor: Aquaculture çiftlik yönetim yazılımı
 neden_norveç: Dünya aquaculture liderinin teknoloji çözüme ihtiyacı var
-pazar: Norveç + global aquaculture (250B USD market)
+pazar: Norveç + global aquaculture (~$300B — FAO SOFIA 2024 tahmini; güncel raporla doğrula)
 aşama: Pre-seed / Seed
 aranılan_yatrım: [TBD] NOK
 kullanim: Yazılım geliştirme, ilk müşteriler, ekip
