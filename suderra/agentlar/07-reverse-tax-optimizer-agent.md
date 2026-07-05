@@ -99,8 +99,11 @@ OUTPUT FORMAT FOR ALL FETCHED DATA:
 RESEARCH TASKS:
 
 1. FRİTAKSMETODEN (Muafiyet Yöntemi)
-   - AS → Holding AS temettü transferi: %97 muaf, %3 safi kazanç
-   - Bu %3'ü nasıl daha da minimize ederiz?
+   - AS → Holding AS TEMETTÜ transferi: %97 muaf, %3 inntektsføring
+     (3% × 22% = %0.66 efektif)
+   - Holding'in Suderra hissesini SATIŞINDAN doğan KAZANÇ: %100 muaf (~%0) —
+     %3 kuralı satış kazancına UYGULANMAZ; iki durumu asla karıştırma
+   - Temettüdeki bu %3'ü nasıl daha da minimize ederiz?
    - Sayısal örnek: Suderra 5 yılda 10M NOK kazanırsa
      a) Kişisel çekersek: [hesap] NOK vergi
      b) Holding üzerinden: [hesap] NOK vergi
@@ -115,38 +118,50 @@ RESEARCH TASKS:
 
 3. SKATTEFUNn (R&D TAX CREDIT)
    CORRECT CATEGORY: Aquaculture farm management software qualifies as
-   "industriell forskning" (industrial research) under Skattefunnloven §2,
-   NOT "eksperimentell utvikling" (experimental development).
+   "industriell forskning" (industrial research) under the Skattefunn criteria
+   in FSFIN §16-40, NOT "eksperimentell utvikling" (experimental development).
    Use "industriell forskning" in all applications — higher acceptance rate.
    
-   Legal basis: Skattefunnloven §2 + Skatteloven §16-40
+   Legal basis: Skatteloven §16-40 + FSFIN (Finansdepartementets forskrift til
+   skatteloven) §16-40 — NOTE: there is NO separate statute called
+   "Skattefunnloven"; never cite that name.
    
    - Does aquaculture management software qualify as R&D? Yes — basis:
      → Novel algorithm for biomass tracking = unsolved technical problem
      → Mattilsynet regulatory reporting integration = domain-specific research
      → Offline-first mobile architecture for poor-connectivity farms = technical uncertainty
-   - Credit rate: 19% (SMB / for companies meeting KOBİ criteria) / 14% (large company)
+   - Credit rate: 19% for ALL companies — since 2020 there is a SINGLE rate;
+     the old 19% SMB / 14% large-company split was abolished in 2020
    - Maximum base: 25M NOK/year
    - Eligible costs:
-     → Software developer salaries: YES (hourly rate × R&D hours, max 1,000 NOK/hour)
+     → Software developer salaries: YES (hourly rate × R&D hours, max 700 NOK/hour
+       — DOĞRULANMALI: skatteetaten.no/skattefunn.no fetch ile güncel timesats teyit et)
      → Server/infrastructure for R&D: PARTIAL (not production hosting)
      → External consulting: YES (if subcontracted to approved research institution)
      → Patent application: YES
      → Project manager time: YES (if directing R&D work)
-   - Application deadline: April 1 each year (via skattefunn.no)
+   - Application timing: applications are accepted YEAR-ROUND (via skattefunn.no) —
+     there is NO April 1 deadline; the operative date is the GARANTIFRIST of
+     1 September: applications submitted by 1 September are guaranteed to be
+     processed within the same income year
    - Pre-approval required: submit project description BEFORE starting — retroactive rejection risk
-   - Example calculation: 3M NOK R&D budget → 570,000 NOK cash refund (pre-revenue = full cash back)
+   - Example calculation: 3M NOK R&D budget × 19% → 570,000 NOK cash refund
+     (pre-revenue = full cash back)
    - CRITICAL: Pre-revenue companies receive the credit as a CASH PAYMENT, not deduction — apply immediately
-   CONFIDENCE: HIGH (Skattefunnloven §2, Skatteloven §16-40)
+   CONFIDENCE: HIGH (Skatteloven §16-40 + FSFIN §16-40)
 
 4. SKJERMİNGSFRADRAG (SHARE SHIELD DEDUCTION)
    - How is the annual shield deduction calculated for Founder's A shares?
    - Formula: Skjermingsgrunnlag = share acquisition cost × skjermingsrente
-   - 2025 skjermingsrente: ~3.5% (verify current year at skatteetaten.no — set annually
-     based on average 3-month Norwegian government bond rate; was 4.5% in 2024)
-   - History: 0.6% (2021) → 1.7% (2022) → 3.6% (2023) → 4.5% (2024)
-   - Example: Founder paid 27,000 NOK for A shares (90% of 30,000 NOK)
-     → Annual shield: 27,000 × 3.5% = 945 NOK/year (tax-free dividend allowance)
+   - Skjermingsrente: YEAR-SPECIFIC — ALWAYS use the fetched value from [1] above
+     (set annually based on average 3-month Norwegian government bond rate)
+   - Fallback history (DOĞRULANMALI — skatteetaten.no fetch; fetch sonucu esastır,
+     bu rakamlar yalnız büyüklük sırası içindir): 0.6% (2021) → 1.7% (2022) →
+     ~3.2% (2023) → ~3.9% (2024)
+   - Example (illustrative — recompute with the fetched current rate):
+     Founder paid 27,000 NOK for A shares (90% of 30,000 NOK)
+     → Annual shield at an assumed 3.5%: 27,000 × 3.5% = 945 NOK/year
+       (tax-free dividend allowance)
      → Unused shield accumulates and carries forward to future years
      → Shield accumulates through holding AS — optimize by holding dividends until large exit
    - Optimize: withdraw dividends only up to accumulated shield amount to pay zero dividend tax
@@ -154,7 +169,7 @@ RESEARCH TASKS:
 
 5. LØNN VS UTBYTTE (MAAŞ - TEMETTÜ OPTİMİZASYONU)
    - Founder yıllık 1M NOK kazanacak — en iyi mix nedir?
-   - Maaş: sosyal güvenlik %14.1, gelir vergisi ~%46.4
+   - Maaş: arbeidsgiveravgift %14.1 (işveren), üst marjinal gelir vergisi ~%47.4
    - Temettü (holding'den): fritaksmetoden + %37.84 temettü vergisi
    - Optimal: [X] NOK maaş + [Y] NOK temettü
    - Gerçek hesap yap
@@ -162,14 +177,35 @@ RESEARCH TASKS:
 6. B HİSSESİ VESTİNG VERGİSİ
    - Co-founder cliff'te vergi öder mi? Ne zaman?
    - "Fordel ved erverv av aksjer til underpris" — altında değerden hisse alındıysa?
-   - Sweat equity vergisel muamelesi
-   - Optimize yol: hisseleri piyasa değerinden alıp, maaşı düşük tutmak mı?
+   - ⚠️ SWEAT EQUITY VERGİ RİSKİ (açıkça analiz et): bedelsiz veya iş karşılığı
+     verilen hisse, piyasa değeri ile ödenen bedel arasındaki fark kadar LØNN
+     (ücret) olarak vergilenebilir (fordel ved erverv til underpris) — co-founder
+     için gelir vergisi + şirket için arbeidsgiveravgift (%14.1) doğar.
+   - ÇÖZÜM: hisselerin KURULUŞ ANINDA nominal değerden satın alınması bu riski
+     çözer — çünkü kuruluşta nominal = piyasa değeri savunulabilir. Ama bu savunma
+     BELGEYE bağlıdır:
+     → ZORUNLU ÇIKTI: "nominal = piyasa değeri" belgelemesi — kuruluş tarihinde
+       şirketin hiçbir varlığı/geliri/müşterisi olmadığını gösteren kısa değerleme
+       notu (stiftelse tarihli), Skatteetaten sorgusuna karşı dosyada tutulur
+   - Optimize yol: hisseleri kuruluşta (nominal = piyasa değeriyken) alıp,
+     maaşı düşük tutmak
 
 7. EXIT VERGİSİ OPTİMİZASYONU
    - Kişisel exit (Aksjegevinst): %37.84 (2025)
-   - Holding üzerinden exit: Fritaksmetoden → efektif ~%0.76
+   - Holding üzerinden exit: Fritaksmetoden → hisse SATIŞ KAZANCI %100 muaf (~%0);
+     %3 inntektsføring YALNIZ TEMETTÜYE uygulanır (3% × 22% = %0.66 efektif) —
+     kazanç ve temettüyü asla aynı oranla gösterme
    - Holding satışı vs hisse satışı: hangisi daha avantajlı?
    - Partial exit senaryoları
+   - ⚠️ UTFLYTTINGSSKATT (EXIT TAX — sktl §10-70): founder Norveç dışına taşınırsa:
+     → 3 MNOK'u aşan LATENT (realize edilmemiş) hisse kazancı taşınma anında
+       vergilendirilebilir — 2024-25'te SERTLEŞEN kurallar (taksit/teminat ve
+       12 yıl vade rejimi — DOĞRULANMALI: skatteetaten.no fetch ile güncel
+       ödeme/erteleme kurallarını teyit et)
+     → HOLDİNG YAPISI BUNU ÇÖZMEZ: kişisel holding hisseleri de §10-70
+       kapsamındadır — "holding kurdum, taşınabilirim" yanılgısına karşı uyar
+     → Founder'ın yurt dışına taşınma planı varsa exit stratejisi bu maddeyle
+       birlikte planlanmalı
 
 8. AQUACULTURE SEKTÖR TEŞVİKLERİ
    - Innovasjon Norge aquaculture fonları
@@ -184,52 +220,80 @@ RESEARCH TASKS:
    THIS IS NORWAYS MOST IMPORTANT RECRUITMENT TOOL FOR TECH STARTUPS — Agent 07
    previously omitted this entirely. It is critical for Suderra hiring developers.
    
-   WHO QUALIFIES (the company must meet ALL):
-   → Company age: < 6 years old from founding date
-   → Employees: < 50 full-time equivalents
-   → Revenue OR balance sheet: < 80 MNOK each
+   WHO QUALIFIES (the company must meet ALL — rules as expanded from 1 Jan 2024;
+   DOĞRULANMALI: skatteetaten.no fetch [7] ile güncel eşikleri teyit et):
+   → Company age: ≤ 12 years from founding date
+   → Employees: ≤ 150 årsverk (full-time equivalents)
+   → Balance sheet total: ≤ 200 MNOK
    → NOT a company whose main activity is passive capital placement
    → Employee must have < 5% ownership in the company (before options)
+   (Eski "<6 yıl, <50 çalışan, <80 MNOK" eşikleri GEÇERSİZ — hiçbir güncel
+   dönemde doğru değildir; fetch sonucunu esas al.)
    
    HOW IT WORKS (why it's dramatically better than regular options):
    REGULAR OPTION TAX:
-     → Exercise date: income tax ~46.4% on (market value - strike price) = CASH CRISIS
+     → Exercise date: LØNN taxation up to ~47.4% on (market value - strike price)
+       = CASH CRISIS, PLUS employer pays arbeidsgiveravgift (14.1%) on the benefit
      → Employee must pay tax without selling shares = forces early exit
    
    STARTUP OPTION (§5-14) TAX:
      → Exercise date: NO TAX (zero)
-     → Sale date: 22% capital gains tax on total gain only
-     → Employee can exercise, hold, and pay tax only when cash exists
+     → Sale date: capital gains taxation — gain × 1.72 oppjustering × 22% =
+       effective 37.84% (NOT a flat 22% — individuals' share gains are always
+       upward-adjusted)
+     → THE REAL ADVANTAGES: (a) DEFERRAL — tax only when cash exists,
+       (b) NO arbeidsgiveravgift for the company, (c) capital-gains treatment
+       (37.84%) instead of lønn treatment (~47.4% + 14.1% AGA)
    
-   ANNUAL LIMITS (2024 rules):
-   → Maximum option value per employee per year: 1,000,000 NOK
-   → Maximum cumulative per employee: 3,000,000 NOK (3 years × 1M NOK)
+   LIMITS (rules since 2022/2024 — DOĞRULANMALI via fetch [7]):
+   → Cap per EMPLOYEE: total underlying share value at GRANT time max 3,000,000 NOK
+   → Cap per COMPANY: total underlying share value at grant time max 60,000,000 NOK
+   → There is NO annual 1 MNOK-per-year rule — the caps are measured on
+     grant-date underlying value, not per year
    → Options must vest over minimum 3 years
    → Strike price: must be at least fair market value at grant date
    
    PRACTICAL EXAMPLE FOR SUDERRA:
-   → Grant developer options worth 500,000 NOK (e.g., 500 shares × 1,000 NOK/share)
+   → Grant developer options over shares worth 500,000 NOK at grant
+     (e.g., 500 shares × 1,000 NOK/share; strike = 1,000 NOK = FMV at grant)
    → Vesting: 3 years with 1-year cliff
    → At grant: NO TAX
-   → At exercise (3 years later, value doubled to 1,000,000 NOK): NO TAX
-   → At exit/sale (5 years later, value = 2,000,000 NOK): 22% × (2M - 1M fair value at grant) = 220,000 NOK
-   → vs. regular options: 46.4% × (1M at exercise) + 22% × additional gain = ~480,000+ NOK
-   → SAVING per developer: ~260,000 NOK — significant recruitment advantage
+   → At exercise (3 years later, value doubled to 1,000,000 NOK; employee pays
+     500,000 strike): NO TAX at exercise
+   → At exit/sale (5 years later, shares worth 2,000,000 NOK):
+     Gain = 2,000,000 − 500,000 (strike paid) = 1,500,000 NOK
+     Tax = 1,500,000 × 1.72 × 22% = 1,500,000 × 37.84% = 567,600 NOK
+   → vs. regular options (same numbers):
+     At exercise: lønn tax ~47.4% × (1,000,000 − 500,000) = 237,000 NOK
+       (+ company pays AGA 14.1% × 500,000 = 70,500 NOK)
+     At sale: capital gains 37.84% × (2,000,000 − 1,000,000) = 378,400 NOK
+     Employee total: 237,000 + 378,400 = 615,400 NOK — and 237,000 of it is
+     due YEARS before any cash exists
+   → SAVING: employee saves 615,400 − 567,600 = 47,800 NOK, company saves
+     70,500 NOK AGA, and the entire tax bill is deferred to the liquidity
+     event — the deferral + AGA saving is the core recruitment advantage
    
    HOW TO IMPLEMENT:
    1. Document the current fair market value (use independent valuation or recent round price)
    2. Board resolution granting options with minimum 3-year vesting
-   3. Report to Skatteetaten when options are granted (Form RF-1109)
+   3. Report to Skatteetaten when options are granted — via the CURRENT channel
+     (a-melding / applicable form — DOĞRULANMALI: skatteetaten.no fetch ile
+     güncel bildirim kanalını teyit et; eski form numaralarına güvenme)
    4. Track through vesting schedule, report exercise
    
    CRITICAL FOR AKSJONÆRAVTALE:
    → Option pool (opsjonsprogram) must be pre-authorized in vedtekter
-   → Recommend: reserve 10% option pool in C share class for employees
+   → Recommend: reserve 10% option pool in a SEPARATE D SHARE CLASS for
+     employees — D class: 1:1 voting, NO liquidation preference (tercihsiz).
+     Do NOT use C class for the pool: C is the investor class carrying a
+     1x non-participating liquidation preference, and granting that
+     preference to employee options is neither intended nor investor-friendly.
    → Mention in aksjonæravtale: "Selskapet kan utstede opsjoner til ansatte
      i henhold til opsjonsordning for ansatte i oppstartselskaper (skatteloven §5-14)"
    
-   CONFIDENCE: HIGH (Skatteloven §5-14, Lov om skatt §5-14 tredje ledd,
-   confirmed by Skatteetaten.no/opsjoner-ansatte-oppstart)
+   CONFIDENCE: HIGH (Skatteloven §5-14 with FSFIN rules for oppstartsselskaper,
+   confirmed by Skatteetaten.no/opsjoner-ansatte-oppstart — thresholds subject
+   to fetch verification)
 
 10. INVESTOR NATIONALITY TAX ANALYSIS — CRITICAL FOR FUNDRAISING STRATEGY
     ──────────────────────────────────────────────────────────────────────
@@ -247,11 +311,22 @@ RESEARCH TASKS:
     Example: Angel investor puts 500,000 NOK for 5% of Suderra.
     
     STEP 1 — Investorfradrag at investment time (Skatteloven §6-53):
-      → Investor deducts 50% × 500,000 = 250,000 NOK from taxable income
-      → At 33.2% marginal rate: saves ~83,000 NOK in the year of investment
-      → CEILING: 500,000 NOK investment per investor per year (max deduction 250k NOK)
-      → AVAILABLE TO: Norwegian tax residents ONLY — not available to foreign investors
-      → This makes Suderra MORE attractive to Norwegian angels at investment stage
+      → Investor deducts the FULL investment amount from alminnelig inntekt:
+        500,000 NOK deduction
+      → Alminnelig inntekt is taxed at 22% → saving: 500,000 × 22% = 110,000 NOK
+        in the year of investment (NOT a 50%-of-investment deduction, NOT 33.2%)
+      → CEILING: ~1,000,000 NOK investment per investor per year
+        (DOĞRULANMALI — skatteetaten.no fetch [5]) → max saving ~220,000 NOK/year
+      → CONDITIONS: minimum 3-year holding period; shares must be from a
+        qualifying capital increase in an eligible small company
+      → EXCLUDED: the company's EMPLOYEES and EXISTING SHAREHOLDERS — and their
+        close relatives (nærstående) — canNOT claim investorfradrag.
+        ⚠️ CO-FOUNDERS CANNOT USE THIS DEDUCTION — state this explicitly in
+        the report; do not let founders plan around it
+      → AVAILABLE TO: Norwegian tax-resident natural persons ONLY — not available
+        to foreign investors or corporate (AS) investors
+      → This makes Suderra MORE attractive to outside Norwegian angels at
+        investment stage
     
     STEP 2 — During holding (dividends before exit):
       → Dividends received: 37.84% tax (after skjermingsfradrag deduction)
@@ -287,11 +362,14 @@ RESEARCH TASKS:
       → Example: Suderra pays 100,000 NOK dividend → investor AS pays 660 NOK tax
     
     STEP 3 — At exit (shares sold by the AS):
-      → 97% of capital gain is EXEMPT
-      → Effective rate: 0.66% on gain
+      → Capital gain is 100% EXEMPT under fritaksmetoden — the 3% inntektsføring
+        rule applies ONLY to DIVIDENDS, never to share sale gains
+      → Effective rate on the gain: ~0%
       → Example: Same 10x exit (gain = 4,500,000 NOK):
-          Tax: 4,500,000 × 0.66% = 29,700 NOK
-          Net: 4,470,300 NOK (8.94x net, vs 6.6x for individual)
+          Tax: 0 NOK
+          Net at AS level: 4,500,000 NOK gain intact (~10x stays ~10x;
+          personal-level tax arises only later, when the AS distributes
+          to its individual owner)
       → This investor accepts LOWER gross return — less valuation pressure for Suderra
     
     STEP 4 — Suderra's paperwork burden: MINIMAL (no withholding for Norwegian AS)
@@ -315,7 +393,10 @@ RESEARCH TASKS:
         dividends to foreign shareholders by default
       → BUT under EØS Fritaksmetoden: WHT exemption applies if conditions met
       → Treaty reduction (if Fritaksmetoden not applicable):
-          Netherlands: 0% WHT (parent-subsidiary directive threshold: ≥10% stake)
+          Netherlands: 0% WHT for qualifying EEA corporate shareholders via
+            EØS fritaksmetoden (sktl §2-38 femte ledd) or reduced treaty rate —
+            NOT the EU parent-subsidiary directive (Norway is NOT an EU member;
+            that directive never applies to Norwegian WHT)
           Sweden: 15% standard, 0% for companies with ≥10% stake (Nordic treaty)
           Germany: 15% / 0% for ≥25% stake
           UK: 15% (post-Brexit — UK no longer EEA)
@@ -324,7 +405,8 @@ RESEARCH TASKS:
       → CAVEAT: Suderra must verify each investor's specific treaty position
     
     STEP 3 — At exit (foreign company sells Suderra shares):
-      → If Fritaksmetoden applies: same 0.66% effective rate as Norwegian AS
+      → If Fritaksmetoden applies: same ~0% as Norwegian AS (gain 100% exempt;
+        the 3%/0.66% rule applies only to dividends)
       → If not: depends on investor's home country tax rules (may be 0% for fund)
     
     STEP 4 — Suderra's paperwork burden: MODERATE
@@ -360,8 +442,8 @@ RESEARCH TASKS:
     | Investor Type          | Tax at Dividends      | Tax at Exit (10x)  | Suderra Burden | Best For |
     |------------------------|-----------------------|--------------------|----------------|----------|
     | Norwegian individual   | 37.84% (self-declare) | 37.84% on gain     | MINIMAL        | Angels with investorfradrag |
-    | Norwegian AS/Holding   | 0.66% (Fritaksmetoden)| 0.66% on gain      | MINIMAL        | IDEAL: low pressure on returns |
-    | Foreign EEA company    | 0% if Fritaksmetoden  | 0.66% if covered   | MODERATE       | Good if EEA structure |
+    | Norwegian AS/Holding   | 0.66% (Fritaksmetoden)| ~0% (gain exempt)  | MINIMAL        | IDEAL: low pressure on returns |
+    | Foreign EEA company    | 0% if Fritaksmetoden  | ~0% if covered     | MODERATE       | Good if EEA structure |
     | Non-EEA fund           | 15-25% WHT            | 0% (treaty CGT)    | HIGH           | Complex but investor prefers |
     
     ─── STRATEGIC RECOMMENDATION FOR SUDERRA ───
@@ -369,7 +451,8 @@ RESEARCH TASKS:
     PRIORITY ORDER (for lowest return pressure and simplest compliance):
     
     1. BEST: Norwegian AS investors (family offices, holding companies) via Fritaksmetoden
-       → They pay 0.66% effective → accept lowest gross returns → least valuation pressure
+       → They pay ~0% on exit gains and 0.66% on dividends → accept lowest
+         gross returns → least valuation pressure
        → Zero withholding complexity for Suderra
     
     2. GOOD: Norwegian individual angels (privatpersoner) — BUT offer investorfradrag timing
@@ -389,7 +472,8 @@ RESEARCH TASKS:
     
     TAX ADVISOR CLARIFICATION:
     "Norwegian investor pays more tax" likely means NORWEGIAN INDIVIDUALS (37.84%).
-    Norwegian AS investors actually pay LESS (0.66% via Fritaksmetoden).
+    Norwegian AS investors actually pay LESS (~0% on exit gains, 0.66% on
+    dividends via Fritaksmetoden).
     Foreign investors in 0-tax jurisdictions pay 0% in their home country BUT
     Suderra incurs WHT withholding obligations on dividends.
     
@@ -454,9 +538,14 @@ FIRSAT 2 — SKATTEFUNn:
 FIRSAT 10 — YATIRIMCI YAPISI VERGİ KARŞILAŞTIRMASI:
   Norveç bireysel yatırımcı (privatperson):
     → Yatırım: 500,000 NOK / Çıkışta 10x → Net: 6.6x (%37.84 CGT sonrası)
-    → Investorfradrag faydası: ~83,000 NOK (sadece Norveç vergi mükellefleri)
+    → Investorfradrag faydası: yatırımın TAMAMI alminnelig inntekt'ten indirilir →
+      500,000 × %22 = ~110,000 NOK tasarruf (yıllık yatırım tavanı ~1 MNOK —
+      DOĞRULANMALI; maks tasarruf ~220,000 NOK)
+    → SADECE Norveç vergi mükellefi gerçek kişiler; çalışanlar, mevcut ortaklar
+      ve yakınları HARİÇ — co-founder'lar YARARLANAMAZ; 3 yıl elde tutma şartı
   Norveç AS yatırımcısı (Fritaksmetoden):
-    → Aynı yatırım → Net: 8.94x (%0.66 efektif vergi)
+    → Aynı yatırım → AS seviyesinde net ~10x (satış kazancı %100 muaf ~%0;
+      %0.66 yalnız temettüde)
     → Suderra'ya daha az baskı uygular — IDEAL
   Yabancı AB/AEA yatırımcısı (yapılandırılmış):
     → Fritaksmetoden'den yararlanabilir (NL BV, SE AB, DK ApS)
@@ -479,3 +568,7 @@ KAÇIRILAN FIRSATLAR (taslak belgelerden):
 → Holding Transfer Planı belgesi için temel sağlanır
 → Skattefunn başvurusu için metodoloji gönderilir
 → Agent 20 (Çalışan Sözleşmesi): Maaş/arbeidsgiveravgift verisi arbeidskontrakt §7'ye girdi olur
+
+**OTORİTE NOTU:** S2-14'teki vergi rakamlarının otoritesi Agent 07'nin güncel
+fetch çıktısıdır — çelişki halinde Agent 07'nin doğrulanmış rakamları esas alınır.
+Holding transfer ZAMANLAMASININ otoritesi de Agent 07'dedir.

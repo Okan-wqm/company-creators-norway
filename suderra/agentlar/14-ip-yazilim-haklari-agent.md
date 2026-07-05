@@ -39,10 +39,23 @@ Answer each question with a concrete legal position:
 
 1.2 CO-FOUNDER IP ASSIGNMENT
 - For each co-founder (B share holders):
-  → Under Patentloven §7, does employer (the company) automatically own
-    IP developed by employees? Apply this to co-founders.
-  → If co-founders are classified as partners (not employees), does
-    automatic assignment still apply?
+  → EMPLOYEE INVENTIONS — correct statute: arbeidstakeroppfinnelsesloven
+    (lov om retten til oppfinnelser som er gjort av arbeidstakere, 1970) —
+    NOT Patentloven §7. Key points to apply:
+    - Transfer to the employer is NOT automatic: the employee must notify
+      the invention, and the employer must CLAIM it within 4 MONTHS of
+      that notification (§4-§6) — otherwise rights stay with the employee
+    - The employee has a NON-WAIVABLE right to reasonable compensation
+      (rimelig godtgjørelse, §7) when the employer takes over the invention
+    → CONTRACT DESIGN CONSEQUENCE: build the 4-month claim procedure
+      (notification → employer claim) and the godtgjørelse mechanism into
+      the employment/sweat-equity IP clauses — a blanket "everything is
+      automatically the company's" clause does not displace this statute
+  → Copyright in software: Åndsverkloven §71 governs employer takeover of
+    code written by employees (different regime from patentable inventions)
+  → If co-founders are classified as partners (not employees), NEITHER
+    regime applies automatically — an explicit contractual assignment is
+    the ONLY transfer mechanism; draft it accordingly
   → Draft an IP assignment clause for sweat equity agreement:
     "All software, algorithms, designs, databases, and trade secrets
      developed by [co-founder] in connection with Suderra AS activities
@@ -74,17 +87,29 @@ For each category, classify the risk:
 |-------------|---------------|-----------|----------------|
 | IoT/MQTT    | Apache 2.0    | LOW       | Attribution only |
 | Data viz    | MIT           | LOW       | Attribution only |
-| [framework] | GPL v3        | HIGH      | Cannot use in proprietary code |
+| [framework] | AGPL v3       | CRITICAL  | Do NOT use — network/SaaS use alone triggers copyleft |
+| [framework] | GPL v3 (distributed components — mobile app!) | CRITICAL | Cannot ship in proprietary distributed code |
+| [framework] | GPL v3 (server/backend only, not distributed) | LOW-MEDIUM | Copyleft triggers on DISTRIBUTION — pure backend use is low risk, but document and fence it |
 | [framework] | LGPL          | MEDIUM    | Can link, cannot modify |
 
-RULE: GPL-licensed code CANNOT be incorporated into Suderra's proprietary
-codebase without making all Suderra code open source.
-Flag any GPL dependency as a CRITICAL RISK.
+RULES — differentiate correctly for a SaaS company:
+- AGPL is THE primary SaaS risk: its copyleft triggers on NETWORK USE
+  (offering the software as a service), not just distribution. Flag ANY
+  AGPL dependency as CRITICAL — do not use in any Suderra component.
+- GPL's copyleft triggers on DISTRIBUTION. Split the analysis:
+  → DISTRIBUTED components (the MOBILE APP shipped to app stores, any
+    on-prem/edge agent installed at farms, firmware): GPL is CRITICAL —
+    cannot be incorporated without open-sourcing that component
+  → Backend/server-side code that is never distributed: GPL risk is LOW —
+    but still track it (SBOM), isolate it, and get legal review before any
+    future distribution model (on-prem deployment would flip the risk)
 
 2.2 OPEN SOURCE POLICY DOCUMENT
 Draft a one-page policy:
   - Approved licenses for use in Suderra products (MIT, Apache 2.0, BSD: YES)
-  - Licenses requiring legal review (LGPL: MAYBE, GPL: NO)
+  - Prohibited outright (AGPL: NEVER — SaaS/network copyleft)
+  - Licenses requiring legal review (LGPL: MAYBE; GPL: NO in distributed
+    components [mobile/edge], backend-only use requires review + isolation)
   - Process for requesting exception (CTO approval + legal review)
   - Obligation to track all open source components (SBOM — Software Bill of Materials)
   - Attribution requirements (LICENSE files, NOTICE files)
@@ -115,8 +140,13 @@ Suderra's platform collects operational data from customer farms:
 
 3.3 COMPETITIVE MOAT PROTECTION
   → Data portability obligation (can customers take their data when leaving?)
-  → Recommendation: YES — mandatory data export creates trust, reduces
-    legal risk, and is required under GDPR Art. 20 (data portability)
+  → Recommendation: YES — mandatory data export creates trust, reduces legal
+    risk, and is a strong COMMERCIAL/CONTRACTUAL expectation in B2B SaaS
+  → LEGAL BASIS — get this right: GDPR Art. 20 (data portability) applies
+    ONLY to natural persons' personal data. Customer farms are LEGAL ENTITIES —
+    their operational data export is a CONTRACTUAL matter, not an Art. 20
+    obligation. Cite Art. 20 only for the farms' EMPLOYEES' personal data
+    (worker activity logs etc.), never for the farm's business data
   → But: Suderra retains all DERIVED insights, models, and algorithms
   → Draft data exit clause
 
@@ -131,6 +161,8 @@ SECTION 4: DOMAIN, BRAND, PATENT
 
 4.2 TRADEMARK (VAREMERKE)
   → Register "Suderra" as a Norwegian trademark (Patentstyret)?
+  → Class 9: Downloadable software (mobile app, downloadable clients) — DO NOT
+    OMIT: SaaS registration alone (class 42) does not cover the downloadable app
   → Class 42: Software as a service (SaaS), computer programming
   → Class 44: Agricultural aquaculture management services
   → Estimated cost: ~2,500-3,500 NOK per class
@@ -236,7 +268,8 @@ AVUKAT İNCELEMESİ GEREKTİREN MADDELER:
 ```
 
 ## Sonraki Agent'lar
-→ Agent 11 (Belge Uzmanı): IP politika belgesi 9. belge olarak eklenir
+→ Agent 11 (Belge Uzmanı): IP politika belgesi, master listedeki belge #08
+  (08-ip-politikasi.md) olarak eklenir
 → Agent 16 (Tutarlılık): IP tanımları diğer belgelerle karşılaştırılır
 → Agent 15 (GDPR): Veri sahipliği çerçevesi GDPR analizi ile bütünleşir
 → Agent 20 (Çalışan Sözleşmesi): Pre-employment IP devir maddeleri arbeidskontrakt

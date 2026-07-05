@@ -23,11 +23,16 @@ TEMEL PARAMETRELER:
 - Vesting: 4 yıl, 1 yıl cliff
 - Cliff tarihi: ŞIRKETE KATILIM TARİHİ (imza tarihi değil) — bu kritik!
 
-VESTİNG TAKVİMİ:
+VESTİNG TAKVİMİ (⚠️ Norveç'te KESİRLİ HİSSE YOKTUR — takvim tam sayı hisse
+  üretmek zorunda; mevcut 1000-hisse yapısını korumak için AŞAĞI YUVARLAMA
+  kuralı uygulanır, yuvarlama farkı 48. ayda kapanır):
   Ay 1-11: Hiç hisse vested değil
-  Ay 12 (cliff): 12.5 hisse vested (toplam 50'nin %25'i)
-  Ay 13-48: Her ay 1/36 hisse vested (≈1.04 hisse/ay)
-  Ay 48: Tam 50 hisse vested
+  Ay 12 (cliff): 12 hisse vested (hesaplanan %25 = 12,5 → tam sayıya AŞAĞI yuvarlanır)
+  Ay 13-47: Kümülatif vested = AŞAĞI_YUVARLA(12,5 + (ay − 12) × 37,5/36)
+    (aylık tahakkuk ≈1,04 hisse; deftere yalnız tam sayı işlenir)
+  Ay 48: Tam 50 hisse vested (birikmiş yuvarlama farkları burada tamamlanır)
+  Belgeye açıkça yaz: "Kesirli hisse tahakkuk etmez; ara aylarda vested hisse
+  sayısı her zaman aşağı yuvarlanır ve fark tam vesting'de telafi edilir."
 
 GOOD LEAVER TANIMI (tam ve kapalı liste — muğlak değil):
   a) Founder isteğiyle karşılıklı anlaşmayla ayrılma
@@ -42,7 +47,9 @@ GOOD LEAVER TANIMI (tam ve kapalı liste — muğlak değil):
 BAD LEAVER TANIMI (tam liste — "vb." veya "gibi" kullanma):
   a) Co-founder kendi isteğiyle ayrılıyor (cliff öncesinde)
   b) Co-founder kendi isteğiyle ayrılıyor (cliff sonrası 12 ay içinde)
-  c) Aksjonæravtale'ye ciddi ihlal (3 iş günü içinde düzeltme yapılmadıysa)
+  c) Aksjonæravtale'ye ciddi ihlal (yazılı ihtardan itibaren 30 gün içinde
+     düzeltme yapılmadıysa — daha kısa süreler [örn. 3 iş günü] gerçekçi değildir
+     ve Avtaleloven §36 hakkaniyet denetiminde aleyhe kullanılabilir)
   d) Dolandırıcılık, zimmete para geçirme, kasıtlı zarar
   e) Rakip şirkette çalışma veya rekabet yasağı ihlali
   f) Gizlilik ihlali (ticari sır paylaşımı)
@@ -66,23 +73,41 @@ BAD LEAVER TANIMI (tam liste — "vb." veya "gibi" kullanma):
     GRAY ZONE — KISMEN BAD LEAVER: Yönetim kurulunun takdir yetkisi ile %50 fair value
     (ne tam bad leaver, ne good leaver — örn: kişisel gerekçeyle ayrılış ama ihmal yok)
 
-FAIR VALUE TANIAMI (kesin metodoloji — "piyasa değeri" diye bırakma):
-  1. Bağımsız sertifikalı muhasebeci (CPA/revisor) belirlenir
-  2. Metodoloji: EBITDA × 5 (aquaculture yazılım sektörü çarpanı)
+FAIR VALUE TANIMI (kesin metodoloji — "piyasa değeri" diye bırakma):
+  1. Bağımsız statsautorisert revisor veya verdsettelsesekspert belirlenir
+  2. KADEMELİ metodoloji — sırayla uygula:
+     a) Son yatırım turu hisse fiyatı (son 12 ay içinde bir tur varsa) — birincil ölçüt
+     b) Tur yoksa: gelir çarpanı (ARR × sektör çarpanı, aquaculture SaaS emsalleri)
+     c) Pre-revenue ise: bağımsız değerleme (DCF / VC yöntemi, verdsettelsesekspert)
+     ⚠️ "EBITDA × 5" gibi tek kâr-çarpanı formülü pre-revenue SaaS'ta ÇALIŞMAZ:
+     EBITDA negatif/sıfırken fair value 0'a düşer → fiilen nominal geri alım →
+     Avtaleloven §36 "açıkça haksız" riski geri gelir. Bu yüzden kademeli yöntem şart.
   3. Minimum değerleme süresi: 30 gün
-  4. Taraflar CPA'ya katılmıyorsa: 2. CPA belirlenir, ortalama alınır
-  5. Anlaşmazlık devam ederse: Oslo Tingrett son karardır
+  4. Taraflar değerlemeye katılmıyorsa: 2. bağımsız değerleme uzmanı belirlenir,
+     iki sonucun ortalaması alınır
+  5. Anlaşmazlık devam ederse: [şirket merkezi] tingrett'te dava — ilk derece
+     mahkemesi "son karar" OLAMAZ; istinaf (lagmannsrett) yolu saklıdır
 
-REKABET YASAĞI (Avtaleloven §36 uyumlu):
+REKABET YASAĞI (rejim, co-founder'ın statüsüne göre AYRIŞIR):
   - Süre: 12 ay ayrılış sonrası
   - Coğrafya: Norveç
   - Sektör: aquaculture çiftlik yönetim yazılımı ve doğrudan rakip ürünler
-  - Geniş yazma — Avtaleloven §36 kapsamında iptal riski taşır!
+  - Geniş yazma — iptal riski taşır!
+  - Co-founder ÇALIŞAN ise (arbeidskontrakt varsa): Arbeidsmiljøloven kap. 14 A
+    rejimi ZORUNLU uygulanır — §14 A-1 (yazılı form, azami 12 ay) + §14 A-3
+    ZORUNLU KOMPENSASJON (G-bazlı: yıllık arbeidsvederlag'ın 8G'ye kadar olan
+    kısmının %100'ü, 8G-12G arası kısmın en az %70'i; 12G üstü dikkate alınmaz).
+    Kompensasjonsuz non-compete GEÇERSİZDİR — maliyet hesabı ve tam formül için
+    Agent 20 (Çalışan Sözleşmesi) §13 ile koordine et.
+  - Co-founder çalışan DEĞİLSE (salt ortak): kap. 14 A uygulanmaz; geçerlilik
+    sınırı Avtaleloven §38 (makul olmayan rekabet yasağı bağlamaz) + §36 genel
+    hakkaniyet denetimidir. Bu rejimde yasal kompensasjon zorunluluğu yoktur ama
+    kapsam/süre makul olmalıdır.
 
 NORVEÇ İŞ HUKUKU UYUMU:
-  - Arbeidsmiljøloven §14 A-1: rekabet yasağı için yazılı form zorunlu
   - Bad leaver hükümleri Arbeidsmiljøloven ile çelişirse Arbeidsmiljøloven önceliklidir
   - Co-founder "çalışan" mı "ortak" mı? Bu ayrım kritik — belgede açıkça belirt
+    (non-compete rejimini, yukarıdaki ayrım uyarınca statüye bağla)
 ```
 
 ---

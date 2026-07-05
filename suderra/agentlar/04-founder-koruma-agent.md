@@ -89,9 +89,22 @@ ANALYSIS 5: BAD LEAVER ECONOMICS
 ═══════════════════════════════════════
 
 If co-founder is bad leaver at month 14 (after 1-year cliff):
-  Vested shares: 14/48 = 29.2% of their 5% = 1.46% of total
-  Unvested shares to repurchase: 3.54% of total
-  Repurchase price: nominal (1 NOK/share or fair value — which is documented?)
+  Vested shares: ~14.6 of 50 (cliff 12.5 + 2 × ~1.04/month, per Agent 06
+    rounding rule) ≈ 29.2% of their 5% = 1.46% of total
+  Repurchase model — AUTHORITATIVE SOURCE IS AGENT 06's time-based
+  proportional penalty scale (NOT a nominal-price repurchase of unvested
+  shares only). Under that scale, a bad leaver's ENTIRE holding (vested AND
+  unvested) is repurchased at a fair-value discount tied to tenure:
+    Month 0-11:  all shares at 10% of fair value
+    Month 12-24: all shares at 25% of fair value  ← month 14 falls here
+    Month 24-36: all shares at 50% of fair value
+    Month 36-48: vested at 75% of fair value; unvested lapse
+    Floor in every band: nominal value 30 NOK/share (30,000 NOK / 1,000 shares)
+  Month-14 worked example:
+    Repurchase price = max(25% × fair value per share, 30 NOK) × 50 shares
+    e.g., fair value 200 NOK/share → 50 NOK/share × 50 = 2,500 NOK total
+    e.g., fair value 100 NOK/share → 30 NOK floor binds (25% = 25 < 30)
+      → 30 NOK/share × 50 = 1,500 NOK total
   Impact on founder's % after repurchase: [calculate]
 
 ═══════════════════════════════════════
@@ -181,9 +194,10 @@ Mechanism (to be defined in vedtekter, see Agent 03 research item 11):
       leaver repurchase, secondary purchase) converts automatically to A
       class (10:1 voting) upon transfer to the Founder.
   (b) Any A share the Founder TRANSFERS to a non-Permitted-Transferee
-      converts automatically to C class (1:1 voting, no automatic
-      liquidation preference — that is reserved for primary capital
-      investment rounds) upon transfer.
+      converts automatically to C class (1:1 voting; per the company
+      parameter block (Agent 00), C class carries a 1x NON-PARTICIPATING
+      liquidation preference — model the preference stack impact of
+      secondary-sale conversions accordingly) upon transfer.
 
   MODEL THE VOTING IMPACT — worked example:
     Starting point: Founder 900 A (9,000 votes), Co-F1+Co-F2 100 B (100 votes),
@@ -243,8 +257,9 @@ DRAG-ALONG BLOCK ANALYSIS:
 ESOP IMPACT:
   10% pool, all from C class: Founder voting: [X]% → [Y]% [CONFIDENCE: HIGH]
   
-BAD LEAVER ECONOMICS (month 14 example):
-  Unvested shares recoverable: [X]%
+BAD LEAVER ECONOMICS (month 14 example — Agent 06 penalty scale):
+  All 50 shares repurchased at 25% of fair value (floor: 30 NOK/share nominal)
+  Repurchase cost at assumed fair value [X] NOK/share: [X] NOK
   Founder's % after recovery: [X]%
 
 TAG-ALONG MATH (Founder sells [X]% of A shares):
