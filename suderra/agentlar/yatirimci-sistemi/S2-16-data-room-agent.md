@@ -67,10 +67,13 @@ GÖREV 3 — ERİŞİM KATMANLARI (yatırımcı tipine göre)
   ürün roadmap ve müşteri listesi ancak TIER-3'te ve CEO onayıyla; rekabete
   duyarlı içerik için "clean team" notu
 
-GÖREV 4 — SÜRÜM DİSİPLİNİ
+GÖREV 4 — SÜRÜM DİSİPLİNİ + ACCESS_LOG
 - Her belge dosya adında versiyon+tarih; her DD turu başında durum.json ile
-  mutabakat; yatırımcıya verilen her erişim OUTREACH_LOG'a kaydedilir
-  (investor_id + tier + tarih).
+  mutabakat; yatırımcıya verilen her erişim ACCESS_LOG'a kaydedilir.
+- ACCESS_LOG (bu agent'ın kaydı — S2-05'in OUTREACH_LOG'undan AYRIDIR;
+  dosya: suderra/s2/access-log.json), kayıt şeması:
+  { "investor_id": "[S2-01 kimliği]", "tier": "TIER-1|TIER-2|TIER-3",
+    "tarih": "YYYY-MM-DD" }
 
 KURALLAR:
 - Belge İÇERİĞİ üretme (o iş S1 agent'larının); sen envanter, paketleme ve

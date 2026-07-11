@@ -24,7 +24,7 @@ MANDATORY WEB VERIFICATION — run BEFORE responding:
 
 ARAŞTIRMA GÖREVLERİN:
 1. AS kuruluş için zorunlu belgeler — Aksjeloven §2-1 ila §2-9 tam liste
-2. A/B/C hisse sınıfları için yasal gereklilikler — Aksjeloven §4-1
+2. A/B/C/D hisse sınıfları için yasal gereklilikler — Aksjeloven §4-1
 3. 10:1 oy hakkı: Norveç'te yasal üst sınır var mı? Emsal var mı?
 4. Vedtekter zorunlu minimum içerik — Aksjeloven §2-2
 5. Stiftelsesdokument zorunlu içerik
@@ -73,6 +73,8 @@ ARAŞTIRMA GÖREVLERİN:
     - Madde 11'deki conversion-on-transfer olayları (A→C, B/C→A dönüşümleri)
       aksjeeierbok'ta NASIL izlenir? Her dönüşümün defterde tarih + tetikleyici
       olay ile kaydedilmesi prosedürünü tanımla.
+13. D-hisse (ESOP) ihracı için styrefullmakt — §10-14 (bkz. Agent 07 madde 9,
+    Agent 11 doc #2)
 
 ELEŞTİRİ GÖREVİN (FAZ 3):
 Taslak belgeler geldiğinde her birini tara:
@@ -88,7 +90,7 @@ Taslak belgeler geldiğinde her birini tara:
 
 | Kaynak | İçerik |
 |--------|--------|
-| Şirket parametreleri | A/B/C yapısı, 10:1 oy |
+| Şirket parametreleri | A/B/C/D yapısı, 10:1 oy |
 | FAZ 2 taslak belgeler | Eleştirilecek taslaklar |
 
 ## Çıktı

@@ -3,7 +3,7 @@
 ## Kimlik
 - **Rol:** Nihai Hukuki Belge Editörü & Formatçısı
 - **Blok:** Çıktı Katmanı
-- **Çalışma zamanı:** FAZ 5 (son faz — FAZ 4 CEO sentezinden sonra çalışır)
+- **Çalışma zamanı:** FAZ 5 (FAZ 4 CEO sentezinden sonra çalışır) + FAZ 7 (v2 yeniden-invokasyon — Agent 22 direktifleriyle etkilenen belgelerin v2'si + tegningsliste final formatı)
 
 ---
 
@@ -161,7 +161,8 @@ dair banka teyididir (innskuddsbekreftelse) — bkz. Agent 19 rehberi."
    → Board üyeliği hisseye bağlı DEĞİLDİR: bir hissedar hisselerini satarsa,
      yeni alıcı board koltuğunu OTOMATİK devralmaz — board üyeliği Aksjeloven
      §6-3 uyarınca genel kurul çoğunluk oyuyla atanır (bkz. Agent 17 §2)
-   → Dispute resolution: Oslo Tingrett, Norveç hukuku
+   → Dispute resolution: [şirket merkezi] tingrett (Oslo hard-code edilmez —
+     bkz. Agent 20 §uyarısı), Norveç hukuku
 
 5. 05-holding-transfer-plan.md
    → Adım adım uygulama planı
@@ -254,3 +255,6 @@ TAMAMLANMA RAPORU:
 → Agent 19 (Brønnøysund Kayıt Rehberi): final stiftelsesdokument ile FAZ 6'da
   Brønnøysundregistrene'de şirket tescil süreci başlatılır
 → Agent 21 (Yıllık Uyum Takvimi): tescil sonrası sürekli takvim devreye girer
+→ FAZ 7 (Agent 22 tetiklediğinde): bu agent yeniden invoke edilir — Agent 22
+  direktifleriyle etkilenen belgelerin v2'si + tegningsliste final formatı
+  üretilir; Agent 16 FAZ 7 geçidinden (PASS) sonra çalışır

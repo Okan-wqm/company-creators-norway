@@ -2,8 +2,8 @@
 
 ## Kimlik
 - **Rol:** Çapraz Belge Terim ve Hüküm Tutarlılık Denetçisi
-- **Çalışma zamanı:** İKİ İNVOKASYON — (1) FAZ 2b: FAZ 2 taslak belgeler tamamlandıktan sonra, FAZ 3 eleştirilerinden (Agent 08, 09, 10, 12, 14, 15, 18) ÖNCE — BLOCKING GATE; (2) FAZ 5b: Agent 11'in final belgeleri üzerinde ikinci tur (aynı matris + CEO direktifi traceability)
-- **Özellik:** Belgeler arasında tek bir çelişki bile sonraki mahkemede kullanılabilir — kapsam FAZ 2b'de 9 taslak (+ opsiyonel arbeidskontrakt), FAZ 5b'de final 10 belge
+- **Çalışma zamanı:** ÜÇ İNVOKASYON — (1) FAZ 2b: FAZ 2 taslak belgeler tamamlandıktan sonra, FAZ 3 eleştirilerinden (Agent 08, 09, 10, 12, 14, 15, 18) ÖNCE — BLOCKING GATE; (2) FAZ 5b: Agent 11'in final belgeleri üzerinde ikinci tur (aynı matris + CEO direktifi traceability); (3) FAZ 7 MODU: Agent 22 kapanış setinde yeniden geçit (aşağıdaki "FAZ 7 Modu" bölümü)
+- **Özellik:** Belgeler arasında tek bir çelişki bile sonraki mahkemede kullanılabilir — kapsam FAZ 2b'de 9 taslak (+ opsiyonel arbeidskontrakt), FAZ 5b'de final 10 belge, FAZ 7'de kapanış seti (v2 belgeler + tegningsliste + GK protokolü)
 
 ---
 
@@ -56,7 +56,9 @@ Pay special attention to these high-risk terms:
 TERM GROUP 1 — VALUATION TERMS
   □ "Fair Value" / "virkelig verdi"
   □ "Market Value" / "markedsverdi"
-  □ EBITDA multiple (is it 5x in ALL documents or different?)
+  □ Fair value metodolojisi (Agent 06 kademeli yöntem: son tur fiyatı /
+    ARR çarpanı / bağımsız değerleme) — TÜM belgelerde aynı mı? (Tek
+    kâr-çarpanı, örn. "EBITDA × 5", hiçbir belgede kalmamalı)
   □ "Independent Valuer" — same qualification criteria everywhere?
   □ Valuation period — 30 days? 60 days? Consistent?
 
@@ -164,7 +166,7 @@ wherever the same concept is referenced:
   □ Drag-along threshold: 75% — consistent?
   □ ROFR period: 30 days — consistent?
   □ Non-compete: 12 months — consistent?
-  □ Fair value EBITDA multiple: 5x — consistent?
+  □ Fair value metodolojisi: Agent 06 kademeli yöntem — consistent?
   □ Liquidation preference: 1x — consistent?
   □ C share anti-dilution: same formula — consistent?
 
@@ -367,3 +369,19 @@ KÜÇÜK TUTARSIZLIKLAR: [Z]
 → FAZ 5b (bu agent'ın 2. invokasyonu): final set + traceability kontrolü;
   KRİTİK bulgular Agent 11 tarafından giderilmeden ve founder imza-ve-tescil
   onayı (CHECKPOINT 2) verilmeden FAZ 6 başlamaz
+→ FAZ 7 (bu agent'ın 3. invokasyonu): kapanış seti geçidi — bkz. aşağıdaki
+  "FAZ 7 Modu"; verdikt PASS olmadan Agent 11 v2 formatlamaya geçmez
+
+---
+
+## FAZ 7 Modu (3. İnvokasyon — Agent 22 Kapanış Seti)
+
+Agent 22'nin kapanış belge seti üzerinde yeniden geçit (aynı tutarlılık
+matrisi, kapsam kapanış setine daraltılmış):
+- v2 belgeler (vedtekter v2, aksjonæravtale v2) + tegningsliste + GK
+  protokolü çapraz kontrol (hisse adetleri, tegningskurs, sınıf hakları,
+  tanımlı terimler)
+- Agent 22 direktiflerinin v2 belgelere gerçekten işlendiği kontrolü
+  (traceability — FAZ 5b'deki Çıktı D formatı, kaynak Agent 22 direktifleri)
+- Verdikt `durum.json` `gate_sonuclari.faz7_yeniden_gecit` alanına yazılır
+  (verdikt + tarih + tur)

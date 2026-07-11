@@ -28,6 +28,10 @@ Etiketler:
   [TechVC]      = Nordic / genel tech VC'ler (S2-00 Kategori D/E — sektör bağımsız fonlar)
   [TÜMÜ]        = Her yatırımcı tipinin sorduğu evrensel sorular
 
+KURAL: [TechVC] = Kategori D/E'nin FON nitelikli üyeleri; angel AĞLARI
+(örn. Norban) ve bireysel angel'lar — Kategori D'de listelense bile —
+her zaman [Angel] etiketi alır.
+
 Format: Her "S:" satırının başına etiket ekle.
 Örnek: [AquaTech][TÜMÜ] S: "Ürününüz bugün ne yapıyor?"
 
@@ -41,14 +45,16 @@ SORU KATEGORİLERİ:
 [TÜMÜ] S: "Küresel aquaculture pazarı büyüklüğü nedir? Sizi ilgilendiren segment?"
 C: Hazırlanacak cevap çerçevesi:
    - Global aquaculture pazar: ~$300B (FAO SOFIA 2024; güncel raporla doğrula)
-   - Norveç: ~$20B laks sektörü
+   - Norveç: ~123 milyar NOK (≈$12B) somon sektörü (DOĞRULANMALI — güncel
+     istatistik fetch; S2-09/S2-10 ile aynı rakam)
    - Operasyon yönetim yazılımı: ~$X penetrasyon
    - SaaS penetrasyon oranı: hâlâ çok düşük → opportunity
    [Founder kendi araştırmasıyla dolduracak]
 
 [TÜMÜ] S: "Norveç pazarı kaç çiftlik, kaç şirket?"
 C: Çerçeve:
-   - Lisanslı Norveç laks çiftliği sayısı: ~1000+
+   - Şirket sayısı: [~100 şirket — N DOĞRULANMALI]; lisanslı lokalite:
+     [~900 lokalite — N DOĞRULANMALI] (S2-13 FARM COUNT RULE — tek rakam kuralı)
    - Büyük entegre şirketler (Mowi, SalMar, Cermaq, Grieg): ~10-15
    - Orta boy bağımsız çiftlikler: hedef müşteri segment
 

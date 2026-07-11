@@ -37,6 +37,8 @@ Co-founder 14. ayda ayrılıyor ve "bad leaver değilim" diyor.
 - Riski: [DÜŞÜK/ORTA/YÜKSEK] + gerekçe
 
 SENARYO B — DRAG-ALONG KÖTÜYE KULLANIM:
+Girdi: Agent 04 Analysis 1-2 çıktısı — bu senaryo hesabı YENİDEN üretmez,
+mahkeme yorumunu ekler; rakam ayrışırsa Agent 04 esastır.
 Yatırımcılar 300 adet C hissesiyle (1.300 toplam hissenin ~%23'ü) co-founder'larla
 birleşip drag-along başlatmak istiyor.
 - %75 eşiği gerçekten founder'ı koruyor mu? Matematik:
@@ -51,7 +53,9 @@ birleşip drag-along başlatmak istiyor.
 
 SENARYO C — "FAIR VALUE" ANLAŞMAZLIĞI:
 Bad leaver co-founder, fair value'nun çok düşük hesaplandığını iddia ediyor.
-- Fair value metodolojisi (EBITDA ×5) mahkemede savunulabilir mi?
+- Fair value metodolojisi (Agent 06 kademeli yöntem: son tur fiyatı / ARR
+  çarpanı / bağımsız değerleme) mahkemede savunulabilir mi? İki değerlemeci +
+  ortalama mekanizması çalışır mı?
 - Bağımsız CPA mekanizması çalışır mı?
 - 30 gün değerleme süresi makul mu?
 - Emsal: benzer değerleme uyuşmazlığı Norveç'te nasıl çözüldü?
@@ -91,12 +95,13 @@ Skatteetaten 30k NOK transferini sorgular.
   Skatteetaten can establish)
 
 SENARYO H — YATIRIMCI KOALİSYONU VEDTEKTER DEĞİŞİKLİĞİ:
-Investor coalition holds 30% C shares + co-founders' 10% B shares = 40% combined.
-They propose a vedtekter amendment to lower drag-along threshold from 75% to 51%.
-- Can this amendment pass without founder (90% A share) consent?
+Investor coalition (300 C shares, Senaryo B cap table) + co-founders' 100 B shares
+propose a vedtekter amendment to lower drag-along threshold from 75% to 51%.
+- Can this amendment pass without founder consent?
   → Vedtekter amendment: Aksjeloven §5-18 requires 2/3 majority of votes cast
-  → Founder A votes: 90% × 10:1 = 9,000 votes out of ~10,300 total
-  → Coalition (C+B): ~1,300 votes
+  → Founder A votes: 900 × 10 = 9,000 votes out of 9,400 total (Senaryo B cap table)
+  → Coalition (C+B): 300 + 100 = 400 votes
+  → 2/3 threshold: ≈ 6,267 votes
   → Result: FOUNDER BLOCKS THIS — cannot pass without founder's votes
   → BUT: can aksjonæravtale be amended without founder? DEPENDS on voting clause
 - What if drag-along is ONLY in aksjonæravtale, not in vedtekter?
@@ -220,7 +225,8 @@ fiilen yönetemez.
 - Şirket/founder: "Vedtekter'deki devir kısıtlamaları ve sweat equity'deki
   leaver mekanizması ölüm halinde de uygulanır."
 Mahkeme analizi:
-- Aksjeloven §4-15 ila §4-17: samtykke ve forkjøpsrett kural olarak miras
+- Samtykke: Aksjeloven §4-15 ila §4-17; forkjøpsrett: §4-19 vd. (Agent 03).
+  Bu mekanizmalar kural olarak miras
   (arv) yoluyla geçişte de uygulanabilir — ANCAK yalnızca vedtekter'de yazılıysa
   herkese (mirasçılar dahil) karşı ileri sürülebilir; aksjonæravtale sadece
   imzacıları bağlar, mirasçının halef olarak bağlı olup olmadığı tartışmalıdır.
@@ -235,7 +241,8 @@ aksjonæravtale'deyse belirsiz. CONFIDENCE: HIGH (vedtekter'in erga omnes
 etkisi) / MED (mirasçının aksjonæravtale ile bağlılığı — doktrin bölünmüş)
 Sözleşme önerisi:
 - Vedtekter'e: "Hissedarın ölümü halinde diğer hissedarlar hisseleri fair
-  value üzerinden innløsning/forkjøp hakkına sahiptir" (§4-17 çerçevesi).
+  value üzerinden innløsning/forkjøp hakkına sahiptir" (samtykke/innløsning:
+  §4-15 ila §4-17; forkjøpsrett: §4-19 vd. — Agent 03).
 - Sweat equity'ye: ölüm + kalıcı iş göremezlik (doktor raporlu) = Good Leaver;
   vested hisseler için şirkete fair value geri alım OPSİYONU; unvested düşer.
 - Founder tarafı: A→C dönüşüm klozunun ölüm/miras halini açıkça düzenlemesi +

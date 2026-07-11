@@ -52,7 +52,8 @@ GÖREV 3 — SAKLAMA VE SİLME
 - hard_pass / 12 ay temassız: profil kartı arşiv-dışı → SİL veya anonim
   istatistiğe indir (S2-12 kanal analizi kişisiz devam edebilir)
 - Silme talebi (md. 17) gelirse: 30 gün içinde tüm kartlardan +
-  OUTREACH_LOG'dan temizle, durum.json'a "erased" kaydı düş
+  OUTREACH_LOG'dan temizle, durum.json s2_durum.erased_kayitlar[] alanına
+  kayıt düş (S0 şemasına eklendi)
 - Yıllık temizlik: her yıl RF-1086 dönemiyle birlikte (31 Ocak) veri envanteri
   gözden geçir
 

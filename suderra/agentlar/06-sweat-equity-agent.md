@@ -62,9 +62,9 @@ BAD LEAVER TANIMI (tam liste — "vb." veya "gibi" kullanma):
     Bunun yerine zaman bazlı oransal ceza skalası kullan:
 
     Cliff öncesi (0-11. ay):   Tüm hisseler fair value'nun %10'undan geri alınır
-    12-24. ay:                 Tüm hisseler fair value'nun %25'inden geri alınır
-    24-36. ay:                 Tüm hisseler fair value'nun %50'sinden geri alınır
-    36-48. ay:                 Vested hisseler fair value'nun %75'inden; unvested sona erer
+    12-23. ay:                 Tüm hisseler fair value'nun %25'inden geri alınır
+    24-35. ay:                 Tüm hisseler fair value'nun %50'sinden geri alınır
+    36-47. ay:                 Vested hisseler fair value'nun %75'inden; unvested sona erer
     Tam vesting sonrası:       %100 fair value — good leaver muamelesi uygulanır
 
     Minimum taban: Her durumda nominal değer (30 NOK/hisse) taban, yani fair value

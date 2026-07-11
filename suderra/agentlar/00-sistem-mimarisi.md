@@ -78,8 +78,10 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
 ┌──────────────────────────────────────────┐
 │  FAZ 7 — KAPANIŞ & EMİSYON (Agent 22)     │
 │  [olay-tetiklemeli: imzalı term sheet]     │
-│  22 → 02/04 (cap table) → 16 (yeniden     │
-│  geçit) → 11 (v2 belgeler) → ✋ FOUNDER   │
+│  02/04 (post-round cap table + oy         │
+│  doğrulaması) → 22 (kapanış belge seti)    │
+│  → 16 (yeniden geçit, FAZ 7 modu) →       │
+│  11 (v2 belgeler) → ✋ FOUNDER            │
 │  → Altinn bildirimi → 21 (yeni takvim)     │
 │  Her yatırım turunda tekrar çalışır        │
 └──────────────────────────────────────────┘
@@ -102,7 +104,7 @@ bkz. S0-durum-yonetimi.md (suderra/durum.json şeması).
 | 06 | Sweat Equity Agent | Hukuk | B hissesi vesting, co-founder hakları, oransal bad leaver |
 | 07 | Reverse Tax Optimizer | Vergi | Vergi fırsatı (Fritaksmetoden, Skattefunn, opsjonsordning §5-14) |
 | 08 | Norveç Avukat Agent | Avukat | Preliminary legal review (NOT certification) |
-| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 11 senaryo (A-K) |
+| 09 | Dava Uzmanı Agent | Avukat | Mahkeme testi — 16 senaryo (A-P) |
 | 10 | Founder Avukatı Agent | Avukat | ADVERSARİAL: karşı taraf avukatının argümanları |
 | 11 | Belge Uzmanı Agent | Çıktı | Nihai format, imzaya hazır 10 belge |
 | 12 | Şeytan'ın Avukatı | Kalite | FAZ 3'te çalışır — CEO'dan ÖNCE kötü senaryoları test eder |
@@ -152,7 +154,7 @@ FAZ 2b — Tutarlılık Kontrolü (Agent 16, 1. invokasyon) ← BLOKAJ GEÇIDI
     (yalnızca çakışan hükümler için — tam sentez FAZ 4'te)
 
 FAZ 3 — TÜM ELEŞTİRİLER (Agent 08, 09, 10, 12, 14, 15, 18) [paralel] ← Agent 12 buraya taşındı
-  ↓ Preliminary legal review (08) — 11 mahkeme senaryosu A-K (09) — Adversarial argümanlar 7 saldırı vektörü (10)
+  ↓ Preliminary legal review (08) — 16 mahkeme senaryosu A-P (09) — Adversarial argümanlar 7 saldırı vektörü (10)
   ↓ Şeytan'ın avukatı / kötü senaryolar (12) — IP (14) — GDPR (15) — Co-founder testi (18)
   ↓ (+ 03/04/05/07 ikincil inceleme: kendi uzmanlık alanındaki taslak
     değişikliklerini doğrular)
@@ -180,19 +182,21 @@ FAZ 6 — Operasyonel Uygulama (Agent 19, 21) [sıralı, sonrasında sürekli]
   ↓ Agent 21: Tescil sonrası yıllık uyum takvimi kurulur — bu noktadan itibaren sürekli/
     tekrarlayan bir agent olarak çalışır (FAZ 0-5b'nin tek seferlik kuruluş döngüsünün dışında)
   ↓ SONRAKİ SİSTEM (el değiştirme): Kuruluş tamamlandığında yatırım turu süreci
-    için Sistem 2 ile devam edin — yatirimci-sistemi/S2-00.5 pre-flight ile başlayın
+    için Sistem 2 ile devam edin — önce S2-07 (founder onboarding), sonra
+    S2-00.5 pre-flight ile başlayın (S2-00.5'in M1 kontrolü S2-07 çıktısını gerektirir)
   ↓ On-demand: Agent 23 (Ticari Sözleşmeler) — ilk müşteri/pilot veya ilk
     yüklenici gündeme geldiğinde (kuruluş döngüsünü bloklamaz)
 
 FAZ 7 — Kapanış & Emisyon (Agent 22) [olay-tetiklemeli, her yatırım turunda]
   ↓ Tetikleyici: Sistem 2'den (S2-14/S2-15) veya founder'dan "imzalı term sheet" sinyali
-  ↓ Agent 22: GK protokolü + tegningsliste + revize belge direktifleri (v2)
-  ↓ Agent 02/04: post-round cap table + oy matematiği doğrulaması
-  ↓ Agent 16 (yeniden geçit) → Agent 11 (v2 final belgeler)
+  ↓ Agent 02/04: post-round cap table + oy matematiği doğrulaması (Agent 22'ye girdi)
+  ↓ Agent 22: kapanış belge seti — GK protokolü + tegningsliste + revize belge direktifleri (v2)
+  ↓ Agent 16 (yeniden geçit, FAZ 7 modu) → Agent 11 (v2 final belgeler)
   ✋ FOUNDER CHECKPOINT 3: kapanış paketi onayı
   ↓ Foretaksregisteret bildirimi (§10-9 — tegningsfrist bitiminden itibaren 3 ay!)
-  ↓ Agent 21: yeni yükümlülükler takvime; S2-12: yatırımcı durumu "INVESTED";
-    durum.json güncellenir
+  ↓ Agent 21: yeni yükümlülükler takvime; S2-05 OUTREACH_LOG'da
+    response_type: "invested" işaretlenir (S2-12 skor güncellemesini yapar);
+    durum.json s2_durum.imzali_term_sheet güncellenir
 ```
 
 **Durum yönetimi:** Tüm fazlarda her agent, `S0-durum-yonetimi.md` protokolüne
@@ -250,7 +254,8 @@ Bu sistem (S1) şirket kuruluşunu kapsar. Yatırım turu süreci ayrı bir sist
 
 - **S2-00.5** — Pre-flight kontrol: S1 çıktılarının (final belgeler, tescil)
   yatırım turuna hazır olduğunu doğrular. FAZ 6 tamamlandığında buradan devam edilir.
-- **S2-07** — Yatırım turu süreç bileşeni (Sistem 2 içinde tanımlı).
+- **S2-07** — Founder onboarding / pitch datasheet bileşeni (FAZ -1);
+  Sistem 2'ye girişin ilk adımıdır. Yatırım turu süreç bileşeni S2-14'tür.
 - **S2-14** — Term sheet / emisyon varsayımları bileşeni; C hissesi emisyon
   ön-yetkilendirmesinin (vedtekter styrefullmakt) S1 belgelerinde hazır olmasını bekler
   (bkz. Agent 11 belge #2 ve Agent 16 kontrol matrisi).
@@ -267,3 +272,23 @@ Ortak durum: iki sistem de `suderra/durum.json` üzerinden senkronize olur
 (bkz. S0-durum-yonetimi.md).
 
 Bu referansların detayları için `yatirimci-sistemi/` klasörüne bakın.
+
+---
+
+## Kullanım
+
+Sistem, `suderra/BASLAT.md` kickoff runbook'u ile başlatılır: ön koşul
+checklist'i, oturum planı (1 oturum = 1 agent) ve faz başına kopyala-yapıştır
+oturum açılış promptları orada tanımlıdır. Devam eden bir çalışmada tek komut
+yeterlidir: "suderra/durum.json'u oku ve kaldığımız yerden devam et."
+
+Yol standartları (tüm agent'lar için bağlayıcı):
+
+| İçerik | Yol |
+|--------|-----|
+| Taslak belgeler (FAZ 2) | `suderra/belgeler/taslak/` |
+| Final belgeler (FAZ 5+) | `suderra/belgeler/` |
+| Faz raporları | `suderra/raporlar/` (örn. `faz3-agent08.md`) |
+| S2 ara çıktıları | `suderra/s2/` (`datasheet.json`, `yatirimcilar.json`, `profiller/`) |
+| Outreach log | `suderra/outreach-log.json` |
+| Ortak durum dosyası | `suderra/durum.json` (şema: S0-durum-yonetimi.md) |

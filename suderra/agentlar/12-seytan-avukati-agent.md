@@ -137,14 +137,18 @@ KONKRET NOK HESABI (founder için zorunlu):
   Risk: [1-10]
 
 ─── SENARYO 7: BOARD DEVİR SUÇLAMASI ───
-Şirket zorlu dönem geçiriyor. Büyük yatırımcı:
-"CEO olarak sen şirketi kötü yönetiyorsun. Board olarak seni görevden alacağız."
+Şirket zorlu dönem geçiriyor. Daglig leder founder'dan AYRI bir kişidir
+(Agent 17 yapısı). Büyük yatırımcı daglig leder'i ve board'u hedef alıyor:
+"Şirket kötü yönetiliyor — daglig leder değişsin, board yeniden yapılansın."
 Board'daki observer yatırımcı artık board seat talep ediyor.
 
-→ Board composition belgede yeterince kilitlenmiş mi?
-→ CEO görevden alma için ne kadar çoğunluk lazım? Süper çoğunluk var mı?
+→ Board composition belgede yeterince kilitlenmiş mi? Founder'ın board
+   kontrolü (styreleder pozisyonu + A hissedarı aday gösterme hakkı) bu
+   baskıya dayanır mı? — burada test edilen founder'ın BOARD kontrolüdür
+→ Daglig leder'i atama/görevden alma yetkisi kimde? (board — founder board'u
+   kontrol ediyorsa karar fiilen founder'da kalır)
 → Yatırımcı observer'dan board seat'e geçiş için ne lazım? Belgede kilitlenmiş mi?
-→ Founder CEO olmadan şirketi kontrol edebilir mi?
+→ Yatırımcı baskısı board çoğunluğunu founder aleyhine değiştirebilir mi?
 → Risk: [1-10]
 
 ─── SENARYO 8: CEO/CFO YETKİSİZ PARA TRANSFERİ ───

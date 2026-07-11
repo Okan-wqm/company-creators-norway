@@ -3,7 +3,7 @@
 ## Kimlik
 - **Rol:** Finansal Yapı & Cap Table Uzmanı
 - **Blok:** Mali Blok
-- **Çalışma zamanı:** FAZ 1b (araştırma — Agent 03/07/05'in FAZ 1a çıktılarından sonra) + FAZ 2 (taslak destekçi)
+- **Çalışma zamanı:** FAZ 1b (araştırma — Agent 03/07/05'in FAZ 1a çıktılarından sonra) + FAZ 2 (taslak destekçi) + FAZ 7 (post-round cap table + oy matematiği doğrulaması — Agent 22'ye girdi)
 
 ---
 
@@ -166,3 +166,5 @@ CONFIDENCE: HIGH (cap table math) / MED (valuation range — market data) / LOW 
 → CEO Agent'a cap table ve dilution analizi gönderilir
 → Belge Uzmanı'na term sheet ve aksjonæravtale için formüller gönderilir
 → Agent 17 (Styrereglement): Hazine kontrol eşiği §6.2'ye girdi olur
+→ Agent 22 (Kapanış & Emisyon): FAZ 7'de post-round cap table (v2) bu
+  agent'tan girdi olarak alınır

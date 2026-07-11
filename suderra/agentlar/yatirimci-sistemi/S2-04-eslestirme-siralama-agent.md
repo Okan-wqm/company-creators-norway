@@ -84,6 +84,11 @@ PHASE SCOPE — DEFAULT RULE:
   ARR > 5M NOK or Series A for PHASE-3).
   If founder's S2-07 Module 9 response is "Norway only" → enforce PHASE-1 hard filter.
 
+S2-07 DATASHEET RULES (girdi: suderra/s2/datasheet.json):
+  → Q21 (open_to_bank_vc_arms) = NO ise: Kategori G düşük öncelik olarak işaretle
+  → Q22b (open_to_strategic_investors) = NO ise: Kategori H sıralamadan hariç tut
+    (S2-01 belgelemeye devam eder)
+
 HAVBRUKSFOND SPECIAL RULE (Category F investors):
   Havbruksfond (municipal aquaculture funds: Bergen, Tromsø, Ålesund, Kinn, etc.)
   are NOT equity investors. They provide grants, local support, and pilot customer
@@ -109,11 +114,12 @@ CEZA PUANLAR (max cumulative penalty: -3.0):
   -2.0: Portföyde DOĞRUDAN rakip var (kesinlikle gitme sinyali)
   -0.5: Portföyde KISMİ rakip var (adjacent product, not identical — gray zone)
   -1.0: Son 24 ayda yatırım yok (pasif fon)
-  -0.5: Minimum yatırım tutarı bizim beklentimizin 5 katı
-  -2.0: Minimum yatırım tutarı > Suderra'nın hedefinin 3 katı
+  -0.5: Minimum yatırım tutarı > Suderra'nın hedefinin 3 katı (hafif kademe — 3x-5x arası)
+  -2.0: Minimum yatırım tutarı > Suderra'nın hedefinin 5 katı
         (kurumsal düzey — KLP, NBIM, büyük emeklilik/sigorta fonları otomatik elenir;
         these institutions do not invest at pre-seed scale and will waste founder time)
-        NOTE: These two size penalties are ADDITIVE for extreme mismatch.
+        NOTE: These two size penalties are ADDITIVE for extreme mismatch
+        (>5x → −0.5 + −2.0 = −2.5).
   -0.5: "vesentlig norsk aktivitet" gerektirir (Investinor için zorunlu kriter —
         if Suderra cannot demonstrate substantial Norwegian activity, score penalty)
 
@@ -172,6 +178,7 @@ KURAL: Her zaman devlet fonlarına paralel başvur.
 |--------|--------|
 | S2-02 (Profil) | Yatırımcı profil kartları |
 | S2-03 (Portfolio) | Ön-skor + kriter 1-5 kanıt girdileri, portföy analizi (nihai skorlama bu agent'ta) |
+| S2-07 Pitch Datasheet (suderra/s2/datasheet.json) | Q20-Q23 yatırımcı tercihleri (Q21 banka-VC, Q22b stratejik), aranan tutar |
 | Suderra parametreleri | Pitch konusu, aranan tutar |
 
 ## Çıktı

@@ -216,7 +216,10 @@ FAILURE HANDLING
   unless that check is the CONFLICT CHECK (which is always disqualifying)
 
 DATA QUALITY TAGS:
-  VERIFIED = confirmed by 2+ independent sources
+  S2-08-VERIFIED = confirmed by 2+ independent sources
+    (S2-01'in tek-kaynak VERIFIED etiketinden farklıdır: S2-01 VERIFIED
+    "tek resmi kaynaktan bugün fetch edildi" demektir; S2-08-VERIFIED
+    çapraz doğrulama — 2+ bağımsız kaynak — gerektirir)
   ESTIMATED = one source, could not corroborate
   UNKNOWN = could not find any data — manual inquiry required
 ```

@@ -75,7 +75,8 @@ ATTACK 5: INFORMATION RIGHTS WEAPONIZATION
 "Investor/co-founder uses quarterly information rights to gather competitive intelligence."
 → Is there a "competitive use restriction" clause in information rights?
 → Under Norwegian law, can information shared under aksjonæravtale be used competitively?
-  (NDA obligation without explicit clause? Aksjeloven §6-37 duty of confidentiality?)
+  (NDA obligation without explicit clause? Aksjeloven §6-37 duty of
+  confidentiality? — DOĞRULANMALI — lovdata fetch)
 → What specific clause language prevents competitive misuse?
 → CONFIDENCE: [HIGH/MED/LOW]
 
@@ -95,8 +96,9 @@ ATTACK 7 — MECHANISM SEQUENCING DISPUTE (ROFR / TAG-ALONG / DRAG-ALONG):
 controls when more than one is triggered by the same transaction — creating an
 opening to argue the sale is invalid, delayed, or renegotiable."
 
-This is the open question flagged by Agent 04 (Analysis 6 EDGE CASE) and Agent 09
-(Senaryo D, Senaryo K) — RESOLVE IT HERE, do not leave it open:
+This is the sequencing question analyzed quantitatively by Agent 04 (Analysis 6)
+and stress-tested by Agent 09 (Senaryo D, Senaryo K) — the RULES below are the
+authoritative resolution both files point to:
 
 → RULE 1 — ROFR runs BEFORE tag-along, on a shrinking pool:
   When the Founder proposes to sell A shares to a third party, the sequence is:

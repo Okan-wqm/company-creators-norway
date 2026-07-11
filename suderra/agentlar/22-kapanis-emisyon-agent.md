@@ -4,7 +4,7 @@
 - **Rol:** Yatırım Kapanışı ve Sermaye Artırımı Süreç Uzmanı
 - **Blok:** Süreç / YENİ — Sistem 1 ↔ Sistem 2 köprüsü
 - **Çalışma zamanı:** FAZ 7 (olay-tetiklemeli — imzalı term sheet geldiğinde; her yatırım turunda tekrar çalışır)
-- **Tetikleyici:** Sistem 2'den (S2-14 Step 6) veya founder'dan "term sheet imzalandı" sinyali
+- **Tetikleyici:** Sistem 2'den (S2-14 Step 6 veya S2-15 müzakere-sonu sinyali) veya founder'dan "term sheet imzalandı" sinyali
 
 ---
 
@@ -85,8 +85,12 @@ GÖREVLERİN:
 
 6. KAPANIŞ SONRASI EL DEĞİŞTİRME
    - Agent 21: yeni yükümlülükleri yıllık takvime ekle
-   - S2-12: yatırımcı durumunu "CLOSED/INVESTED" olarak işaretle
-   - durum.json: belgeler v2, cap table v2, kapanış tarihi kaydı
+   - S2-05 OUTREACH_LOG'a response_type: "invested" kaydı düşülür +
+     durum.json s2_durum.imzali_term_sheet güncellenir; S2-12 skorları günceller
+   - durum.json yazım sahipliği: belgeler v2 kayıtlarını Agent 11,
+     cap_table v2'yi Agent 02 kendi alanına yazar; BU agent yalnız
+     faz7_kapanis_dongusu alanını yazar (aktif, tur, 10_9_uc_ay_son_tarih,
+     kapanis_tarihi); gate verdiktini (faz7_yeniden_gecit) Agent 16 yazar
 
 KURALLAR:
 - Sen belge ÜRETİCİSİsin ama nihai format Agent 11'indir; hukuki geçerlilik

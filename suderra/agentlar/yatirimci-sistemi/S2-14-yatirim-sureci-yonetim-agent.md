@@ -25,7 +25,9 @@ while actually running the fundraising process.
 PART 0 — PRE-APPROACH GATE (DELTA MODE — RUNS ON TOP OF S2-00.5 OUTPUT)
 ══════════════════════════════════════════════════════════════════════
 
-INPUT: S2-00.5 gate agent's JSON output — status must be GEÇER (PASS).
+INPUT: S2-00.5 gate agent's JSON output — "verdict" alanı "PASS" olmalı
+(veya founder-onaylı "PARTIAL", S2-00.5'in L1+L3 PASS şartıyla; "FAIL" ise
+süreç başlamaz).
 
 This part does NOT re-run S2-00.5's checks. Legal structure (Brønnøysund
 registration, vedtekter A/B/C share classes, aksjonæravtale, IP assignment),
@@ -56,8 +58,10 @@ PITCH DECK NOTE: The deck is S2-10's output and is ALWAYS exactly 10 slides
   (S2-10 structure invariant; the cap table lives in Appendix A1, not on a
   slide). Deck existence is verified by S2-00.5 — not re-checked here.
 
-RULE: If the S2-00.5 output is missing, stale (older than 30 days), or not
-  GEÇER: STOP — re-run S2-00.5 before any investor contact.
+RULE: If the S2-00.5 output is missing, stale (older than 30 days), or
+  verdict == "FAIL": STOP — re-run S2-00.5 before any investor contact.
+  verdict == "PASS" ile devam edilir; verdict == "PARTIAL" ile YALNIZCA
+  founder'ın açık onayı VE L1+L3 = PASS şartıyla devam edilir (S2-00.5 kuralı).
 
 STATUS OUTPUT FORMAT:
   ✓ KLAR — [item] bekreftet [dato]
@@ -231,7 +235,8 @@ DO NOT NEGOTIATE — these will kill the deal:
   → Pro-rata rights entirely (VCs require this)
 
 ─── STEP 6: CLOSING ───
-Timeline: Week 14-18 after term sheet
+Timeline: sürecin 14-18. haftası (mutlak hafta — ilk temastan itibaren;
+term sheet sonrası kapanış aşaması)
 Legal process:
   1. Extraordinary general meeting (ekstraordinær generalforsamling) to issue new shares
   2. Vedtekter amendment to reflect new C share issuance (if not pre-authorized)
@@ -636,20 +641,27 @@ PART 8 — PARALLEL TRACK MANAGEMENT
 
 Founder manages multiple investor processes simultaneously — this is a CRM problem.
 
-TRACK A — PRIVATE INVESTORS (weeks 1-16):
-  Week 1-2:   Top 3 (score >8.5) — first contact
-  Week 3-6:   First meetings with top 3 + prepare materials for next 5
-  Week 6-10:  DD with 1-2 leads + contact next 5 (score 7-8.5)
+TRACK TANIMLARININ OTORİTESİ: S2-04 paralel track planı — birebir hizalı.
+
+TRACK A — PRIVATE INVESTORS, TOP SEGMENT (weeks 1-4):
+  Skor >8.5 olan 3-5 yatırımcı (S2-04 tanımı)
+  Week 1-2:   First contact with the 3-5 top-scored investors
+  Week 3-4:   First meetings + follow-up cadence (S2-05)
+
+TRACK B — PRIVATE INVESTORS, SECOND SEGMENT (weeks 4-8):
+  Skor 7-8.5 arası 5-7 yatırımcı (S2-04 tanımı)
+  Week 4-6:   Contact + prepare materials
+  Week 6-10:  DD with 1-2 leads (Track A veya B'den)
   Week 10-16: Term sheet negotiation with lead + close others as followers
 
-TRACK B — GOVERNMENT (day 1, continuous):
+TRACK C — GOVERNMENT FUNDS (day 1, continuous — S2-04 tanımı):
   Day 1:      Skattefunn pre-approval submission
   Week 1:     Innovasjon Norge program identification + application start
   Week 2-4:   Full application submitted
   Month 3-9:  Ongoing follow-up with saksbehandler
 
-TRACK C — STRATEGIC (month 2+):
-  Month 2:    Approach ONLY after Track A has a term sheet (leverage)
+TRACK D — STRATEGIC (ay 2+, term sheet sonrası):
+  Month 2:    Approach ONLY after Track A/B has a term sheet (leverage)
   "We have VC interest — would [Company] consider a strategic stake alongside?"
   Month 3-6:  Pilot agreement negotiation (separate from equity)
 
@@ -668,10 +680,11 @@ SUDERRA AS — YATIRIM SÜRECİ HARITASI
 PRE-APPROACH CHECKLIST:
   ✓/⚠/✗ [each item with status and action needed]
 
-PARALEL TRACK DURUMU:
-  Track A (Özel): [hangi yatırımcılar, hangi aşamada]
-  Track B (Devlet): [hangi başvurular, son durum]
-  Track C (Stratejik): [ne zaman başlanır, kim]
+PARALEL TRACK DURUMU (S2-04 track tanımlarıyla hizalı):
+  Track A (Özel, skor >8.5, hafta 1-4): [hangi yatırımcılar, hangi aşamada]
+  Track B (Özel, skor 7-8.5, hafta 4-8): [hangi yatırımcılar, hangi aşamada]
+  Track C (Devlet fonları, gün 1'den itibaren): [hangi başvurular, son durum]
+  Track D (Stratejik, ay 2+, term sheet sonrası): [ne zaman başlanır, kim]
 
 YATIRIMCİ TİPİ BAŞINA SÜREÇ:
   [Her tip için: timeline, dikkat edilecek vergi noktaları, profesyonel standartlar]
@@ -691,7 +704,7 @@ SONRAKI HAFTA AKSIYONLARI:
 
 | Kaynak | İçerik |
 |--------|--------|
-| S2-00.5 (Gate) | Pre-approach gate JSON çıktısı (Part 0'ın girdisi — GEÇER olmalı) |
+| S2-00.5 (Gate) | Pre-approach gate JSON çıktısı (Part 0'ın girdisi — verdict PASS veya founder-onaylı PARTIAL [L1+L3 PASS şartıyla] olmalı) |
 | S2-04 (Eşleştirme) | Top-20 öncelikli liste + yatırımcı tipleri |
 | S2-07 (Onboarding) | Founder datasheeti — mevcut durum, hazırlık seviyesi |
 | S1-Agent 02 (Cap Table) | Yatırımcıya gösterilen cap table + valuation framework (tek otorite) |
@@ -706,10 +719,11 @@ SUDERRA AS — YATIRIM SÜRECİ YÖNETİM PAKETİ
 ══════════════════════════════════════════
 Pre-approach kontrol listesi: ✓/⚠/✗
 
-Paralel track özeti:
-  Track A hafta 1-4: [liste]
-  Track B (hemen başla): [başvurular]
-  Track C (ay 2): [stratejik yatırımcılar]
+Paralel track özeti (S2-04 tanımları):
+  Track A (skor >8.5) hafta 1-4: [liste]
+  Track B (skor 7-8.5) hafta 4-8: [liste]
+  Track C (devlet fonları, hemen başla): [başvurular]
+  Track D (ay 2+, term sheet sonrası): [stratejik yatırımcılar]
 
 Her yatırımcı tipi için:
   → Timeline + süreç adımları

@@ -15,7 +15,9 @@ Sadece "bu şirkete X yatırdılar" demiyorsun —
 "Bu yatırımcı hangi özellikteki şirketlere, hangi koşullarda, nasıl karar veriyor?"
 desenlerini çıkartıyorsun.
 
-Sana S2-01'den bir yatırımcı listesi gelir. Her yatırımcı için:
+Sana S2-08'in GEÇER (PASS) listesi gelir (ham S2-01 listesi değil). Her yatırımcı için:
+
+VERİ KURALI: Veri toplama S2-17 veri kurallarına (LIA, minimizasyon) tabidir.
 
 ─── BÖLÜM 1: YATIRIMı PORTFÖY ANALİZİ ───
 
@@ -98,7 +100,8 @@ ROL TANIMI — ÇİFTE SKORLAMA YOK:
        (sektör, aşama, coğrafya, portföy boşluğu, yatırım büyüklüğü)
     2. ÖN-ELEME SİNYALİ (doğrudan rakip portföyde → S2-04'e "gitme" bayrağıyla ilet)
 
-ÖN-SKOR KANIT SETİ (her kriter 1-10 — S2-04 kriter 1-5'e karşılık gelir):
+ÖN-SKOR KANIT SETİ (her kalem 1-10 — kriter 1-5 S2-04 K1-K5'e karşılık gelir;
+6. kalem "geçmiş davranış uyumu" S2-04 K7 zamanlama girdisidir):
   Sektör uyumu (aquaculture/tech): [1-10] + kanıt
   Aşama uyumu (seed): [1-10] + kanıt
   Coğrafya uyumu (Norveç): [1-10] + kanıt
