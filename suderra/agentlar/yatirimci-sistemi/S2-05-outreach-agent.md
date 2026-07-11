@@ -96,7 +96,7 @@ ANGEL YATIRIMCI:
   → "Senin görüşün değerli" — ego tatmini ama gerçekçi
 
 NORDİC TECH VC:
-  → Pazar büyüklüğü vurgula (250B USD global aquaculture)
+  → Pazar büyüklüğü vurgula (~$300B global aquaculture — FAO SOFIA 2024; güncel raporla doğrula)
   → Ölçeklenebilirlik vurgula
   → Nordic'ten global'e vizyonu
 
@@ -110,8 +110,9 @@ PROBLEM: Norveç'teki aquaculture çiftlikleri kritik operasyonları Excel,
 ÇÖZÜM: Suderra — gerçek zamanlı çiftlik operasyon yönetim platformu.
         Sensör entegrasyonu + analitik + raporlama tek platformda.
 
-NEDEN ŞİMDİ: Norveç hükümeti 2025-2030 aquaculture dijitalleşme hedefleri
-              belirledi. Pencere açık.
+NEDEN ŞİMDİ: Norveç hükümeti güncel havbruksstrategi döneminde aquaculture
+              dijitalleşme hedefleri belirledi (dönem yıllarını güncel strateji
+              belgesinden doğrula — sabit yıl yazma). Pencere açık.
 
 NEDEN BİZ: [Founder aquaculture sektör deneyimi varsa — vurgula]
             [Yoksa: "Sahada 6 ay araştırma yapıldı" vurgula]
@@ -121,17 +122,22 @@ TRACTION: [Varsa: MVP / pilot müşteri / LOI]
 
 ─── ZAMANSAL STRATEJİ ───
 
-OUTREACH TAKVİMİ:
-  Hafta 1: Skor >8.5 olan 3 yatırımcıya gönder
-  Hafta 2: Yanıt takibi + Skor 7-8.5 olan 4 yatırımcıya gönder
+OUTREACH TAKVİMİ (otorite: S2-04 paralel track planı — birebir hizalı):
+  Hafta 1-4 (Track A): Skor >8.5 olan 3-5 yatırımcıya gönder + yanıt takibi
   Hafta 3-4: Yanıt gelenlere 2. e-posta (follow-up)
-  Hafta 4-6: Skor 5.5-7 olan yatırımcılara gönder
+  Hafta 4-8 (Track B): Skor 7-8.5 olan 5-7 yatırımcıya gönder
+  Hafta 8+: Skor 5.5-7 olanlara yalnızca fırsat çıkarsa (S2-04 "ikinci dalga")
 
 FOLLOW-UP KURALLARI:
   - 7 gün yanıt yoksa: kısa follow-up (1-2 cümle)
   - 14 gün yanıt yoksa: konuyu değiştir (yeni bilgi paylaş)
   - 21 gün yanıt yoksa: bir kez daha sonra bırak
   - 3 deneme sonrası yanıt yoksa: 3 ay bekle
+
+TERM SHEET KURALI:
+  Yatırımcı term sheet aşamasına gelirse, müzakerenin başlangıç pozisyonu
+  Suderra'nın KENDİ term sheet şablonudur (S1 belge 06-term-sheet-template.md).
+  Yatırımcının şablonunu pasif kabul etme — süreç detayı için S2-14'e bak.
 
 ─── ÇIKTI FORMAT ───
 
@@ -163,8 +169,18 @@ OUTREACH_LOG:
   "response_type": null,
   "notes": null
 }
+RESPONSE_TYPE ENUM — TANIM (bu sistemin tek otoriter tanımı; S2-12'nin
+yanıt kırılımıyla birebir hizalıdır):
+  "meeting"     = toplantı ayarlandı (pozitif yanıt)
+  "soft_pass"   = "ilgili ama şimdi değil" (90 gün sonra yeniden yaklaş)
+  "hard_pass"   = net red
+  "no_response" = 3 deneme sonrası yanıt yok
+  "pending"     = gönderildi, takip süreci devam ediyor
+response_type alanına yalnızca bu beş değerden biri yazılabilir.
+
 NOTE TO FOUNDER: Fill in variant_sent ("LinkedIn"|"Email"|"WarmIntro"),
 sent_date (YYYY-MM-DD), and response fields after sending.
+response_type: yukarıdaki enum değerlerinden biri.
 S2-12 (Geri Bildirim Agent) reads these logs to update S2-04 scores.
 ```
 
@@ -177,7 +193,7 @@ S2-12 (Geri Bildirim Agent) reads these logs to update S2-04 scores.
 | S2-02 (Profil) | Kişi bilgileri, tarz, ilgi alanları |
 | S2-03 (Portfolio) | Portföy detayı (referans vermek için) |
 | S2-04 (Eşleşme) | Top 20 liste ve sıralama |
-| S2-06 (Sorular) | Due diligence hazırlığı (mesajlarda referans için) |
+| S2-06 (Sorular) | OPSİYONEL/VARSA — Due diligence hazırlığı (mesajlarda referans için; S2-05 ve S2-06 FAZ 3'te paralel çalışır, S2-06 çıktısını bekleme) |
 | Founder | Traction bilgisi, kişisel hikaye |
 
 ## Çıktı
@@ -200,7 +216,8 @@ FOLLOW-UP ŞABLONLARI:
 GENEL OUTREACH METRİKLERİ:
   Hedef yanıt oranı: %30 (iyi outreach için)
   Hedef toplantı oranı: %10
-  Hedef term sheet oranı: %1-2
+  Term sheet kalibrasyonu: tipik olarak 20-40 görüşme → 1 term sheet
+  (S2-12'nin morale/energy kalibrasyonuyla aynı ölçek)
 ```
 
 ## Bu Agent'tan Sonra

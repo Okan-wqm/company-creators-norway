@@ -22,64 +22,55 @@ This is NOT a template — it is a LIVE PROCESS GUIDE the founder follows
 while actually running the fundraising process.
 
 ══════════════════════════════════════════════════════════════════════
-PART 0 — PRE-APPROACH SETUP (DO BEFORE FIRST INVESTOR CONTACT)
+PART 0 — PRE-APPROACH GATE (DELTA MODE — RUNS ON TOP OF S2-00.5 OUTPUT)
 ══════════════════════════════════════════════════════════════════════
 
-Before approaching ANY investor, verify these are complete.
-A professional investor will check these in the first 30 minutes of DD.
-Missing any of these = immediate credibility loss.
+INPUT: S2-00.5 gate agent's JSON output — status must be GEÇER (PASS).
 
-CHECKPOINT CHECKLIST — FETCH AND VERIFY STATUS OF EACH:
+This part does NOT re-run S2-00.5's checks. Legal structure (Brønnøysund
+registration, vedtekter A/B/C share classes, aksjonæravtale, IP assignment),
+Skattefunn pre-approval and the investor entity policy are all owned and
+verified by S2-00.5 — duplicating them here creates conflicting authority.
 
-─── LEGAL STRUCTURE ───
-□ Suderra AS registered in Brønnøysundregistrene
-  → Verify: https://www.brreg.no/ — search "Suderra AS" — note org.nr.
-  → Required before any investment closes
-  → FETCH Brønnøysund to confirm status
+Part 0 ONLY delta-checks that the following items are current as of TODAY:
 
-□ Vedtekter filed with correct A/B/C share class structure
-  → A shares: 10:1 voting (founder protection)
-  → B shares: co-founder vesting (aksjonæravtale separate)
-  → C shares: investor class pre-authorized (vedtekter must already allow this)
-  → WHY: If C shares not in vedtekter, closing takes 4-8 extra weeks
-           for extraordinary general meeting — investors lose patience
-
-□ Aksjonæravtale signed between ALL current shareholders
-  → Must be signed BEFORE bringing in investors
-  → Unsigned aksjonæravtale = investors will demand their own version
-
-□ IP Assignment: Co-founders have signed IP transfer to Suderra AS
-  → All code, designs, domain names transferred to company — not personal
-  → Standard investor DD item — missing = red flag
-
-□ Suderra Holding AS formed (if tax strategy requires it)
-  → CRITICAL TIMING: Must be done when Suderra value = 30,000 NOK (founding value)
-  → After valuation increases: transfer triggers capital gains tax
-  → If not yet done: do it NOW before approaching investors
-
-─── TAX SETUP ───
-□ Skattefunn pre-approval submitted
-  → FETCH: https://skattefunn.no/soknad/ — check submission status
-  → WHY: Skattefunn pre-approval letter is a credibility signal to VCs
-           and is needed before investors ask "what government support do you have?"
-  → Timing: Submit IMMEDIATELY — pre-approval takes 3-6 weeks
-
-□ Investor entity type decision made (affects withholding tax later)
-  → Decision: Will you accept ONLY Norwegian AS investors (simplest)?
-              Or also foreign EEA? Or any investor type?
-  → Record this in company's investment policy before first term sheet
-
-─── MATERIALS ───
-□ Pitch deck (10 slides): Product, Problem, Market, Traction, Team, Financials, Ask
+DELTA CHECKLIST:
 □ 18-month financial model (Norwegian NOK, monthly)
+  → Updated within the last 30 days? Assumptions still match S2-07 datasheet?
 □ Cap table document (current + post-round pro-forma)
+  → MUST be the S1-Agent 02 output — this is the single authority for the
+    cap table shown to investors
+  → AUTHORITY NOTE: S1-Agent 04's output is an INTERNAL protection analysis —
+    it does NOT go into the data room and is never sent to investors
 □ One-pager executive summary (for cold email attachment)
-□ Demo (video or live link)
+  → Current version? Reflects latest traction from S2-07?
+□ Suderra term sheet template (S1 belge 06-term-sheet-template.md)
+  → Ready as the NEGOTIATION STARTING POSITION (see Part 2, Step 5)
+
+HOLDING TIMING NOTE (authority: S1-Agent 07):
+  If the Suderra Holding AS decision has not yet been made per S1-Agent 07's
+  rule: it MUST be completed BEFORE closing. It does NOT block outreach,
+  but it DOES block term sheet signing.
+
+PITCH DECK NOTE: The deck is S2-10's output and is ALWAYS exactly 10 slides
+  (S2-10 structure invariant; the cap table lives in Appendix A1, not on a
+  slide). Deck existence is verified by S2-00.5 — not re-checked here.
+
+RULE: If the S2-00.5 output is missing, stale (older than 30 days), or not
+  GEÇER: STOP — re-run S2-00.5 before any investor contact.
 
 STATUS OUTPUT FORMAT:
   ✓ KLAR — [item] bekreftet [dato]
   ⚠ MANGLER — [item] — gjøres innen [X] dager
   ✗ BLOKKERER — [item] — investor-process cannot start until fixed
+
+══════════════════════════════════════════════════════════════════════
+TAX CHECKPOINT GENERAL RULE (applies to EVERY tax checkpoint below)
+══════════════════════════════════════════════════════════════════════
+  The authority for all tax figures in this document is S1-Agent 07's
+  CURRENT fetch output. The values written here illustrate the mechanism —
+  they are examples, not current rates. Always verify via S1-Agent 07
+  before quoting a number to an investor.
 
 ══════════════════════════════════════════════════════════════════════
 PART 1 — GOVERNMENT FUNDS (START IMMEDIATELY — PARALLEL TRACK)
@@ -90,7 +81,7 @@ They take 3-9 months — start on Day 1 even while approaching private investors
 Government support in hand = stronger position with private investors.
 
 INVESTORS IN THIS CATEGORY:
-  Innovasjon Norge, Investinor AS, Norges Forskningsråd (BIA), SIVA, Havbruksfond
+  Innovasjon Norge, Investinor AS, Norges Forskningsråd (IPN — tidl. BIA), SIVA, Havbruksfond
 
 ─── STEP 1: APPLICATION PREPARATION ───
 Timeline: Day 1 — Week 2
@@ -129,10 +120,14 @@ PROFESSIONAL STANDARD:
   Professional: Always communicate in Norwegian, reference your application number
 
 ─── TAX CHECKPOINT ─── 
-  Government grants: NOT taxable income if used for eligible R&D costs
-  Condition: Must be spent on the approved project
+  Government grants: tax treatment is NOT automatic — do NOT assume exemption.
+  → Skatteloven §5-31's exemption applies mainly to specific distrikts-tilskudd;
+    mainstream Innovasjon Norge grants are typically taxable income or reduce
+    the cost basis (gider tabanı) of the funded assets.
+  → ACTION: Confirm the treatment of EACH specific grant with regnskapsfører
+    before booking it.
   FETCH VERIFICATION: https://www.skatteetaten.no/bedrift-og-organisasjon/starte-og-drive/tilskudd-og-stotte/
-  Record: "Tilskudd fra Innovasjon Norge til FoU — skattefritt jf. skatteloven §5-31"
+  Record: "[Tilskudd navn] — skattemessig behandling bekreftet med regnskapsfører [dato]"
 
 ══════════════════════════════════════════════════════════════════════
 PART 2 — AQUATECH VCs (Hatch, Aqua-Spark, Katapult Ocean, Spawn Capital)
@@ -174,7 +169,9 @@ PROFESSIONAL STANDARD:
   → Run a live demo — not slides of screenshots
   → Prepare: market size calculation sourced from FAO, Fiskeridirektoratet, SSB
   → Prepare: competitor matrix (S2-13 output) — be honest about Fishtalk and AquaCloud
-  → Have your cap table model ready (Agent 04 output)
+  → Have your cap table model ready (S1-Agent 02 output — the cap table shown
+    to investors is ALWAYS S1-Agent 02's; S1-Agent 04's output is internal
+    protection analysis and does not go into the data room)
   → ASK: "Do you have portfolio companies in Norway who could be pilot partners?"
 
 ─── STEP 4: DUE DILIGENCE ───
@@ -199,21 +196,38 @@ PROFESSIONAL STANDARD:
 
 ─── STEP 5: TERM SHEET ───
 Timeline: Week 10-16
+
+INSTRUMENT — NORWEGIAN ADAPTATION (IMPORTANT):
+  The US-style SAFE has NO direct equivalent in Norwegian company law
+  (Aksjeloven) — never accept a raw SAFE document for a Norwegian AS.
+  → DEFAULT INSTRUMENT: priced C-share issuance (rettet emisjon av C-aksjer),
+    negotiated from Suderra's OWN term sheet template
+    (S1 belge 06-term-sheet-template.md) — this template is the negotiation's
+    starting position; do not start from the investor's paper.
+  → ALTERNATIVE (only if the investor insists on deferred pricing):
+    konvertibelt lån (convertible loan, Aksjeloven kap. 11) or the
+    StartupLab "SLIP" standard (the Norwegian SAFE-like instrument).
+  → CONSISTENCY NOTE: for Norwegian angel investors, direct equity
+    (aksjeinnskudd) is required for investorfradrag — a convertible does
+    NOT qualify (see Part 3, Step 4). Keep the instrument choice aligned
+    across investor types in the same round.
+
 Typical terms from AquaTech VCs:
-  Instrument: SAFE (Simple Agreement for Future Equity) or priced equity round
-  Check size: NOK 1-5M (HATCH range — verify from their website)
+  Check size: NOK 1-5M (HATCH range — DOĞRULANMALI: accelerator checks are
+    typically SMALLER, ~USD 100-250k; verify from their website before
+    anchoring expectations on this range)
   Pro-rata rights: YES (they want to follow-on)
   Information rights: Quarterly financial reports
   Board seat: Usually observer right (not full seat) at seed stage
   Anti-dilution: Broad-based weighted average (NOT ratchet)
 
 NEGOTIATE — the following are movable:
-  → Valuation cap on SAFE: push 10-20% above your preferred number
+  → Valuation (priced round) or valuation cap (konvertibel/SLIP):
+    push 10-20% above your preferred number
   → Pro-rata threshold: negotiate minimum investment for pro-rata activation
   → Information rights format: propose quarterly one-pager (not full accounts)
 
 DO NOT NEGOTIATE — these will kill the deal:
-  → Standard SAFE mechanics (they are non-negotiable)
   → Pro-rata rights entirely (VCs require this)
 
 ─── STEP 6: CLOSING ───
@@ -224,6 +238,10 @@ Legal process:
   3. Aksjonæravtale update including new investor
   4. Capital increase registration with Brønnøysund (aksjekapitalforhøyelse)
   5. Money received → shares issued → Brønnøysund filing completed
+  6. FORWARD REFERENCE — S1-Agent 22 (Kapanış & Emisyon — yeni, FAZ 7):
+     closing documents and the corresponding S1 document updates (vedtekter,
+     aksjonæravtale, aksjeeierbok, cap table) are executed through the
+     S1-Agent 22 cycle — hand off to it at this step.
 
 PROFESSIONAL STANDARD:
   → Engage a Norwegian advokat for closing (minimum 1 hour review)
@@ -256,10 +274,20 @@ Channel: Warm intro strongly preferred — cold email success rate ~5%
 How to get warm intros: AquaNor conference, Norban events, LinkedIn mutual connections
 
 INVESTORFRADRAG PITCH POINT (CRITICAL — use this with every Norwegian angel):
-  → "Som privatperson kan du kreve investorfradrag på 50% av investeringen
-    opp til 500 000 kr — opptil 83 000 kr i skattebesparelse år 1"
+  → Mechanism (Skatteloven §6-53): the angel deducts 100% of the aksjeinnskudd
+    (share subscription) from alminnelig inntekt; with the 22% tax rate this
+    gives a tax saving of up to ~220,000 NOK at the ~1 MNOK annual
+    per-investor cap (DOĞRULANMALI — skatteetaten.no fetch below).
+  → Scripted line: "Som privatperson kan du kreve investorfradrag
+    (skatteloven §6-53): hele aksjeinnskuddet trekkes fra i alminnelig
+    inntekt — med 22 % skattesats gir det inntil ca. 220 000 kr i
+    skattebesparelse ved innskudd opp til ca. 1 MNOK per år"
+    (rakamlar DOĞRULANMALI — aşağıdaki fetch yapılmadan bu cümleyi kullanma)
+  → Conditions to state up front: 3-year holding period; employees and
+    existing shareholders are NOT eligible; company-side cap ~5 MNOK
+    per year (DOĞRULANMALI)
   → VERIFICATION: FETCH https://www.skatteetaten.no/person/aksjer-og-verdipapirer/investorfradrag/
-    Read the current rules in Norwegian — verify amount and percentage still correct
+    Read the current rules in Norwegian — verify caps, rate and conditions still correct
   → This makes Suderra significantly more attractive vs. no-fradrag alternatives
   → Prepare a one-pager on investorfradrag — send as attachment to intro email
 
@@ -283,11 +311,16 @@ Angels do lighter DD than VCs:
   → They may ask their lawyer friend to review your aksjonæravtale — be ready
 
 ─── STEP 4: TERMS ───
-Instrument: Convertible note (gjeldsbrev med konverteringsrett) OR direct equity
+Instrument — DEFAULT: priced equity, direct C-share subscription (fiyatlı
+  C-hisse emisyonu — negotiated from Suderra's term sheet template,
+  S1 belge 06); this preserves the angel's investorfradrag.
+Instrument — ALTERNATIVE: konvertibelt lån (gjeldsbrev med konverteringsrett) —
+  only if the angel explicitly prefers it AND accepts losing investorfradrag.
 Typical Norwegian angel check: NOK 250,000 — 1,500,000
-Interest on convertible: 5-8% per annum
-Discount on conversion: 15-25%
-Valuation cap: Set at your preferred pre-money valuation + 20%
+If convertible is used:
+  Interest: 5-8% per annum
+  Discount on conversion: 15-25%
+  Valuation cap: Set at your preferred pre-money valuation + 20%
 
 INVESTORFRADRAG REQUIREMENT:
   → Angel must invest in EQUITY (not convertible note) for investorfradrag
@@ -302,7 +335,11 @@ Brønnøysund filing for capital increase: done online via Altinn
 
 ─── TAX CHECKPOINT AT CLOSING ───
   Angel is Norwegian privatperson (individual):
-  → Investorfradrag: Angel claims 50% deduction in Year 1 tax return (skattemelding)
+  → Investorfradrag (Skatteloven §6-53): Angel deducts 100% of the aksjeinnskudd
+    from alminnelig inntekt in the skattemelding — tax value 22%, i.e. max
+    saving ~220,000 NOK at the ~1 MNOK annual per-investor cap
+    (DOĞRULANMALI — FETCH skatteetaten.no; company-side cap ~5 MNOK/year;
+    3-year holding; employees/existing shareholders excluded)
     → Your obligation: provide investor with "bekreftelse på aksjeinnskudd" document
     → Send within 7 days of closing: shares issued, amount invested, Suderra org.nr.
   → No withholding tax from Suderra side (angel declares their own income)
@@ -408,7 +445,7 @@ PROFESSIONAL STANDARD:
   → Draft a simple 2-page pilot agreement (Norwegian)
   → Agree on: which farm(s), which features, success metrics, data ownership
   → Data ownership clause CRITICAL: pilot customer does NOT get ownership of Suderra's code
-    (Agent 14's IP assignment work protects this)
+    (S1-Agent 14'ün IP assignment çalışması bunu korur)
 
 ─── STEP 3: EQUITY DISCUSSION ───
 Only after pilot is running or completed successfully:
@@ -503,8 +540,11 @@ PROFESSIONAL STANDARD:
   Bank VC arm (Norwegian AS/datterselskap of bank):
   → Fritaksmetoden applies — both the bank AS and its subsidiary qualify
   → FETCH confirmation: https://lovdata.no/lov/1999-03-26-14/§2-38 — "datterselskap" covered
-  → AML compliance: Suderra has obligations under Hvitvaskingsloven §17 as a company
-    receiving institutional investment — may need enhanced due diligence procedures
+  → AML compliance: the AML-obligated entity (rapporteringspliktig) under
+    Hvitvaskingsloven is the BANK — Suderra itself has NO §17 obligation here.
+    Suderra's role is to PROVIDE complete KYC documentation promptly
+    (passports, proof of address, source of funds declarations) so the bank's
+    compliance process does not stall the closing
 
 ══════════════════════════════════════════════════════════════════════
 PART 7 — POST-INVESTMENT PROFESSIONAL MANAGEMENT
@@ -535,8 +575,11 @@ STRATEGIC INVESTOR:
 
 ─── BOARD MANAGEMENT ───
 If any investor has a board seat or observer right:
-  → Styrereglement (Agent 17 output): follow it precisely
-  → Board meeting frequency: quarterly minimum (Aksjeloven requirement for AS)
+  → Styrereglement (S1-Agent 17 output): follow it precisely
+  → Board meeting frequency: quarterly is the INVESTOR EXPECTATION and good
+    practice — Aksjeloven does NOT mandate a fixed meeting frequency
+    (styret must meet as often as needed); frame it as professionalism,
+    not legal obligation
   → Agenda 7 days before: CEO report, financials, key decisions to approve
   → Board minutes (styreprotokoll) within 2 weeks of meeting
   → Signing: All resolutions signed by all styremedlemmer
@@ -548,14 +591,21 @@ PROFESSIONAL STANDARD — STYREPROTOKOLL:
   → Report: to Brønnøysund if changes to board composition
 
 ─── ANNUAL TAX OBLIGATIONS ───
-□ Skattefunn: Submit RF-1053 with annual tax return (skattemelding)
+□ Skattefunn: Report approved R&D costs via the Skattefunn section of the
+  annual skattemelding/næringsspesifikasjon (the old RF-1053 form is
+  discontinued — verify the current form/section name at skattefunn.no)
   → FETCH: https://skattefunn.no/for-bedrifter/rapportering/
   → Deadline: Same as skattemelding (May 31 for AS)
   → Missing: Forfeits the entire credit for that year
 
-□ Aksjereigster (share register): Update Brønnøysund after any share issuance
-  → FETCH: https://www.altinn.no — "aksjekapitalforhøyelse" form
-  → Timing: within 30 days of capital increase (Aksjeloven §10-9)
+□ Aksjeeierbok & registre: after any share issuance, three separate duties:
+  → Internal aksjeeierbok (share register): update IMMEDIATELY upon issuance
+  → Brønnøysund: register the kapitalforhøyelse within 3 MONTHS of the end
+    of the tegningsfrist (Aksjeloven §10-9) — missing this deadline makes
+    the capital increase resolution LAPSE (kapitalforhøyelsen bortfaller)
+    → FETCH: https://www.altinn.no — "aksjekapitalforhøyelse" form
+  → Skatteetaten: file the aksjonærregisteroppgave (RF-1086) with
+    SKATTEETATEN (not Brønnøysund) by the annual deadline
 
 □ Utbyttemelding: If dividends paid, report to Skatteetaten
   → Norwegian AS shareholders: No withholding — they self-report
@@ -641,10 +691,13 @@ SONRAKI HAFTA AKSIYONLARI:
 
 | Kaynak | İçerik |
 |--------|--------|
+| S2-00.5 (Gate) | Pre-approach gate JSON çıktısı (Part 0'ın girdisi — GEÇER olmalı) |
 | S2-04 (Eşleştirme) | Top-20 öncelikli liste + yatırımcı tipleri |
 | S2-07 (Onboarding) | Founder datasheeti — mevcut durum, hazırlık seviyesi |
-| Agent 07 (Vergi) | Yatırımcı tipi başına vergi analizi |
-| Agent 08/10 (Hukuk) | Aksjonæravtale, vedtekter hazır mı? |
+| S1-Agent 02 (Cap Table) | Yatırımcıya gösterilen cap table + valuation framework (tek otorite) |
+| S1 belge 06 (Term Sheet Şablonu) | Suderra'nın kendi term sheet şablonu — müzakerenin başlangıç pozisyonu |
+| S1-Agent 07 (Vergi) | Yatırımcı tipi başına vergi analizi — tüm vergi rakamlarının otoritesi |
+| S1-Agent 08/10 (Hukuk) | Aksjonæravtale, vedtekter hazır mı? |
 
 ## Çıktı
 
@@ -673,4 +726,5 @@ Vergi takvimi:
 ## Sonraki Agentlar
 → S2-05 (Outreach): Her yatırımcı tipi için süreç-bilinçli temas mesajları yazar
 → S2-11 (Toplantı Hazırlık): Her meeting için bu sürecin hangi aşamasında olduğunu bilir
-→ Agent 07 (Vergi): Her kapanış öncesi vergi dönüm noktasını kontrol eder
+→ S1-Agent 07 (Vergi): Her kapanış öncesi vergi dönüm noktasını kontrol eder
+→ S1-Agent 22 (Kapanış & Emisyon — yeni, FAZ 7): Kapanış belgeleri ve S1 belge güncellemeleri bu agent'ın döngüsüyle yürütülür (Part 2, Step 6)

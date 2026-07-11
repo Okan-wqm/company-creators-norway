@@ -33,7 +33,7 @@ FORMAT:
    revizyonlarını yansıtmaktadır."
 
 KALİTE KRİTERLERİ:
-□ Aksjeloven 2026 tam uyumlu
+□ Aksjeloven (LOV-1997-06-13-44, güncel hali) tam uyumlu
 □ Her "tanım" gerektiren terim tanımlanmış (fair value, bad leaver, vs.)
 □ Her süre açıkça belirtilmiş (gün cinsinden, "makul süre" değil)
 □ Her prosedür adım adım yazılmış
@@ -44,8 +44,11 @@ KALİTE KRİTERLERİ:
 ⚠️ TESCİL ÖNCESI UYARI (her belgeye ekle):
 "Bu belge, Suderra AS'nin Brønnøysundregistrene'den organisasjonsnummer
 almasına kadar kuruculara şahsen bağlayıcıdır. Tescil öncesinde imzalanan
-sözleşmeler şirketi değil kurucuyu yükümlü kılar (Aksjeloven §2-9).
-Tescil genellikle online başvuruda 1-3 iş günü sürer."
+sözleşmeler şirketi değil kurucuyu yükümlü kılar (Aksjeloven §2-20).
+Tescil genellikle birkaç iş günü sürer, yoğun dönemlerde 2 haftaya kadar
+uzayabilir (DOĞRULANMALI — güncel işlem süreleri brreg.no üzerinden fetch et).
+Not: Tescilin ön şartı, 30.000 NOK sermayenin şirket hesabına yatırıldığına
+dair banka teyididir (innskuddsbekreftelse) — bkz. Agent 19 rehberi."
 
 ÜRETİLECEK 10 BELGE:
 
@@ -53,11 +56,17 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
    → Tam Norveçce kuruluş senedi
    → A/B/C hisse yapısı açıkça belirtilmiş
    → Aksjeloven §2-1 ila §2-9 zorunluluklarının tamamı
-   → ZORUNLU EK: Revisorloven denetim muafiyeti beyanı (fravalg av revisjon):
-     "Generalforsamlingen vedtar å unnlate revisjon i henhold til Revisorloven §2-1,
+   → ZORUNLU EK: Denetim muafiyeti beyanı (fravalg av revisjon — dayanak
+     Aksjeloven §7-6):
+     "Generalforsamlingen vedtar å unnlate revisjon i henhold til aksjeloven §7-6,
       da selskapet oppfyller vilkårene for fritak."
-     (Şirket küçük şirket kriterlerini karşılıyorsa: <5M NOK gelir, <10M NOK bilanço, <10 çalışan)
-     Bu madde olmadan şirket yılda 30.000-50.000 NOK denetim ücreti ödemek zorundadır.
+     (Şirket eşiklerin altında kaldığı sürece: driftsinntekter ≤ ~7M NOK,
+      balansesum ≤ ~27M NOK, ortalama ≤ 10 årsverk — Mayıs 2023 sonrası eşikler;
+      2026 güncel değerleri DOĞRULANMALI — lovdata.no / regnskapsstiftelsen
+      üzerinden fetch et)
+     Bu madde olmadan şirket denetim (revisjon) yükümlülüğüne girer ve yıllık
+     revisor maliyeti doğar — küçük bir şirket için dahi anlamlı, sürekli bir
+     gider (tutar revisor ve şirket karmaşıklığına göre değişir).
 
 2. 02-vedtekter.md
    → Minimum §2-2 içeriği + güçlendirilmiş hükümler
@@ -89,6 +98,20 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
      üçüncü şahıs alıcılara karşı bağlayıcı olması için (bkz. Agent 03 araştırma
      madde 11). Board'un samtykke onayı, alıcının bu dönüşüm maddesini yazılı
      olarak kabul ettiğini teyit etmeden verilmemeli (Agent 09 Senaryo K).
+   → ZORUNLU EK — C-HİSSE EMİSYON ÖN-YETKİLENDİRMESİ (styrefullmakt,
+     Aksjeloven §10-14): Genel kurulun, yatırım turunda C hissesi ihracı için
+     board'a verdiği sınırlı süreli ve sınırlı tutarlı sermaye artırım yetkisi
+     çerçevesi vedtekter/genel kurul kararında tanımlanmalı (azami nominal
+     tutar, yetki süresi — kanuni azami 2 yıl — ve C sınıfına özgü haklar).
+     Gerekçe: Sistem 2 (S2-14) term sheet varsayımı, C-hisse emisyonunun
+     "pre-authorized" olmasına dayanır — bu yetki belgelerde yoksa yatırım
+     turunda ayrı bir genel kurul gerekir.
+   → ZORUNLU EK — OPSİYON HAVUZU YETKİSİ (ESOP): Çalışan opsiyon havuzu için
+     C sınıfı KULLANILMAZ (C = yatırımcı, 1x non-participating liq pref).
+     ESOP için tercihsiz, 1:1 oylu AYRI bir "D sınıfı" tanımlanır (bkz.
+     00-sistem-mimarisi.md hisse_yapisi). Vedtekter'e D sınıfının tanımı ve
+     D-hisse ihracı için ayrı styrefullmakt/ön-yetkilendirme maddesi eklenir
+     (Aksjeloven §10-14; opsjonsordning §5-14 vergi rejimiyle uyumlu).
 
 3. 03-sweat-equity-avtale.md
    → Co-founder başına (iki versiyon: Co-F1 ve Co-F2)
@@ -173,7 +196,11 @@ Tescil genellikle online başvuruda 1-3 iş günü sürer."
    → En kritik 3 madde per belge
    → İmzalamadan önce bilmen gerekenler
    → Bir sonraki adımlar
-   → Brønnøysundregistrene kayıt adımları (Altinn, ~1-3 iş günü)
+   → Brønnøysundregistrene kayıt adımları (Altinn; süre genellikle birkaç iş
+     günü, 2 haftaya kadar uzayabilir — DOĞRULANMALI, brreg.no; ön şart:
+     30.000 NOK sermaye banka teyidi / innskuddsbekreftelse)
+   → Sonraki sistem: kuruluş tamamlandıktan sonra yatırım turu için
+     yatirimci-sistemi/S2-00.5 pre-flight ile başlayın (el-değiştirme notu)
 
 EKSTRA — DAVA ÖNLEME NOTU:
 Her belgenin sonuna ekle:
@@ -192,6 +219,9 @@ danışılması tavsiye edilir. Özellikle [o belgeye özgü kritik maddeler]."
 | Agent 09 (Dava Uzmanı) | Mahkeme dayanıklılık güçlendirmeleri |
 | Agent 10 (Founder Avukatı) | Founder koruma güçlendirmeleri |
 | Agent 12 (Şeytan'ın Avukatı) | Senaryo zayıflıkları |
+| Agent 14 (IP & Yazılım Hakları) | IP assignment maddeleri, açık kaynak politikası (belge #8 içeriği) |
+| Agent 15 (GDPR & Veri Uyum) | Databehandleravtale özeti (belge #8 içeriği) |
+| Agent 18 (Co-founder Perspektif) | "İmzalar mıydım?" testi bulguları |
 | Agent 07 (Vergi) | Vergi fırsatı entegrasyonu |
 | Agent 16 (Tutarlılık) | Konsistans matrisi, FAZ 2b'de çözülmüş çelişkiler |
 | FAZ 2 taslaklar | Revize edilecek belgeler |
@@ -216,7 +246,10 @@ TAMAMLANMA RAPORU:
 
 ## Bu Agent'tan Sonra
 → Tüm belgeler repo'ya kaydedilir
-→ Founder (kullanıcı) inceler ve onaylar
+→ Agent 16 (Belge Tutarlılık) FAZ 5b'de final seti ikinci kez tarar +
+  CEO direktifi traceability kontrolü yapar (blokaj geçidi)
+→ Founder (kullanıcı) inceler ve onaylar (FOUNDER CHECKPOINT 2 —
+  imza-ve-tescil onayı, FAZ 6 öncesi)
 → Gerçek Norveç avukatına final review için gönderilir
 → Agent 19 (Brønnøysund Kayıt Rehberi): final stiftelsesdokument ile FAZ 6'da
   Brønnøysundregistrene'de şirket tescil süreci başlatılır

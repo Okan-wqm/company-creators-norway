@@ -25,8 +25,30 @@ Some of this data will be stale, inaccurate, or outdated:
 YOUR TASK: For each investor on the S2-01 list, run a validation check.
 Produce a VALIDATED LIST that S2-02 and S2-03 can safely use.
 
-INPUT: S2-01 output (full investor list with 11-field entries)
+INPUT: S2-01 output — the AUTHORITATIVE format is the S2-01 "TAM LİSTE" JSON
+       array (fields: investor_id, name, category, location, stage_focus,
+       check_range_nok, web_status, proff_verified, last_investment_date,
+       aquaculture_portfolio, phase, conflict_flag, contact, source_urls,
+       data_quality, notes). The 11-column markdown table in the S2-01 output
+       is a human-readable summary only — do NOT parse it as data.
 OUTPUT: Validated list with PASS / FAIL / UNCERTAIN status per investor
+
+═══════════════════════════════════════════════════
+STEP 0 — JSON SCHEMA CHECK (before any validation)
+═══════════════════════════════════════════════════
+
+Parse the S2-01 output as JSON. For EVERY entry, verify the required fields
+exist: investor_id, name, category (A-H), web_status (ACTIVE|PASSIVE|UNKNOWN),
+conflict_flag (NONE|PARTIAL|DIRECT), phase, data_quality
+(VERIFIED|ESTIMATED|UNKNOWN).
+  → Parse failure on the whole list → return the list to S2-01, do not proceed.
+  → Individual entries with missing required fields → return those entries to
+    S2-01 for completion; validate the rest.
+
+IDENTITY RULE (kimliği düşürme kuralı): investor_id is MANDATORY on every
+validation card and in every output list. IDs are carried UNCHANGED through
+the whole chain S2-01 → S2-08 → S2-02 → S2-04 → S2-05 → S2-12 — never drop,
+renumber, or reassign an investor_id.
 
 ═══════════════════════════════════════════════════
 VALIDATION CHECKLIST — PER INVESTOR
@@ -84,12 +106,29 @@ For each investor, verify:
    Red: No public presence, invite-only, no clear path → DIFFICULT — deprioritize
 
 ═══════════════════════════════════════════════════
+ROLL-UP RULE — 7 CHECKS → PASS / FAIL / UNCERTAIN
+═══════════════════════════════════════════════════
+
+Combine the 7 checks above into a single per-investor status:
+
+  1. Check 5 (Conflict) = Red → automatic FAIL, regardless of all other checks
+  2. ≥ 5 of 7 checks Green AND no Red anywhere → PASS
+  3. Anything else (fewer than 5 Green, or any non-conflict Red) → UNCERTAIN
+
+%70 THRESHOLD DEFINITION (mimari hizalama): S2-00 ve S2-01'deki "%70+ PASS"
+ifadesi ŞUNU ifade eder: yatırımcı başına 7 kontrolün ≥%70'i (yani ≥5'i)
+Green olmalıdır. Bu, yukarıdaki roll-up kuralının 2. maddesiyle aynıdır —
+başka bir %70 yorumu (örn. listenin %70'i) KULLANILMAZ.
+
+═══════════════════════════════════════════════════
 VALIDATION RESULT PER INVESTOR
 ═══════════════════════════════════════════════════
 
 For each investor, produce:
 
-[Investor Name] — [S2-01 Score] → [VALIDATED SCORE]
+[investor_id] | [Investor Name] — S2-01 Suderra Uyumu: [Yüksek/Orta/Düşük]
+  → Doğrulanmış Uyum: [Yüksek/Orta/Düşük]
+(investor_id zorunludur — kimliği düşürme kuralı, bkz. STEP 0)
 Status: PASS / FAIL / UNCERTAIN
 Validation date: [date]
 Checks:
@@ -119,6 +158,15 @@ VALIDATED LIST SUMMARY:
   UNCERTAIN (proceed with caution / verify one item): [Z]
   FAIL (remove or pause): [W]
 
+LOW-PASS FALLBACK RULE (PASS < 25):
+  If the PASS count is below 25, do NOT proceed to FAZ 1 with a thin list.
+  → Identify which categories (A-H) produced the fewest PASS entries
+  → Re-run S2-01 targeted at those missing/weak categories (with the specific
+    gaps listed: e.g. "Kategori C family offices yetersiz — Ålesund/Tromsø derinleştir")
+  → Validate the new entries, then merge and re-issue this summary
+  → Only when PASS ≥ 25 (or the founder explicitly accepts a smaller pool)
+    does FAZ 1 (S2-02/S2-03) begin
+
 REMOVED FROM LIST (with reason):
   1. [Investor]: [reason — fund closed / conflict / size mismatch / etc.]
   ...
@@ -127,13 +175,32 @@ CONTACT UPDATES:
   [Investor]: Original contact [Name] → Updated contact [Name, new role]
 
 PRIORITIZED VALIDATED LIST:
-  Rank | Investor | Validated Score | Key Finding | Next Step
-  -----|----------|----------------|-------------|----------
+  Rank | investor_id | Investor | Doğrulanmış Uyum (Yüksek/Orta/Düşük) | Key Finding | Next Step
+  -----|-------------|----------|--------------------------------------|-------------|----------
   [Proceed in this order based on validation findings]
 
 UNEXPECTED FINDINGS (not in S2-01 original list):
   - [Any investor discovered during validation that S2-01 missed]
   - [Fund that recently started Nordic/aquaculture focus — opportunistic]
+
+═══════════════════════════════════════════════════
+YENİDEN DOĞRULAMA MODU (RE-VALIDATION — 90-DAY TTL)
+═══════════════════════════════════════════════════
+
+VERIFIED data has a TTL of 90 days. This agent has a second, lighter mode:
+
+TRIGGER: An investor is about to be TARGETED (outreach message, meeting
+prep — S2-05/S2-11) and their validation date OR their VERIFIED data-quality
+tag is older than 90 days.
+
+SCOPE: Mini-revalidation of ONLY the targeted investors — do NOT re-run the
+full list. For each targeted investor, re-run at minimum:
+  Check 1 (Fund activity), Check 2 (Key contact), Check 5 (Conflict).
+Re-run the remaining checks only if one of these three changed.
+
+OUTPUT: Updated validation card (same format, same investor_id — kimlik
+korunur) with a new validation date. If the mini-revalidation downgrades the
+investor to FAIL or UNCERTAIN, notify S2-04/S2-05 so outreach is paused.
 
 ═══════════════════════════════════════════════════
 FAILURE HANDLING
@@ -160,7 +227,7 @@ DATA QUALITY TAGS:
 
 | Kaynak | İçerik |
 |--------|--------|
-| S2-01 (Ekosistem) | Doğrulanacak yatırımcı listesi |
+| S2-01 (Ekosistem) | Doğrulanacak yatırımcı listesi — otoriter format: "TAM LİSTE" JSON dizisi (tablo değil) |
 | Web kaynakları | LinkedIn, Proff.no, Dealroom.co, fon web siteleri |
 
 ## Çıktı
@@ -186,3 +253,5 @@ Doğrulama tarihi: [tarih]
 → S2-02 (Profil Araştırma): Sadece GEÇER listesiyle çalışır
 → S2-03 (Portföy Analiz): Sadece GEÇER listesiyle çalışır
 → BELİRSİZ yatırımcılar founder tarafından manuel doğrulanır
+→ GEÇER < 25 ise: FAZ 1 başlamaz — S2-01 eksik kategorilerle yeniden çalıştırılır (Low-Pass Fallback kuralı)
+→ Yeniden Doğrulama Modu: hedeflenen yatırımcının doğrulaması 90 günden eskiyse outreach öncesi mini-revalidation

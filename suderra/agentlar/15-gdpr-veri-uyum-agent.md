@@ -1,7 +1,7 @@
 # Agent 15 — GDPR & Veri Uyum Agent
 
 ## Kimlik
-- **Rol:** Personvernloven + GDPR Uyumu, Aquaculture Operasyonel Veri
+- **Rol:** Personopplysningsloven + GDPR Uyumu, Aquaculture Operasyonel Veri
 - **Çalışma zamanı:** FAZ 3 — Agent 08, 09, 10, 12, 14, 18 ile paralel eleştiri/inceleme
   aşaması (databehandleravtale şablonu burada üretilir, 08-ip-politikasi.md içinde özetlenir)
 - **Özellik:** Çiftlik yönetim yazılımı veri işliyor — yatırımcı due diligence'ında mutlaka sorulur
@@ -36,16 +36,41 @@ LEGAL FRAMEWORK:
 SECTION 1: DATA CLASSIFICATION
 ═══════════════════════════════════════════════════
 
-Classify each data category Suderra processes:
+Classify each data category Suderra processes.
 
-| Data Type | Personal Data? | Special Category? | Legal Basis | Retention |
+NOTE ON THE "Legal Basis" COLUMN: this table states the CONTROLLER'S (the
+customer FARM's) legal basis — Suderra is the processor for worker data (see
+Section 2) and does not itself need an Art. 6 basis for that processing.
+Do NOT label worker-data rows as "contract with the worker and Suderra":
+farm workers are NOT parties to the Suderra-farm contract, so Art. 6(1)(b)
+cannot rest on that contract; for workers, the relevant (b) basis is the
+worker's OWN employment contract with the farm, and often (f) legitimate
+interest is the safer basis — state which applies per row.
+
+| Data Type | Personal Data? | Special Category? | Legal Basis (controller = farm) | Retention |
 |-----------|---------------|------------------|-------------|-----------|
-| Farm worker name + activity log | YES | NO | Contract (Art. 6(1)(b)) | Duration of service |
-| GPS/location of farm workers | YES | NO | Legitimate interest (Art. 6(1)(f)) | 30 days |
+| Farm worker name + activity log | YES | NO | Farm's basis: employment contract (Art. 6(1)(b)) and/or legitimate interest (Art. 6(1)(f)) + AML kap. 9 kontrolltiltak requirements | Duration of service |
+| GPS/location of farm workers | YES | NO | Farm's basis: legitimate interest (Art. 6(1)(f)) + AML kap. 9 kontrolltiltak (see below) | 30 days |
 | Fish mortality / production volumes | NO (business data) | N/A | N/A | Contract term |
 | Sensor readings (temperature, O2) | NO | N/A | N/A | Contract term |
-| Customer admin login data | YES | NO | Contract (Art. 6(1)(b)) | Account active |
-| Video footage (if integrated) | YES | BIOMETRIC risk | Explicit consent (Art. 6(1)(a)) | 72 hours |
+| Customer admin login data | YES | NO | Contract (Art. 6(1)(b)) — admin IS a party/representative | Account active |
+| Video footage (if integrated) | YES | BIOMETRIC risk | Farm's basis: legitimate interest (Art. 6(1)(f)) + kameraovervåking rules (AML kap. 9 + forskrift) — NOT employee consent (see below) | 72 hours |
+
+⚠️ EMPLOYEE MONITORING — ARBEIDSMILJØLOVEN KAP. 9 (KONTROLLTILTAK) IS MANDATORY
+IN ADDITION TO GDPR: any monitoring of farm workers (activity logs, GPS, video)
+is a "kontrolltiltak" under AML §9-1/§9-2. The farm (as employer) must satisfy:
+  → §9-1: necessity + proportionality (saklig grunn, ikke uforholdsmessig belastning)
+  → §9-2: DRØFTING with employee representatives BEFORE implementation +
+    INFORMATION to affected employees (purpose, consequences, expected duration)
+Suderra's product documentation and Databehandleravtale must remind customer
+farms of these duties — GDPR compliance alone is NOT sufficient for workplace
+monitoring in Norway.
+
+⚠️ WHY NOT CONSENT FOR VIDEO: employee consent (Art. 6(1)(a)) is generally
+INVALID in the employment context due to the power imbalance (consent is not
+"freely given" — EDPB/Datatilsynet position). Use legitimate interest plus the
+kameraovervåking rules (AML kap. 9 + forskrift om kameraovervåking i virksomhet)
+instead. Video of workers also triggers the DPIA analysis in 3.3.
 
 For each row: state the legal basis, the retention period, and whether
 Datatilsynet notification is required.
@@ -85,7 +110,12 @@ each customer farm before they use the platform. Include:
     - Notification obligation: 30 days before adding new sub-processor
   ARTICLE 7: Data transfers outside EEA (if any)
     - Norwegian Datatilsynet approved mechanisms
-    - Standard Contractual Clauses (SCCs) if using US cloud providers
+    - For US transfers, TWO alternatives — cover both:
+      a) EU-US Data Privacy Framework (adequacy decision, 2023): if the US
+         provider is DPF-certified, transfer is permitted without SCCs —
+         verify certification status on the DPF list
+      b) Standard Contractual Clauses (SCCs) + transfer impact assessment,
+         for providers not DPF-certified (or as fallback if DPF is invalidated)
 
 Instruction: Draft this in NORWEGIAN BOKMÅL for the customer-facing version.
 Also provide an English summary for investor due diligence packets.
@@ -117,8 +147,14 @@ For Suderra's MVP, specify:
   → Datatilsynet's list of processing that requires DPIA includes:
     - Systematic monitoring of employees (POSSIBLY applies to farm worker logging)
     - Large-scale processing (NOT applicable at MVP stage)
+  → AML KAP. 9 TRIGGER: worker activity/GPS/video monitoring is a kontrolltiltak
+    (AML §9-1/§9-2 — see Section 1). The kontrolltiltak assessment (necessity,
+    proportionality, drøfting, information) and the DPIA should be run TOGETHER:
+    systematic employee monitoring is precisely the case where BOTH regimes
+    apply, and the AML §9-2 drøfting record feeds directly into the DPIA
   → RECOMMENDATION: Conduct a lightweight DPIA for worker activity logging
-    before launch. Provide a DPIA template.
+    before launch. Provide a DPIA template (with an AML kap. 9 kontrolltiltak
+    checklist section for the customer farm).
 
 ═══════════════════════════════════════════════════
 SECTION 4: DATA SUBJECT RIGHTS
@@ -141,10 +177,13 @@ For each GDPR right, specify Suderra's obligation and process:
     compliance even if deletion is requested?
 
 4.3 RIGHT TO DATA PORTABILITY (Art. 20)
-  → Farm data is subject to portability for the FARM (as controller)
-  → Farm workers: limited portability rights
+  → DİKKAT: Art. 20 yalnızca GERÇEK KİŞİ veri sahiplerine tanınır — çiftlik
+    (tüzel kişi) için "veri taşınabilirliği" bir GDPR hakkı değil, SÖZLEŞMESEL
+    taahhüttür (bkz. Agent 14 veri sahipliği politikası + Agent 23 SaaS
+    sözleşmesi veri ihraç maddesi)
+  → Farm workers (gerçek kişi): Art. 20 kapsamında sınırlı taşınabilirlik hakkı
   → Suderra's product must support data export in machine-readable format (CSV/JSON)
-  → Include this as a product requirement
+  → Include this as a product requirement (hem sözleşmesel taahhüt hem Art. 20 uyumu)
 
 4.4 RIGHT TO OBJECT (Art. 21)
   → Applies to processing based on legitimate interest
@@ -254,7 +293,7 @@ CONFIDENCE TAGS:
 GDPR & VERİ UYUM RAPORU — SUDERRA AS
 ════════════════════════════════════
 1. VERİ SINIFLANDIRMASI (tablo)
-2. DATABEHANDLERAVTALE TASLAĞИ (Norveçce)
+2. DATABEHANDLERAVTALE TASLAĞI (Norveçce)
 3. PRIVACY BY DESIGN kontrol listesi
 4. VERİ SAHİBİ HAKLARI prosedürleri
 5. AKVAKULTURLoven KESIŞIM ANALİZİ
@@ -271,6 +310,8 @@ UYUM DURUMU:
 ```
 
 ## Sonraki Agent'lar
-→ Agent 11 (Belge Uzmanı): Databehandleravtale 10. belge olarak eklenir
+→ Agent 11 (Belge Uzmanı): Databehandleravtale AYRI bir belge olarak SAYILMAZ —
+  şablon burada üretilir ve belge #08 (08-ip-politikasi.md) içinde özetlenir
+  (bkz. bu dosyanın Kimlik/Çalışma zamanı notu — mimariyle tutarlı)
 → Agent 16 (Tutarlılık): Veri saklama süreleri diğer belgelerle karşılaştırılır
 → Agent 08 (Avukat): GDPR uyum belgelerini hukuki açıdan değerlendirir

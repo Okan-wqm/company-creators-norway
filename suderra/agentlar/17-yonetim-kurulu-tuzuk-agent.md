@@ -43,11 +43,16 @@ COMPANY CONTEXT:
 ⚠️ CRITICAL LIMITATION TO FLAG EXPLICITLY IN THE OUTPUT:
 A Styrereglement is an INTERNAL document. It binds the CEO/CFO and creates grounds
 for removal/liability if violated — but it does NOT, by itself, stop a bank from
-processing a transfer the CEO is otherwise authorized to make under Norwegian law
-(Aksjeloven §6-33 — daglig leder has statutory authority over "den daglige
-ledelse," and a third party acting in good faith is generally protected even if the
-CEO exceeded an INTERNAL restriction they didn't know about; see Agent 09 Senaryo K,
-Agent 12 Senaryo 8, and Agent 19 for the same citation used consistently). This means: paper
+processing a transfer the CEO is otherwise authorized to make under Norwegian law.
+Two SEPARATE provisions do the work here — cite them correctly, not merged:
+  → Aksjeloven §6-14 gives the daglig leder statutory authority over "den
+    daglige ledelse" (and §6-32 makes the daglig leder's acts within that
+    daily-management scope binding on the company);
+  → Aksjeloven §6-33 protects a THIRD PARTY acting in GOOD FAITH: the company
+    is bound even if the CEO exceeded an INTERNAL restriction the third party
+    didn't know (or shouldn't have known) about.
+(See Agent 09 Senaryo K, Agent 12 Senaryo 8, and Agent 19 — use this same
+split citation consistently.) This means: paper
 rules alone are NOT enough. The Treasury Controls in §6 MUST be paired with two
 EXTERNAL, technical implementations (covered in Agent 19's registration guide):
   1. Brønnøysund signaturrett/prokura registration: the CEO must NOT be registered
@@ -122,7 +127,11 @@ Specify:
        shareholder has a conflict of interest (§7), or (b) the Chair determines
        that the observer's presence would compromise confidential competitive matters
     → Bound by the same confidentiality obligations as full board members (§8)
-    → Observer status does NOT carry board member personal liability under Aksjeloven §17-1
+    → Observer status does NOT, as a rule, carry board member personal liability
+       under Aksjeloven §17-1 — BUT this is not absolute: an observer who in
+       practice acts as a de facto board member ("faktisk styremedlem" — e.g.,
+       participates in decisions, instructs management) can be held liable under
+       §17-1 despite the title. State this exception explicitly in the document
     → Observer appointment may be immediately revoked by board resolution if:
        (a) the observer's appointing shareholder falls below 15% C-share threshold,
        or (b) the observer breaches confidentiality obligations
@@ -169,6 +178,23 @@ ORDINARY RESOLUTIONS (simple majority):
 TREASURY RESOLUTIONS (require the FOUNDER'S AFFIRMATIVE VOTE — cannot pass without
 it, regardless of board size; this is the operative mechanism that prevents the
 CEO/CFO from ever outvoting the Founder on money matters):
+
+  ⚠️ LEGAL ANCHORING WARNING — DO NOT LEAVE THIS RULE ONLY IN THE STYREREGLEMENT:
+  Aksjeloven §6-25 sets simple majority as the default for board decisions and
+  §6-25(2) provides that STRICTER voting rules must be laid down in the
+  VEDTEKTER. A founder-veto/qualified-majority rule that exists ONLY in this
+  internal charter may be non-binding — a board majority could simply override
+  or ignore it. Therefore:
+    1. The Treasury veto / qualified-majority rule MUST be written into the
+       VEDTEKTER (instruct Agent 11, doc #2) — that is what makes it legally
+       operative against the board itself;
+    2. It should ALSO be mirrored in the AKSJONÆRAVTALE (contractual remedy
+       between shareholders);
+    3. This Styrereglement then only REPEATS the rule for daily operational
+       reference — it is the third layer, not the source.
+  State in the output document, verbatim in substance: "Bu kural vedtekter'e
+  işlenmeden hükümsüz kalabilir — vedtekter kaydı yapılmadan bu belgeye
+  güvenilmemelidir."
   - Any single payment or transfer above the §6 threshold
   - Any change to bank signatories, approvers, or account access
   - Opening new bank accounts, credit lines, payment processor accounts, or
@@ -187,12 +213,17 @@ SUPERMAJORITY RESOLUTIONS (2/3 majority of all board seats):
   - Appointment or removal of external auditor
 
 UNANIMOUS RESOLUTIONS (100% of eligible board seats, excluding any inhabil member):
-  - Removal of the CEO/CFO "for cause" requires only the Founder's resolution
-    as Chair where the cause is a §6 Treasury Controls violation (expedited —
-    does NOT require the full unanimous/supermajority process below)
+  - Removal of the CEO/CFO (daglig leder): appointment and removal of the
+    daglig leder is an ORGAN DECISION OF THE BOARD (Aksjeloven §6-2) — it can
+    NEVER be a one-person "Chair's resolution." Where the cause is a §6
+    Treasury Controls violation, the expedited path is: an IMMEDIATELY
+    CONVENED board meeting deciding by SIMPLE MAJORITY of the board
+    (excluding the CEO/CFO as inhabil if they hold a seat) — it does NOT
+    require the full unanimous/supermajority process below, but it DOES
+    require a proper board resolution, not a unilateral Chair act
   - Amendment to this Styrereglement
   - Entering into any M&A transaction
-  - Change of registered address outside Hordaland county
+  - Change of registered address outside Vestland county
 
   PROTECTION NOTE: Because Treasury Resolutions require the Founder's affirmative
   vote as a structural matter (not merely a majority outcome that happens to
@@ -216,8 +247,12 @@ The CEO/CFO (daglig leder) shall provide the Board with:
     including: loss of major customer, regulatory inquiry, litigation,
     key employee departure, funding discussions with third parties
 
-  CEO/CFO shall immediately notify the Board if the company's equity falls below
-  50% of share capital (Aksjeloven §3-5 compliance trigger).
+  CEO/CFO shall immediately notify the Board if the company's equity or
+  liquidity is no longer FORSVARLIG (sound/adequate) given the risk and scope
+  of the business (Aksjeloven §3-4 standard; §3-5 imposes the board's duty to
+  act when equity is presumed unsound). NOTE: the old fixed "equity below 50%
+  of share capital" trigger was REPEALED in 2019 — do not cite it; the sole
+  operative test is forsvarlig egenkapital og likviditet.
 
   INDEPENDENT VERIFICATION (does not depend on the CEO/CFO's own reporting):
   - The Founder shall hold a personal, read-only login to the company's bank
@@ -234,7 +269,7 @@ The CEO/CFO (daglig leder) shall provide the Board with:
     might be causing it
 
 ──────────────────────────────────────────────────────
-§ 6 DAGLIG LEDERS FULLMAKTER OG HAZİNE KONTROLLERI
+§ 6 DAGLIG LEDERS FULLMAKTER OG LIKVIDITETS- OG UTBETALINGSKONTROLL
    (CEO/CFO AUTHORITY AND TREASURY CONTROLS)
 ──────────────────────────────────────────────────────
 [What the CEO/CFO can decide without Board approval, and the controls that
@@ -410,8 +445,13 @@ All board members and observers shall:
   - Minutes must be kept for every board meeting
   - Content: date, participants, agenda items, resolutions, votes
   - Signed by all present members (or digital signature)
-  - Stored for minimum 10 years
-  - Accessible to all shareholders upon reasonable request
+  - Stored for the ENTIRE LIFETIME of the company (Aksjeloven §6-29 —
+    "hele selskapets levetid"; not a fixed 10-year period)
+  - Access: shareholders do NOT have a general statutory right to inspect
+    board minutes (their information right is at the general meeting,
+    Aksjeloven §5-15). Access to minutes is granted at the BOARD'S DISCRETION,
+    case by case — do not promise blanket shareholder access; that would also
+    undermine the founder-protection architecture of this charter
 
 ──────────────────────────────────────────────────────
 § 10 STYREMEDLEMMERS ANSVAR (BOARD LIABILITY)
@@ -426,6 +466,13 @@ Board members are personally liable for decisions made in violation of:
 A dissenting vote, properly recorded in minutes, limits personal exposure.
 Board members should ensure their dissent is recorded when they disagree
 with a resolution that may create legal risk.
+
+RECOMMENDATION — D&O INSURANCE (STYREANSVARSFORSIKRING): include a note in
+this section recommending that the company take out styreansvarsforsikring
+(directors' & officers' liability insurance) once budget allows — §17-1
+liability is personal and unlimited, and investors' board members/observers
+will typically expect this cover; cheap at startup scale, and it makes board
+seats easier to fill.
 
 ──────────────────────────────────────────────────────
 § 11 IKRAFTTREDELSE (ENTRY INTO FORCE)
@@ -488,7 +535,6 @@ CONFIDENCE TAGS:
 | Agent 04 (Founder Koruma) | Founder kontrolü analizi |
 | Agent 05 (Yatırımcı Dostu) | Yatırımcı beklentileri |
 | Agent 02 (CFO) | Hazine kontrol eşiği önerisi (aylık burn rate'e göre) |
-| Agent 19 (Brønnøysund Rehberi) | Signaturrett/prokura kayıt talimatları |
 
 ## Çıktı
 
@@ -514,5 +560,10 @@ GÜVEN SKORU:
 ```
 
 ## Sonraki Agent'lar
-→ Agent 11 (Belge Uzmanı): Styrereglement 10. belge olarak eklenir
+→ Agent 11 (Belge Uzmanı): Styrereglement, master listedeki belge #09 olarak eklenir;
+  ayrıca Treasury veto/nitelikli çoğunluk kuralının VEDTEKTER'e (belge #2) işlenmesi
+  talimatı gönderilir (bkz. §4 Legal Anchoring Warning)
 → Agent 16 (Tutarlılık): Styrereglement CEO yetki sınırları aksjonæravtale ile karşılaştırılır
+→ Agent 19 (Brønnøysund Rehberi): Bu belge Agent 19'a signaturrett/prokura kayıt
+  TALİMATINI GÖNDERİR ("i fellesskap" ortak imza, §6.2.b) — Agent 19 FAZ 6'da
+  çalıştığı için yön bu şekildedir; Agent 19 çıktısı bu belgeye girdi DEĞİLDİR

@@ -24,6 +24,12 @@ This agent activates ONLY after the founder has confirmed:
   → Co-founder IS classified as an employee (not pure equity partner)
   If the co-founder is ONLY an equity holder with no salary: this agent
   is NOT needed. Consult Agent 06 (Sweat Equity) instead.
+  ⚠️ NOTE THE 2024 PRESUMPTION — AML §1-8: since 2024, a working person is
+  PRESUMED to be an arbeidstaker (employee) unless it is made overwhelmingly
+  probable that they are genuinely independent. "We simply decided the
+  co-founder is a partner, not an employee" does NOT hold up if they in fact
+  work under the company's direction on its core product — factor this
+  presumption into the status decision itself, not just into later disputes.
 
 IMPORTANT DISTINCTION:
   Co-founder as EMPLOYEE: Has employment contract + rights under
@@ -39,6 +45,23 @@ MAJORITY OF NORWEGIAN CO-FOUNDERS ARE BOTH:
 ══════════════════════════════════════════════════════
 MANDATORY ARBEIDSKONTRAKT CONTENT (Arbeidsmiljøloven §14-6)
 ══════════════════════════════════════════════════════
+
+⚠️ 1 JULY 2024 AMENDMENTS — the §14-6 minimum content list was EXPANDED
+(EU work-transparency directive implementation). In addition to the classic
+items below, the written contract must now also cover, among other things:
+  → prøvetid information (if any) — duration and conditions
+  → paid absences/leave entitlements and other yan haklar (benefits) the
+    employer provides
+  → the social security institutions receiving employer contributions
+    (e.g., pension provider) and any employer-covered social security benefits
+  → all pay ELEMENTS listed SEPARATELY (base, supplements, overtime rates,
+    payment method and frequency)
+  → procedure/formal requirements on termination
+FETCH the current §14-6 text (lovdata.no, aml §14-6) and include every listed
+item — do not rely on the pre-2024 list.
+ALSO §14-5 (written contract DEADLINE) changed 1 July 2024: for employment
+relationships lasting longer than 1 month, the written contract must exist
+no later than 7 DAYS after work begins (previously 1 month).
 
 ALL of the following MUST be in the contract (§14-6 requires written form):
 
@@ -85,8 +108,21 @@ ALL of the following MUST be in the contract (§14-6 requires written form):
   ARBEIDSGIVERAVGIFT REMINDER: Employer pays ~14.1% of gross salary
   to NAV (Zone 1 Oslo). See Agent 02 (CFO) for runway impact calculation.
 
+  MANDATORY WITH THE FIRST EMPLOYEE — ADD THESE COST LINES:
+  → OTP (obligatorisk tjenestepensjon): minimum 2% of salary between 1G and
+    12G — mandatory occupational pension from the first qualifying employee
+    (OTP-loven). Example: 600,000 NOK salary → roughly 2% × (600,000 − 1G)
+    ≈ 9,500 NOK/year (G ≈ 124,000 NOK — DOĞRULANMALI, updated each 1 May)
+  → Yrkesskadeforsikring (occupational injury insurance): mandatory for ALL
+    employees from day one (yrkesskadeforsikringsloven) — typically a few
+    thousand NOK/year per employee
+  Both must appear in the runway/cost model — a contract without these two
+  items understates the true cost of the hire.
+
 § 8 ARBEIDSTID (Working Hours)
-  Full time: 37.5 hours/week (Norveç standardı — Arbeidsmiljøloven §10-4)
+  Full time: 37.5 hours/week (Norveç TARİFE standardı — dikkat: Arbeidsmiljøloven
+    §10-4'ün koyduğu YASAL AZAMİ 40 saat/haftadır; 37,5 saat kanundan değil,
+    yaygın tarife/piyasa standardından gelir — kaynağı doğru göster)
   OR: Part time: [X] hours/week [percentage of full time]
   Overtime: governed by Arbeidsmiljøloven §10-6 (max 10 hrs/week,
     25 hrs/4-week period, 200 hrs/year without collective agreement)
@@ -101,11 +137,15 @@ ALL of the following MUST be in the contract (§14-6 requires written form):
 
 § 10 OPPSIGELSESTID (Notice Period)
   Standard notice periods (Arbeidsmiljøloven §15-3):
-    First 6 months: 14 days (during probation, if applicable)
-    After 6 months: 1 month
-    After 5 years: 2 months
-    After 10 years: 3 months
-    After 15+ years: 4-6 months
+    During probation (if applicable): 14 days
+    Default: 1 month
+    After 5 years' seniority: 2 months
+    After 10 years' seniority: 3 months
+    After 10 years' seniority, AGE-BASED extension (employer-side notice):
+      age 50+: 4 months / age 55+: 5 months / age 60+: 6 months
+    (There is NO "15+ years: 4-6 months" tier — the extension beyond 3 months
+    depends on the employee's AGE combined with 10 years' seniority, not on
+    15 years of service)
   FOUNDER NOTE: For co-founders, consider adding a mutual 3-month notice
     from the start — predictability is more important than the legal minimum
 
@@ -136,39 +176,65 @@ ALL of the following MUST be in the contract (§14-6 requires written form):
   as long as the information remains confidential.
 
 § 13 KONKURRANSEKLAUSUL (Non-Compete Clause)
-  IF INCLUDED — mandatory requirements (Arbeidsmiljøloven §14A-1 to §14A-5):
-  → Must be in writing (§14A-1)
-  → Employee must receive written explanation of why it applies (§14A-2)
-  → Duration: Maximum 12 months after employment ends (§14A-3)
+  IF INCLUDED — mandatory requirements (Arbeidsmiljøloven kap. 14 A —
+  CORRECT §-MAPPING, do not shuffle these):
+  → §14 A-1: konkurranseklausul definition + WRITTEN FORM required +
+    MAXIMUM DURATION 12 months after employment ends; the same provision
+    also regulates the employer's right to terminate/waive the clause while
+    the employment lasts, and the rule that the clause cannot be invoked
+    when dismissal is due to the EMPLOYER'S circumstances (virksomhetens
+    forhold) (alt bent/ledd numaraları DOĞRULANMALI — lovdata.no aml §14 A-1 fetch)
+  → §14 A-2: REDEGJØRELSE — on request (and at termination) the employer must
+    give a written statement of whether and how far the clause will be invoked
+  → §14 A-3: KOMPENSASJON — the mandatory compensation rule (see below)
+  → §14 A-4: KUNDEKLAUSUL (customer non-solicit) — a SEPARATE, lighter regime;
+    do NOT cite §14 A-4 for non-compete compensation
   → Scope: Must be limited to activities that actually compete with Suderra
     (not a blanket "no tech startup" clause — would be void)
   → Geographic scope: Norway (broader scope risks invalidity)
   
-  KOMPENSASJON — MANDATORY (§14A-4):
-  Non-compete is UNENFORCEABLE without compensation:
-  → Minimum: 100% of salary for up to 6 months (if clause is 6 months)
-  → Minimum: 70% of salary for 7-12 months (§14A-4, tredje ledd)
-  → Payment: Monthly during the restriction period
-  → Employer may cancel the clause with 1 month notice (§14A-3, annet ledd)
-  → If employer is dismissed (oppsigelse) without cause: non-compete is void
-    (§14A-3, fjerde ledd — employee cannot enforce restriction without compensation)
+  KOMPENSASJON — MANDATORY (§14 A-3):
+  Non-compete is UNENFORCEABLE without compensation, and the statutory formula
+  is G-BASED (grunnbeløp tiers), NOT time-based — there is NO "100% for the
+  first 6 months, 70% thereafter" rule:
+  → Basis: the employee's ARBEIDSVEDERLAG (salary + other work remuneration)
+    over the last 12 months before notice
+  → Tier 1: 100% compensation of arbeidsvederlag up to 8G
+  → Tier 2: at least 70% of the part of arbeidsvederlag between 8G and 12G
+  → Cap: arbeidsvederlag above 12G is disregarded (12G ceiling)
+  → G = folketrygdens grunnbeløp, ~124,000 NOK (DOĞRULANMALI — updated each
+    1 May; fetch current G from nav.no/skatteetaten.no before calculating)
+  → Payment: monthly during the restriction period; agreed deductions for
+    other income may apply per the statute (detay DOĞRULANMALI)
 
-  CALCULATE KONKURRANSE KOMPENSASJON:
-  Example: Co-founder salary NOK 600,000/year
-  → 12-month non-compete requires:
-    Month 1-6: 100% × (600,000/12) = 50,000 NOK/month × 6 = 300,000 NOK
-    Month 7-12: 70% × (600,000/12) = 35,000 NOK/month × 6 = 210,000 NOK
-    TOTAL COST: 510,000 NOK — founder must be able to afford this before
-    including a non-compete clause.
+  CALCULATE KONKURRANSE KOMPENSASJON (with the CORRECT G-based formula):
+  Example: Co-founder arbeidsvederlag NOK 600,000/year
+  → 8G ≈ 8 × 124,000 = 992,000 NOK → 600,000 < 8G → the ENTIRE
+    arbeidsvederlag falls in Tier 1 → compensation = 100%
+  → 12-month non-compete: 600,000 × 100% = 600,000 NOK total
+    (50,000 NOK/month × 12) — NOT ~510,000; the old time-tiered calculation
+    was wrong
+  → Contrast example (high earner), arbeidsvederlag 1,500,000 NOK/year:
+    Tier 1: 100% × 992,000 = 992,000
+    Tier 2: 70% × (1,488,000 − 992,000) = 70% × 496,000 = 347,200
+    (12G = 1,488,000 caps the basis; the 12,000 above 12G is ignored)
+    12-month total: 992,000 + 347,200 = 1,339,200 NOK
   
   FOUNDER WARNING: If Suderra cannot pay this compensation, the non-compete
-  clause is void from the start. Do NOT include non-compete unless the company
+  clause is void from the start. For a 600k co-founder, a 12-month clause
+  costs the FULL 600,000 NOK — do NOT include non-compete unless the company
   has funding to pay the mandatory compensation.
 
 § 14 TVISTER (Dispute Resolution)
   Disputes regarding this employment contract shall first be attempted
   resolved through written negotiation.
-  If unresolved within 30 days: Oslo Tingrett (first instance court)
+  If unresolved within 30 days: the tingrett of the company's registered
+  office ([şirket merkezi] tingrett — do NOT hard-code "Oslo Tingrett"
+  unless the registered office is actually in Oslo)
+  ⚠️ NOTE: employment disputes follow Arbeidsmiljøloven kap. 17's special
+  procedural rules (verneting, søksmålsfrister) — these statutory jurisdiction
+  rules canNOT be freely narrowed by contract; the clause is a default, not
+  an exclusive-forum guarantee
   Governing law: Norwegian law (Arbeidsmiljøloven, Avtaleloven)
 
 ══════════════════════════════════════════════════════
@@ -187,7 +253,13 @@ sweat equity agreement (to be confirmed by Agent 16):
 
 FAILURE HANDLING:
 - If employment classification is unclear (employee vs. independent contractor):
-  flag for attorney review — this is a legal determination, not an agent decision
+  flag for attorney review — this is a legal determination, not an agent decision.
+  ⚠️ AML §1-8 PRESUMPTION (in force since 2024): a person is PRESUMED to be an
+  arbeidstaker (employee) unless the engaging party makes it OVERWHELMINGLY
+  PROBABLE that an independent-contractor relationship exists — the burden is
+  on Suderra, not the worker. A co-founder who works under the company's
+  direction, with its tools, on its core product will almost certainly be an
+  employee under this presumption; plan (and budget AGA/OTP/insurance) accordingly
 - If salary is "0 NOK deferred": still produce the full contract with deferred
   salary clause — do NOT skip the salary section
 - If any §14A compensation calculation exceeds what the company can afford:
@@ -234,5 +306,7 @@ CONFIDENCE: HIGH (§14-6 mandatory items) / MED (§14A non-compete)
 
 ## Sonraki Agent'lar
 → Agent 16 (Tutarlılık): Arbeidskontrakt + sweat equity çapraz kontrol
-→ Agent 11 (Belge Uzmanı): Sözleşme 10 belge setine eklenir (co-founder çalışansa)
+→ Agent 11 (Belge Uzmanı): Arbeidskontrakt, master sayım kuralına göre OPSİYONEL
+  11. belgedir (temel set 10 belgedir; bu sözleşme yalnız co-founder çalışan
+  sayılırsa sete eklenir)
 → Agent 07 (Vergi): Maaş bilgisi → arbeidsgiveravgift hesabı güncellenir

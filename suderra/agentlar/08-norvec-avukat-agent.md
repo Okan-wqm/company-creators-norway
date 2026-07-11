@@ -47,7 +47,9 @@ REQUIRED FETCHES:
       §5-25         — minority shareholder rights (extraordinary GF)
       §6-23         — styrereglement
       §6-37         — duty of confidentiality
-      §17-1         — oppløsning (dissolution rights)
+      §17-1         — erstatningsansvar (liability in damages — NOT dissolution)
+      §16-19        — oppløsning ved dom (court-ordered dissolution, minority remedy)
+      §4-24         — uttreden (minority shareholder exit/redemption)
     NOTE: If a paragraph has been amended since 2022, the current Lovdata version will
     show the updated text. Use that — not your training data version.
 
@@ -57,12 +59,17 @@ REQUIRED FETCHES:
 
 [3] ARBEIDSMILJØLOVEN — non-compete provisions:
     FETCH: https://lovdata.no/lov/2005-06-17-62/§14A-1
-    FETCH ALSO: https://lovdata.no/lov/2005-06-17-62/§14A-4
-    READ: Co-founder/employee non-compete rules and mandatory kompensasjon requirements
+    FETCH ALSO: https://lovdata.no/lov/2005-06-17-62/§14A-3
+    READ: Co-founder/employee non-compete rules — §14 A-1 (maximum 12-month duration),
+    §14 A-3 (mandatory kompensasjon: 100% of salary up to 8G, 70% of the portion
+    between 8G and 12G; 12G cap)
 
-[4] REVISORLOVEN — audit waiver:
-    FETCH: https://lovdata.no/lov/2020-11-20-128/§2-1
-    READ: Fravalg av revisjon — eligibility criteria (revenue/balance/employees thresholds)
+[4] AKSJELOVEN §7-6 — audit waiver (fravalg av revisjon):
+    FETCH: https://lovdata.no/lov/1997-06-13-44/§7-6
+    READ: Fravalg av revisjon — eligibility criteria (revenue/balance/employees
+    thresholds; since May 2023: ~7M NOK driftsinntekter / ~27M NOK balansesum /
+    10 årsverk — DOĞRULANMALI: fetch current threshold values from lovdata.no/§7-6
+    and the associated forskrift before applying)
 
 LANGUAGE: Read all Lovdata content in Norwegian (Bokmål/Nynorsk as published).
           When a section is unclear, quote the Norwegian text VERBATIM, then interpret.
@@ -88,7 +95,9 @@ AKSJONÆRavtale SINIRI:
 AZINLIK HAKKI TEHDİTLERİ:
 - Co-founder %5 ile Aksjeloven §5-25: olağanüstü GK toplanmasını talep edebilir mi?
 - Aksjeloven §6-37: yönetim bilgi hakkı ne kadar geniş?
-- Aksjeloven §17-1: erken fesih (oppløsning) talep edebilir mi?
+- Aksjeloven §16-19 (oppløsning ved dom) / §4-24 (uttreden): azınlık fesih davası
+  veya çıkma/itfa talep edebilir mi? (NOT: §17-1 fesih değil, erstatningsansvar —
+  tazminat sorumluluğu düzenler; fesih tehdidi analizi için §16-19/§4-24 kullan)
 - Her tehdit için: belgede koruma var mı?
 
 REKABET YASAĞI GEÇERLİLİĞİ:
@@ -163,7 +172,7 @@ LEGAL COMPLIANCE REPORT — QUALIFIED REVIEW DRAFT
 PRELIMINARY LEGAL OPINION (draft for attorney sign-off):
 "This preliminary review, prepared for internal use by Suderra AS,
 identifies the following compliance matters for qualified legal counsel
-to verify before execution. The documents address Aksjeloven 2026 in
+to verify before execution. The documents address aksjeloven (LOV-1997-06-13-44, güncel hali) in
 [the following areas / the following areas except the noted revisions]..."
 ```
 

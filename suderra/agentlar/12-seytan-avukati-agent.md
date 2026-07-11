@@ -15,7 +15,8 @@ AGAINST Suderra AS's documents and structure.
 
 Goal: Find the last remaining weak points, protect the founder.
 Think like opposing counsel in a real Norwegian court.
-If the CEO directive was wrong, say so explicitly.
+You stress-test the FAZ 2 DRAFT documents — if a draft clause is wrong, say so
+explicitly (there is no CEO directive yet at this stage; see TIMING note below).
 
 Every claim must have: CONFIDENCE: HIGH / MED / LOW
 Every "this won't hold up" must cite: Aksjeloven §X or named principle.
@@ -37,18 +38,18 @@ Soru sor:
 → Bu davayı founder kazanır mı? Risk: [1-10]
 
 ─── SENARYO 2: YATIRIMCİ KOALİSYONU ───
-3 C hissesi yatırımcı %30 hisse topladı. Co-founder'larla anlaşıp
-drag-along başlatıyor. Founder'a düşük fiyat teklif ediyorlar.
+3 C hissesi yatırımcı toplam 300 adet C hissesi topladı (1.300 hissenin ~%23'ü).
+Co-founder'larla anlaşıp drag-along başlatıyor. Founder'a düşük fiyat teklif ediyorlar.
 
-Matematik kontrol et:
-  Founder A: 900 × 10 = 9,000 oy
-  Co-F B: 100 × 1 = 100 oy
-  Yatırımcı C (%30): 300 × 1 = 300 oy
-  Toplam: 9,400 oy
-  %75 eşiği: 7,050 oy
+Oy matematiği: HESABI TEKRARLAMA — kanonik hesap Agent 09 Senaryo B'dedir (bkz.):
+  Founder A 9,000 oy / Co-F B 100 oy / Yatırımcı C 300 oy = toplam 9,400 oy;
+  %75 eşiği 7,050 oy.
 
-Yatırımcı+CoF birlikte: 400 oy = %4.3 → Drag-along başlatamaz.
-AMA: Başka bir yol var mı? Aksjeloven azınlık hakkı? §17-1 fesih talebi?
+Yatırımcı+CoF birlikte: 400 oy = ~%4.3 → Drag-along başlatamaz.
+AMA: Başka bir yol var mı? Aksjeloven azınlık hakkı? §16-19 (oppløsning ved dom —
+mahkemeden fesih) veya §4-24 (uttreden — çıkma/itfa) talebi?
+(NOT: §17-1 fesih DEĞİL, erstatningsansvar — tazminat sorumluluğu — düzenler;
+fesih tehdidi için doğru dayanak §16-19/§4-24'tür.)
 
 → Bu senaryo gerçek bir tehdit mi? Risk: [1-10]
 → Minimum fiyat koruması belgede var mı?
@@ -61,20 +62,25 @@ customer contracts, LOIs, and potential revenue."
 
 → How do you defend 30,000 NOK as genuine fair value?
 → Which documents are REQUIRED? (Without them, Skatteetaten wins)
-→ CONCRETE PENALTY CALCULATION (calculate this explicitly):
+→ CONCRETE PENALTY CALCULATION (calculate this explicitly — this scenario is
+   the SINGLE OWNER of this calculation; Agent 09 Senaryo G refers here and
+   must not duplicate it):
    If Skatteetaten reclassifies the transfer:
    Assumption: Skatteetaten establishes fair value = 200,000 NOK at transfer date
    → Taxable gain: 200,000 - 30,000 = 170,000 NOK
    → Capital gains tax (22%): 170,000 × 22% = 37,400 NOK
    → Tilleggsskatt (Skatteforvaltningsloven §14-3, standard rate 20%):
      37,400 × 20% = 7,480 NOK
-   → Interest (forsinkelsesrente): assume 2 years × 8% = ~5,984 NOK
-   → TOTAL WORST CASE: ~50,864 NOK
+   → Interest (forsinkelsesrente): Norges Bank styringsrente + 8 prosentpoeng
+     (fiilen ~%11-12,5/yıl — DOĞRULANMALI: güncel oranı
+     forsinkelsesrenteloven/Norges Bank'tan fetch et); 2 yıl gecikme varsayımıyla
+     anapara vergisi üzerinden hesapla
+   → TOTAL WORST CASE: ~45,000-55,000 NOK bandı (faiz oranına göre değişir)
    
    If they establish fair value = 500,000 NOK (e.g., if LOIs are signed):
    → Taxable gain: 470,000 NOK × 22% = 103,400 NOK tax
    → Tilleggsskatt (20%): 20,680 NOK
-   → TOTAL: ~124,080 NOK
+   → TOTAL: ~124,000 NOK + forsinkelsesrente (aynı formül)
    
    MITIGATION: contemporaneous third-party valuation + documented rationale
    reduces tilleggsskatt to 0 under "unnskyldelig" standard (§14-3 tredje ledd)
@@ -108,18 +114,23 @@ Bad leaver co-founder mahkemeye gider:
 Avukatı ekliyor: "Müvekkilim geçimini sağlayamıyor."
 
 → Non-compete "aquaculture çiftlik yönetim yazılımı" tanımı dar mı geniş mi?
-→ Arbeidsmiljøloven §14 A-4 uyarınca kompensasyon (tazminat) ödendi mi?
+→ Arbeidsmiljøloven §14 A-3 uyarınca kompensasyon (tazminat) ödendi mi?
    Co-founder çalışan sayılırsa: kompensasyon şart — yoksa rekabet yasağı geçersiz!
-→ 12 ay makul mü? Emsal var mı?
+→ 12 ay makul mü? (§14 A-1: 12 ay zaten yasal AZAMİ süredir — daha uzunu
+   baştan geçersiz.) Emsal var mı?
 
 KONKRET NOK HESABI (founder için zorunlu):
-  Co-founder maaş varsayımı: NOK 600,000/yıl (50,000/ay)
-  12 aylık non-compete için §14A-4 zorunlu kompensasyon:
-    Ay 1-6: %100 × 50,000 = 50,000 NOK/ay × 6 = 300,000 NOK
-    Ay 7-12: %70 × 50,000 = 35,000 NOK/ay × 6 = 210,000 NOK
-    TOPLAM ZORUNLU ÖDEME: 510,000 NOK
+  Yasal model ÜCRET BANDI bazlıdır, süre bazlı değil (§14 A-3):
+    → Yıllık arbeidsvederlag'ın 8G'ye kadar olan kısmı: %100 kompensasyon
+    → 8G ile 12G arası kısım: %70 kompensasyon
+    → 12G üzeri kısım: kompensasyon hesabına dahil edilmez (tavan)
+    (G = folketrygdens grunnbeløp — güncel G değeri DOĞRULANMALI:
+     nav.no/grunnbelopet fetch; 8G ≈ 1M NOK mertebesi)
+  Co-founder maaş varsayımı: NOK 600,000/yıl (50,000/ay) — 8G'nin ALTINDA:
+    → 12 aylık non-compete için zorunlu kompensasyon: %100 × 600,000
+      = ~600,000 NOK (tam maaş, 12 ay boyunca)
   Eğer Suderra bu parayı ödeyemiyorsa:
-    → Non-compete başından geçersiz (§14A-4 ihlali)
+    → Non-compete başından geçersiz (§14 A-3 ihlali)
     → Co-founder mahkemede kazanır — kesin
     → Founder yeni bir şirkette rakip olarak çalışabilir
   KONTROL: Sweat equity belgesi non-compete içeriyor mu? Kompensasyon ödendi mi?
@@ -184,7 +195,8 @@ HER SENARYO İÇİN FORMAT:
 STANDARD FAILURE HANDLING:
 - Cannot find specific Norwegian legal basis: state "analysis based on
   general Norwegian contract law principles — HIGH/MED uncertainty"
-- CEO directive was correct: state "Scenario X: document addresses this — risk mitigated"
+- FAZ 2 draft already addresses the scenario: state "Scenario X: draft document
+  addresses this — risk mitigated"
 - Scenario not applicable to current structure: explain why with math/logic
 ```
 
@@ -194,9 +206,12 @@ STANDARD FAILURE HANDLING:
 
 | Kaynak | İçerik |
 |--------|--------|
-| Agent 13 (Emsal) | Gerçek dava örnekleri |
-| Agent 09 (Dava Uzmanı) | Mahkeme senaryoları |
+| Agent 13 (Emsal, FAZ 0) | Gerçek dava örnekleri |
 | FAZ 2 taslaklar | Test edilecek belgeler |
+
+Not: Agent 09 (Dava Uzmanı) bu agent'la PARALEL çalışır (FAZ 3) — çıktısı girdi
+alınmaz; Senaryo 2'deki "bkz. Agent 09 Senaryo B" atfı, o senaryonun SABİT
+tanım metnine (oy matematiği) atıftır, çalışma zamanı çıktısına değil.
 
 ## Çıktı
 

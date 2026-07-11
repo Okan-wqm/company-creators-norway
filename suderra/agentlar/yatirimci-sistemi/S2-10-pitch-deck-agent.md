@@ -56,7 +56,9 @@ This is the most important slide. Investors must feel the pain.
 
 Content structure:
   [Headline] — one provocative sentence
-  Recommended: "Norwegian salmon farming is a NOK 180B industry managed with Excel and WhatsApp"
+  Recommended: "Norwegian seafood is a ~NOK 175B export industry (salmon ~123B) managed with Excel and WhatsApp"
+  (Source: Norges sjømatråd 2024 export figures — DOĞRULANMALI: fetch current
+   numbers from seafood.no before finalizing the slide)
 
   [3 concrete problem points] — specific, quantified, credible:
   
@@ -128,7 +130,7 @@ Content:
   [Headline]: "NOK [X]B market, less than [Y]% penetrated by modern software"
 
   TAM (Total Addressable Market):
-  → Global aquaculture market: ~USD 280B (2024, source: FAO)
+  → Global aquaculture market: ~USD 300B (source: FAO SOFIA 2024 — verify against the current report)
   → Aquaculture operations software (global): ~USD [X]B
     [Note: if this number is uncertain, use bottom-up instead]
   → Alternative TAM: Total annual spend on aquaculture operations in Norway
@@ -249,8 +251,9 @@ Content (CRITICAL — use ONLY what is real from S2-07):
   IF NOTHING YET:
   → Slide 7 is titled "ROADMAP & VALIDATION PLAN" — it is STILL slide 7, not an extra slide
   → Content for validation plan version:
-    "3 pilot farms identified for Q[X] 2025 launch"
-    "First paying customer target: Q[Y] 2025"
+    "3 pilot farms identified for [Q+1 — next quarter] launch"
+    "First paying customer target: [Q+2 — quarter after next]"
+    (Use relative quarter placeholders — never hard-code a year that will go stale)
     12-month roadmap with key milestones
   → Note: absence of traction is the single biggest investor concern at seed
     → Focus almost all energy on getting SOMETHING real before first meetings
@@ -292,8 +295,8 @@ Content:
   → Advisors add credibility — recruit 1-2 before investor meetings if possible
 
   GAP ACKNOWLEDGMENT (honest and proactive):
-  → If team lacks technical depth: "Hiring: Backend Developer Q1 2025
-    (budget included in use of funds)"
+  → If team lacks technical depth: "Hiring: Backend Developer [Q+1 —
+    next quarter] (budget included in use of funds)"
   → If team lacks aquaculture domain depth: "Advisory board includes
     [farm manager / industry veteran]"
   → Investors ask about gaps — better to address proactively
@@ -344,8 +347,9 @@ Content:
 
   INVESTMENT ASK:
   → Amount: NOK [X] (from S2-07 datasheet)
-  → Instrument: [equity / convertible / SAFE]
-  → Valuation: [pre-money NOK X] (if equity)
+  → Instrument: [priced C-share equity (default — see S2-14) / konvertibelt lån / SLIP]
+    (a US-style SAFE has no direct Norwegian law equivalent — do not offer it)
+  → Valuation: [pre-money NOK X] (if priced equity)
   → Planned closing: [date]
 
   USE OF FUNDS (pie chart description):
@@ -404,7 +408,7 @@ CONFIDENCE TAGS:
 | Kaynak | İçerik |
 |--------|--------|
 | S2-07 (Onboarding) | Suderra Pitch Datasheeti |
-| S2-04 (Eşleştirme) | Sektör rakamları |
+| S2-04 (Eşleştirme) | Hedef yatırımcı profili (deck vurgusu için — S2-04 sektör rakamı üretmez; sektör verisi S2-13/S2-07'den gelir) |
 | S2-13 (Rekabet) | Rakip matrisi |
 
 ## Çıktı

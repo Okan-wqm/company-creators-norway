@@ -37,14 +37,17 @@ Co-founder 14. ayda ayrılıyor ve "bad leaver değilim" diyor.
 - Riski: [DÜŞÜK/ORTA/YÜKSEK] + gerekçe
 
 SENARYO B — DRAG-ALONG KÖTÜYE KULLANIM:
-Yatırımcılar %25 C hissesiyle co-founder'larla birleşip drag-along başlatmak istiyor.
+Yatırımcılar 300 adet C hissesiyle (1.300 toplam hissenin ~%23'ü) co-founder'larla
+birleşip drag-along başlatmak istiyor.
 - %75 eşiği gerçekten founder'ı koruyor mu? Matematik:
   Founder A oyları: 900×10 = 9000
   Co-F1+Co-F2 B oyları: 100×1 = 100
-  Yatırımcı C oyları (max %30): 300×1 = 300
+  Yatırımcı C oyları (300 adet = sermayenin ~%23'ü): 300×1 = 300
   Toplam: 9400 oy — %75 eşiği = 7050 oy
   Founder tek başına: 9000 oy → Drag-along'u engeller mi? EVET/HAYIR
 - Drag-along minimum fiyat koruması belgede var mı?
+- NOT (tek sahip): Bu oy matematiğinin kanonik sahibi bu senaryodur —
+  Agent 12 Senaryo 2 hesabı TEKRARLAMAZ, buraya atıf verir.
 
 SENARYO C — "FAIR VALUE" ANLAŞMAZLIĞI:
 Bad leaver co-founder, fair value'nun çok düşük hesaplandığını iddia ediyor.
@@ -76,19 +79,16 @@ Skatteetaten 30k NOK transferini sorgular.
 - Belgeler bu transferi destekliyor mu?
 - "Arm's length" prensibi sağlanmış mı?
 - Savunma argümanları: [liste]
-- CONCRETE PENALTY CALCULATION (Skatteforvaltningsloven §14-3):
-  If Skatteetaten wins and reclassifies the transfer as undervalued:
-  → Assume company was worth 500,000 NOK at transfer time (conservative)
-  → Taxable gain to holding: 500,000 - 30,000 = 470,000 NOK
-  → Income tax on gain: 470,000 × 22% = 103,400 NOK
-  → Tilleggsskatt (penalty, Skatteforvaltningsloven §14-3): 20% of underpaid tax
-    = 103,400 × 20% = 20,680 NOK
-  → Interest (forsinkelsesrente, current ~8%/year): variable
-  → TOTAL WORST CASE EXPOSURE: ~124,000 NOK + interest
+- CONCRETE PENALTY CALCULATION: bkz. Agent 12 (Şeytan'ın Avukatı) Senaryo 3 —
+  ceza hesabının TEK SAHİBİ o senaryodur (200k/500k NOK değerleme varsayımları,
+  %22 gelir vergisi, %20 tilleggsskatt, forsinkelsesrente formülü). Hesabı burada
+  TEKRARLAMA — Agent 12 Senaryo 3'ün sonuçlarını girdi al, bu senaryoda yalnızca
+  mahkeme dayanıklılığı ve savunma stratejisini değerlendir.
   → Mitigation: contemporaneous valuation documentation reduces penalty to 0
-    if "unnskyldelig" (excusable) standard met (§14-3 tredje ledd)
-  CONFIDENCE: MED (calculation based on statutory rates; actual exposure depends
-  on actual transfer-date valuation established by Skatteetaten)
+    if "unnskyldelig" (excusable) standard met (Skatteforvaltningsloven §14-3
+    tredje ledd)
+  CONFIDENCE: MED (actual exposure depends on the transfer-date valuation
+  Skatteetaten can establish)
 
 SENARYO H — YATIRIMCI KOALİSYONU VEDTEKTER DEĞİŞİKLİĞİ:
 Investor coalition holds 30% C shares + co-founders' 10% B shares = 40% combined.
@@ -118,7 +118,10 @@ company decision that violated Aksjeloven.
 - When is the founder at risk? Concrete examples to test:
   → Paid a supplier from company funds after knowing the company was insolvent
   → Signed a contract outside authorized scope (§6-14 violation)
-  → Failed to convene general meeting when equity fell below 50% of share capital (§3-5)
+  → Failed to fulfil the handleplikt (Aksjeloven §3-5) when equity was no longer
+    "forsvarlig" per §3-4 — NOTE: the former fixed "50% of share capital" trigger
+    was repealed in 2019; the duty now attaches to the discretionary forsvarlig
+    egenkapital standard of §3-4
   → Provided false information to Brønnøysund/Altinn
 - Protection mechanism: founder's proper documentation of decisions (styreprotokoll)
   → A well-documented board decision, even if commercially wrong, limits §17-1 exposure
@@ -207,6 +210,171 @@ gaps, not yet court-tested in Norway); CONFIDENCE: LOW specifically on the
 vedtekter-as-constructive-notice doctrinal claim (see above — flagged
 separately per the system's per-claim confidence convention)
 
+SENARYO L — FOUNDER/CO-FOUNDER ÖLÜMÜ VEYA KALICI İŞ GÖREMEZLİĞİ:
+Olay: Co-founder (%5 B, vesting'in 20. ayında) ölür — hisseler dødsbo'ya, sonra
+mirasçılara geçer. Varyant: founder kalıcı iş göremez hale gelir ve şirketi
+fiilen yönetemez.
+İddialar:
+- Mirasçılar: "Hisseler miras yoluyla bize geçti; aksjonæravtale'yi biz
+  imzalamadık, forkjøpsrett/geri alım bizi bağlamaz."
+- Şirket/founder: "Vedtekter'deki devir kısıtlamaları ve sweat equity'deki
+  leaver mekanizması ölüm halinde de uygulanır."
+Mahkeme analizi:
+- Aksjeloven §4-15 ila §4-17: samtykke ve forkjøpsrett kural olarak miras
+  (arv) yoluyla geçişte de uygulanabilir — ANCAK yalnızca vedtekter'de yazılıysa
+  herkese (mirasçılar dahil) karşı ileri sürülebilir; aksjonæravtale sadece
+  imzacıları bağlar, mirasçının halef olarak bağlı olup olmadığı tartışmalıdır.
+- Sweat equity: ölüm/kalıcı iş göremezlik Good Leaver tanımında mı? (Agent 18
+  Review 2.3 aynı soruyu sorar.) Tanımsızsa mirasçılar unvested hisseler için
+  de hak iddia eder.
+- Founder ölümü varyantı: A hisselerinin 10:1 oyu mirasçıya geçer mi, yoksa
+  devirle C'ye dönüşüm klozu ölümde de tetiklenir mi? Belgede açık değilse
+  yorum riski yüksek.
+Court Prediction: vedtekter'de mekanizma varsa şirket kazanır; yalnızca
+aksjonæravtale'deyse belirsiz. CONFIDENCE: HIGH (vedtekter'in erga omnes
+etkisi) / MED (mirasçının aksjonæravtale ile bağlılığı — doktrin bölünmüş)
+Sözleşme önerisi:
+- Vedtekter'e: "Hissedarın ölümü halinde diğer hissedarlar hisseleri fair
+  value üzerinden innløsning/forkjøp hakkına sahiptir" (§4-17 çerçevesi).
+- Sweat equity'ye: ölüm + kalıcı iş göremezlik (doktor raporlu) = Good Leaver;
+  vested hisseler için şirkete fair value geri alım OPSİYONU; unvested düşer.
+- Founder tarafı: A→C dönüşüm klozunun ölüm/miras halini açıkça düzenlemesi +
+  nøkkelpersonforsikring (key person sigortası) ile geri alımın finansmanı.
+
+SENARYO M — BOŞANMA / FELLESEIE HİSSE BÖLÜNMESİ:
+Olay: Founder (veya co-founder) boşanıyor. Evlilikte ektepakt yok → hisseler
+felleseie (ortak mal rejimi) kapsamında bölüşüme girer.
+İddialar:
+- Eş: ekteskapsloven §58 uyarınca net değerin yarısını talep eder; değer
+  tartışmalıysa hisselerin bir kısmının AYNEN devrini ister.
+- Founder: hisseler kişisel girişimin ürünü; ayrıca kuruluş sermayesi evlilik
+  öncesi varlıktan geldiyse skjevdeling (§59) iddiası.
+Mahkeme analizi:
+- Ana kural: bölüşüm DEĞER üzerindendir; eşya tahsisinde hisseler kural olarak
+  hissedar eşte kalır (ekteskapsloven §66-67 çerçevesi) — ama founder eşe
+  ödeyecek likiditeyi bulamazsa fiilen hisse satışı/devri gündeme gelir.
+- Skjevdeling (§59): evlilik öncesi/miras kaynaklı değerler bölüşüm dışı —
+  ispat yükü founder'da; startup değer artışının "evlilik içi emek"ten mi
+  kaynaklandığı tartışması açılır.
+- Eşe fiilî devir olursa: vedtekter'deki samtykke + forkjøpsrett tetiklenir mi?
+  Vedtekter'de yazılıysa evet — eş de herkese karşı etkili kısıtlamalara tabi.
+Court Prediction: hisselerin kendisi genelde founder'da kalır (değer alacağı
+ödenir) — ama likidite riski gerçek. CONFIDENCE: HIGH (değer-bölüşümü ana
+kuralı) / MED (skjevdeling sonucu — vaka olgusuna bağlı)
+Sözleşme önerisi:
+- En güçlü koruma belge DIŞI: særeie kuran tinglyst ektepakt (hisseleri özel
+  mal yapar) — founder'a ve co-founder'lara öner.
+- Aksjonæravtale'ye: "Her taraf, hisselerini særeie olarak tutmak için gerekli
+  ektepakt'ı yapmayı ve talep halinde ibraz etmeyi taahhüt eder; boşanma
+  sonucu hisse devri gündeme gelirse diğer hissedarların fair value'den
+  forkjøpsrett'i doğar."
+- Vedtekter'e: boşanma/mal rejimi tasfiyesi yoluyla devir = samtykke +
+  forkjøpsrett tetikleyicisi olduğunun açıkça yazılması.
+
+SENARYO N — HİSSEDAR İFLASI / KREDİTÖR HACZİ:
+Olay: Co-founder kişisel konkurs'a girer; hisseler konkursbo'ya geçer.
+Varyant: bir kreditör hisselere utlegg (haciz) koyar ve cebri satış ister.
+İddialar:
+- Konkursbo/kreditör: "Dekningsloven uyarınca borçlunun tüm malvarlığı bo'ya
+  geçer; aksjonæravtale'deki devir kısıtlamaları bizi bağlamaz, hisseleri en
+  yüksek teklife satarız."
+- Şirket: "Vedtekter'deki samtykke ve forkjøpsrett cebri satışta da uygulanır;
+  alıcı kim olursa olsun kısıtlamalara tabidir."
+Mahkeme analizi:
+- Dekningsloven §2-2: borçlunun haczedilebilir tüm malvarlığı kreditörlere
+  açıktır — hisselerin bo'ya geçişi engellenemez.
+- ANCAK: vedtekter'deki devir kısıtlamaları hissenin NİTELİĞİNE bağlıdır ve
+  cebri satış alıcısına karşı da ileri sürülebilir (erga omnes); yalnızca
+  aksjonæravtale'de kalan kısıtlamaların bo'ya karşı etkisi zayıf/tartışmalı.
+- Dikkat — omstøtelse/kreditör itirazı riski: iflas halinde hisseleri NOMINAL
+  değerden zorla geri alan bir kloz, kreditörlerden değer kaçırma olarak
+  saldırıya açıktır; fair value bazlı innløsning çok daha savunulabilir.
+Court Prediction: bo hisseleri alır ama vedtekter kısıtlamalarına tabi satar;
+nominal-değer zorunlu devir klozu iflasta ayakta kalmayabilir.
+CONFIDENCE: HIGH (dekningsloven ana kuralı + vedtekter'in erga omnes etkisi) /
+MED (nominal-fiyat klozunun iflasta akıbeti — emsal sınırlı)
+Sözleşme önerisi:
+- Vedtekter'e: "Bir hissedar hakkında konkurs açılması veya hisselerine utlegg
+  konulması halinde, diğer hissedarlar hisseleri bağımsız belirlenen fair
+  value üzerinden innløsning hakkına sahiptir."
+- Aksjonæravtale'ye: iflas/haciz = otomatik satış tetikleyicisi + oy
+  haklarının devir tamamlanana dek askıya alınması (bo'nun şirket yönetimine
+  karışmasını sınırlar — geçerliliği LOW confidence, avukat teyidi şart).
+
+SENARYO O — YATIRIMCI TRANCHE TEMERRÜDÜ:
+Olay: Yatırımcı 2M NOK taahhüdün ilk 1M'ini ödedi; 2. tranche (1M) vadesinde
+"milestone karşılanmadı" diyerek ödemiyor. Şirketin runway'i 3 ay.
+İddialar:
+- Yatırımcı: "Tranche 2 milestone'a bağlıydı; milestone (ör. X müşteri/ARR)
+  karşılanmadı — ödeme yükümlülüğüm doğmadı."
+- Şirket: "Milestone objektif olarak karşılandı; tegning bağlayıcıdır,
+  yatırımcı temerrütte."
+Mahkeme analizi:
+- Tegnet ama ödenmemiş sermaye: Aksjeloven §2-11 ila §2-13 (kuruluş) ve
+  emisyonda paralel rejim — şirket ödemeyi dava edebilir; §2-13: gecikme
+  bildirimi sonrası hisseler iptal edilebilir veya başkasına devredilebilir,
+  gecikme faizi işler.
+- Kritik olgu: tranche yapısı HUKUKEN nasıl kurulmuş? (a) Tek emisyonda tegnet
+  + vadeli ödeme → §2-13 rejimi şirket lehine güçlü. (b) İleri tarihli AYRI
+  emisyon taahhüdü (yatırım sözleşmesi) → genel sözleşme hukuku; muğlak
+  milestone yatırımcı lehine yorumlanır, spesifik ifa yerine tazminatla
+  sınırlı kalma riski.
+- Forsinkelsesrente: Norges Bank styringsrente + 8 puan (fiilen ~%11-12,5;
+  güncel oran DOĞRULANMALI — lovdata.no/forsinkelsesrenteloven + Norges Bank
+  fetch).
+Court Prediction: milestone'lar objektif yazılmışsa şirket kazanır; muğlaksa
+belirsiz ve süreç şirketin runway'inden uzun sürer (asıl risk budur).
+CONFIDENCE: HIGH (§2-13 mekanizması) / MED (milestone yorumu — taslak diline
+bağlı)
+Sözleşme önerisi:
+- Milestone'ları objektif, ölçülebilir, üçüncü tarafça doğrulanabilir yaz
+  (ör. "Regnskapsfører onaylı MRR ≥ X NOK"); "tatmin edici ilerleme" gibi
+  sübjektif ifadeler YASAK.
+- Tranche'ları ayrı emisyonlar olarak yapılandır: ödenmeyen tranche = hisse
+  ihraç edilmez → cap table bozulmaz, şirket sadece parayı değil hisseyi de
+  vermemiş olur.
+- Temerrüt klozu: ödenmeyen tranche halinde yatırımcının (a) pro-rata /
+  anti-dilution hakları, (b) board/observer ve veto hakları askıya alınır
+  ("pay-to-play" mantığı) + forsinkelsesrente + şirketin ifa VEYA iptal
+  seçimlik hakkı.
+
+SENARYO P — 2 KİŞİLİK BOARD DEADLOCK:
+Olay: Board 2 üyeli — founder (styreleder) + yatırımcı temsilcisi. Yıllık
+bütçe ve daglig leder ataması 1-1 kilitlendi; iki board toplantısı sonuçsuz,
+şirket kararsız kaldı.
+İddialar:
+- Yatırımcı: "Şirket organları işlemez durumda (alvorlig motsetningsforhold) —
+  §16-19 oppløsning davası açarız / §4-24 uttreden isteriz; ya da vedtekter'i
+  değiştirip board'u 3 üyeye çıkaralım."
+- Founder: "Aksjeloven §6-25: oylar eşitse møteleder'in oyu belirleyicidir —
+  deadlock diye bir şey hukuken yok, benim oyum üstün."
+Mahkeme analizi:
+- Aksjeloven §6-25 (kanuni default): oy eşitliğinde møteleder'in (styreleder)
+  oyu belirleyicidir — styreleder founder ise founder fiilen kazanır; vedtekter
+  bu default'u değiştirmedikçe geçerli. BU YÜZDEN styreleder'in KİM olduğu ve
+  bunun nasıl kilitlendiği kritik.
+- Ancak casting vote her şeyi çözmez: GENERALFORSAMLING seviyesindeki
+  deadlock (ör. %50-%50 hisse) §6-25 ile çözülmez; burada Suderra yapısında
+  founder'ın 10:1 A oyu GF deadlock'unu zaten önler.
+- §16-19 fesih: "myndighetsmisbruk veya alvorlig og varig motsetningsforhold"
+  eşiği YÜKSEK — mahkemeler feshi son çare görür; ama uzayan, belgelenmiş
+  yönetim felci gerçek bir dava riski yaratır.
+Court Prediction: founder styreleder ise deadlock iddiası büyük ölçüde
+etkisiz (casting vote); founder styreleder DEĞİLSE risk tersine döner.
+CONFIDENCE: HIGH (§6-25 metni açık) / MED (§16-19 fesih tahmini — emsal
+azınlık lehine nadiren sonuçlanır)
+Sözleşme önerisi:
+- Vedtekter/aksjonæravtale'ye: "Styreleder, A hissedarlarının aday gösterdiği
+  kişidir" — §6-25 casting vote'u founder'da yapısal olarak kilitle; bu hakkın
+  değiştirilmesi tüm A hissedarlarının yazılı onayına bağlansın.
+- Tek sayılı board hedefle (1 veya 3 üye); 2 üyeli yapı kalacaksa casting
+  vote'un varlığını ve kimde olduğunu AÇIKÇA yaz (kanuna güvenip susma).
+- Kademeli deadlock klozu: 30 gün müzakere → mediation → önceden tanımlı
+  tie-breaker. Buy-sell (Texas shoot-out/Russian roulette) klozlarına DİKKAT:
+  nakit gücü yüksek tarafı (yatırımcıyı) avantajlı kılar — founder aleyhine
+  çalışabilir; ancak bilinçli tercih olarak eklensin. CONFIDENCE: LOW (bu tür
+  klozların Norveç'te dar emsali var — avukat teyidi şart).
+
 HER SENARYO İÇİN FORMAT:
   Risk Level: [LOW / MEDIUM / HIGH / CRITICAL]
   Current Status in Document: [present? sufficient?]
@@ -236,7 +404,7 @@ STANDARD FAILURE HANDLING:
 ## Çıktı
 
 ```
-COURT STRESS TEST REPORT — 11 SCENARIOS
+COURT STRESS TEST REPORT — 16 SCENARIOS (A-P)
 ────────────────────────────────────────
 SCENARIO A (Bad Leaver Dispute):
   Risk: [LOW / MEDIUM / HIGH]
@@ -244,7 +412,7 @@ SCENARIO A (Bad Leaver Dispute):
   Weak point: [clause]
   Mitigation: [revision]
 
-[...B through K scenarios...]
+[...B through P scenarios...]
 
 GENEL MAHKEME DAYANIKLILIK SKORU:
   Stiftelsesdokument: [1-10]

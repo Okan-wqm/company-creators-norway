@@ -111,15 +111,35 @@ STEP 1: PREPARE STIFTELSESDOKUMENT (Foundation Document)
   □ Share capital: 30,000 NOK
   □ Share classes: A (900 shares, 10:1 voting), B (100 shares, 1:1 voting)
   □ Shareholders and their initial subscriptions
-  □ Board of directors (styret): at least 1 member for AS < 3M NOK capital
+  □ Board of directors (styret): 1 member is sufficient — every AS can be
+    founded with a single board member (the old < 3M NOK capital condition
+    was abolished in 2013; no capital-based board-size requirement exists)
   □ CEO (daglig leder): named if applicable
   □ Accounting year (regnskapsår): Jan 1 – Dec 31 (recommended)
   □ CRITICAL: "Fravalg av revisjon" clause (audit waiver):
-      Text: "Generalforsamlingen beslutter at selskapet ikke skal ha revisor
-             etter revisorloven §2-1 andre ledd."
+      Text: "Generalforsamlingen beslutter at selskapet ikke skal ha revisor,
+             jf. aksjeloven §7-6."
+      Legal basis: Aksjeloven §7-6 (NOT Revisorloven §2-1)
       Saves 30,000-50,000 NOK/year in audit fees
-      Condition: Revenue < 5M NOK, balance < 10M NOK, < 10 employees
+      Condition (raised May 2023): driftsinntekter under ~7M NOK,
+      balansesum under ~27M NOK, average workforce not exceeding 10 årsverk
+      → DOĞRULANMALI: fetch current thresholds from
+        lovdata.no/lov/1997-06-13-44/§7-6 + associated forskrift before relying
   □ All founders sign the stiftelsesdokument
+
+  ⚠️ 3-MONTH REGISTRATION DEADLINE (Aksjeloven §2-18) ⚠️
+  The company MUST be notified to Foretaksregisteret within THREE MONTHS of
+  the signing of the stiftelsesdokument. If the deadline passes:
+  → The founding lapses (kuruluş geçersiz hale gelir) — share subscriptions
+    are no longer binding and deposited capital must be returned
+  → The entire founding process (documents + signatures) must be REDONE
+  → Plan the timeline so bank confirmation (Step 2) and Altinn filing
+    (Steps 3-5) all complete comfortably inside the 3-month window
+  PRECONDITION — INNSKUDDSBEKREFTELSE: registration CANNOT be submitted
+  without confirmation that the 30,000 NOK share capital has been paid in.
+  The confirmation must come from a bank, or another authorized confirmer
+  (finansforetak; revisor/advokat where permitted for cash contributions) —
+  this is the Step 2 bank letter. No bekreftelse = no registration.
 
 STEP 2: OPEN TEMPORARY BANK ACCOUNT (aksjeinnskuddskonto)
   → Contact: DNB, SpareBank 1, Sparebanken Vest, or Nordea
@@ -168,7 +188,11 @@ STEP 5: SIGN AND SUBMIT
     was submitted, independent of what Brønnøysund later confirms
   → Submit the form
   → Current processing time: 1-5 business days (verify at brreg.no)
-  → Current registration fee: 1,890 NOK (verify at brreg.no)
+  → Current registration fee: AS electronic registration in Foretaksregisteret
+    is in the ~5,570-6,000+ NOK range (paper filing costs more)
+    → DOĞRULANMALI: fetch the exact current fee from
+      brreg.no (gebyrer/priser page) before budgeting — fees are adjusted
+      periodically
 
 ─── PHASE 3: AFTER REGISTRATION (within 1 week of org.nr.) ───
 
@@ -207,11 +231,17 @@ STEP 8: TRANSFER CONTRACTS TO THE COMPANY
        fra og med [dato]."
   → All parties to the contracts should be notified in writing
 
-STEP 9: REGISTER FOR EMPLOYER TAX (if applicable)
-  → If co-founders will be employees: register at nav.no/arbeidsgiver
-  → URL: https://www.nav.no/arbeidsgiveravgift
-  → a-ordningen monthly reporting begins immediately
-  → First payment deadline: within 15th of following month
+STEP 9: REGISTER AS EMPLOYER (if applicable)
+  → If co-founders will be employees: employer registration and a-melding run
+    through the a-ordningen — reported via Altinn / Skatteetaten (NOT a
+    separate NAV portal; NAV, SSB and Skatteetaten all receive the a-melding
+    through this single channel)
+  → URL: https://www.skatteetaten.no/bedrift-og-organisasjon/arbeidsgiver/a-meldingen/
+  → a-ordningen monthly REPORTING: a-melding due by the 5th of the FOLLOWING
+    month (even a "null" report if registered but no salary paid)
+  → PAYMENT is separate from reporting: forskuddstrekk (withheld tax) and
+    arbeidsgiveravgift are paid in six two-month terminer, due the 15th
+    (15 Jan, 15 Mar, 15 May, 15 Jul, 15 Sep, 15 Nov) — see Agent 21 calendar
 
 STEP 10: MAINTAIN THE AKSJEBOK (Share Register)
   → Norwegian law requires a share register for all AS companies
@@ -219,7 +249,9 @@ STEP 10: MAINTAIN THE AKSJEBOK (Share Register)
       a) Verdipapirsentralen (VPS) — official, costs ~2,000 NOK/year
       b) Private register (physical or digital) — free, but founder must maintain
   → Must record: shareholder names, share class, number of shares, transfer history
-  → Update within 30 days of any share transfer
+  → Update "uten opphold" (without delay) upon any share transfer — this is the
+    Aksjeloven §4-5 statutory standard; do not substitute an arbitrary number
+    of days (same standard used in Agent 13's error catalog, item 19)
   → If the CEO/CFO is not the Founder: the Founder must hold an independent
     copy of (or direct access to) the aksjebok — do not rely solely on a
     register the CEO/CFO alone maintains and controls; VPS option (a) is
@@ -242,18 +274,27 @@ STEP 11: POST-FILING INDEPENDENT VERIFICATION (Founder does this personally)
 
 ─── PHASE 4: ANNUAL OBLIGATIONS (starts year 1) ───
 
-ANNUAL FILINGS (see also Agent 21 — Annual Compliance Calendar):
+ANNUAL FILINGS (see also Agent 21 — Annual Compliance Calendar, which is the
+single owner of the full deadline calendar):
 
-□ By 31 May: Årsregnskap (annual financial statements) to Brønnøysund
-  → File through: regnskapsregisteret.no
-  → If fravalg av revisjon: no audit required (verify eligibility annually)
+□ By 31 Jan: Aksjonærregisteroppgave (RF-1086) to Skatteetaten
+
+□ By 31 May: Skattemelding (corporate tax return) to Skatteetaten
+  → Skattefunn claim (RF-1053) is filed as an ATTACHMENT to the skattemelding —
+    it is NOT a separate 15 June filing (see Agent 07 / Agent 21)
+
+□ By 30 Jun: Ordinær generalforsamling approves (fastsetter) the årsregnskap
+  (Aksjeloven §5-5: within 6 months of fiscal year end)
+
+□ By 31 Jul: Årsregnskap filed with Regnskapsregisteret (via Altinn)
+  → Forsinkelsesgebyr (late fee) accrues in practice from 1 August
+  → If fravalg av revisjon: no audit required (verify eligibility annually
+    against the Aksjeloven §7-6 thresholds)
 
 □ Within 30 days: Any changes to:
   → Board composition → file "Melding om endring" through Altinn
   → Share capital increases → file new aksjekapital melding
   → Address changes → update in Enhetsregisteret
-
-□ By 15 June: Skattefunn RF-1053 if claiming R&D tax credit (see Agent 07)
 
 ──────────────────────────────────────
 COMMON MISTAKES TO AVOID
@@ -262,7 +303,11 @@ MISTAKE 1: Signing contracts before org.nr.
 → Personal liability risk. Wait or add explicit ratification clause.
 
 MISTAKE 2: Forgetting "fravalg av revisjon" in stiftelsesdokument
-→ Must be in the founding document; cannot easily be added later
+→ Best practice is to include it in the founding document — but it is NOT
+  irreversible: fravalg can also be decided later by the generalforsamling
+  under Aksjeloven §7-6 (GF authorizes the board / resolves not to have a
+  revisor). Including it at founding simply avoids an extra GF resolution
+  and any interim audit obligation.
 → Saves 30,000-50,000 NOK/year
 
 MISTAKE 3: Using incorrect næringskode
@@ -305,7 +350,7 @@ CONFIDENCE LEVELS:
 |--------|--------|
 | Agent 11 (Belge Uzmanı) | Stiftelsesdokument taslağı |
 | Şirket parametreleri | 30,000 NOK sermaye, A/B/C hisseleri |
-| Agent 17 (Styrereglement) | Hazine kontrol eşiği, dual-approval gereksinimi |
+| Agent 17 (Styrereglement) | Hazine kontrol eşiği, dual-approval gereksinimi VE signaturrett "i fellesskap" gereksinimi — bu gereksinimler Agent 17'den GELİR, bu agent tescilde UYGULAR |
 
 ## Çıktı
 
@@ -348,12 +393,20 @@ YILLIK YÜKÜMLÜLÜKLERİN ÖZETİ: [Tarih bazlı liste]
 
 UYARILAR:
   ⚠️ Pre-registration sözleşme riski — kişisel sorumluluk
-  ⚠️ Fravalg av revisjon — stiftelsesdokument'e eklendi mi?
+  ⚠️ 3 AY TESCİL SÜRESİ (Aksjeloven §2-18) — stiftelsesdokument imzasından
+     itibaren 3 ay içinde Foretaksregisteret'e bildirim yapılmazsa KURULUŞ
+     GEÇERSİZ olur; tüm süreç baştan. İmza tarihi + 3 ay son tarihini not et.
+  ⚠️ Innskuddsbekreftelse olmadan tescil BAŞVURULAMAZ — 30k sermayenin banka/
+     yetkili kurum teyidi ön şarttır (Step 2)
+  ⚠️ Fravalg av revisjon — stiftelsesdokument'e eklendi mi? (dayanak: aksjeloven §7-6)
   ⚠️ Signaturrett "alene" ise — Agent 17 Hazine Kontrolleri PRATİKTE işlemez
 ```
 
 ## Sonraki Agent'lar
 → S2-00.5 (Pre-Flight): Tescil tamamlandı → L1 ve L2 checkboxları geçti
 → Agent 21 (Yıllık Uyum): Yıllık takvimdeki dosyalama tarihlerini takip et
-→ Agent 17 (Styrereglement): §6.2 Hazine Kontrolleri ancak banka dual-approval
-  ve signaturrett "i fellesskap" burada tamamlandıktan SONRA gerçekten etkin olur
+→ Agent 17 (Styrereglement): signaturrett/dual-approval GEREKSİNİMİ Agent 17'den
+  bu agent'a girdi olarak gelir (yukarıdaki girdi tablosu) — bu agent yalnızca
+  UYGULAMA DURUMUNU geri raporlar: §6.2 Hazine Kontrolleri ancak banka
+  dual-approval ve signaturrett "i fellesskap" burada fiilen tamamlandıktan
+  SONRA gerçekten etkin olur

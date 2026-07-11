@@ -39,12 +39,20 @@ CRITICAL PRINCIPLE:
   Frame everything through the NATIONAL INTEREST lens.
 
 ═══════════════════════════════════════════════════
-PROGRAM 1: INNOVASJON NORGE — OPPSTARTS- OG VEKSTTILSKUDD
+PROGRAM 1: INNOVASJON NORGE — OPPSTARTSTILSKUDD
+(markedsavklaringstilskudd + kommersialiseringstilskudd)
 ═══════════════════════════════════════════════════
 
-Purpose: Grants for Norwegian startups with growth potential.
-Amount: Typically 300,000 - 1,500,000 NOK (non-dilutive grant)
-Process: Online application via Altinn → Regional IN office review
+NOTE: "Oppstarts- og veksttilskudd" is NOT the official current program name.
+The current startup grant instruments are (DOĞRULANMALI — FETCH
+https://www.innovasjonnorge.no/no/tjenester/ live before drafting):
+  → Markedsavklaringstilskudd: ~150,000 NOK (early market validation phase)
+  → Kommersialiseringstilskudd: up to ~1,500,000 NOK (staged/kademeli —
+    typically paid out in milestones)
+
+Purpose: Grants for Norwegian startups with growth potential (non-dilutive).
+Process: Online application via Innovasjon Norge's own "Min side" portal
+  (NOT Altinn) → Regional IN office review
 Timeline: 2-4 months for initial decision
 Key evaluator criteria: Innovation degree, market potential, team capacity,
   Norwegian value creation
@@ -68,7 +76,9 @@ APPLICATION SECTIONS TO DRAFT:
   Word limit guidance: 400-600 words
 
 1.3 MARKEDSBESKRIVELSE (Market Description)
-  → Norwegian aquaculture market size (salmon alone: ~180 billion NOK annual value)
+  → Norwegian seafood export value: ~175 billion NOK total, of which salmon
+    ~123 billion NOK (2024 — source: Norges sjømatråd; DOĞRULANMALI —
+    fetch current export figures from seafood.no before drafting)
   → Number of potential customers: [use S2-07 founder data]
   → International expansion opportunity (Chile, Scotland, Canada)
   → Innovasjon Norge loves "export potential" — emphasize it
@@ -131,15 +141,21 @@ APPLICATION FOCUS:
   Mark placeholders with [DATA NEEDED: source = Fiskeridirektoratet annual report]
 
 ═══════════════════════════════════════════════════
-PROGRAM 3: NORGES FORSKNINGSRÅD — BIA PROGRAM
+PROGRAM 3: NORGES FORSKNINGSRÅD — INNOVASJONSPROSJEKT I NÆRINGSLIVET (IPN)
 ═══════════════════════════════════════════════════
 
-BIA = Brukerstyrt Innovasjonsarena (User-directed Innovation Arena)
-Purpose: Fund R&D projects with industry participation
-Amount: 25-50% of R&D costs (3-4 MNOK is typical)
-Requirement: Collaboration with at least one research institution
-  (SINTEF, NTNU, Bergen, Høgskolene — e.g., SINTEF Ocean for aquaculture)
-Timeline: Applications accepted 2x per year; review takes 3-6 months
+NOTE: The former BIA program (Brukerstyrt Innovasjonsarena) no longer exists —
+it was replaced around 2020 by "Innovasjonsprosjekt i næringslivet" (IPN).
+FETCH https://www.forskningsradet.no/ and verify the current IPN call terms
+(rates, deadlines, partnership requirements) before drafting.
+
+Purpose: Fund company-led R&D projects
+Amount: 25-50% of R&D costs (3-4 MNOK is typical — DOĞRULANMALI against current call)
+Partnership: Collaboration with a research institution (SINTEF, NTNU,
+  Universitetet i Bergen, høgskolene — e.g., SINTEF Ocean for aquaculture)
+  is ENCOURAGED and strengthens the application, but is NOT mandatory
+Timeline: Applications are largely accepted on a rolling basis (løpende);
+  review takes 3-6 months (verify current call schedule)
 
 APPLICATION FOCUS:
   → Research question: "How can real-time sensor integration and machine
@@ -155,10 +171,11 @@ APPLICATION FOCUS:
   → Dissemination plan (how will results be shared?)
   → Budget (research costs vs. commercialization costs)
 
-  NOTE: BIA is more complex than Innovasjon Norge.
-  Mark sections that require a university/SINTEF partner to complete.
-  Recommendation: First approach SINTEF Ocean to confirm partnership interest,
-  then co-apply. Contact: sintef.no/ocean
+  NOTE: IPN is more complex than Innovasjon Norge.
+  Mark sections that benefit from a university/SINTEF partner.
+  Recommendation: A research partner is not mandatory, but approaching
+  SINTEF Ocean to confirm partnership interest before applying significantly
+  strengthens the application. Contact: sintef.no/ocean
 
 ═══════════════════════════════════════════════════
 PROGRAM 4: SKATTEFUNN (TAX INCENTIVE PROGRAM)
@@ -166,18 +183,29 @@ PROGRAM 4: SKATTEFUNN (TAX INCENTIVE PROGRAM)
 
 Purpose: 19% tax deduction on approved R&D costs (up to 25 MNOK costs)
 Apply via: Norges Forskningsråd (NFR) → then file with Skatteetaten
-Deadline: Application before fiscal year end (soft deadline: April 1 for current year)
+Deadline: Garantifrist is 1 September — applications submitted by 1 September
+  are guaranteed processing within the same income year. Apply as early as
+  possible; applications after 1 September risk falling to the next year.
 Website: skattefunn.no
 
 APPLICATION FOCUS:
   → Project title: "Utvikling av SaaS-plattform for sanntidsoperasjonsovervåking
     i norsk havbruk" (Development of SaaS platform for real-time operations
     monitoring in Norwegian aquaculture)
-  → R&D category: INDUSTRIELL FORSKNING (not "eksperimentell utvikling")
-    → Why: Suderra is developing new knowledge applicable to industry
-    → This category allows broader cost eligibility
+  → R&D category: choose based on the PROJECT'S ACTUAL NATURE — do not
+    pick a category for perceived eligibility advantage:
+    → SaaS product development is typically "EKSPERIMENTELL UTVIKLING"
+      (developing new/improved products using existing knowledge)
+    → "Industriell forskning" applies only if the project generates new
+      generalizable knowledge (rare for a SaaS startup)
+    → Since 2020 the rate (19%) and cost cap (25 MNOK) are IDENTICAL for
+      both categories — there is NO "broader eligibility" from choosing
+      industriell forskning; misclassification risks rejection
   → Eligible costs: salaries of technical staff working on R&D,
     materials, external consultants, testing costs
+    → Hourly rate cap for own personnel: ~700 NOK/hour
+      (DOĞRULANMALI — fetch current rate from skattefunn.no),
+      max 1,850 hours/year/person
   → NOT eligible: sales, marketing, customer support, administration
 
   Draft the project description (200-300 words):
@@ -250,11 +278,13 @@ IMMEDIATE (start within 2 weeks):
      → Email Bergen Teknologioverføring or Blue Legasea this week
 
 SHORT-TERM (1-3 months):
-  3. Innovasjon Norge Oppstarts- — primary grant application
+  3. Innovasjon Norge oppstartstilskudd (markedsavklaring → kommersialisering) —
+     primary grant application
   4. Innovasjon Norge Miljøteknologiordningen — supplement if environmental data ready
 
 MEDIUM-TERM (3-6 months):
-  5. Norges Forskningsråd BIA — requires research partner first
+  5. Norges Forskningsråd IPN — løpende application; research partner not
+     mandatory but strengthens the case
      → Initiate SINTEF Ocean partnership conversation before application
   6. Havbruksfond — low probability but zero dilution
 
@@ -297,14 +327,14 @@ NORVEÇ DEVLET FONU BAŞVURU PAKETİ — SUDERRA AS
 PROGRAM DURUMU:
   Skattefunn: HAZIR — bu hafta başvur
   SIVA inkubator: HAZIR — bu hafta e-posta at
-  Innovasjon Norge Oppstarts-: [taslak hazır / eksik veri: X]
+  IN oppstartstilskudd (markedsavklaring/kommersialisering): [taslak hazır / eksik veri: X]
   Miljøteknologiordningen: [taslak hazır / çevre verisi gerekiyor]
-  BIA NFR: [SINTEF ortaklığı bekleniyor]
+  IPN (NFR): [løpende — SINTEF ortaklığı güçlendirici, zorunlu değil]
   Havbruksfond: [hangi belediye hedeflendi]
 
 TASLAK BAŞVURULAR:
   1. Skattefunn proje açıklaması (200-300 kelime, Norveçce)
-  2. Innovasjon Norge Oppstarts- tam başvuru taslağı
+  2. Innovasjon Norge oppstartstilskudd tam başvuru taslağı
   3. SIVA inkubator 1-sayfa giriş
   4. Havbruksfond belediye mektubu
 

@@ -41,8 +41,10 @@ GREEN FLAGS — BUNLARIN VARLIĞINI ONAYLA:
 - Makul lock-up (12 ay)
 
 MANDATORY WEB VERIFICATION — fetch BEFORE providing any investor criteria:
-→ https://www.hatchaquaculture.com/ — Hatch Bergen: current application criteria,
+→ https://www.hatch.blue/ — Hatch Bergen: current application criteria,
   portfolio companies, batch schedule, what they look for
+  (alan adı DOĞRULANMALI — fetch başarısız olursa "Hatch aquaculture accelerator
+  Bergen" web aramasıyla güncel resmi alan adını bul; eski/uydurma alan adı kullanma)
 → https://www.investinor.no/ — current investment focus, sectors, stage, how to apply
 → https://www.innovasjonnorge.no/ — aquaculture-specific programs, current open calls
 → https://www.aqua-spark.nl/ — current portfolio, stage, check size, application process
@@ -56,7 +58,10 @@ Norveç aquaculture tech yatırım ekosistemi:
 - Investinor: başvuru kriterleri (fetch + web verified)
 - Innovation Norway (Innovasjon Norge): aquaculture yazılım için fonlar (fetch + web verified)
 - Aqua-Spark, Katapult Ocean: beklentileri (fetch + web verified)
-- Norveç angel investor grupları: Norban, Follo Invest, Bergen Angels
+- Norveç angel investor grupları: Norban + web'de doğrulanabilen diğer aktif gruplar
+  ANTI-HALÜSİNASYON KURALI: "Follo Invest", "Bergen Angels" gibi isimler teyitsizdir —
+  bir grubu web'de doğrulayamazsan RAPORLAMA; yalnızca fetch/web aramasıyla varlığı
+  teyit edilen grupları listele
 - Tipik seed valuation aralığı (aquaculture yazılım, Norveç, 2025-2026)
 ```
 

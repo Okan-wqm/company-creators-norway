@@ -2,7 +2,7 @@
 
 ## Kimlik
 - **Rol:** Due Diligence Soruları & Hazır Cevap Kütüphanesi
-- **Çalışma zamanı:** FAZ 3 — S2-04 ile paralel çalışır
+- **Çalışma zamanı:** FAZ 3 — S2-04 tamamlandıktan sonra çalışır (girdisi S2-04 Top-20 listesi)
 - **Özellik:** "Yatırımcı toplantısında ne sorar?" ve "Ne cevap verirsin?" — hazırlık paketi
 
 ---
@@ -25,6 +25,7 @@ Etiketler:
   [FamilyOffice]= Bergen/Ålesund/Tromsø merkezli family office'ler
   [Strategic]   = AKVA Group, Mowi, Lerøy, SalMar gibi sektör oyuncuları
   [Bank]        = DNB Ventures, SpareBank 1 SR-Bank, Storebrand Impact gibi banka VC kolları
+  [TechVC]      = Nordic / genel tech VC'ler (S2-00 Kategori D/E — sektör bağımsız fonlar)
   [TÜMÜ]        = Her yatırımcı tipinin sorduğu evrensel sorular
 
 Format: Her "S:" satırının başına etiket ekle.
@@ -39,7 +40,7 @@ SORU KATEGORİLERİ:
 
 [TÜMÜ] S: "Küresel aquaculture pazarı büyüklüğü nedir? Sizi ilgilendiren segment?"
 C: Hazırlanacak cevap çerçevesi:
-   - Global aquaculture pazar: ~$280B (2024, büyüyor)
+   - Global aquaculture pazar: ~$300B (FAO SOFIA 2024; güncel raporla doğrula)
    - Norveç: ~$20B laks sektörü
    - Operasyon yönetim yazılımı: ~$X penetrasyon
    - SaaS penetrasyon oranı: hâlâ çok düşük → opportunity
@@ -57,7 +58,7 @@ C: Çerçeve:
    - Rakipler: AquaCloud, Fishtalk, Marel gibi platformlar
    - Suderra farkı: [founder belirleyecek]
 
-[AquaTech][Bank][TÜMÜ] S: "Norveç dışına çıkabilir misiniz?"
+[AquaTech][Bank][TechVC][TÜMÜ] S: "Norveç dışına çıkabilir misiniz?"
 C: Çerçeve:
    - Şili (2. büyük laks üreticisi), Kanada, İskoçya
    - Platform dil/lokalizasyon bariyer düşük (SaaS)
@@ -81,7 +82,7 @@ C: Çerçeve:
 C: Çerçeve:
    - Mattilsynet (gıda güvenliği) raporlama gereklilikleri
    - Akvakulturloven uyum raporlaması
-   - Norveç hükümeti dijitalleşme hedefleri 2025-2030
+   - Norveç hükümeti güncel havbruksstrategi dönemi dijitalleşme hedefleri (dönem yıllarını güncel strateji belgesinden doğrula)
 
 ─── BÖLÜM 3: İŞ MODELİ SORULARI ───
 
@@ -93,7 +94,7 @@ C: Çerçeve:
    - Enterprise vs SMB pricing
    [Founder fiyatlandırma modelini belirleyecek]
 
-[AquaTech][Angel][Bank] S: "Birim ekonominiz nedir? CAC, LTV?"
+[AquaTech][Angel][Bank][TechVC] S: "Birim ekonominiz nedir? CAC, LTV?"
 C: Çerçeve:
    - Erken aşamada tahmin: CAC = [X] NOK
    - LTV: yıllık [Y] NOK × ortalama [Z] yıl müşteri ömrü
@@ -115,10 +116,11 @@ C: Çerçeve — MUTLAKA KİŞİSEL OLMALI:
    [Founder kendi hikayesini yazacak]
 
 [TÜMÜ] S: "Co-founder'larınız kim? Ekip?"
-C: Çerçeve:
-   - 2 co-founder, sweat equity ile çalışıyor
-   - Roller: [founder belirleyecek]
-   - Vesting yapısı var (bunu sormalıysan söyle — güven sinyali)
+C: Çerçeve (S2-07 datasheet'inden DİNAMİK doldur — sabit sayı yazma;
+   anlatı hisse yapısıyla tutarlı olmalı: %90 founder / %5 + %5 co-founder'lar):
+   - Ekip bileşimi: [S2-07 datasheet — güncel co-founder sayısı ve isimleri]
+   - Roller: [S2-07 datasheet'inden]
+   - Sweat equity + vesting yapısı var (bunu sormalıysan söyle — güven sinyali)
 
 [AquaTech][Bank][TÜMÜ] S: "Teknik ekibiniz var mı? Ürünü kim yapıyor?"
 C: Çerçeve:
@@ -137,31 +139,43 @@ C: Çerçeve:
      → Operasyon / hukuki (%W)
    - Bu yatırımla ulaşılacak milestone: [ne olacak 18 ayda]
 
-[AquaTech][Angel][FamilyOffice][Strategic][Bank] S: "Valuation nedir? Nasıl hesapladınız?"
+[AquaTech][Angel][FamilyOffice][Strategic][Bank][TechVC] S: "Valuation nedir? Nasıl hesapladınız?"
 C: Çerçeve:
-   - Pre-money: [X] NOK
-   - Metodoloji: sektör benchmark (benzer Nordic SaaS seed valuations)
+   - KAYNAK ZORUNLULUĞU: Pre-money rakamı ve metodoloji S1-Agent 02
+     valuation framework çıktısından alınır — başka kaynak kullanma
+     (çift kaynak çelişkisini önler)
+   - Pre-money: [X] NOK (kaynak: S1-Agent 02)
+   - Metodoloji: sektör benchmark (benzer Nordic SaaS seed valuations,
+     S1-Agent 02 çerçevesiyle)
    - Önemli: çok yüksek valuation early stage'de kötü sinyaldir
 
 [TÜMÜ] S: "Daha önce yatırım aldınız mı?"
 C: [Founder dolduracak — yoksa dürüst ol]
 
-[AquaTech][Angel][FamilyOffice][Strategic][Bank] S: "Hisse yapınız nedir? A/B/C hisse var mı?"
-C: Çerçeve (önceden hazırla):
+[AquaTech][Angel][FamilyOffice][Strategic][Bank][TechVC] S: "Hisse yapınız nedir? A/B/C hisse var mı?"
+C: Çerçeve (önceden hazırla — S2-07 datasheet'iyle tutarlı anlat):
    - Founder: %90 A hisse (10:1 oy hakkı — açıkça söyle)
-   - Co-founder: %10 B hisse (vesting yapısı var)
+   - Co-founder'lar: %5 + %5 B hisse (vesting yapısı var)
    - Yatırımcı: C hisse (tercihli, 1x non-participating)
    - "Transparanım çünkü bu yapı uzun vadede sağlıklı"
 
 ─── BÖLÜM 6: ZOR SORULAR ───
 
-[AquaTech][Angel][FamilyOffice][Strategic][Bank] S: "10:1 oy hakkı çok agresif değil mi? Neden kontrol istiyorsunuz?"
-C: Hazır cevap:
-   "Bu oy yapısı şirketin vizyonunu korumak içindir. Yatırımcılar ekonomik
-   haklarında tam eşittir — ancak stratejik kararları kurucu olarak ben alıyorum.
-   Bu aslında yatırımcılar için iyi — bir vizyon sahibi kurucu şirketi yönetir,
-   komite değil. Mowi, SalMar gibi başarılı Norveç şirketlerinin tarihine bakın —
-   güçlü kurucu kontrolü vardı."
+[AquaTech][Angel][FamilyOffice][Strategic][Bank][TechVC] S: "10:1 oy hakkı çok agresif değil mi? Neden kontrol istiyorsunuz?"
+C: Hazır cevap (yapı founder'ın tasarımıdır — yapıyı savunurken itirazı
+   meşru kabul eden, esnekliğe açık bir ton kullan):
+   "Bu itiraz tamamen anlaşılır — süpervoting Norveç erken aşama pratiğinde
+   alışılmadık bir yapı. Amacım erken fazda yön istikrarı: ürün ve pazar
+   kararlarında hız kaybetmemek. C sınıfı yatırımcı hakları tam korunur —
+   ekonomik haklar (1x non-participating tercih), bilgi hakları ve standart
+   azınlık korumaları eksiksiz. Ve açık olayım: bu yapı görüşmeye açık —
+   sizin için kritik olan noktaları term sheet aşamasında birlikte ele alalım."
+
+   ⚠ FOUNDER'A AÇIK UYARI (cevabın parçası değil — hazırlık notu):
+   Birçok Norveçli yatırımcı süpervoting'i reddeder (janteloven kültürü;
+   dual-class süpervoting pre-seed'de nadiren kabul edilir). Bu yapıda ısrar
+   term sheet kaybettirebilir — S2-15 term sheet müzakeresinde esneklik planla.
+   Mowi/SalMar örneğini KULLANMA (doğrulanamaz).
 
 [TÜMÜ] S: "Neden şu an bu şirket kurulabilir? Daha önce neden olmadı?"
 C: Çerçeve:
@@ -189,7 +203,7 @@ Hatch gibi aquaculture-odaklı yatırımcıya özel:
 
 [AquaTech][Strategic] S: "Balık sağlığı izleme entegrasyonu var mı?"
 [AquaTech][Strategic][Devlet] S: "Biyogüvenlik (biosecurity) raporlaması yapabiliyor mu?"
-[AquaTech][Strategic] S: "Laks dışı türler (uskumru, kalkan) için uyarlanabilir mi?"
+[AquaTech][Strategic] S: "Laks dışı türler (ørret, torsk, kveite) için uyarlanabilir mi?"
 [AquaTech][Devlet][Strategic] S: "Akuakultur lisans uyum modülü var mı?"
 
 Bu soruları araştır ve çerçeveli cevaplar hazırla.
@@ -197,24 +211,26 @@ Bu soruları araştır ve çerçeveli cevaplar hazırla.
 ─── KIRMIZI BAYRAK SORULAR ───
 
 Bu sorular gelirse dikkatli ol:
-  "Kullanıcınız var mı?" → Yoksa: "Validasyon sürecindeyiz, ilk 3 pilot Ocak'ta"
+  "Kullanıcınız var mı?" → Yoksa: "Validasyon sürecindeyiz, ilk 3 pilot [Q+1 — içinde bulunulan çeyrek+1]'de"
   "Gelir var mı?"        → Yoksa: "Pre-revenue, ilk pilot sonrası fiyatlandırma netleşecek"
   "Bu sektörde deneyimin var mı?" → Dürüst ol — yoksa "Saha araştırması" vurgula
   "Neden bu çiftlikler senden alır?" → Güçlü cevap hazırla — bu kritik soru
 
 ─── PITCH DECK KONTROL LİSTESİ ───
 
-Toplantı öncesi bu slaytlar hazır olmalı:
-  □ Problem slaytı (1 slayt, somut veri)
-  □ Çözüm slaytı (ekran görüntüsü/demo)
-  □ Pazar büyüklüğü (TAM/SAM/SOM)
-  □ İş modeli
-  □ Rakip matrisi
-  □ Traction/validasyon
-  □ Ekip
-  □ Finansal projeksiyon (18 ay)
-  □ Kullanım planı (yatırım nereye gider)
-  □ Cap table (şeffaf)
+Toplantı öncesi deck, S2-10'un 10-slide yapı invariantına BİREBİR uymalı
+(her zaman tam 10 slayt — asla 11. slayt ekleme):
+  □ Slide 1: Cover (tagline + iletişim + round)
+  □ Slide 2: Problem (somut, kaynaklı veri)
+  □ Slide 3: Çözüm (ekran görüntüsü/demo)
+  □ Slide 4: Pazar büyüklüğü (TAM/SAM/SOM)
+  □ Slide 5: İş modeli
+  □ Slide 6: Rakip matrisi
+  □ Slide 7: Traction/validasyon (başlık traction seviyesine göre değişir — S2-10 kuralı)
+  □ Slide 8: Ekip
+  □ Slide 9: Finansal projeksiyon (18 ay)
+  □ Slide 10: Talep (yatırım miktarı + kullanım planı)
+  □ Appendix A1: Cap table (şeffaf) — slayt DEĞİL, appendix (S2-10 yapısı)
 ```
 
 ---
@@ -224,6 +240,7 @@ Toplantı öncesi bu slaytlar hazır olmalı:
 | Kaynak | İçerik |
 |--------|--------|
 | Suderra parametreleri | Sektör, ürün, ekip bilgisi |
+| S2-07 (Onboarding) | Founder datasheeti — ekip bileşimi ve traction cevapları buradan DİNAMİK doldurulur |
 | S2-01 (Ekosistem) | Yatırımcı tip profili (hangi sorular hangi tipten gelir) |
 | S2-04 (Eşleşme) | Top 20 yatırımcı (onlara özel sorular) |
 | S2-13 (Rekabet İstihbaratı) | Rakip kartları — "Rakipler neden sizi kopyalamıyor?" sorusunun cevabı buradan doldurulur |
