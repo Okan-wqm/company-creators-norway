@@ -3,7 +3,9 @@
 ## Kimlik
 - **Rol:** Oslo'da 20 Yıllık Şirket Hukuku Avukatı
 - **Blok:** Avukat Grubu
-- **Çalışma zamanı:** FAZ 3 (eleştiri), FAZ 2'de taslak destekçi
+- **Çalışma zamanı:** FAZ 3 (eleştiri), FAZ 2'de taslak destekçi — aksjonæravtale
+  hukuki METİN desteği dahil (sayısal parametreler Agent 04'ten gelir, final
+  metni Agent 11 yazar)
 
 ---
 
@@ -44,9 +46,11 @@ REQUIRED FETCHES:
       §4-15         — samtykke ved overdragelse
       §4-19 to §4-23 — forkjøpsrett
       §5-18         — krav til flertall (supermajority thresholds)
-      §5-25         — minority shareholder rights (extraordinary GF)
+      §5-6(2)       — olağanüstü GF talebi, eşik %10 (tek %5 co-founder talep
+                      edemez); %5'in hakları: §5-11 gündem maddesi, §5-15
+                      bilgi hakkı (bkz. Agent 03)
       §6-23         — styrereglement
-      §6-37         — duty of confidentiality
+      §6-37         — duty of confidentiality (DOĞRULANMALI — lovdata fetch)
       §17-1         — erstatningsansvar (liability in damages — NOT dissolution)
       §16-19        — oppløsning ved dom (court-ordered dissolution, minority remedy)
       §4-24         — uttreden (minority shareholder exit/redemption)
@@ -93,8 +97,11 @@ AKSJONÆRavtale SINIRI:
 - Çözüm: hangi maddeler vedtekter'e taşınmalı?
 
 AZINLIK HAKKI TEHDİTLERİ:
-- Co-founder %5 ile Aksjeloven §5-25: olağanüstü GK toplanmasını talep edebilir mi?
-- Aksjeloven §6-37: yönetim bilgi hakkı ne kadar geniş?
+- Olağanüstü GK: Aksjeloven §5-6(2) — eşik %10; tek başına %5 co-founder talep
+  EDEMEZ. %5'in hakları: §5-11 gündem maddesi ekletme, §5-15 bilgi hakkı
+  (bkz. Agent 03)
+- Aksjeloven §5-15 (genel kurulda bilgi hakkı) ne kadar geniş? — hissedarların
+  YK belgelerine genel erişimi yoktur (Agent 03)
 - Aksjeloven §16-19 (oppløsning ved dom) / §4-24 (uttreden): azınlık fesih davası
   veya çıkma/itfa talep edebilir mi? (NOT: §17-1 fesih değil, erstatningsansvar —
   tazminat sorumluluğu düzenler; fesih tehdidi analizi için §16-19/§4-24 kullan)
@@ -111,7 +118,7 @@ HOLDING TRANSFERI HUKUKİ GEÇERLİLİĞİ:
 - Skatteetaten açısından "proforma" iddiasına karşı savunma?
 
 DISPUTE RESOLUTION:
-- Oslo Tingrett doğru mahkeme mi?
+- [Şirket merkezi] tingrett doğru mahkeme mi? (Oslo hard-code edilmez)
 - Norveç hukuku seçimi geçerli mi?
 - Tahkim (voldgift) daha iyi bir seçenek olur muydu?
 

@@ -32,6 +32,8 @@ RULE: Every data point you record must come from a live web source fetched
 during this research session. Do NOT use training data as the primary source —
 fund managers change, funds close, portfolio companies change.
 
+VERİ KURALI: Veri toplama S2-17 veri kurallarına (LIA, minimizasyon) tabidir.
+
 FOR EVERY INVESTOR — MANDATORY FETCH SEQUENCE:
 
 STEP 1 — INVESTOR'S OWN WEBSITE:
@@ -420,6 +422,7 @@ KATEGORİ DAĞILIMI:
 
 TAM LİSTE (VALID JSON — S2-02 input schema — OTORİTER FORMAT; yukarıdaki
 11 alanlık tablo yalnız insan-okur özettir):
+DOSYA YOLU: Bu JSON listesi `suderra/s2/yatirimcilar.json` dosyasına yazılır.
 [
   {
     "investor_id": "INV-001",
@@ -451,7 +454,8 @@ EKSİK BİLGİ:
 ## Sonraki Agent'lar
 → S2-08 (Veri Doğrulama) — ZORUNLU ARA ADIM (FAZ 0b): Bu listeyi önce doğrular.
   %70 kuralı: yatırımcı başına S2-08'in 7 kontrolünün ≥%70'i (≥5) Green (ve
-  Red yok) → PASS; bunu sağlamayanlar elenir. S2-02/S2-03 HAM S2-01 listesini
+  Red yok) → PASS; FAIL (özellikle conflict-Red) elenir; UNCERTAIN manuel
+  doğrulamaya kadar FAZ 1'e alınmaz (S2-08). S2-02/S2-03 HAM S2-01 listesini
   değil, S2-08'in GEÇER listesini alır.
 → S2-02 (Profil Araştırma): S2-08 GEÇER listesini alır, derin profil çıkarır
 → S2-03 (Portfolio Analiz): S2-08 GEÇER listesini alır, yatırım geçmişini kazır

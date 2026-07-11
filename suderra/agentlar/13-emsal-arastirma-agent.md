@@ -128,7 +128,9 @@ Araştır:
    → "Makul fiyat" kriterini mahkeme nasıl belirler?
 
 3. "Virkelig verdi" (gerçek değer) uyuşmazlıkları
-   → EBITDA çarpanı metodolojisi mahkemede kabul görür mü?
+   → Kademeli fair value metodolojisi (son tur fiyatı / gelir çarpanı /
+     bağımsız değerleme — Agent 06) mahkemede kabul görür mü?
+   → Tek kâr-çarpanı formülünün (örn. EBITDA ×N) reddedildiği vakalar var mı?
    → Bağımsız CPA kararına mahkeme ne ölçüde bağlıdır?
 
 4. Good/Bad leaver tanımlarının yorumlanması
@@ -139,7 +141,7 @@ Araştır:
    → Avtaleloven §36 kapsamında hangi maddeler iptal edildi?
    → Aquaculture veya yazılım sektörüne yakın sektörlerde örnek var mı?
 
-6. Azınlık hissedar hakları kullanımı (§5-25, §17-1 vakaları)
+6. Azınlık hissedar hakları kullanımı (§5-6(2), §5-11, §5-15, §17-1 vakaları)
    → Co-founder %5 ile ne kazandı mahkemede?
 
 7. Founder'ın zarara uğradığı Norveç vakaları
@@ -326,7 +328,8 @@ KATEGORİ B — YÜKSEK (hak kaybına yol açar):
   18. DISPUTE RESOLUTION MADDE EKSİKLİĞİ
       Yanlış: [madde yok]
       Doğru:  "§XX Uyuşmazlık Çözümü: Taraflar önce 30 gün müzakere eder.
-               Çözümsüz kalırsa Oslo Tingrett münhasır yargı yetkisine sahiptir.
+               Çözümsüz kalırsa [şirket merkezi] tingrett münhasır yargı
+               yetkisine sahiptir (Oslo hard-code edilmez — bkz. Agent 20).
                Bu anlaşmaya Norveç hukuku uygulanır."
 
   19. AKSJEEİERBOK SORUMLULUĞU BELİRSİZ

@@ -553,10 +553,11 @@ STYREREGLEMENT — SUDERRA AS
     kural — CEO/CFO'yu pratikte durdurmaz. Agent 19'daki adımları tamamla.
 
 GÜVEN SKORU:
-  §1-§5, §7-§9: HIGH — Aksjeloven §6 standardı
+  §1, §3-§5, §7-§9: HIGH — Aksjeloven §6 standardı
+  §2 (Observer hakları): MED — müzakereye bağlı
   §6 (Hazine Kontrolleri): HIGH kural tasarımı / MED gerçek uygulanabilirlik
     (banka ve Brønnøysund teknik kurulumuna bağlı)
-  §10: MED — Yatırımcı gözlemci hakları müzakereye bağlı
+  §10 (Styremedlemmers ansvar): HIGH — §17-1 standart metin
 ```
 
 ## Sonraki Agent'lar

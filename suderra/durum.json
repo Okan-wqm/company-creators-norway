@@ -1,0 +1,62 @@
+{
+  "son_guncelleme": null,
+  "guncelleyen_agent": "bootstrap",
+
+  "sirket": {
+    "org_nr": null,
+    "tescil_tarihi": null,
+    "tescil_durumu": "NOT_STARTED"
+  },
+
+  "belgeler": {
+    "01-stiftelsesdokument": { "versiyon": null, "tarih": null, "imza": "DRAFT" },
+    "02-vedtekter":          { "versiyon": null, "tarih": null, "imza": "DRAFT" },
+    "03-sweat-equity-avtale":{ "versiyon": null, "tarih": null, "imza": null },
+    "04-aksjonaer-avtale":   { "versiyon": null, "tarih": null, "imza": null },
+    "05-holding-transfer-plan": { "versiyon": null, "tarih": null, "imza": null },
+    "06-term-sheet-template":   { "versiyon": null, "tarih": null, "imza": "N/A" },
+    "07-skattefunn-soknad":     { "versiyon": null, "tarih": null, "imza": null },
+    "08-ip-politikasi":         { "versiyon": null, "tarih": null, "imza": null },
+    "09-styrereglement":        { "versiyon": null, "tarih": null, "imza": null },
+    "00-founder-ozet":          { "versiyon": null, "tarih": null, "imza": "N/A" },
+    "opsiyonel-arbeidskontrakt": { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-saas-sozlesme":   { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-oppdragsavtale":  { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-tegningsliste":   { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-gk-protokoll":    { "versiyon": null, "tarih": null, "imza": null }
+  },
+
+  "gate_sonuclari": {
+    "faz2b_tutarlilik": { "verdikt": null, "tarih": null, "acik_cakismalar": [] },
+    "faz5b_tutarlilik": { "verdikt": null, "tarih": null },
+    "s2_00_5_preflight": { "verdikt": null, "skor": null, "tarih": null },
+    "s2_17_outreach_uyum": { "verdikt": null, "tarih": null },
+    "faz7_yeniden_gecit": { "verdikt": null, "tarih": null, "tur": null }
+  },
+
+  "cap_table": {
+    "versiyon": "v0",
+    "kaynak": "Agent 02",
+    "ozet": "A:900 (founder) / B:50+50 (co-founder) / C:0 / D(ESOP):0"
+  },
+
+  "s2_durum": {
+    "datasheet_versiyon": null,
+    "datasheet_yolu": "suderra/s2/datasheet.json",
+    "yatirimci_listesi_yolu": "suderra/s2/yatirimcilar.json",
+    "outreach_log_yolu": "suderra/outreach-log.json",
+    "aktif_yatirimcilar": [],
+    "erased_kayitlar": [],
+    "imzali_term_sheet": null,
+    "data_room_tier_durumu": null
+  },
+
+  "faz7_kapanis_dongusu": {
+    "aktif": false,
+    "tur": null,
+    "10_9_uc_ay_son_tarih": null,
+    "kapanis_tarihi": null
+  },
+
+  "acik_aksiyonlar": []
+}

@@ -49,8 +49,11 @@ SECTION 1: RESPONSE ANALYSIS
   → Hard passes (rejected): [X]                      ← response_type "hard_pass"
   → No response: [X]                                 ← response_type "no_response"
   → Follow-up pending: [X]                           ← response_type "pending"
-  (Kırılım S2-05'te tanımlı response_type enum'uyla birebir hizalıdır —
-   başka kategori icat etme)
+  → Term sheet received: [X]                         ← response_type "term_sheet"
+  → Closed / invested: [X]                           ← response_type "invested"
+  (Kırılım S2-05'te tanımlı 7 değerli response_type enum'uyla birebir
+   hizalıdır — başka kategori icat etme; "term_sheet"/"invested" kapanış
+   geri beslemesi S1-Agent 22 / FAZ 7'den gelir)
 
   CHANNEL PERFORMANCE:
   → LinkedIn message response rate: [X%]
@@ -143,16 +146,22 @@ RULE — DO NOT OVERWRITE THE ORIGINAL S2-04 SCORE:
   The S2-04 score is immutable. Empirical corrections are recorded in a
   SEPARATE field per investor, using this schema:
 
-  EMPIRICAL_ADJUSTMENT:
+  EMPIRICAL_ADJUSTMENT (geçerli strict JSON — yorum satırı ve "+" işaret
+  öneki YOK):
   {
     "investor_id": "[S2-01 investor_id — e.g. INV-001]",
-    "original_score": 7.2,        // S2-04 çıktısı — DEĞİŞMEZ
-    "adjustment": +1.3,           // ampirik bonus/ceza
-    "revised_score": 8.5,         // = original_score + adjustment
+    "original_score": 7.2,
+    "adjustment": 1.3,
+    "revised_score": 8.5,
     "reason": "[neden — gözleme dayalı]",
     "evidence": "[OUTREACH_LOG / MEETING_LOG referansı]",
     "date": "YYYY-MM-DD"
   }
+  Alan notları (JSON dışında tutulur):
+    original_score = S2-04 çıktısı — DEĞİŞMEZ
+    adjustment = ampirik bonus/ceza (negatif değer JSON sayısı olarak
+    yazılır, örn. -3.0; pozitifte "+" öneki kullanılmaz)
+    revised_score = original_score + adjustment
 
   S2-04's bonus/penalty cap rules apply to "adjustment" as well:
   max cumulative bonus +2.0, max cumulative penalty -3.0.
@@ -218,7 +227,8 @@ Fundraising is exhausting. This section is honest.
     next investor wave
 
 5.3 MORALE / ENERGY CHECK
-  Fundraising typically: 20-50 conversations for 1 seed check.
+  Fundraising typically: 20-40 conversations for 1 seed check
+  (S2-05 term sheet kalibrasyonuyla aynı ölçek).
   
   If < 20 conversations: you're early — this is normal
   If 20-40 conversations with no term sheet: something needs to change

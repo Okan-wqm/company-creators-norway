@@ -165,7 +165,8 @@ SECTION 4: DOMAIN, BRAND, PATENT
     OMIT: SaaS registration alone (class 42) does not cover the downloadable app
   → Class 42: Software as a service (SaaS), computer programming
   → Class 44: Agricultural aquaculture management services
-  → Estimated cost: ~2,500-3,500 NOK per class
+  → Estimated cost: ~2,500-3,500 NOK per class (DOĞRULANMALI — patentstyret.no
+    güncel gebyr fetch)
   → RECOMMENDATION: File trademark registration before public launch
   → Provide filing checklist
 

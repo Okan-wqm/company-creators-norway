@@ -28,6 +28,8 @@ RULE: Profile data must come from live sources fetched now.
 Do NOT rely on training data — fund managers move firms, funds close,
 portfolio changes. Stale data = wrong outreach = wasted founder time.
 
+VERİ KURALI: Veri toplama S2-17 veri kurallarına (LIA, minimizasyon) tabidir.
+
 FOR EACH INVESTOR PROFILE — FETCH IN THIS ORDER:
 
 [1] INVESTOR'S OFFICIAL WEBSITE:
@@ -227,6 +229,8 @@ Bu yatırımcı Suderra'yı neden severdi? / İtirazı ne olabilir?
 ```
 PROFİL KARTLARI — S2-08 GEÇER LİSTESİ (~35-55 YATIRIMCI)
 ────────────────────────────────────
+DOSYA YOLU: Profil kartları `suderra/s2/profiller/` klasörüne yazılır
+(yatırımcı başına bir dosya, investor_id ile adlandırılır).
 [Her yatırımcı için doldurulmuş profil kartı — investor_id zorunlu]
 
 TEMAS LİSTESİ (isim + kanal + öncelik):

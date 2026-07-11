@@ -39,8 +39,8 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
 
 ```json
 {
-  "son_guncelleme": "YYYY-MM-DD",
-  "guncelleyen_agent": "Agent 11",
+  "son_guncelleme": null,
+  "guncelleyen_agent": "bootstrap",
 
   "sirket": {
     "org_nr": null,
@@ -49,8 +49,8 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
   },
 
   "belgeler": {
-    "01-stiftelsesdokument": { "versiyon": "v1", "tarih": "YYYY-MM-DD", "imza": "DRAFT | SIGNED" },
-    "02-vedtekter":          { "versiyon": "v1", "tarih": null, "imza": "DRAFT" },
+    "01-stiftelsesdokument": { "versiyon": null, "tarih": null, "imza": "DRAFT" },
+    "02-vedtekter":          { "versiyon": null, "tarih": null, "imza": "DRAFT" },
     "03-sweat-equity-avtale":{ "versiyon": null, "tarih": null, "imza": null },
     "04-aksjonaer-avtale":   { "versiyon": null, "tarih": null, "imza": null },
     "05-holding-transfer-plan": { "versiyon": null, "tarih": null, "imza": null },
@@ -61,26 +61,32 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
     "00-founder-ozet":          { "versiyon": null, "tarih": null, "imza": "N/A" },
     "opsiyonel-arbeidskontrakt": { "versiyon": null, "tarih": null, "imza": null },
     "opsiyonel-saas-sozlesme":   { "versiyon": null, "tarih": null, "imza": null },
-    "opsiyonel-oppdragsavtale":  { "versiyon": null, "tarih": null, "imza": null }
+    "opsiyonel-oppdragsavtale":  { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-tegningsliste":   { "versiyon": null, "tarih": null, "imza": null },
+    "opsiyonel-gk-protokoll":    { "versiyon": null, "tarih": null, "imza": null }
   },
 
   "gate_sonuclari": {
     "faz2b_tutarlilik": { "verdikt": null, "tarih": null, "acik_cakismalar": [] },
     "faz5b_tutarlilik": { "verdikt": null, "tarih": null },
     "s2_00_5_preflight": { "verdikt": null, "skor": null, "tarih": null },
-    "s2_17_outreach_uyum": { "verdikt": null, "tarih": null }
+    "s2_17_outreach_uyum": { "verdikt": null, "tarih": null },
+    "faz7_yeniden_gecit": { "verdikt": null, "tarih": null, "tur": null }
   },
 
   "cap_table": {
-    "versiyon": "v1",
+    "versiyon": "v0",
     "kaynak": "Agent 02",
     "ozet": "A:900 (founder) / B:50+50 (co-founder) / C:0 / D(ESOP):0"
   },
 
   "s2_durum": {
     "datasheet_versiyon": null,
+    "datasheet_yolu": "suderra/s2/datasheet.json",
+    "yatirimci_listesi_yolu": "suderra/s2/yatirimcilar.json",
     "outreach_log_yolu": "suderra/outreach-log.json",
     "aktif_yatirimcilar": [],
+    "erased_kayitlar": [],
     "imzali_term_sheet": null,
     "data_room_tier_durumu": null
   },
@@ -88,7 +94,8 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
   "faz7_kapanis_dongusu": {
     "aktif": false,
     "tur": null,
-    "10_9_uc_ay_son_tarih": null
+    "10_9_uc_ay_son_tarih": null,
+    "kapanis_tarihi": null
   },
 
   "acik_aksiyonlar": [
@@ -96,6 +103,22 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
   ]
 }
 ```
+
+Not: `"NOT_STARTED | FILED | REGISTERED"` ve `"founder | Agent XX"` gibi
+pipe'lı değerler izin verilen enum değerlerini belgeler; gerçek dosyada tek
+değer yazılır. Şemadaki diğer tüm örnek değerler boş-başlangıç (bootstrap)
+halidir.
+
+---
+
+## İlk Kurulum (Bootstrap)
+
+Repo'da hazır bir `suderra/durum.json` şablonu bulunur: yukarıdaki şemanın
+tüm alanları null / boş / NOT_STARTED başlangıç değerleriyle,
+`guncelleyen_agent: "bootstrap"` olarak doldurulmuş halidir (cap_table.ozet
+başlangıç cap table'ını, versiyon "v0" olarak içerir). Dosya herhangi bir
+nedenle yoksa, ilk çalışan agent onu bu şemadan, `guncelleyen_agent:
+"bootstrap"` ile oluşturur ve founder'a bilgi verir.
 
 ---
 
@@ -107,12 +130,17 @@ Yeni bir LLM oturumu açıldığında founder'ın tek yapması gereken:
 | Gate verdikti FAIL ama sonraki faz çalışmış görünüyor | DUR — founder'a eskalasyon |
 | İmzalı belge üzerinde yeni taslak değişikliği | UYARI: imzalı belge değiştirilemez; v+1 taslağı + yeniden imza süreci gerekir |
 | durum.json 30+ gün güncellenmemiş ve aktif outreach var | S2-08 mini-revalidation + S2-17 dalga kontrolü öner |
+| Zorunlu web fetch başarısız / oturumda web erişimi yok | Bulgu CONFIDENCE: LOW işaretlenir + acik_aksiyonlar'a "manuel doğrulama" kaydı düşülür |
 
 ---
 
 ## Sahiplik
 
-- Dosya yolu: `suderra/durum.json` (repo kökünde, belgelerin yanında)
+- Dosya yolu: `suderra/durum.json` (suderra/ klasöründe; belgeler
+  suderra/belgeler/ altında)
+- Yol standardı: taslaklar `suderra/belgeler/taslak/`, final belgeler
+  `suderra/belgeler/`, faz raporları `suderra/raporlar/`, S2 ara çıktıları
+  `suderra/s2/` (bkz. 00-sistem-mimarisi.md "Kullanım")
 - Şema değişikliği yalnız bu dosyada (S0) yapılır; agent'lar şemayı genişletemez.
 - CEO Agent (01) her FAZ geçişinde durum.json'un güncel olduğunu doğrular;
   S1-Agent 22 (FAZ 7) kapanış döngüsü alanının tek yazarıdır.

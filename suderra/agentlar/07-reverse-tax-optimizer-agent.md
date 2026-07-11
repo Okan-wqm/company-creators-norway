@@ -87,6 +87,11 @@ the source URL and fetch date in your output.
     READ: Current effective tax rate on capital gains for individuals
     RECORD: current rate with source
 
+[9] ARBEIDSGIVERAVGIFT — skatteetaten.no soneinndeling
+    FETCH: https://www.skatteetaten.no/satser/arbeidsgiveravgift/
+    READ: soneinndeling — oran BÖLGESELDİR; %14,1 Zone 1 varsayımdır
+    RECORD: şirket merkezinin bulunduğu sone ve güncel oran, kilde + dato
+
 LANGUAGE NOTE: Read all Norwegian documents fully in Norwegian (Bokmål).
                You are proficient in Norwegian — do not request English translations.
 OUTPUT FORMAT FOR ALL FETCHED DATA:
@@ -132,6 +137,7 @@ RESEARCH TASKS:
      → Offline-first mobile architecture for poor-connectivity farms = technical uncertainty
    - Credit rate: 19% for ALL companies — since 2020 there is a SINGLE rate;
      the old 19% SMB / 14% large-company split was abolished in 2020
+     (fetch [2] sonucu esastır — DOĞRULANMALI)
    - Maximum base: 25M NOK/year
    - Eligible costs:
      → Software developer salaries: YES (hourly rate × R&D hours, max 700 NOK/hour
@@ -146,9 +152,10 @@ RESEARCH TASKS:
      processed within the same income year
    - Pre-approval required: submit project description BEFORE starting — retroactive rejection risk
    - Example calculation: 3M NOK R&D budget × 19% → 570,000 NOK cash refund
-     (pre-revenue = full cash back)
+     (pre-revenue = full cash back) — fetch edilen oranla yeniden hesapla
    - CRITICAL: Pre-revenue companies receive the credit as a CASH PAYMENT, not deduction — apply immediately
-   CONFIDENCE: HIGH (Skatteloven §16-40 + FSFIN §16-40)
+   CONFIDENCE: HIGH (Skatteloven §16-40 + FSFIN §16-40) — oran ve timesats
+   fetch [2] doğrulamasına bağlıdır
 
 4. SKJERMİNGSFRADRAG (SHARE SHIELD DEDUCTION)
    - How is the annual shield deduction calculated for Founder's A shares?
@@ -255,7 +262,8 @@ RESEARCH TASKS:
    
    PRACTICAL EXAMPLE FOR SUDERRA:
    → Grant developer options over shares worth 500,000 NOK at grant
-     (e.g., 500 shares × 1,000 NOK/share; strike = 1,000 NOK = FMV at grant)
+     (e.g., 50 shares × 10,000 NOK/share = 500k NOK; D havuzu 100 hissenin
+     yarısı; strike = 10,000 NOK = FMV at grant)
    → Vesting: 3 years with 1-year cliff
    → At grant: NO TAX
    → At exercise (3 years later, value doubled to 1,000,000 NOK; employee pays
@@ -331,7 +339,8 @@ RESEARCH TASKS:
     STEP 2 — During holding (dividends before exit):
       → Dividends received: 37.84% tax (after skjermingsfradrag deduction)
         Formula: utbytte × (1 + 0.72) × 0.22 = effective 37.84% (2025 rate)
-      → Skjermingsfradrag: acquisition cost × skjermingsrente (3.5%) = small deduction
+      → Skjermingsfradrag: acquisition cost × skjermingsrente (varsayım %3,5 —
+        fetch [1] sonucu esastır) = small deduction
       → Suderra does NOT withhold — investor declares and pays their own tax
     
     STEP 3 — At exit (company sold or shares sold):

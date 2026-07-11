@@ -40,6 +40,10 @@ YAP:
 
 ─── HER YATIRIMCI İÇİN ─── 
 
+ZORUNLU KAYNAK BİLDİRİMİ (S2-17 zorunlu alanı — GDPR md. 14):
+Her mesaj varyantında tek cümlelik kaynak bildirimi bulunur:
+"Size [LinkedIn profiliniz / fonunuzun web sitesi / Proff.no] üzerinden ulaştım."
+
 KANALLAR VE FORMAT:
 
 ▸ LİNKEDİN MESAJI (max 300 karakter):
@@ -124,15 +128,16 @@ TRACTION: [Varsa: MVP / pilot müşteri / LOI]
 
 OUTREACH TAKVİMİ (otorite: S2-04 paralel track planı — birebir hizalı):
   Hafta 1-4 (Track A): Skor >8.5 olan 3-5 yatırımcıya gönder + yanıt takibi
-  Hafta 3-4: Yanıt gelenlere 2. e-posta (follow-up)
+  Hafta 3-4: Yanıt gelmeyenlere follow-up (aşağıdaki FOLLOW-UP KURALLARI kadansı)
   Hafta 4-8 (Track B): Skor 7-8.5 olan 5-7 yatırımcıya gönder
   Hafta 8+: Skor 5.5-7 olanlara yalnızca fırsat çıkarsa (S2-04 "ikinci dalga")
 
-FOLLOW-UP KURALLARI:
-  - 7 gün yanıt yoksa: kısa follow-up (1-2 cümle)
-  - 14 gün yanıt yoksa: konuyu değiştir (yeni bilgi paylaş)
-  - 21 gün yanıt yoksa: bir kez daha sonra bırak
-  - 3 deneme sonrası yanıt yoksa: 3 ay bekle
+FOLLOW-UP KURALLARI (max 2 follow-up — S2-17 GDPR sınırıyla uyumlu):
+  TANIM: "follow-up" = ilk mesajdan sonraki takip mesajı. Toplam 3 dokunuş:
+  ilk mesaj + 2 follow-up — daha fazlası yok.
+  - 7 gün yanıt yoksa: 1. follow-up — kısa (1-2 cümle)
+  - 14 gün yanıt yoksa: 2. ve SON follow-up — konuyu değiştir (yeni bilgi paylaş)
+  - 2 follow-up sonrası yanıt yoksa: 3 ay bekle
 
 TERM SHEET KURALI:
   Yatırımcı term sheet aşamasına gelirse, müzakerenin başlangıç pozisyonu
@@ -158,7 +163,7 @@ Sıcak Intro Notu:
 ÖZEL NOT (bu kişiye özel dikkat edilecek):
 [1-2 cümle]
 
-OUTREACH_LOG:
+OUTREACH_LOG (dosya: suderra/outreach-log.json):
 {
   "investor_id": "[S2-01 investor_id — e.g. INV-001]",
   "investor_name": "[Yatırımcı adı]",
@@ -167,16 +172,22 @@ OUTREACH_LOG:
   "response_received": null,
   "response_date": null,
   "response_type": null,
+  "do_not_contact": false,
   "notes": null
 }
+("do_not_contact" alanını S2-17 yazabilir — opt-out geldiğinde true olur,
+o kişiye tüm temas kalıcı olarak durur.)
 RESPONSE_TYPE ENUM — TANIM (bu sistemin tek otoriter tanımı; S2-12'nin
 yanıt kırılımıyla birebir hizalıdır):
   "meeting"     = toplantı ayarlandı (pozitif yanıt)
   "soft_pass"   = "ilgili ama şimdi değil" (90 gün sonra yeniden yaklaş)
   "hard_pass"   = net red
-  "no_response" = 3 deneme sonrası yanıt yok
+  "no_response" = 3 dokunuş (ilk mesaj + 2 follow-up) sonrası yanıt yok
   "pending"     = gönderildi, takip süreci devam ediyor
-response_type alanına yalnızca bu beş değerden biri yazılabilir.
+  "term_sheet"  = term sheet alındı (S2-15 devreye girer)
+  "invested"    = yatırım kapandı (kapanış geri beslemesi S1-Agent 22 /
+                  FAZ 7'den gelir)
+response_type alanına yalnızca bu yedi değerden biri yazılabilir.
 
 NOTE TO FOUNDER: Fill in variant_sent ("LinkedIn"|"Email"|"WarmIntro"),
 sent_date (YYYY-MM-DD), and response fields after sending.
@@ -194,6 +205,7 @@ S2-12 (Geri Bildirim Agent) reads these logs to update S2-04 scores.
 | S2-03 (Portfolio) | Portföy detayı (referans vermek için) |
 | S2-04 (Eşleşme) | Top 20 liste ve sıralama |
 | S2-06 (Sorular) | OPSİYONEL/VARSA — Due diligence hazırlığı (mesajlarda referans için; S2-05 ve S2-06 FAZ 3'te paralel çalışır, S2-06 çıktısını bekleme) |
+| S2-17 (GDPR Uyum) | Dalga kontrol verdikti — GEÇTİ olmadan gönderim yapılmaz (S2-00 gate) |
 | Founder | Traction bilgisi, kişisel hikaye |
 
 ## Çıktı

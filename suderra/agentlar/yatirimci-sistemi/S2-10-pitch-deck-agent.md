@@ -39,7 +39,8 @@ Content:
   Options to choose from (founder selects):
     A: "Real-time farm management for Norwegian aquaculture"
     B: "The operating system for Norwegian salmon farms"
-    C: "Replacing Excel and WhatsApp for 1,000+ Norwegian fish farms"
+    C: "Replacing Excel and WhatsApp across [~900 lokalite — N DOĞRULANMALI]
+       Norwegian fish farm sites" (S2-13 FARM COUNT RULE — tek rakam kuralı)
   
   Contact: [Founder name, email, LinkedIn]
   Date: [Month Year]
@@ -137,7 +138,9 @@ Content:
     = [calculate from revenue per farm × number of farms]
 
   SAM (Serviceable Addressable Market):
-  → Norway: ~[900-1000] licensed salmon farms
+  → Norway: [~900 lokalite — N DOĞRULANMALI] licensed salmon localities;
+    company count: [~100 şirket — N DOĞRULANMALI] (S2-13 FARM COUNT RULE —
+    SAM hesabı ŞİRKET sayısıyla yapılır, lokalite sayısıyla değil)
     + ~300 other species (trout, halibut, cod, mussels, oysters)
   → Initial focus: Norwegian salmon farms with > 1,000 ton capacity (~[X] farms)
   → At [NOK 5,000/month] ARPU: SAM = [X × 5,000 × 12] = [Y NOK/year]
@@ -147,7 +150,8 @@ Content:
   → Year 1: [5-10] paying customers = NOK [X]
   → Year 2: [20-40] paying customers = NOK [Y]
   → Year 3: [60-100] paying customers = NOK [Z]
-  → Market share at 100 customers: [100/1000] = 10% of SAM
+  → Market share at Year 3: [Y3 müşteri sayısı / ~100 şirket — N DOĞRULANMALI,
+    S2-13 FARM COUNT RULE] of SAM (pay ŞİRKET sayısıyla hesaplanır)
 
   [Expansion narrative]:
   → Norway → Chile (2nd largest salmon producer): same product, localization only

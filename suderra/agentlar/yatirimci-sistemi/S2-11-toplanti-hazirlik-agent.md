@@ -106,6 +106,9 @@ SELECTION MECHANISM — USE S2-06's INVESTOR-TYPE TAGS AS THE FILTER:
   | Kategori F — Havbruksfond              | [Devlet] (equity dışı — normalde S2-09'a gider, toplantı brifingi nadiren gerekir) |
 
   (Kategori harflerini S2-00 çıktısındaki güncel tanımlarla doğrula.)
+  KURAL: [TechVC] = Kategori D/E'nin FON nitelikli üyeleri; angel AĞLARI
+  (örn. Norban) ve bireysel angel'lar — Kategori D'de olsalar bile —
+  her zaman [Angel] ile eşlenir.
   Step 3: Filter the S2-06 library to questions tagged with this investor's
   tag + the universal [TÜMÜ] tag, then pick the 5 most likely from that subset.
   Untagged questions cannot be filtered — flag them back to S2-06.

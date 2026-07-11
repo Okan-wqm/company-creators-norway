@@ -137,6 +137,9 @@ COMPETITOR 2: AQUACLOUD  [HİPOTEZ KARTI — canlı kaynakla doğrula]
   We are exploring integration with AquaCloud data."
 
 COMPETITOR 3: MAREL SOFTWARE PRODUCTS  [HİPOTEZ KARTI — canlı kaynakla doğrula]
+  SINIFLANDIRMA NOTU: Bu kart A bölümünde listelense de doğru kategori C
+  (donanım + post-harvest) — kartın kendisi "not direct competition" diyor;
+  özet listelerde C kategorisi altında raporlanır.
   Country: Iceland (global hardware and software company)
   Product: Aquaculture harvest management, processing software
   Focus: Post-harvest and processing — not farm operations
@@ -386,10 +389,13 @@ REKABETÇİ ANALİZ RAPORU — SUDERRA AS
 ════════════════════════════════════
 Araştırma tarihi: [tarih]
 
-RAKIP KARDLERİ:
-  A Kategorisi (doğrudan rakip): [Fishtalk, AquaCloud, Scale AQ]
+RAKIP KARDLERİ (kart bölümündeki kategorilerle birebir hizalı):
+  A Kategorisi (doğrudan rakip): [Fishtalk, AquaCloud (⚠ muhtemelen rakip
+    değil — kartın DOĞRULANMALI uyarısı geçerli; ticari rakip çıkmazsa
+    "sektör veri girişimi / potansiyel veri ortağı" olarak yeniden sınıflandır)]
   B Kategorisi (ERP genel): [SAP, Microsoft Dynamics]
-  C Kategorisi (donanım+izleme): [Marel, diğerleri]
+  C Kategorisi (donanım+izleme): [Marel (post-harvest — kartı "not direct
+    competition" der), Idun Aqua, Scale AQ]
   D Kategorisi (statüko): [Excel/WhatsApp/kağıt]
   E Kategorisi (uluslararası): [araştırma sonuçları]
 

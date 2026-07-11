@@ -3,7 +3,8 @@
 ## Kimlik
 - **Rol:** Baş Koordinatör & Sentezleyici
 - **Blok:** Koordinasyon
-- **Çalışma zamanı:** FAZ 4 (tüm tartışmalar bittikten sonra)
+- **Çalışma zamanı:** FAZ 4 (sentez) + FAZ 2b (Agent 16 eskalasyonunda sınırlı ön-arbitraj — yalnız çözülmeyen çakışan hükümler)
+- **Sürekli görev:** Her FAZ geçişinde `suderra/durum.json`'un güncel olduğunu doğrular (bkz. S0-durum-yonetimi.md §Sahiplik)
 
 ---
 
@@ -91,7 +92,7 @@ RULE: All outputs include CONFIDENCE: HIGH / MED / LOW on factual claims.
 | Agent 05 (Yatırımcı Dostu) | Red flag listesi + FAZ 3 ikincil inceleme |
 | Agent 07 (Vergi Optimizer) | Vergi fırsatı eksiklikleri + FAZ 3 ikincil inceleme |
 | Agent 02 (CFO) | Cap table, dilution analizi ve hazine kontrol eşiği önerisi |
-| Agent 16 (Belge Tutarlılık) | Konsistans matrisi + FAZ 2b'de çözülemeyen/eskale edilen çakışmalar |
+| Agent 16 (Belge Tutarlılık) | Konsistans matrisi + FAZ 2b'de taslak agent'larının çözemediği çakışan hükümler (bu agent'ın FAZ 2b sınırlı ön-arbitraj turunun girdisi; tam sentez FAZ 4'te) |
 | Agent 13 (Emsal Araştırma) | Dava ve hata bulguları |
 
 ## Çıktı

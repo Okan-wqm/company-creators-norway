@@ -106,7 +106,9 @@ ALL of the following MUST be in the contract (§14-6 requires written form):
   Benefits: [list any — health insurance, equipment allowance, etc.]
 
   ARBEIDSGIVERAVGIFT REMINDER: Employer pays ~14.1% of gross salary
-  to NAV (Zone 1 Oslo). See Agent 02 (CFO) for runway impact calculation.
+  to NAV (Zone 1 — şirket merkezinin bölgesine göre teyit et — DOĞRULANMALI;
+  bkz. Agent 07 fetch [9] soneinndeling). See Agent 02 (CFO) for runway
+  impact calculation.
 
   MANDATORY WITH THE FIRST EMPLOYEE — ADD THESE COST LINES:
   → OTP (obligatorisk tjenestepensjon): minimum 2% of salary between 1G and

@@ -29,8 +29,10 @@ Bu diyagram FAZ akışının üst düzey özetidir. Tam ve otoriter sıralama i�
                       ▼
 ┌──────────────────────────────────────────┐
 │ FAZ 0b — Veri Doğrulama (S2-08)           │
-│ %70 kuralı: yatırımcı başına 7 kontrolün  │
-│ ≥%70'i (≥5) Green değilse elenir          │
+│ %70 kuralı: ≥5/7 Green + Red yok → PASS;  │
+│ FAIL (özellikle conflict-Red) elenir;     │
+│ UNCERTAIN manuel doğrulamaya kadar        │
+│ FAZ 1'e alınmaz                           │
 └────────────────────┬──────────────────────┘
                       ▼
 ┌──────────────────────────────────────────┐
@@ -78,13 +80,13 @@ S2-16 (data room, FAZ 3) · S0 durum protokolü (durum.json)
 | # | Agent | Görev | Çıktı | Faz |
 |---|-------|-------|-------|-----|
 | S2-07 | Founder Onboarding | Suderra Pitch Datasheeti üretir (TÜM sistemin girdi kaynağı) | JSON datasheet + readiness score | FAZ -1 |
-| S2-00.5 | Pre-Flight Doğrulama | Sistem 1 tamamlığını kontrol eder — GEÇMEDEN sistemi başlatma | PASS/PARTIAL/FAIL raporu | FAZ -1 |
+| S2-00.5 | Pre-Flight Doğrulama | Sistem 1 tamamlığını kontrol eder — PASS veya founder-onaylı PARTIAL (L1+L3 PASS şartıyla) olmadan sistemi başlatma; FAIL'de başlamaz | PASS/PARTIAL/FAIL raporu | FAZ -1 |
 | S2-01 | Ekosistem Haritalama | 50-80 yatırımcı listesi (Havbruksfond + Banka VC + Stratejik dahil) | Yatırımcı listesi JSON | FAZ 0 |
 | S2-13 | Rekabet İstihbaratı | Rakip analizi — S2-06 ve S2-10'a veri sağlar | Competitor cards + positioning | FAZ 0 |
 | S2-08 | Veri Doğrulama | S2-01 listesini bağımsız kaynaklarla çapraz kontrol eder | Doğrulanmış liste | FAZ 0b |
 | S2-02 | Profil Araştırmacı | Her yatırımcı için derin kişi/şirket profili | Yapılandırılmış profil kartları | FAZ 1 |
 | S2-03 | Portfolio Analist | Geçmiş yatırımların deseni, tutar, zamanlama | Yatırım davranış analizi | FAZ 1 |
-| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru (8 kriter, bonus cap ±2) — PHASE-1 only default | Top 20 liste + gerekçe | FAZ 2 |
+| S2-04 | Eşleşme & Sıralama | Suderra uyum skoru (8 kriter, +2.0 bonus / −3.0 ceza cap) — PHASE-1 only default | Top 20 liste + gerekçe | FAZ 2 |
 | S2-09 | Devlet Fonu Başvuru | Skattefunn + SIVA + Innovasjon Norge + IPN (eski BIA) başvuruları | Hazır başvuru paketleri | FAZ 2 |
 | S2-10 | Pitch Deck İçerik | 10 slide için metin içerik (traction seviyesine göre) | Slide content | FAZ 2 |
 | S2-14 | Yatırım Süreci Yönetim | Yatırımcı tipi başına tam süreç haritası + vergi dönüm noktaları | Süreç rehberi + vergi takvimi | FAZ 3 |
@@ -207,7 +209,8 @@ S2-07 Modül 9'da founder "Yalnızca Norveç" seçerse PHASE-1 hard filter aktif
 FAZ -1: S2-07 (Founder Onboarding) → S2-00.5 (Pre-Flight Doğrulama) [sıralı]
   ↓ S2-07 ÖNCE çalışır: Suderra Pitch Datasheet üretilir — valid JSON formatında
   ↓ S2-00.5 SONRA çalışır (M1 + JSON şema kontrolü S2-07 çıktısını gerektirir):
-    Hukuki/vergi/materyal hazırlık kontrol — PASS olmadan FAZ 0 başlamaz
+    Hukuki/vergi/materyal hazırlık kontrol — PASS veya founder-onaylı PARTIAL
+    (S2-00.5: L1+L3 PASS şartıyla) olmadan FAZ 0 başlamaz; FAIL'de başlamaz
   ↓ Investor Readiness Score: 0-10
 
 FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]
@@ -216,7 +219,8 @@ FAZ 0:  S2-01 (Ekosistem) + S2-13 (Rekabet İstihbaratı) [paralel]
 
 FAZ 0b: S2-08 (Veri Doğrulama)
   ↓ S2-01 listesinin %70 kuralı ile kontrolü — yatırımcı başına 7 kontrolün
-    ≥%70'i (≥5) Green (ve Red yok) → PASS; başarısız olanlar elenir
+    ≥%70'i (≥5) Green (ve Red yok) → PASS; FAIL (özellikle conflict-Red)
+    elenir; UNCERTAIN manuel doğrulamaya kadar FAZ 1'e alınmaz (S2-08)
 
 FAZ 1:  S2-02 + S2-03 [paralel — validated liste üzerinde]
   ↓ Profil kartları + portfolio analizi
@@ -246,6 +250,12 @@ SÜREKLI: S2-17 (GDPR & Outreach Uyum) — FAZ 0'dan itibaren ← YENİ
 **Durum yönetimi:** Her agent `../S0-durum-yonetimi.md` protokolüne uyar —
 başlarken `suderra/durum.json` okunur, bitirirken kendi alanı güncellenir.
 S1 ile senkronizasyon (belge versiyonları, kapanış döngüsü) bu dosya üzerinden yürür.
+
+**Ara çıktı yolları:** S2-07 datasheet → `suderra/s2/datasheet.json` ·
+S2-01 yatırımcı listesi → `suderra/s2/yatirimcilar.json` ·
+S2-02 profil kartları → `suderra/s2/profiller/` ·
+S2-05 outreach log → `suderra/outreach-log.json` ·
+S2-16 erişim logu → `suderra/s2/access-log.json`
 
 ---
 

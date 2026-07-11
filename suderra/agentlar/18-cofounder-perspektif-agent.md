@@ -56,7 +56,8 @@ REVIEW SECTION 1: VESTING TERMS
   → If employee: I have termination protections (oppsigelse must be saklig)
   → If partner: no employment protections — what then?
   → THE CRITICAL QUESTION: If I'm fired after 18 months (post-cliff),
-    do I keep my 37.5% of unvested shares (Good Leaver) or lose them (Bad Leaver)?
+    do I keep my vested shares (18 of 50 = 36% per Agent 06 FLOOR rounding)
+    as a Good Leaver, or lose them (Bad Leaver)?
 
 ═══════════════════════════════════════════════════
 REVIEW SECTION 2: BAD LEAVER ANALYSIS
@@ -88,12 +89,15 @@ REVIEW SECTION 2: BAD LEAVER ANALYSIS
   FOR EACH BAD LEAVER ITEM IN THE DRAFT: rate as ACCEPTABLE / NEGOTIATE / REJECT
 
 2.2 BAD LEAVER REMEDY — IS IT PROPORTIONATE?
-  If classified as Bad Leaver: shares repurchased at [nominal value? 50% discount?]
-  → Is this proportionate to the severity of the triggering event?
-  → RECOMMENDATION: Sliding scale should be considered:
-    - Fraud/crime: nominal value (maximum penalty is appropriate)
-    - Gray zone breaches: fair value with 20% discount
-    - This avoids the "same penalty for vastly different offenses" problem
+  Authoritative remedy is Agent 06's TIME-BASED proportional penalty scale:
+  all shares repurchased at 10% / 25% / 50% / 75% of fair value by tenure
+  (months 0-11 / 12-23 / 24-35 / 36-47), nominal value only as a floor.
+  Gray zone cases: 50% of fair value (board discretion, per Agent 06).
+  → Is this scale proportionate to the severity of the triggering event?
+  → NOTE: A severity-based refinement (e.g., distinguishing fraud/crime
+    from gray-zone breaches) is at most NEGOTIABLE on top of the time-based
+    scale — a nominal-value repurchase is NOT recommended (Avtaleloven §36
+    "açıkça haksız" risk, see Agent 06)
 
 2.3 GOOD LEAVER LIST — IS IT COMPREHENSIVE?
   Review the Good Leaver definition. Missing common items:

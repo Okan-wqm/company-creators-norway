@@ -422,7 +422,7 @@ CONFIDENCE: HIGH for the deadline STRUCTURE (statutory rhythms);
 | Kaynak | İçerik |
 |--------|--------|
 | Agent 11 (Belge Uzmanı) | Şirket parametreleri, yatırımcı bilgileri |
-| S2-07 (Onboarding) | Yatırımcı raporlama yükümlülükleri |
+| Agent 22 / S2-14 (kapanış seti) + aksjonæravtale information-rights maddesi | Yatırımcı raporlama yükümlülükleri |
 | Agent 07 (Vergi) | Skattefunn, kildeskatt detayları |
 
 ## Çıktı
